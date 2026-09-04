@@ -1,0 +1,73 @@
+name: Calendar Studio Windows Build Gate
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: calendar-studio-windows-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Calendar Studio on KRAIMMARK-BUILD-01
+    runs-on:
+      - self-hosted
+      - Windows
+      - X64
+      - build-station
+      - windows-desktop
+      - msvc
+      - tauri
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Build Station routing and source
+        shell: powershell
+        run: |
+          Write-Host "Runner: $env:RUNNER_NAME"
+          Write-Host "Repository: $env:GITHUB_REPOSITORY"
+          Write-Host "SHA: $env:GITHUB_SHA"
+          node --version
+          npm --version
+          rustc --version
+          cargo --version
+          if (-not (Test-Path package.json)) {
+            throw "Calendar Studio source tree is not fully staged yet: package.json is missing."
+          }
+          if (-not (Test-Path src-tauri/Cargo.toml)) {
+            throw "Calendar Studio source tree is not fully staged yet: src-tauri/Cargo.toml is missing."
+          }
+
+      - name: Install dependencies
+        shell: powershell
+        run: |
+          if (Test-Path package-lock.json) { npm ci } else { npm install }
+
+      - name: Tests
+        shell: powershell
+        run: npm test
+
+      - name: Lint
+        shell: powershell
+        run: npm run lint
+
+      - name: Frontend production build
+        shell: powershell
+        run: npm run build
+
+      - name: Rustfmt
+        shell: powershell
+        run: cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+
+      - name: Clippy
+        shell: powershell
+        run: cargo clippy --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+
+      - name: Tauri NSIS build
+        shell: powershell
+        run: npm run tauri build -- --bundles nsis
