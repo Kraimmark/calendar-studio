@@ -1,0 +1,1 @@
+Calendar Studio 0.9.17 verified build payload chunks. Reassemble rt.part00..rt.part17 in lexical order as UTF-8/base64, decode to runtime.tar.xz, verify SHA-256 before extraction. Temporary bridge payload; remove after repository bootstrap is complete.
