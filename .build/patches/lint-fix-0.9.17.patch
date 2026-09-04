@@ -1,0 +1,99 @@
+diff --git a/eslint.config.js b/eslint.config.js
+index 0be30b2..23a3154 100644
+--- a/eslint.config.js
++++ b/eslint.config.js
+@@ -22,4 +22,10 @@ export default tseslint.config(
+       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+     },
+   },
++  {
++    files: ['tests/offline/**/*.d.ts'],
++    rules: {
++      '@typescript-eslint/no-explicit-any': 'off',
++    },
++  },
+ );
+diff --git a/src/domain/monthLayout.ts b/src/domain/monthLayout.ts
+index 6802a79..0af6ae9 100644
+--- a/src/domain/monthLayout.ts
++++ b/src/domain/monthLayout.ts
+@@ -12,7 +12,7 @@ export interface MonthEventSegment {
+   endsHere: boolean;
+ }
+ 
+-interface PendingSegment extends Omit<MonthEventSegment, 'lane'> {}
++type PendingSegment = Omit<MonthEventSegment, 'lane'>;
+ 
+ function clampDate(value: DateOnly, min: DateOnly, max: DateOnly): DateOnly {
+   if (compareDateOnly(value, min) < 0) return min;
+diff --git a/src/domain/portability.ts b/src/domain/portability.ts
+index 0166873..3a5dbba 100644
+--- a/src/domain/portability.ts
++++ b/src/domain/portability.ts
+@@ -144,7 +144,10 @@ function validateAuditShape(value: unknown, errors: string[], index: number): va
+ function duplicateValues(values: readonly string[]): string[] {
+   const seen = new Set<string>();
+   const duplicates = new Set<string>();
+-  for (const value of values) seen.has(value) ? duplicates.add(value) : seen.add(value);
++  for (const value of values) {
++    if (seen.has(value)) duplicates.add(value);
++    else seen.add(value);
++  }
+   return [...duplicates];
+ }
+ 
+diff --git a/src/features/calendar/CalendarScreen.tsx b/src/features/calendar/CalendarScreen.tsx
+index 9f162f5..6d80786 100644
+--- a/src/features/calendar/CalendarScreen.tsx
++++ b/src/features/calendar/CalendarScreen.tsx
+@@ -19,7 +19,7 @@ import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLa
+ import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
+ import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
+ import type { CalendarPortability } from '../../domain/portability';
+-import type { CalendarEvent, CalendarEventData, CalendarSettings, Discipline } from '../../domain/types';
++import type { CalendarEvent, CalendarEventData, CalendarSettings } from '../../domain/types';
+ import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
+ import { calculateWarnings } from '../../domain/warnings';
+ import { summarizeCalendarWarnings } from '../../domain/warningSummary';
+diff --git a/src/features/calendar/eventDraft.ts b/src/features/calendar/eventDraft.ts
+index af79e35..4feb27f 100644
+--- a/src/features/calendar/eventDraft.ts
++++ b/src/features/calendar/eventDraft.ts
+@@ -33,19 +33,25 @@ export function createEventData(startDate: DateOnly | null = null, endDate: Date
+   };
+ }
+ 
++const EVENT_METADATA_KEYS = [
++  'id',
++  'calendarYear',
++  'revision',
++  'createdAt',
++  'createdBy',
++  'updatedAt',
++  'updatedBy',
++  'archivedAt',
++] as const satisfies readonly (keyof CalendarEvent)[];
++
++function omitEventMetadata(event: CalendarEvent): CalendarEventData {
++  const data = structuredClone(event) as Partial<CalendarEvent>;
++  for (const key of EVENT_METADATA_KEYS) delete data[key];
++  return data as CalendarEventData;
++}
++
+ export function eventDataOf(event: CalendarEvent): CalendarEventData {
+-  const {
+-    id: _id,
+-    calendarYear: _calendarYear,
+-    revision: _revision,
+-    createdAt: _createdAt,
+-    createdBy: _createdBy,
+-    updatedAt: _updatedAt,
+-    updatedBy: _updatedBy,
+-    archivedAt: _archivedAt,
+-    ...data
+-  } = event;
+-  return structuredClone(data);
++  return omitEventMetadata(event);
+ }
+ 
+ export function diffEventData(original: CalendarEventData, next: CalendarEventData): Partial<CalendarEventData> {
