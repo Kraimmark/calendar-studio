@@ -1,0 +1,220 @@
+name: Calendar Studio 0.9.18 Direct Source Bootstrap
+
+on:
+  push:
+    branches:
+      - release/0.9.18
+    paths:
+      - '.github/workflows/bootstrap-0.9.18.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: calendar-studio-0918-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  bootstrap-and-build:
+    name: Rehydrate, verify frozen source, and build
+    runs-on:
+      - self-hosted
+      - Windows
+      - X64
+      - build-station
+      - windows-desktop
+      - msvc
+      - tauri
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rehydrate exact 0.9.18 direct source
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Set-StrictMode -Version Latest
+
+          $repo = $env:GITHUB_WORKSPACE
+          $tmp = Join-Path $env:RUNNER_TEMP 'calendar-studio-bootstrap-0918'
+          if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
+          New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+
+          $manifest = Join-Path $tmp 'frozen-0.9.18-build-critical.sha256'
+          Copy-Item (Join-Path $repo '.migration\frozen-0.9.18-build-critical.sha256') $manifest
+          $lintPatch = Join-Path $tmp 'lint-fix-0.9.17.patch'
+          Copy-Item (Join-Path $repo '.build\patches\lint-fix-0.9.17.patch') $lintPatch
+
+          # Reassemble the verified 0.9.17 runtime bridge payload already stored in Git.
+          $parts = @(Get-ChildItem (Join-Path $repo '.build\runtime') -Filter 'rt.part*' -File | Sort-Object Name)
+          if ($parts.Count -ne 18) { throw "Expected 18 runtime parts, found $($parts.Count)." }
+          $encoded = ($parts | ForEach-Object { (Get-Content $_.FullName -Raw).Trim() }) -join ''
+          $runtimeArchive = Join-Path $tmp 'runtime.tar.xz'
+          [IO.File]::WriteAllBytes($runtimeArchive, [Convert]::FromBase64String($encoded))
+          $runtimeHash = (Get-FileHash $runtimeArchive -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($runtimeHash -ne '447be99596c56bf03ec3665af7b06a9aa62ae297aa1cab071edc5c6f0b1fa8f6') {
+            throw "Runtime bridge SHA mismatch: $runtimeHash"
+          }
+
+          $stage = Join-Path $tmp 'stage'
+          New-Item -ItemType Directory -Force -Path $stage | Out-Null
+          & tar -xJf $runtimeArchive -C $stage
+          if ($LASTEXITCODE -ne 0) { throw "Runtime extraction failed: $LASTEXITCODE" }
+
+          $packageCandidates = @(Get-ChildItem $stage -Filter 'package.json' -File -Recurse)
+          if ($packageCandidates.Count -ne 1) { throw "Expected one package.json in runtime payload, found $($packageCandidates.Count)." }
+          $sourceRoot = $packageCandidates[0].Directory.FullName
+          Write-Host "Rehydrated source root: $sourceRoot"
+
+          # Restore the separately transported test tree when it is not part of runtime.tar.xz.
+          $testsB64Path = Join-Path $repo '.build\tests\tests.b64'
+          if (Test-Path $testsB64Path) {
+            $testsArchive = Join-Path $tmp 'tests.tar.xz'
+            [IO.File]::WriteAllBytes($testsArchive, [Convert]::FromBase64String((Get-Content $testsB64Path -Raw).Trim()))
+            $entries = @(& tar -tf $testsArchive)
+            if ($LASTEXITCODE -ne 0 -or $entries.Count -eq 0) { throw 'Unable to inspect tests archive.' }
+            if (@($entries | Where-Object { $_ -match '^tests[/\\]' }).Count -gt 0) {
+              & tar -xJf $testsArchive -C $sourceRoot
+            } else {
+              $testsRoot = Join-Path $sourceRoot 'tests'
+              New-Item -ItemType Directory -Force -Path $testsRoot | Out-Null
+              & tar -xJf $testsArchive -C $testsRoot
+            }
+            if ($LASTEXITCODE -ne 0) { throw "Tests extraction failed: $LASTEXITCODE" }
+          }
+
+          # Verify and inject the exact lockfiles from the last proven-green Build Station candidate.
+          $candidate = 'C:\BuildStation\artifacts\calendar-studio\source-candidate-0.9.17'
+          $packageLockSource = Join-Path $candidate 'package-lock.json'
+          $cargoLockSource = Join-Path $candidate 'src-tauri\Cargo.lock'
+          $packageLockHash = (Get-FileHash $packageLockSource -Algorithm SHA256).Hash.ToLowerInvariant()
+          $cargoLockHash = (Get-FileHash $cargoLockSource -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($packageLockHash -ne '2ae799c48e4c808f3eb4c105a7dfaf654c22db213e112a514c1c4833861f3a69') {
+            throw "Unexpected source package-lock SHA: $packageLockHash"
+          }
+          if ($cargoLockHash -ne '93dd39ef6a1156f5a061761b2f8b157720a81b80d64e863182bd9817ccda4bbb') {
+            throw "Unexpected source Cargo.lock SHA: $cargoLockHash"
+          }
+          Copy-Item $packageLockSource (Join-Path $sourceRoot 'package-lock.json') -Force
+          New-Item -ItemType Directory -Force -Path (Join-Path $sourceRoot 'src-tauri') | Out-Null
+          Copy-Item $cargoLockSource (Join-Path $sourceRoot 'src-tauri\Cargo.lock') -Force
+
+          # Replace bootstrap repository contents with the reconstructed direct source.
+          Push-Location $repo
+          git rm -r --ignore-unmatch . | Out-Null
+          Get-ChildItem -LiteralPath $repo -Force | Where-Object { $_.Name -ne '.git' } | Remove-Item -Recurse -Force
+          Get-ChildItem -LiteralPath $sourceRoot -Force | Copy-Item -Destination $repo -Recurse -Force
+
+          # Apply the proven lint patch iff it has not already been folded into the runtime payload.
+          git apply --check $lintPatch 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            git apply $lintPatch
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to apply lint fix patch.' }
+            Write-Host 'Applied lint fix patch.'
+          } else {
+            git apply --reverse --check $lintPatch 2>$null
+            if ($LASTEXITCODE -ne 0) { throw 'Lint patch is neither applicable nor already applied.' }
+            Write-Host 'Lint fix patch already present.'
+          }
+
+          function Replace-VersionOnce([string]$path) {
+            $text = [IO.File]::ReadAllText($path)
+            $count = ([regex]::Matches($text, [regex]::Escape('0.9.17'))).Count
+            if ($count -ne 1) { throw "Expected exactly one 0.9.17 in $path, found $count." }
+            $text = $text.Replace('0.9.17', '0.9.18')
+            [IO.File]::WriteAllText($path, $text, [Text.UTF8Encoding]::new($false))
+          }
+          Replace-VersionOnce (Join-Path $repo 'package.json')
+          Replace-VersionOnce (Join-Path $repo 'src-tauri\Cargo.toml')
+          Replace-VersionOnce (Join-Path $repo 'src-tauri\tauri.conf.json')
+
+          # Minimal root-version edits in exact lockfiles; dependency graph bytes otherwise stay untouched.
+          $packageLockPath = Join-Path $repo 'package-lock.json'
+          $packageLockText = [IO.File]::ReadAllText($packageLockPath)
+          $packagePattern = '(?m)("name": "calendar-studio",\r?\n\s+"version": ")0\.9\.17(")'
+          $packageMatches = [regex]::Matches($packageLockText, $packagePattern)
+          if ($packageMatches.Count -ne 2) { throw "Expected two Calendar Studio root versions in package-lock, found $($packageMatches.Count)." }
+          $packageLockText = [regex]::Replace($packageLockText, $packagePattern, '${1}0.9.18${2}')
+          [IO.File]::WriteAllText($packageLockPath, $packageLockText, [Text.UTF8Encoding]::new($false))
+
+          $cargoLockPath = Join-Path $repo 'src-tauri\Cargo.lock'
+          $cargoLockText = [IO.File]::ReadAllText($cargoLockPath)
+          $cargoPattern = '(?ms)(\[\[package\]\]\r?\nname = "calendar-studio"\r?\nversion = ")0\.9\.17(")'
+          $cargoMatches = [regex]::Matches($cargoLockText, $cargoPattern)
+          if ($cargoMatches.Count -ne 1) { throw "Expected one Calendar Studio root version in Cargo.lock, found $($cargoMatches.Count)." }
+          $cargoLockText = [regex]::Replace($cargoLockText, $cargoPattern, '${1}0.9.18${2}')
+          [IO.File]::WriteAllText($cargoLockPath, $cargoLockText, [Text.UTF8Encoding]::new($false))
+
+          # Frozen manifest is authoritative for every build-critical source file.
+          $expected = @{}
+          foreach ($line in Get-Content $manifest) {
+            if ($line -notmatch '^([0-9a-f]{64})  (.+)$') { throw "Malformed manifest line: $line" }
+            $expected[$Matches[2]] = $Matches[1]
+          }
+          if ($expected.Count -ne 82) { throw "Expected 82 frozen source entries, got $($expected.Count)." }
+
+          # Remove bridge-only or stale candidate files not present in the frozen source.
+          $allowedExtra = @('package-lock.json', 'src-tauri/Cargo.lock')
+          foreach ($file in Get-ChildItem $repo -File -Recurse -Force) {
+            if ($file.FullName.StartsWith((Join-Path $repo '.git'))) { continue }
+            $rel = [IO.Path]::GetRelativePath($repo, $file.FullName).Replace('\', '/')
+            if (-not $expected.ContainsKey($rel) -and $allowedExtra -notcontains $rel) {
+              Remove-Item $file.FullName -Force
+            }
+          }
+
+          $mismatches = @()
+          foreach ($rel in $expected.Keys | Sort-Object) {
+            $path = Join-Path $repo ($rel.Replace('/', '\'))
+            if (-not (Test-Path $path)) {
+              $mismatches += "MISSING $rel"
+              continue
+            }
+            $actual = (Get-FileHash $path -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actual -ne $expected[$rel]) {
+              $mismatches += "HASH $rel expected=$($expected[$rel]) actual=$actual"
+            }
+          }
+          if ($mismatches.Count -gt 0) {
+            Write-Host 'Frozen source mismatches:'
+            $mismatches | ForEach-Object { Write-Host $_ }
+            throw "Rehydrated source differs from frozen 0.9.18 in $($mismatches.Count) file(s)."
+          }
+          Write-Host 'All 82 frozen build-critical source files match exactly.'
+
+          $finalPackageLockHash = (Get-FileHash $packageLockPath -Algorithm SHA256).Hash.ToLowerInvariant()
+          $finalCargoLockHash = (Get-FileHash $cargoLockPath -Algorithm SHA256).Hash.ToLowerInvariant()
+          Write-Host "0.9.18 package-lock SHA-256: $finalPackageLockHash"
+          Write-Host "0.9.18 Cargo.lock SHA-256:    $finalCargoLockHash"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Restore Calendar Studio 0.9.18 direct source'
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to commit direct source.' }
+          git push origin HEAD:release/0.9.18
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to push direct source branch.' }
+          $directSha = (git rev-parse HEAD).Trim()
+          "CALENDAR_DIRECT_SHA=$directSha" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          Write-Host "Direct source commit: $directSha"
+          Pop-Location
+
+      - name: Direct-source Windows release gate
+        shell: powershell
+        run: |
+          $env:GITHUB_SHA = $env:CALENDAR_DIRECT_SHA
+          .\scripts\build-station-release.ps1
+
+      - name: Report release binaries
+        shell: powershell
+        run: |
+          $latest = 'C:\BuildStation\artifacts\calendar-studio\latest'
+          Get-ChildItem $latest -File | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash
+            Write-Host "$($_.Name)  $hash"
+          }
