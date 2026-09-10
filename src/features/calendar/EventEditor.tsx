@@ -1,6 +1,267 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíï~¸N‹Z–‹­¦ëeŠw¬Õ¥µÁ½ÉÐìÕÍ•…±±‰…¬°ÕÍ•™™•Ð°ÕÍ•5•µ¼°ÕÍ•I•˜°ÕÍ•MÑ…Ñ”°ÑåÁ”¡…¹•Ù•¹Ð°ÑåÁ”5½ÕÍ•Ù•¹Ð…ÌI•…Ñ5½ÕÍ•Ù•¹Ðô™É½´€É•…Ðœì)¥µÁ½ÉÐì…±Õ±…Ñ•M¡¥™Ñ…å±¥¡Ñ]…É¹¥¹Ìô™É½´€œ¸¸¼¸¸½‘½µ…¥¸½‘…å±¥¡Ðœì)¥µÁ½ÉÐÑåÁ”ì…±•¹‘…ÉÙ•¹Ð°…±•¹‘…ÉÙ•¹Ñ…Ñ„°¥Í¥Á±¥¹”°Ù•¹Ñ-¥¹°Ù•¹ÑM•É¥•Ì°Ù•¹ÑM½ÕÉ”°Ù•¹ÑMÑ…ÑÕÌ°M¡¥™Ñ-¥¹°Y•¹Õ•M½Á”ô™É½´€œ¸¸¼¸¸½‘½µ…¥¸½ÑåÁ•Ìœì)¥µÁ½ÉÐÑåÁ”ìY…±¥‘…Ñ¥½¹%ÍÍÕ”ô™É½´€œ¸¸¼¸¸½‘½µ…¥¸½Ù…±¥‘…Ñ¥½¸œì)¥µÁ½ÉÐì…É¡¥Ù•½¹™¥Éµ…Ñ¥½¹5•ÍÍ…”°‘…å±¥¡Ñ½¹™¥Éµ…Ñ¥½¹-•ä°É•ÅÕ¥É•Í¥Í…É‘½¹™¥Éµ…Ñ¥½¸ô™É½´€œ¸½½¹™¥Éµ…Ñ¥½¹MÑ…Ñ”œì()¥¹Ñ•É™…”Ù•¹Ñ‘¥Ñ½ÉAÉ½ÁÌì(€å•…Èè¹Õµ‰•Èì(€•Ù•¹Ðè…±•¹‘…ÉÙ•¹Ðð¹Õ±°ì(€¥¹¥Ñ¥…±…Ñ„è…±•¹‘…ÉÙ•¹Ñ…Ñ„ì(€¥ÍÍÕ•ÌèY…±¥‘…Ñ¥½¹%ÍÍÕ•mtì(€Í…Ù¥¹œè‰½½±•…¸ì(€½¹…¹•°è€ ¤€ôøÙ½¥ì(€½¹M…Ù”è€¡‘…Ñ„è…±•¹‘…ÉÙ•¹Ñ…Ñ„¤€ôøÙ½¥ì(€½¹É¡¥Ù”üè€ ¤€ôøÙ½¥ì(€É•…‘=¹±äüè‰½½±•…¸ì(€Á…É•¹Ñ…¹‘¥‘…Ñ•Ìüè…±•¹‘…ÉÙ•¹Ñmtì(€É•ÅÕ¥É•­Á½¹™¥Éµ…Ñ¥½¸üè‰½½±•…¸ì(€É•Ù¥Í¥½¹½¹™±¥Ðüèì•áÁ•Ñ•‘I•Ù¥Í¥½¸è¹Õµ‰•Èì…ÑÕ…±I•Ù¥Í¥½¸è¹Õµ‰•Èôð¹Õ±°ì(€½¹I•™É•Í¡½¹™±¥Ðüè€ ¤€ôøÙ½¥ì)ô()½¹ÍÐ­¥¹‘ÌèÉÉ…äñmÙ•¹Ñ-¥¹°ÍÑÉ¥¹tø€ômlµ…Ñ œ°€ŸBsBÃFFt°lÕÑ´œ°€ŸBB‹Bp€¼ƒFFB×B÷BãFBûBËBëBÀt°l‰Õ¥±œ°€ŸB_BÃFFFBûBçBëBÀutì)½¹ÍÐ‘¥Í¥Á±¥¹•ÌèÉÉ…äñm¥Í¥Á±¥¹”°ÍÑÉ¥¹tø€ômlÁ¥ÍÑ½°œ°€ŸBBãFFBûBïB×Ft°l…É‰¥¹”œ°€ŸBkBÃFBÃBÇBãBôt°lÍ¡½ÑÕ¸œ°€ŸBƒFBÛF3FDt°l…¥ÉÕ¸œ°€ŸBB÷B×BËBóBÃFBãBëBÀt°lµÕ±Ñ¥Õ¸œ°€ŸBsFBïF3FBãBÏBÃBôt°l½Ñ¡•Èœ°€ŸBSFFBÏBûBÔutì)½¹ÍÐÍ•É¥•ÌèÉÉ…äñmÙ•¹ÑM•É¥•Ì°ÍÑÉ¥¹tø€ômlÉ•Õ±…Èœ°€ŸB{BÇF/FB÷BÃF<t°lÑÉ˜œ°€ŸB‹BƒBt°l…±±IÕÍÍ¥…¸œ°€ŸBKFB×FBûFFBãBçFBëBÃF<t°l‘•Á…ÉÑµ•¹Ñ…°œ°€ŸBKB×BÓBûBóFFBËB×B÷B÷BÃF<t°lÍÁ‰ÕÀœ°€ŸBkFBÇBûBèƒB‡BBÄt°l½Ñ¡•Èœ°€ŸBSFFBÏBÃF<utì)½¹ÍÐÍÑ…ÑÕÍ•ÌèÉÉ…äñmÙ•¹ÑMÑ…ÑÕÌ°ÍÑÉ¥¹tø€ôml‘É…™Ðœ°€ŸBŸB×FB÷BûBËBãBèt°lÑ•¹Ñ…Ñ¥Ù”œ°€ŸBFB×BÓBËBÃFBãFB×BïF3B÷Bøt°l½¹™¥Éµ•œ°€ŸBBûBÓFBËB×FBÛBÓB×B÷Bøutì)½¹ÍÐÍ½ÕÉ•ÌèÉÉ…äñmÙ•¹ÑM½ÕÉ”°ÍÑÉ¥¹tø€ômlµ…¹Õ…°œ°€ŸBƒFFB÷BûBäƒBËBËBûBÐt°l•­Àœ°€ŸBWBkB|utì)½¹ÍÐÍ½Á•ÌèÉÉ…äñmY•¹Õ•M½Á”°ÍÑÉ¥¹tø€ôml¹•ÙÍ­äœ°€ŸB‡B‡Bhƒ
-¯BwB×BËFBëBãBç
-ìt°lÍÁˆœ°€ŸB‡BÃB÷BëF·BB×FB×FBÇFFBÌt°l½Ñ¡•ÉI•¥½¸œ°€ŸBSFFBÏBûBäƒFB×BÏBãBûBôt°lÕ¹ÍÁ•¥™¥•œ°€ŸBwBÔƒFBëBÃBßBÃB÷Bøutì()™Õ¹Ñ¥½¸¹Õ±±…‰±•9Õµ‰•È¡Ù…±Õ”èÍÑÉ¥¹œ¤è¹Õµ‰•Èð¹Õ±°ì(€¥˜€¡Ù…±Õ”€ôôô€œœ¤É•ÑÕÉ¸¹Õ±°ì(€½¹ÍÐÁ…ÉÍ•€ô9Õµ‰•È¡Ù…±Õ”¤ì(€É•ÑÕÉ¸9Õµ‰•È¹¥Í¥¹¥Ñ”¡Á…ÉÍ•¤€üÁ…ÉÍ•€è¹Õ±°ì)ô()•áÁ½ÉÐ™Õ¹Ñ¥½¸Ù•¹Ñ‘¥Ñ½È¡ìå•…È°•Ù•¹Ð°¥¹¥Ñ¥…±…Ñ„°¥ÍÍÕ•Ì°Í…Ù¥¹œ°½¹…¹•°°½¹M…Ù”°½¹É¡¥Ù”°É•…‘=¹±ä€ô™…±Í”°Á…É•¹Ñ…¹‘¥‘…Ñ•Ì€ômt°É•ÅÕ¥É•­Á½¹™¥Éµ…Ñ¥½¸€ô™…±Í”°É•Ù¥Í¥½¹½¹™±¥Ð€ô¹Õ±°°½¹I•™É•Í¡½¹™±¥ÐôèÙ•¹Ñ‘¥Ñ½ÉAÉ½ÁÌ¤ì(€½¹ÍÐm‘É…™Ð°Í•ÑÉ…™Ñt€ôÕÍ•MÑ…Ñ”ñ…±•¹‘…ÉÙ•¹Ñ…Ñ„ø  ¤€ôøÍÑÉÕÑÕÉ•‘±½¹”¡¥¹¥Ñ¥…±…Ñ„¤¤ì(€½¹ÍÐm•­Á½¹™¥Éµ•°Í•Ñ­Á½¹™¥Éµ•‘t€ôÕÍ•MÑ…Ñ”¡™…±Í”¤ì(€½¹ÍÐm‘…å±¥¡Ñ½¹™¥Éµ•°Í•Ñ…å±¥¡Ñ½¹™¥Éµ•‘t€ôÕÍ•MÑ…Ñ”¡™…±Í”¤ì(€½¹ÍÐ‘¥…±½I•˜€ôÕÍ•I•˜ñ!Q51±•µ•¹Ðð¹Õ±°ø¡¹Õ±°¤ì(€½¹ÍÐÍ…Ù¥¹I•˜€ôÕÍ•I•˜¡Í…Ù¥¹œ¤ì(€½¹ÍÐ…¹•±I•˜€ôÕÍ•I•˜¡½¹…¹•°¤ì((€ÕÍ•™™•Ð  ¤€ôøìÍ•ÑÉ…™Ð¡ÍÑÉÕÑÕÉ•‘±½¹”¡¥¹¥Ñ¥…±…Ñ„¤¤ìÍ•Ñ­Á½¹™¥Éµ•¡™…±Í”¤ìÍ•Ñ…å±¥¡Ñ½»úâÚ$z{-®éÜj×{(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { startsAt: e.target.value })} />
+import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type MouseEvent as ReactMouseEvent } from 'react';
+import { calculateShiftDaylightWarnings } from '../../domain/daylight';
+import type { CalendarEvent, CalendarEventData, Discipline, EventKind, EventSeries, EventSource, EventStatus, ShiftKind, VenueScope } from '../../domain/types';
+import type { ValidationIssue } from '../../domain/validation';
+import { archiveConfirmationMessage, daylightConfirmationKey, requiresDiscardConfirmation } from './confirmationState';
+
+interface EventEditorProps {
+  year: number;
+  event: CalendarEvent | null;
+  initialData: CalendarEventData;
+  issues: ValidationIssue[];
+  saving: boolean;
+  onCancel: () => void;
+  onSave: (data: CalendarEventData) => void;
+  onArchive?: () => void;
+  readOnly?: boolean;
+  parentCandidates?: CalendarEvent[];
+  requireEkpConfirmation?: boolean;
+  revisionConflict?: { expectedRevision: number; actualRevision: number } | null;
+  onRefreshConflict?: () => void;
+}
+
+const kinds: Array<[EventKind, string]> = [['match', 'ÐœÐ°Ñ‚Ñ‡'], ['utm', 'Ð£Ð¢Ðœ / Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²ÐºÐ°'], ['build', 'Ð—Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ°']];
+const disciplines: Array<[Discipline, string]> = [['pistol', 'ÐŸÐ¸ÑÑ‚Ð¾Ð»ÐµÑ‚'], ['carbine', 'ÐšÐ°Ñ€Ð°Ð±Ð¸Ð½'], ['shotgun', 'Ð ÑƒÐ¶ÑŒÑ‘'], ['airgun', 'ÐŸÐ½ÐµÐ²Ð¼Ð°Ñ‚Ð¸ÐºÐ°'], ['multigun', 'ÐœÑƒÐ»ÑŒÑ‚Ð¸Ð³Ð°Ð½'], ['other', 'Ð”Ñ€ÑƒÐ³Ð¾Ðµ']];
+const series: Array<[EventSeries, string]> = [['regular', 'ÐžÐ±Ñ‹Ñ‡Ð½Ð°Ñ'], ['trf', 'Ð¢Ð Ð¤'], ['allRussian', 'Ð’ÑÐµÑ€Ð¾ÑÑÐ¸Ð¹ÑÐºÐ°Ñ'], ['departmental', 'Ð’ÐµÐ´Ð¾Ð¼ÑÑ‚Ð²ÐµÐ½Ð½Ð°Ñ'], ['spbCup', 'ÐšÑƒÐ±Ð¾Ðº Ð¡ÐŸÐ±'], ['other', 'Ð”Ñ€ÑƒÐ³Ð°Ñ']];
+const statuses: Array<[EventStatus, string]> = [['draft', 'Ð§ÐµÑ€Ð½Ð¾Ð²Ð¸Ðº'], ['tentative', 'ÐŸÑ€ÐµÐ´Ð²Ð°Ñ€Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾'], ['confirmed', 'ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¾']];
+const sources: Array<[EventSource, string]> = [['manual', 'Ð ÑƒÑ‡Ð½Ð¾Ð¹ Ð²Ð²Ð¾Ð´'], ['ekp', 'Ð•ÐšÐŸ']];
+const scopes: Array<[VenueScope, string]> = [['nevsky', 'Ð¡Ð¡Ðš Â«ÐÐµÐ²ÑÐºÐ¸Ð¹Â»'], ['spb', 'Ð¡Ð°Ð½ÐºÑ‚-ÐŸÐµÑ‚ÐµÑ€Ð±ÑƒÑ€Ð³'], ['otherRegion', 'Ð”Ñ€ÑƒÐ³Ð¾Ð¹ Ñ€ÐµÐ³Ð¸Ð¾Ð½'], ['unspecified', 'ÐÐµ ÑƒÐºÐ°Ð·Ð°Ð½Ð¾']];
+
+function nullableNumber(value: string): number | null {
+  if (value === '') return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict }: EventEditorProps) {
+  const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(initialData));
+  const [ekpConfirmed, setEkpConfirmed] = useState(false);
+  const [daylightConfirmed, setDaylightConfirmed] = useState(false);
+  const dialogRef = useRef<HTMLElement | null>(null);
+  const savingRef = useRef(saving);
+  const cancelRef = useRef(onCancel);
+
+  useEffect(() => { setDraft(structuredClone(initialData)); setEkpConfirmed(false); setDaylightConfirmed(false); }, [initialData]);
+  useEffect(() => { savingRef.current = saving; }, [saving]);
+  const dirty = useMemo(() => JSON.stringify(draft) !== JSON.stringify(initialData), [draft, initialData]);
+  const requestClose = useCallback(() => {
+    if (savingRef.current) return;
+    if (requiresDiscardConfirmation(dirty, readOnly) && !window.confirm('Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€? ÐÐµÑÐ¾Ñ…Ñ€Ð°Ð½Ñ‘Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ Ð±ÑƒÐ´ÑƒÑ‚ Ð¿Ð¾Ñ‚ÐµÑ€ÑÐ½Ñ‹.')) return;
+    onCancel();
+  }, [dirty, onCancel, readOnly]);
+  const requestArchive = useCallback(() => {
+    if (savingRef.current || !onArchive) return;
+    if (!window.confirm(archiveConfirmationMessage(dirty))) return;
+    onArchive();
+  }, [dirty, onArchive]);
+  useEffect(() => { cancelRef.current = requestClose; }, [requestClose]);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const focusableSelector = 'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])';
+    const focusable = () => Array.from(dialog.querySelectorAll<HTMLElement>(focusableSelector)).filter((element) => !element.hasAttribute('hidden') && element.offsetParent !== null);
+    const initial = dialog.querySelector<HTMLElement>('[autofocus]') ?? focusable()[0] ?? dialog;
+    initial.focus();
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (!savingRef.current) {
+          event.preventDefault();
+          cancelRef.current();
+        }
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const items = focusable();
+      if (items.length === 0) {
+        event.preventDefault();
+        dialog.focus();
+        return;
+      }
+      const first = items[0]!;
+      const last = items[items.length - 1]!;
+      const active = document.activeElement;
+      if (event.shiftKey && (active === first || !dialog.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (active === last || !dialog.contains(active))) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    dialog.addEventListener('keydown', onKey);
+    return () => {
+      dialog.removeEventListener('keydown', onKey);
+      if (previousFocus?.isConnected) previousFocus.focus();
+    };
+  }, []);
+
+  const groupedIssues = useMemo(() => issues.filter((issue) => issue.severity === 'error'), [issues]);
+  useEffect(() => { setEkpConfirmed(false); }, [draft]);
+  const needsEkpConfirmation = !readOnly && requireEkpConfirmation && dirty;
+  const daylightWarnings = useMemo(() => calculateShiftDaylightWarnings(draft), [draft]);
+  const daylightWarningKey = useMemo(() => daylightConfirmationKey(daylightWarnings), [daylightWarnings]);
+  useEffect(() => { setDaylightConfirmed(false); }, [daylightWarningKey]);
+  const needsDaylightConfirmation = !readOnly && dirty && daylightWarnings.length > 0;
+  const patch = <K extends keyof CalendarEventData>(key: K, value: CalendarEventData[K]) => setDraft((current) => ({ ...current, [key]: value }));
+  const updateShift = (id: string, changes: Partial<CalendarEventData['shifts'][number]>) => setDraft((current) => ({ ...current, shifts: current.shifts.map((shift) => shift.id === id ? { ...shift, ...changes } : shift) }));
+  const addShift = () => setDraft((current) => ({ ...current, shifts: [...current.shifts, { id: crypto.randomUUID(), name: `Ð¡Ð¼ÐµÐ½Ð° ${current.shifts.length + 1}`, kind: 'day', startsAt: '10:00', endsAt: '18:00' }] }));
+  const removeShift = (id: string) => setDraft((current) => ({ ...current, shifts: current.shifts.filter((shift) => shift.id !== id) }));
+
+  return (
+    <div className="modal-backdrop" role="presentation" onMouseDown={(mouse: ReactMouseEvent<HTMLDivElement>) => { if (mouse.target === mouse.currentTarget) requestClose(); }}>
+      <section ref={dialogRef} className="event-editor" role="dialog" aria-modal="true" aria-labelledby="event-editor-title" tabIndex={-1}>
+        <header className="editor-header">
+          <div>
+            <p className="eyebrow">{readOnly ? `ÐŸÐ ÐžÐ¡ÐœÐžÐ¢Ð  Â· Ð Ð•Ð”ÐÐšÐ¦Ð˜Ð¯ ${event?.revision ?? 0}` : event ? `Ð Ð•Ð”ÐÐšÐ¦Ð˜Ð¯ ${event.revision}` : 'ÐÐžÐ’ÐžÐ• ÐœÐ•Ð ÐžÐŸÐ Ð˜Ð¯Ð¢Ð˜Ð•'}</p>
+            <h2 id="event-editor-title">{event ? event.title : `ÐšÐ°Ð»ÐµÐ½Ð´Ð°Ñ€ÑŒ ${year}`}</h2>
+          </div>
+          <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ</button>
+        </header>
+
+        {groupedIssues.length > 0 && (
+          <div className="validation-summary" role="alert">
+            <strong>ÐŸÑ€Ð¾Ð²ÐµÑ€ÑŒÑ‚Ðµ Ñ„Ð¾Ñ€Ð¼Ñƒ</strong>
+            <ul>{groupedIssues.map((issue, index) => <li key={`${issue.code}-${index}`}>{issue.message}</li>)}</ul>
+          </div>
+        )}
+
+        {revisionConflict && (
+          <div className="revision-conflict" role="alert">
+            <div>
+              <strong>Ð—Ð°Ð¿Ð¸ÑÑŒ ÑƒÐ¶Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ð»Ð°ÑÑŒ Ð¿Ð¾ÑÐ»Ðµ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð¾Ñ€Ð¼Ñ‹.</strong>
+              <span>ÐžÑ‚ÐºÑ€Ñ‹Ñ‚Ð° Ñ€ÐµÐ´Ð°ÐºÑ†Ð¸Ñ {revisionConflict.expectedRevision}, Ð°ÐºÑ‚ÑƒÐ°Ð»ÑŒÐ½Ð°Ñ â€” {revisionConflict.actualRevision}. Ð’Ð°ÑˆÐ¸ Ð½ÐµÑÐ¾Ñ…Ñ€Ð°Ð½Ñ‘Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ Ð¿Ð¾ÐºÐ° Ð¾ÑÑ‚Ð°ÑŽÑ‚ÑÑ Ð² Ñ„Ð¾Ñ€Ð¼Ðµ.</span>
+            </div>
+            {onRefreshConflict && <button className="button button-secondary" type="button" disabled={saving} onClick={() => { if (!dirty || window.confirm('ÐžÐ±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ñ„Ð¾Ñ€Ð¼Ñƒ Ð°ÐºÑ‚ÑƒÐ°Ð»ÑŒÐ½Ð¾Ð¹ Ñ€ÐµÐ´Ð°ÐºÑ†Ð¸ÐµÐ¹? ÐÐµÑÐ¾Ñ…Ñ€Ð°Ð½Ñ‘Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ Ð±ÑƒÐ´ÑƒÑ‚ Ð¾Ñ‚Ð±Ñ€Ð¾ÑˆÐµÐ½Ñ‹.')) onRefreshConflict(); }}>ÐžÐ±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ñ„Ð¾Ñ€Ð¼Ñƒ</button>}
+          </div>
+        )}
+
+        <div className="editor-scroll">
+          <fieldset className="form-section" disabled={readOnly}>
+            <legend>ÐžÑÐ½Ð¾Ð²Ð½Ð¾Ðµ</legend>
+            <div className="form-grid two-columns">
+              <label className="field field-wide">ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ
+                <input autoFocus value={draft.title} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('title', e.target.value)} />
+              </label>
+              <label className="field field-wide">ÐžÑ€Ð³Ð°Ð½Ð¸Ð·Ð°Ñ‚Ð¾Ñ€
+                <input value={draft.organizerName} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('organizerName', e.target.value)} placeholder="Ð¢ÐµÐºÑÑ‚Ð¾Ð²Ñ‹Ð¹ Ð¾Ñ€Ð³Ð°Ð½Ð¸Ð·Ð°Ñ‚Ð¾Ñ€ Ð´Ð»Ñ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ñ€ÐµÐ»Ð¸Ð·Ð°" />
+              </label>
+              <label className="field">Ð¡Ð¿Ð¾Ñ€Ñ‚Ð¸Ð²Ð½Ñ‹Ð¹ ÑÑ‚Ð°Ñ‚ÑƒÑ
+                <input value={draft.competitionStatus ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('competitionStatus', e.target.value || null)} />
+              </label>
+              <label className="field">Ð ÐµÐ³Ð¸Ð¾Ð½
+                <input value={draft.competitionRegion ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('competitionRegion', e.target.value || null)} />
+              </label>
+              <label className="field">Ð¤Ð°Ð·Ð° / ÑÑ‚Ð°Ð¿
+                <input value={draft.competitionPhase ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('competitionPhase', e.target.value || null)} />
+              </label>
+              <label className="field">ÐÐ¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ð¿Ð°
+                <input type="number" min="1" value={draft.competitionStageNumber ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('competitionStageNumber', nullableNumber(e.target.value))} />
+              </label>
+              <label className="field">Ð¢Ð¸Ð¿
+                <select value={draft.kind} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('kind', e.target.value as EventKind)}>{kinds.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field">Ð”Ð¸ÑÑ†Ð¸Ð¿Ð»Ð¸Ð½Ð°
+                <select value={draft.discipline} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('discipline', e.target.value as Discipline)}>{disciplines.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field">Ð¡ÐµÑ€Ð¸Ñ
+                <select value={draft.series} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('series', e.target.value as EventSeries)}>{series.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field">Ð¡Ð¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ
+                <select value={draft.status} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('status', e.target.value as EventStatus)}>{statuses.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field">ÐÐ°Ñ‡Ð°Ð»Ð¾
+                <input type="date" min={`${year}-01-01`} max={`${year}-12-31`} value={draft.startDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('startDate', (e.target.value || null) as CalendarEventData['startDate'])} />
+              </label>
+              <label className="field">ÐžÐºÐ¾Ð½Ñ‡Ð°Ð½Ð¸Ðµ
+                <input type="date" min={`${year}-01-01`} max={`${year}-12-31`} value={draft.endDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('endDate', (e.target.value || null) as CalendarEventData['endDate'])} />
+              </label>
+              <label className="field">ÐžÑ†ÐµÐ½ÐºÐ° ÑƒÐ¿Ñ€Ð°Ð¶Ð½ÐµÐ½Ð¸Ð¹
+                <input type="number" min="1" max="40" value={draft.plannedExerciseCount ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('plannedExerciseCount', nullableNumber(e.target.value))} />
+              </label>
+              <label className="field">ÐžÑ†ÐµÐ½ÐºÐ° ÑÐºÐ²Ð¾Ð´Ð¾Ð²
+                <input type="number" min="1" max="80" value={draft.plannedSquadCount ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('plannedSquadCount', nullableNumber(e.target.value))} />
+              </label>
+              <label className="field field-wide">Ð Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÑÐºÐ¾Ðµ Ð¼ÐµÑ€Ð¾Ð¿Ñ€Ð¸ÑÑ‚Ð¸Ðµ
+                <select value={draft.parentEventId ?? ''} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('parentEventId', e.target.value || null)}>
+                  <option value="">Ð‘ÐµÐ· Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÑÐºÐ¾Ð³Ð¾ Ð¼ÐµÑ€Ð¾Ð¿Ñ€Ð¸ÑÑ‚Ð¸Ñ</option>
+                  {parentCandidates.filter((candidate) => candidate.id !== event?.id).map((candidate) => <option key={candidate.id} value={candidate.id}>{candidate.title}</option>)}
+                </select>
+              </label>
+            </div>
+            <label className="check-field"><input type="checkbox" checked={draft.isPrimary} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('isPrimary', e.target.checked)} /> ÐžÑÐ½Ð¾Ð²Ð½Ð¾Ðµ Ð¼ÐµÑ€Ð¾Ð¿Ñ€Ð¸ÑÑ‚Ð¸Ðµ</label>
+          </fieldset>
+
+          <fieldset className="form-section" disabled={readOnly}>
+            <legend>Ð˜ÑÑ‚Ð¾Ñ‡Ð½Ð¸Ðº Ð¸ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÐºÐ°</legend>
+            <div className="form-grid two-columns">
+              <label className="field">Ð˜ÑÑ‚Ð¾Ñ‡Ð½Ð¸Ðº
+                <select value={draft.source} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('source', e.target.value as EventSource)}>{sources.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field">Ð“ÐµÐ¾Ð³Ñ€Ð°Ñ„Ð¸Ñ
+                <select value={draft.venueScope} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('venueScope', e.target.value as VenueScope)}>{scopes.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              </label>
+              <label className="field field-wide">ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÐºÐ°
+                <input value={draft.venue} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('venue', e.target.value)} />
+              </label>
+              {draft.source === 'ekp' && <>
+                <label className="field">Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ Ð•ÐšÐŸ
+                  <input value={draft.ekpLevel ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('ekpLevel', e.target.value || null)} />
+                </label>
+                <label className="field">ÐÐ¾Ð¼ÐµÑ€ / ÑÑ‚Ð°Ð¿ Ð•ÐšÐŸ
+                  <input type="number" min="1" value={draft.ekpStageNumber ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('ekpStageNumber', nullableNumber(e.target.value))} />
+                </label>
+              </>}
+              <label className="field">ÐÐºÑ†ÐµÐ½Ñ‚ ÐºÐ°Ñ€Ñ‚Ð¾Ñ‡ÐºÐ¸
+                <input type="color" value={draft.stickerColor} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('stickerColor', e.target.value)} />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset className="form-section" disabled={readOnly}>
+            <legend>Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ</legend>
+            <div className="form-grid two-columns">
+              <label className="field">Ð ÐµÐ¶Ð¸Ð¼
+                <select value={draft.registration.mode} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('registration', { ...draft.registration, mode: e.target.value as CalendarEventData['registration']['mode'] })}>
+                  <option value="free">Ð¡Ð²Ð¾Ð±Ð¾Ð´Ð½Ð°Ñ / Ð±ÐµÐ· Ñ€Ð°ÑÐ¿Ð¸ÑÐ°Ð½Ð¸Ñ</option>
+                  <option value="scheduled">ÐŸÐ¾ Ð´Ð°Ñ‚Ð°Ð¼</option>
+                </select>
+              </label>
+              {draft.registration.mode === 'scheduled' && <>
+                <label className="field">ÐžÑ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ
+                  <input type="date" value={draft.registration.opensAt ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, opensAt: (e.target.value || null) as CalendarEventData['registration']['opensAt'] })} />
+                </label>
+                <label className="field">Ð—Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ
+                  <input type="date" value={draft.registration.closesAt ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, closesAt: (e.target.value || null) as CalendarEventData['registration']['closesAt'] })} />
+                </label>
+              </>}
+            </div>
+            <label className="check-field"><input type="checkbox" checked={draft.registration.priorityOneAlerts} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, priorityOneAlerts: e.target.checked })} /> Ð£Ð²ÐµÐ´Ð¾Ð¼Ð»ÐµÐ½Ð¸Ñ Ð¿ÐµÑ€Ð²Ð¾Ð¹ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸</label>
+          </fieldset>
+
+          <fieldset className="form-section" disabled={readOnly}>
+            <legend>Ð¡Ð¼ÐµÐ½Ñ‹ Ð¸ ÑÐ²ÐµÑ‚Ð¾Ð²Ð¾Ðµ Ð¾ÐºÐ½Ð¾</legend>
+            <div className="form-grid two-columns">
+              <label className="field">Ð ÐµÐ·ÐµÑ€Ð² ÑÐ²ÐµÑ‚Ð¾Ð²Ð¾Ð³Ð¾ Ð¾ÐºÐ½Ð°, Ð¼Ð¸Ð½ÑƒÑ‚
+                <input type="number" min="0" max="120" value={draft.daylightBufferMinutes} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('daylightBufferMinutes', Number(e.target.value))} />
+              </label>
+            </div>
+            <div className="shift-list">
+              {draft.shifts.map((shift) => (
+                <div className="shift-row" key={shift.id}>
+                  <label className="field">ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ
+                    <input value={shift.name} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { name: e.target.value })} />
+                  </label>
+                  <label className="field">Ð¢Ð¸Ð¿
+                    <select value={shift.kind} onChange={(e: ChangeEvent<HTMLSelectElement>) => updateShift(shift.id, { kind: e.target.value as ShiftKind })}>
+                      <option value="day">Ð”Ð½ÐµÐ²Ð½Ð°Ñ</option>
+                      <option value="night">ÐÐ¾Ñ‡Ð½Ð°Ñ</option>
+                    </select>
+                  </label>
+                  <label className="field">ÐÐ°Ñ‡Ð°Ð»Ð¾
+                    <input type="time" value={shift.startsAt} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { startsAt: e.target.value })} />
                   </label>
                   <label className="field">ÐžÐºÐ¾Ð½Ñ‡Ð°Ð½Ð¸Ðµ
                     <input type="time" value={shift.endsAt} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { endsAt: e.target.value })} />

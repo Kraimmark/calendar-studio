@@ -1,4 +1,372 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éí÷~wN‹Z–‹­¦ëeŠw¬Õ¥µÁ½ÉĞÑåÁ”ìÕ‘¥Ñ¹ÑÉäô™É½´€œ¸½…Õ‘¥Ğœì)¥µÁ½ÉĞì5a}19I}eH°5%9}19I}eHô™É½´€œ¸½…±•¹‘…Èœì)¥µÁ½ÉĞÑåÁ”ì…±•¹‘…ÉÙ•¹Ğ°…±•¹‘…ÉÙ•¹Ñ…Ñ„°…±•¹‘…ÉM•ÑÑ¥¹Ìô™É½´€œ¸½ÑåÁ•Ìœì)¥µÁ½ÉĞìÙ…±¥‘…Ñ•Ù•¹Ğô™É½´€œ¸½Ù…±¥‘…Ñ¥½¸œì()•áÁ½ÉĞ½¹ÍĞA=IQ	1}=I5P€ô€…±•¹‘…ÈµÍÑÕ‘¥¼µ•áÁ½ÉĞœ…Ì½¹ÍĞì)•áÁ½ÉĞ½¹ÍĞA=IQ	1}=I5Q}YIM%=8€ô€Ä…Ì½¹ÍĞì()•áÁ½ÉĞ¥¹Ñ•É™…”A½ÉÑ…‰±•…±•¹‘…ÉMÑ…Ñ”ì(€…±•¹‘…Ée•…ÉÌè…±•¹‘…ÉM•ÑÑ¥¹Ímtì(€•Ù•¹ÑÌè…±•¹‘…ÉÙ•¹Ñmtì(€½É…¹¥é•ÉÌè¹•Ù•Émtì(€…Õ‘¥ĞèÕ‘¥Ñ¹ÑÉåmtì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”…±•¹‘…ÉMÑÕ‘¥½áÁ½ÉÑA…­…”•áÑ•¹‘ÌA½ÉÑ…‰±•…±•¹‘…ÉMÑ…Ñ”ì(€™½Éµ…ĞèÑåÁ•½˜A=IQ	1}=I5Pì(€™½Éµ…ÑY•ÉÍ¥½¸èÑåÁ•½˜A=IQ	1}=I5Q}YIM%=8ì(€•áÁ½ÉÑ•‘ĞèÍÑÉ¥¹œì(€¡•­ÍÕ´èÍÑÉ¥¹œì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”A½ÉÑ…‰¥±¥ÑåY…±¥‘…Ñ¥½¹I•ÍÕ±Ğì(€Ù…±¥è‰½½±•…¸ì(€•ÉÉ½ÉÌèÍÑÉ¥¹mtì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”A½ÉÑ…‰±•…±•¹‘…ÉMÑ½É”ì(€•áÁ½ÉÑA½ÉÑ…‰±•MÑ…Ñ” ¤èAÉ½µ¥Í”ñA½ÉÑ…‰±•…±•¹‘…ÉMÑ…Ñ”øì(€É•Á±…•A½ÉÑ…‰±•MÑ…Ñ”¡ÍÑ…Ñ”èA½ÉÑ…‰±•…±•¹‘…ÉMÑ…Ñ”¤èAÉ½µ¥Í”ñì‰…­ÕÁI•™•É•¹”èÍÑÉ¥¹œğ¹Õ±°ôøì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”…±•¹‘…ÉA½ÉÑ…‰¥±¥Ñäì(€•áÁ½ÉÑA…­…”¡•áÁ½ÉÑ•‘ĞüèÍÑÉ¥¹œ¤èAÉ½µ¥Í”ñ…±•¹‘…ÉMÑÕ‘¥½áÁ½ÉÑA…­…”øì(€Ù…±¥‘…Ñ•%µÁ½ÉĞ¡Ù…±Õ”èÕ¹­¹½İ¸¤èAÉ½µ¥Í”ñA½ÉÑ…‰¥±¥ÑåY…±¥‘…Ñ¥½¹I•ÍÕ±Ğøì(€¥µÁ½ÉÑA…­…”¡Ù…±Õ”èÕ¹­¹½İ¸¤èAÉ½µ¥Í”ñì‰…­ÕÁI•™•É•¹”èÍÑÉ¥¹œğ¹Õ±°ôøì)ô()ÑåÁ”)Í½¹Y…±Õ”€ô¹Õ±°ğ‰½½±•…¸ğ¹Õµ‰•ÈğÍÑÉ¥¹œğ)Í½¹Y…±Õ•mtğìm­•äèÍÑÉ¥¹tè)Í½¹Y…±Õ”ôì()™Õ¹Ñ¥½¸…¹½¹¥…±¥é”¡Ù…±Õ”è)Í½¹Y…±Õ”¤èÍÑÉ¥¹œì(€¥˜€¡Ù…±Õ”€ôôô¹Õ±°ñğÑåÁ•½˜Ù…±Õ”€„ôô€½‰©•Ğœ¤É•ÑÕÉ¸)M=8¹ÍÑÉ¥¹¥™ä¡Ù…±Õ”¤ì(€¥˜€¡ÉÉ…ä¹¥ÍÉÉ…ä¡Ù…±Õ”¤¤É•ÑÕÉ¸l‘íÙ…±Õ”¹µ…À¡…¹½¹¥…±¥é”¤¹©½¥¸ œ°œ¥õu€ì(€É•ÑÕÉ¸ì‘í=‰©•Ğ¹­•åÌ¡Ù…±Õ”¤¹Í½ÉĞ ¤¹µ…À ¡­•ä¤€ôø€‘í)M=8¹ÍÑÉ¥¹¥™ä¡­•ä¥ôè‘í…¹½¹¥…±¥é”¡Ù…±Õ•m­•åt„¥õ€¤¹©½¥¸ œ°œ¥õõ€ì)ô()™Õ¹Ñ¥½¸‰åÑ•ÍQ½!•à¡‰åÑ•ÌèÉÉ…å	Õ™™•È¤èÍÑÉ¥¹œì(€É•ÑÕÉ¸l¸¸¹¹•ÜU¥¹ĞáÉÉ…ä¡‰åÑ•Ì¥t¹µ…À ¡‰åÑ”¤€ôø‰åÑ”¹Ñ½MÑÉ¥¹œ ÄØ¤¹Á…‘MÑ…ÉĞ È°€œÀœ¤¤¹©½¥¸ œœ¤ì)ô()…Íå¹Œ™Õ¹Ñ¥½¸Í¡„ÈÔØ¡Ù…±Õ”èÍÑÉ¥¹œ¤èAÉ½µ¥Í”ñÍÑÉ¥¹œøì(€¥˜€ …±½‰…±Q¡¥Ì¹ÉåÁÑ¼ü¹ÍÕ‰Ñ±”¤Ñ¡É½Ü¹•ÜÉÉ½È M!´ÈÔØ]•‰ÉåÁÑ¼¥ÌÕ¹…Ù…¥±…‰±”¥¸Ñ¡¥ÌÉÕ¹Ñ¥µ”¸œ¤ì(€½¹ÍĞ‘¥•ÍĞ€ô…İ…¥Ğ±½‰…±Q¡¥Ì¹ÉåÁÑ¼¹ÍÕ‰Ñ±”¹‘¥•ÍĞ M!´ÈÔØœ°¹•ÜQ•áÑ¹½‘•È ¤¹•¹½‘”¡Ù…±Õ”¤¤ì(€É•ÑÕÉ¸Í¡„ÈÔØè‘í‰åÑ•ÍQ½!•à¡‘¥•ÍĞ¥õ€ì)ô()™Õ¹Ñ¥½¸İ¥Ñ¡½ÕÑ¡•­ÍÕ´¡Á­œè=µ¥Ğñ…±•¹‘…ÉMÑÕ‘¥½áÁ½ÉÑA…­…”°€¡•­ÍÕ´œø¤è)Í½¹Y…±Õ”ì(€É•ÑÕÉ¸Á­œ…ÌÕ¹­¹½İ¸…Ì)Í½¹Y…±Õ”ì)ô()•áÁ½ÉĞ…Íå¹Œ™Õ¹Ñ¥½¸…±Õ±…Ñ•A…­…•¡•­ÍÕ´¡Á­œè=µ¥Ğñ…±•¹‘…ÉMÑÕ‘¥½áÁ½ÉÑA…­…”°€¡•­ÍÕ´œø¤èAÉ½µ¥Í”ñÍÑÉ¥¹œøì(€É•ÑÕÉ¸Í¡„ÈÔØ¡…¹½¹¥…±¥é”¡İ¥Ñ¡½ÕÑ¡•­ÍÕ´¡Á­œ¤¤¤ì)ô()™Õ¹Ñ¥½¸¥ÍI•½É¡Ù…±Õ”èÕ¹­¹½İ¸¤èÙ…±Õ”¥ÌI•½ÉñÍÑÉ¥¹œ°Õ¹­¹½İ¸øì(€É•ÑÕÉ¸ÑåÁ•½˜Ù…±Õ”€ôôô€½‰©•Ğœ€˜˜Ù…±Õ”€„ôô¹Õ±°€˜˜€…ÉÉ…ä¹¥ÍÉÉ…ä¡Ù…±Õ”¤ì)ô()™Õ¹Ñ¥½¸¥Í9Õ±±…‰±•MÑÉ¥¹œ¡Ù…±Õ”èÕ¹­¹½İ¸¤è‰½½±•…¸ìÉ•ÑÕÉ¸Ù…±Õ”€ôôô¹Õ±°ñğÑåÁ•½˜Ù…±Õ”€ôôô€ÍÑÉ¥¹œœìô)™Õ¹Ñ¥½¸¥Í9Õ±±…‰±•%¹Ñ••È¡Ù…±Õ”èÕ¹­¹½İ¸¤è‰½½±•…¸ìÉ•ÑÕÉ¸Ù…±Õ”€ôôô¹Õ±°ñğ9Õµ‰•È¹¥Í%¹Ñ••È¡Ù…±Õ”¤ìô)™Õ¹Ñ¥½¸¥Í…±•¹‘…Ée•…È¡Ù…±Õ”èÕ¹­¹½İ¸¤èÙ…±Õ”¥Ì¹Õµ‰•ÈìÉ•ÑÕÉ¸9Õµ‰•È¹¥Í%¹Ñ••È¡Ù…±Õ”¤€˜˜9Õµ‰•È¡Ù…±Õ”¤€øô5%9}19I}eH€˜˜9Õµ‰•È¡Ù…±Õ”¤€ğô5a}19I}eHìô()½¹ÍÓ½ùŞÚ$z{-®éÜj×);
+import type { AuditEntry } from './audit';
+import { MAX_CALENDAR_YEAR, MIN_CALENDAR_YEAR } from './calendar';
+import type { CalendarEvent, CalendarEventData, CalendarSettings } from './types';
+import { validateEvent } from './validation';
+
+export const PORTABLE_FORMAT = 'calendar-studio-export' as const;
+export const PORTABLE_FORMAT_VERSION = 1 as const;
+
+export interface PortableCalendarState {
+  calendarYears: CalendarSettings[];
+  events: CalendarEvent[];
+  organizers: never[];
+  audit: AuditEntry[];
+}
+
+export interface CalendarStudioExportPackage extends PortableCalendarState {
+  format: typeof PORTABLE_FORMAT;
+  formatVersion: typeof PORTABLE_FORMAT_VERSION;
+  exportedAt: string;
+  checksum: string;
+}
+
+export interface PortabilityValidationResult {
+  valid: boolean;
+  errors: string[];
+}
+
+export interface PortableCalendarStore {
+  exportPortableState(): Promise<PortableCalendarState>;
+  replacePortableState(state: PortableCalendarState): Promise<{ backupReference: string | null }>;
+}
+
+export interface CalendarPortability {
+  exportPackage(exportedAt?: string): Promise<CalendarStudioExportPackage>;
+  validateImport(value: unknown): Promise<PortabilityValidationResult>;
+  importPackage(value: unknown): Promise<{ backupReference: string | null }>;
+}
+
+type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
+
+function canonicalize(value: JsonValue): string {
+  if (value === null || typeof value !== 'object') return JSON.stringify(value);
+  if (Array.isArray(value)) return `[${value.map(canonicalize).join(',')}]`;
+  return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${canonicalize(value[key]!)}`).join(',')}}`;
+}
+
+function bytesToHex(bytes: ArrayBuffer): string {
+  return [...new Uint8Array(bytes)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
+async function sha256(value: string): Promise<string> {
+  if (!globalThis.crypto?.subtle) throw new Error('SHA-256 WebCrypto is unavailable in this runtime.');
+  const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+  return `sha256:${bytesToHex(digest)}`;
+}
+
+function withoutChecksum(pkg: Omit<CalendarStudioExportPackage, 'checksum'>): JsonValue {
+  return pkg as unknown as JsonValue;
+}
+
+export async function calculatePackageChecksum(pkg: Omit<CalendarStudioExportPackage, 'checksum'>): Promise<string> {
+  return sha256(canonicalize(withoutChecksum(pkg)));
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isNullableString(value: unknown): boolean { return value === null || typeof value === 'string'; }
+function isNullableInteger(value: unknown): boolean { return value === null || Number.isInteger(value); }
+function isCalendarYear(value: unknown): value is number { return Number.isInteger(value) && Number(value) >= MIN_CALENDAR_YEAR && Number(value) <= MAX_CALENDAR_YEAR; }
+
+const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,9})?(?:Z|[+-]\d{2}:\d{2})$/;
+
+function parseTimestamp(value: string): number | null {
+  if (!ISO_TIMESTAMP_PATTERN.test(value)) return null;
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function validateTimestampField(value: string, label: string, errors: string[]): number | null {
+  const parsed = parseTimestamp(value);
+  if (parsed === null) errors.push(`${label} Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ ISO-8601 timestamp.`);
+  return parsed;
+}
+
+function validateNullableTimestampField(value: string | null, label: string, errors: string[]): number | null {
+  if (value === null) return null;
+  return validateTimestampField(value, label, errors);
+}
+
+function validatePairedNullableStrings(left: string | null, right: string | null, label: string, errors: string[]): void {
+  if ((left === null) !== (right === null)) errors.push(`${label} Ğ´Ğ¾Ğ»Ğ¶Ğ½Ñ‹ Ğ±Ñ‹Ñ‚ÑŒ Ğ»Ğ¸Ğ±Ğ¾ Ğ¾Ğ±Ğ° Ğ·Ğ°Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ñ‹, Ğ»Ğ¸Ğ±Ğ¾ Ğ¾Ğ±Ğ° null.`);
+}
+
+function isEventDataShape(value: unknown): value is CalendarEventData {
+  if (!isRecord(value) || !isRecord(value.registration) || !Array.isArray(value.shifts)) return false;
+  const stringFields = ['title','organizerName','kind','discipline','series','source','status','venue','venueScope','notes','stickerColor'] as const;
+  if (stringFields.some((field) => typeof value[field] !== 'string')) return false;
+  if (!['match','utm','build'].includes(String(value.kind)) || !['pistol','carbine','shotgun','airgun','multigun','other'].includes(String(value.discipline)) ||
+      !['regular','trf','allRussian','departmental','spbCup','other'].includes(String(value.series)) || !['manual','ekp'].includes(String(value.source)) ||
+      !['draft','tentative','confirmed'].includes(String(value.status)) || !['nevsky','spb','otherRegion','unspecified'].includes(String(value.venueScope))) return false;
+  const nullableStrings = ['competitionStatus','competitionRegion','competitionPhase','startDate','endDate','parentEventId','ekpLevel','coverPath'] as const;
+  if (nullableStrings.some((field) => !isNullableString(value[field]))) return false;
+  if (!isNullableInteger(value.competitionStageNumber) || !isNullableInteger(value.ekpStageNumber) || !isNullableInteger(value.plannedExerciseCount) || !isNullableInteger(value.plannedSquadCount)) return false;
+  if (typeof value.isPrimary !== 'boolean' || !Number.isInteger(value.daylightBufferMinutes)) return false;
+  const registration = value.registration;
+  if (!['free','scheduled'].includes(String(registration.mode)) || !isNullableString(registration.opensAt) || !isNullableString(registration.closesAt) || typeof registration.priorityOneAlerts !== 'boolean') return false;
+  return value.shifts.every((shift) => isRecord(shift) && typeof shift.id === 'string' && typeof shift.name === 'string' && (shift.kind === 'day' || shift.kind === 'night') && typeof shift.startsAt === 'string' && typeof shift.endsAt === 'string');
+}
+
+function validateEventShape(value: unknown, errors: string[], index: number): value is CalendarEvent {
+  if (!isRecord(value) || typeof value.id !== 'string' || !value.id || !isCalendarYear(value.calendarYear) || !Number.isInteger(value.revision) || Number(value.revision) < 1 ||
+      typeof value.createdAt !== 'string' || typeof value.createdBy !== 'string' || typeof value.updatedAt !== 'string' || typeof value.updatedBy !== 'string' || !isNullableString(value.archivedAt) || !isEventDataShape(value)) {
+    errors.push(`events[${index}] Ğ¸Ğ¼ĞµĞµÑ‚ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ ÑÑ‚Ñ€ÑƒĞºÑ‚ÑƒÑ€Ñƒ.`);
+    return false;
+  }
+  const event = value as unknown as CalendarEvent;
+  const issues = validateEvent(event, { year: event.calendarYear, eventId: event.id });
+  for (const issue of issues.filter((candidate) => candidate.severity === 'error')) errors.push(`events[${index}]: ${issue.message}`);
+  return true;
+}
+
+function validateSettingsShape(value: unknown, errors: string[], index: number): value is CalendarSettings {
+  if (!isRecord(value) || !isCalendarYear(value.year) || (value.mode !== 'planning' && value.mode !== 'approved') || !Number.isInteger(value.revision) || Number(value.revision) < 1 ||
+      !isNullableString(value.approvedAt) || !isNullableString(value.approvedBy) || !isNullableString(value.reopenedAt) || !isNullableString(value.reopenedBy)) {
+    errors.push(`calendarYears[${index}] Ğ¸Ğ¼ĞµĞµÑ‚ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ ÑÑ‚Ñ€ÑƒĞºÑ‚ÑƒÑ€Ñƒ.`);
+    return false;
+  }
+  return true;
+}
+
+function validateAuditShape(value: unknown, errors: string[], index: number): value is AuditEntry {
+  if (!isRecord(value) || typeof value.auditId !== 'string' || !value.auditId || typeof value.timestamp !== 'string' || typeof value.actor !== 'string' ||
+      (value.entityType !== 'event' && value.entityType !== 'calendar_settings') || typeof value.entityId !== 'string' ||
+      !['create','update','archive','restore','approve','reopen'].includes(String(value.action)) ||
+      !(value.baseRevision === null || Number.isInteger(value.baseRevision)) || !Number.isInteger(value.resultingRevision) || Number(value.resultingRevision) < 1 || typeof value.payloadSummary !== 'string') {
+    errors.push(`audit[${index}] Ğ¸Ğ¼ĞµĞµÑ‚ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ ÑÑ‚Ñ€ÑƒĞºÑ‚ÑƒÑ€Ñƒ.`);
+    return false;
+  }
+  return true;
+}
+
+function duplicateValues(values: readonly string[]): string[] {
+  const seen = new Set<string>();
+  const duplicates = new Set<string>();
+  for (const value of values) {
+    if (seen.has(value)) duplicates.add(value);
+    else seen.add(value);
+  }
+  return [...duplicates];
+}
+
+function validateAuditRevisionTransition(entry: AuditEntry, errors: string[], index: number): void {
+  if (entry.action === 'create') {
+    if (entry.baseRevision !== null || entry.resultingRevision !== 1) {
+      errors.push(`audit[${index}] create Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ¿ĞµÑ€ĞµÑ…Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ¸Ğ· baseRevision=null Ğ² resultingRevision=1.`);
+    }
+    return;
+  }
+
+  if (entry.baseRevision === null || entry.baseRevision < 1 || entry.resultingRevision !== entry.baseRevision + 1) {
+    errors.push(`audit[${index}] ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ Ğ¿ĞµÑ€ĞµÑ…Ğ¾Ğ´ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ ${String(entry.baseRevision)} -> ${entry.resultingRevision}; Ğ¾Ğ¶Ğ¸Ğ´Ğ°ĞµÑ‚ÑÑ Ñ€Ğ¾Ğ²Ğ½Ğ¾ +1.`);
+  }
+}
+
+
+function calendarSettingsModeFromAudit(entry: AuditEntry, errors: string[], index: number): CalendarSettings['mode'] | null {
+  const mode = entry.payloadSummary === 'mode:planning' ? 'planning' : entry.payloadSummary === 'mode:approved' ? 'approved' : null;
+  if (mode === null) {
+    errors.push(`audit[${index}] Ğ´Ğ»Ñ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾ĞµĞº ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ payloadSummary mode:planning Ğ¸Ğ»Ğ¸ mode:approved.`);
+    return null;
+  }
+  if (entry.action === 'approve' && mode !== 'approved') errors.push(`audit[${index}] approve Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ°Ñ‚ÑŒÑÑ Ñ€ĞµĞ¶Ğ¸Ğ¼Ğ¾Ğ¼ approved.`);
+  if (entry.action === 'reopen' && mode !== 'planning') errors.push(`audit[${index}] reopen Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ°Ñ‚ÑŒÑÑ Ñ€ĞµĞ¶Ğ¸Ğ¼Ğ¾Ğ¼ planning.`);
+  return mode;
+}
+
+function validateCalendarSettingsAuditConsistency(
+  settings: CalendarSettings,
+  entries: readonly { entry: AuditEntry; index: number; timestampMs: number | null }[],
+  errors: string[],
+): void {
+  const ordered = [...entries].sort((a, b) => a.entry.resultingRevision - b.entry.resultingRevision);
+  const modeByRevision = new Map<number, CalendarSettings['mode']>();
+
+  for (const item of ordered) {
+    const mode = calendarSettingsModeFromAudit(item.entry, errors, item.index);
+    if (mode !== null) modeByRevision.set(item.entry.resultingRevision, mode);
+
+    if (item.entry.action === 'approve') {
+      if (settings.approvedAt === null || settings.approvedBy === null) {
+        errors.push(`audit[${item.index}] ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ approve, Ğ½Ğ¾ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ¸ ${settings.year} Ğ½Ğµ ÑĞ¾Ñ…Ñ€Ğ°Ğ½ÑÑÑ‚ approval metadata.`);
+      } else {
+        const approvedAtMs = parseTimestamp(settings.approvedAt);
+        if (item.timestampMs !== null && approvedAtMs !== null && item.timestampMs > approvedAtMs) {
+          errors.push(`audit[${item.index}] approve Ğ½Ğ¾Ğ²ĞµĞµ canonical approvedAt Ğ´Ğ»Ñ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ ${settings.year}.`);
+        }
+        if (item.timestampMs !== null && approvedAtMs !== null && item.timestampMs === approvedAtMs && item.entry.actor !== settings.approvedBy) {
+          errors.push(`audit[${item.index}] approve actor Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚ Ñ canonical approvedBy Ğ´Ğ»Ñ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ ${settings.year}.`);
+        }
+      }
+    }
+
+    if (item.entry.action === 'reopen') {
+      if (settings.reopenedAt === null || settings.reopenedBy === null) {
+        errors.push(`audit[${item.index}] ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ reopen, Ğ½Ğ¾ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ¸ ${settings.year} Ğ½Ğµ ÑĞ¾Ñ…Ñ€Ğ°Ğ½ÑÑÑ‚ reopen metadata.`);
+      } else {
+        const reopenedAtMs = parseTimestamp(settings.reopenedAt);
+        if (item.timestampMs !== null && reopenedAtMs !== null && item.timestampMs > reopenedAtMs) {
+          errors.push(`audit[${item.index}] reopen Ğ½Ğ¾Ğ²ĞµĞµ canonical reopenedAt Ğ´Ğ»Ñ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ ${settings.year}.`);
+        }
+        if (item.timestampMs !== null && reopenedAtMs !== null && item.timestampMs === reopenedAtMs && item.entry.actor !== settings.reopenedBy) {
+          errors.push(`audit[${item.index}] reopen actor Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚ Ñ canonical reopenedBy Ğ´Ğ»Ñ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ ${settings.year}.`);
+        }
+      }
+    }
+  }
+
+  for (let index = 1; index < ordered.length; index += 1) {
+    const previous = ordered[index - 1]!;
+    const current = ordered[index]!;
+    if (current.entry.resultingRevision !== previous.entry.resultingRevision + 1) continue;
+    const previousMode = modeByRevision.get(previous.entry.resultingRevision);
+    const currentMode = modeByRevision.get(current.entry.resultingRevision);
+    if (!previousMode || !currentMode) continue;
+
+    const valid = current.entry.action === 'approve'
+      ? previousMode === 'planning' && currentMode === 'approved'
+      : current.entry.action === 'reopen'
+        ? previousMode === 'approved' && currentMode === 'planning'
+        : current.entry.action === 'update'
+          ? previousMode === currentMode
+          : true;
+    if (!valid) {
+      errors.push(`ĞÑƒĞ´Ğ¸Ñ‚ calendar_settings:${settings.year} ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ğ½ĞµĞ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ñ‹Ğ¹ Ğ¿ĞµÑ€ĞµÑ…Ğ¾Ğ´ ${previousMode} -> ${currentMode} Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸ĞµĞ¼ ${current.entry.action} Ğ½Ğ° Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ ${current.entry.resultingRevision}.`);
+    }
+  }
+
+  const currentEntry = ordered.find((item) => item.entry.resultingRevision === settings.revision);
+  if (currentEntry) {
+    const currentMode = modeByRevision.get(settings.revision);
+    if (currentMode && currentMode !== settings.mode) {
+      errors.push(`ĞÑƒĞ´Ğ¸Ñ‚ Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾ĞµĞº ${settings.year} Ğ·Ğ°ĞºĞ°Ğ½Ñ‡Ğ¸Ğ²Ğ°ĞµÑ‚ÑÑ Ñ€ĞµĞ¶Ğ¸Ğ¼Ğ¾Ğ¼ ${currentMode}, Ğ½Ğ¾ canonical mode=${settings.mode}.`);
+    }
+    if (currentEntry.entry.action === 'approve' && (currentEntry.entry.timestamp !== settings.approvedAt || currentEntry.entry.actor !== settings.approvedBy)) {
+      errors.push(`Ğ¢ĞµĞºÑƒÑ‰Ğ¸Ğ¹ approve audit Ğ½Ğ°ÑÑ‚Ñ€Ğ¾ĞµĞº ${settings.year} Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°Ñ‚ÑŒ Ñ canonical approvedAt/approvedBy.`);
+    }
+    if (currentEntry.entry.action === 'reopen' && (currentEntry.entry.timestamp !== settings.reopenedAt || currentEntry.entry.actor !== settings.reopenedBy)) {
+      errors.push(`Ğ¢ĞµĞºÑƒÑ‰Ğ¸Ğ¹ reopen audit Ğ½Ğ°ÑÑ‚Ñ€Ğ¾ĞµĞº ${settings.year} Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°Ñ‚ÑŒ Ñ canonical reopenedAt/reopenedBy.`);
+    }
+  }
+}
+
+export async function validatePortablePackage(value: unknown): Promise<PortabilityValidationResult> {
+  const errors: string[] = [];
+  if (!isRecord(value)) return { valid: false, errors: ['Ğ¤Ğ°Ğ¹Ğ» Ğ¸Ğ¼Ğ¿Ğ¾Ñ€Ñ‚Ğ° Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ JSON-Ğ¾Ğ±ÑŠĞµĞºÑ‚.'] };
+  if (value.format !== PORTABLE_FORMAT) errors.push(`ĞĞµĞ¸Ğ·Ğ²ĞµÑÑ‚Ğ½Ñ‹Ğ¹ Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ‚: Ğ¾Ğ¶Ğ¸Ğ´Ğ°Ğ»ÑÑ ${PORTABLE_FORMAT}.`);
+  if (value.formatVersion !== PORTABLE_FORMAT_VERSION) errors.push(`ĞĞµĞ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶Ğ¸Ğ²Ğ°ĞµĞ¼Ğ°Ñ Ğ²ĞµÑ€ÑĞ¸Ñ Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ‚Ğ°: ${String(value.formatVersion)}.`);
+  if (typeof value.exportedAt !== 'string' || !value.exportedAt) errors.push('ĞÑ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ exportedAt.');
+  if (typeof value.checksum !== 'string' || !value.checksum.startsWith('sha256:')) errors.push('ĞÑ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ°Ñ SHA-256 checksum.');
+  if (!Array.isArray(value.calendarYears)) errors.push('calendarYears Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ¾Ğ¼.');
+  if (!Array.isArray(value.events)) errors.push('events Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ¾Ğ¼.');
+  if (!Array.isArray(value.organizers)) errors.push('organizers Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ¾Ğ¼.');
+  if (!Array.isArray(value.audit)) errors.push('audit Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ¾Ğ¼.');
+  if (errors.length) return { valid: false, errors };
+
+  const calendarYears = value.calendarYears as unknown[];
+  const events = value.events as unknown[];
+  const organizers = value.organizers as unknown[];
+  const audit = value.audit as unknown[];
+  if (organizers.length !== 0) errors.push('Ğ¤Ğ¾Ñ€Ğ¼Ğ°Ñ‚ v1 Ğ¿Ğ¾ĞºĞ° Ğ½Ğµ Ğ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶Ğ¸Ğ²Ğ°ĞµÑ‚ Ğ¸Ğ¼Ğ¿Ğ¾Ñ€Ñ‚ ÑĞ¿Ñ€Ğ°Ğ²Ğ¾Ñ‡Ğ½Ğ¸ĞºĞ° Ğ¾Ñ€Ğ³Ğ°Ğ½Ğ¸Ğ·Ğ°Ñ‚Ğ¾Ñ€Ğ¾Ğ²; Ğ¾Ğ¶Ğ¸Ğ´Ğ°ĞµÑ‚ÑÑ Ğ¿ÑƒÑÑ‚Ğ¾Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ² organizers.');
+
+  const exportedAtMs = typeof value.exportedAt === 'string' ? validateTimestampField(value.exportedAt, 'exportedAt', errors) : null;
+
+  const validSettings = calendarYears.map((item, index) => validateSettingsShape(item, errors, index));
+  const validEvents = events.map((item, index) => validateEventShape(item, errors, index));
+  const validAudit = audit.map((item, index) => validateAuditShape(item, errors, index));
+  if (validSettings.every(Boolean)) {
+    const duplicates = duplicateValues((calendarYears as CalendarSettings[]).map((item) => String(item.year)));
+    if (duplicates.length) errors.push(`ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€ÑÑÑ‰Ğ¸ĞµÑÑ Ğ³Ğ¾Ğ´Ñ‹ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ: ${duplicates.join(', ')}.`);
+  }
+  if (validEvents.every(Boolean)) {
+    const typedEvents = events as CalendarEvent[];
+    const duplicates = duplicateValues(typedEvents.map((item) => item.id));
+    if (duplicates.length) errors.push(`ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€ÑÑÑ‰Ğ¸ĞµÑÑ ID Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğ¹: ${duplicates.join(', ')}.`);
+    const ids = new Set(typedEvents.map((item) => item.id));
+    for (const event of typedEvents) if (event.parentEventId && !ids.has(event.parentEventId)) errors.push(`ĞœĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğµ ${event.id} ÑÑÑ‹Ğ»Ğ°ĞµÑ‚ÑÑ Ğ½Ğ° Ğ¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒÑÑ‰ĞµĞ³Ğ¾ Ñ€Ğ¾Ğ´Ğ¸Ñ‚ĞµĞ»Ñ ${event.parentEventId}.`);
+    for (const event of typedEvents) {
+      const issues = validateEvent(event, { year: event.calendarYear, eventId: event.id, events: typedEvents });
+      if (issues.some((issue) => issue.code === 'parent_cycle' || issue.code === 'parent_self_cycle')) errors.push(`ĞœĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğµ ${event.id}: Ñ†Ğ¸ĞºĞ»Ğ¸Ñ‡ĞµÑĞºĞ°Ñ Ñ€Ğ¾Ğ´Ğ¸Ñ‚ĞµĞ»ÑŒÑĞºĞ°Ñ ÑĞ²ÑĞ·ÑŒ.`);
+    }
+    for (const [index, event] of typedEvents.entries()) {
+      const createdAtMs = validateTimestampField(event.createdAt, `events[${index}].createdAt`, errors);
+      const updatedAtMs = validateTimestampField(event.updatedAt, `events[${index}].updatedAt`, errors);
+      const archivedAtMs = validateNullableTimestampField(event.archivedAt, `events[${index}].archivedAt`, errors);
+      if (createdAtMs !== null && updatedAtMs !== null && createdAtMs > updatedAtMs) errors.push(`events[${index}] ÑĞ¾Ğ·Ğ´Ğ°Ğ½ Ğ¿Ğ¾Ğ·Ğ¶Ğµ ÑĞ²Ğ¾ĞµĞ³Ğ¾ Ğ¿Ğ¾ÑĞ»ĞµĞ´Ğ½ĞµĞ³Ğ¾ Ğ¸Ğ·Ğ¼ĞµĞ½ĞµĞ½Ğ¸Ñ.`);
+      if (archivedAtMs !== null && updatedAtMs !== null && archivedAtMs > updatedAtMs) errors.push(`events[${index}].archivedAt Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ updatedAt.`);
+      if (exportedAtMs !== null && updatedAtMs !== null && updatedAtMs > exportedAtMs) errors.push(`events[${index}].updatedAt Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ exportedAt.`);
+      if (exportedAtMs !== null && archivedAtMs !== null && archivedAtMs > exportedAtMs) errors.push(`events[${index}].archivedAt Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ exportedAt.`);
+    }
+  }
+  if (validSettings.every(Boolean)) {
+    for (const [index, settings] of (calendarYears as CalendarSettings[]).entries()) {
+      validatePairedNullableStrings(settings.approvedAt, settings.approvedBy, `calendarYears[${index}] approvedAt/approvedBy`, errors);
+      validatePairedNullableStrings(settings.reopenedAt, settings.reopenedBy, `calendarYears[${index}] reopenedAt/reopenedBy`, errors);
+      const approvedAtMs = validateNullableTimestampField(settings.approvedAt, `calendarYears[${index}].approvedAt`, errors);
+      const reopenedAtMs = validateNullableTimestampField(settings.reopenedAt, `calendarYears[${index}].reopenedAt`, errors);
+      if (settings.mode === 'approved' && settings.approvedAt === null) errors.push(`calendarYears[${index}] Ğ² Ñ€ĞµĞ¶Ğ¸Ğ¼Ğµ approved Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ approvedAt/approvedBy.`);
+      if (settings.reopenedAt !== null && settings.approvedAt === null) errors.push(`calendarYears[${index}] Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ reopen Ğ±ĞµĞ· Ğ¿Ñ€ĞµĞ´Ñ‹Ğ´ÑƒÑ‰ĞµĞ³Ğ¾ approve.`);
+      if (settings.mode === 'planning' && settings.approvedAt !== null && settings.reopenedAt === null) errors.push(`calendarYears[${index}] Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ² planning Ğ¿Ğ¾ÑĞ»Ğµ approve Ğ±ĞµĞ· reopen metadata.`);
+      if (approvedAtMs !== null && reopenedAtMs !== null && settings.mode === 'approved' && approvedAtMs < reopenedAtMs) errors.push(`calendarYears[${index}] Ğ² Ñ€ĞµĞ¶Ğ¸Ğ¼Ğµ approved Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ¸Ğ¼ĞµÑ‚ÑŒ Ğ¿Ğ¾ÑĞ»ĞµĞ´Ğ½ĞµĞµ approve Ğ½Ğµ Ñ€Ğ°Ğ½ÑŒÑˆĞµ reopen.`);
+      if (approvedAtMs !== null && reopenedAtMs !== null && settings.mode === 'planning' && reopenedAtMs < approvedAtMs) errors.push(`calendarYears[${index}] Ğ² Ñ€ĞµĞ¶Ğ¸Ğ¼Ğµ planning Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ¸Ğ¼ĞµÑ‚ÑŒ Ğ¿Ğ¾ÑĞ»ĞµĞ´Ğ½ĞµĞµ reopen Ğ½Ğµ Ñ€Ğ°Ğ½ÑŒÑˆĞµ approve.`);
+      if (exportedAtMs !== null && approvedAtMs !== null && approvedAtMs > exportedAtMs) errors.push(`calendarYears[${index}].approvedAt Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ exportedAt.`);
+      if (exportedAtMs !== null && reopenedAtMs !== null && reopenedAtMs > exportedAtMs) errors.push(`calendarYears[${index}].reopenedAt Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ exportedAt.`);
+    }
+  }
+  if (validAudit.every(Boolean)) {
+    const typedAudit = audit as AuditEntry[];
+    const duplicates = duplicateValues(typedAudit.map((item) => item.auditId));
+    if (duplicates.length) errors.push(`ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€ÑÑÑ‰Ğ¸ĞµÑÑ auditId: ${duplicates.join(', ')}.`);
+    for (const [index, entry] of typedAudit.entries()) validateAuditRevisionTransition(entry, errors, index);
+
+    const duplicateEntityRevisions = duplicateValues(typedAudit.map((entry) => `${entry.entityType}:${entry.entityId}:${entry.resultingRevision}`));
+    if (duplicateEntityRevisions.length) errors.push(`ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€ÑÑÑ‰Ğ¸ĞµÑÑ Ñ€ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ¸Ñ€ÑƒÑÑ‰Ğ¸Ğµ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ Ğ² Ğ°ÑƒĞ´Ğ¸Ñ‚Ğµ: ${duplicateEntityRevisions.join(', ')}.`);
+
+    const timestampedAudit = typedAudit.map((entry, index) => ({ entry, index, timestampMs: validateTimestampField(entry.timestamp, `audit[${index}].timestamp`, errors) }));
+    for (const item of timestampedAudit) {
+      if (exportedAtMs !== null && item.timestampMs !== null && item.timestampMs > exportedAtMs) errors.push(`audit[${item.index}].timestamp Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¿Ğ¾Ğ·Ğ¶Ğµ exportedAt.`);
+    }
+    const auditByEntity = new Map<string, typeof timestampedAudit>();
+    for (const item of timestampedAudit) {
+      const key = `${item.entry.entityType}:${item.entry.entityId}`;
+      const bucket = auditByEntity.get(key) ?? [];
+      bucket.push(item);
+      auditByEntity.set(key, bucket);
+    }
+    for (const [key, entries] of auditByEntity) {
+      const ordered = [...entries].sort((a, b) => a.entry.resultingRevision - b.entry.resultingRevision);
+      for (let index = 1; index < ordered.length; index += 1) {
+        const previous = ordered[index - 1]!;
+        const current = ordered[index]!;
+        if (previous.timestampMs !== null && current.timestampMs !== null && previous.timestampMs > current.timestampMs) {
+          errors.push(`ĞÑƒĞ´Ğ¸Ñ‚ ${key} Ğ½Ğ°Ñ€ÑƒÑˆĞ°ĞµÑ‚ Ğ²Ñ€ĞµĞ¼ĞµĞ½Ğ½Ğ¾Ğ¹ Ğ¿Ğ¾Ñ€ÑĞ´Ğ¾Ğº Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¹ ${previous.entry.resultingRevision} -> ${current.entry.resultingRevision}.`);
+        }
+      }
+    }
+
+    if (validEvents.every(Boolean) && validSettings.every(Boolean)) {
+      const eventById = new Map((events as CalendarEvent[]).map((event) => [event.id, event]));
+      const settingsByYear = new Map((calendarYears as CalendarSettings[]).map((settings) => [String(settings.year), settings]));
+      for (const [index, entry] of typedAudit.entries()) {
+        if (entry.entityType === 'event') {
+          const event = eventById.get(entry.entityId);
+          if (!event) {
+            errors.push(`audit[${index}] ÑÑÑ‹Ğ»Ğ°ĞµÑ‚ÑÑ Ğ½Ğ° Ğ¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒÑÑ‰ĞµĞµ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğµ ${entry.entityId}.`);
+            continue;
+          }
+          if (!['create', 'update', 'archive', 'restore'].includes(entry.action)) {
+            errors.push(`audit[${index}] ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ ${entry.action}, Ğ½ĞµÑĞ¾Ğ²Ğ¼ĞµÑÑ‚Ğ¸Ğ¼Ğ¾Ğµ Ñ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸ĞµĞ¼.`);
+          }
+          if (entry.resultingRevision > event.revision) {
+            errors.push(`audit[${index}] ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ñ ${entry.resultingRevision} Ğ½Ğ¾Ğ²ĞµĞµ Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ñ ${event.revision}.`);
+          }
+          if (entry.resultingRevision === event.revision && parseTimestamp(entry.timestamp) !== null && parseTimestamp(event.updatedAt) !== null && parseTimestamp(entry.timestamp) !== parseTimestamp(event.updatedAt)) {
+            errors.push(`audit[${index}] Ğ´Ğ»Ñ Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ Ñ€ĞµĞ²Ğ¸Ğ·Ğ¸Ğ¸ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ñ ${event.id} Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°Ñ‚ÑŒ Ğ¿Ğ¾ timestamp Ñ updatedAt.`);
+          }
+        } else {
+          const settings = settingsByYear.get(entry.entityId);
           if (!settings) {
             errors.push(`audit[${index}] ÑÑÑ‹Ğ»Ğ°ĞµÑ‚ÑÑ Ğ½Ğ° Ğ¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒÑÑ‰Ğ¸Ğµ Ğ½Ğ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ¸ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ ${entry.entityId}.`);
             continue;

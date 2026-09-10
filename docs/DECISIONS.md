@@ -1,4 +1,100 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíç5N‹Z–‹­¦ëeŠw¬ÔŒ•¥Í¥½¹Ì((ŒŒ´ÀÀÄƒŠPMÑ…¹‘…±½¹”ÉÕ¹Ñ¥µ”)…±•¹‘…ÈMÑÕ‘¥¼¥Ì„Í•Á…É…Ñ”…ÁÁ±¥…Ñ¥½¸…¹É•Á½Í¥Ñ½Éä¸9¼5Q ¼½=L!Õˆ°Á…¥É¥¹œ°ÉÕ¹Ñ¥µ”¥¹Ñ•É…Ñ¥½¸½ÈÍ¡…É•‘…Ñ„™½±‘•ÉÌ¸((ŒŒ´ÀÀÈƒŠPMÑ½É…”‰½Õ¹‘…Éä)ME1¥Ñ”¥Ì±½…°…¹½¹¥…°ÍÑ½É…”¸U$½µÁ½¹•¹ÑÌ‘¼¹½Ğ…±°ME1¥Ñ”‘¥É•Ñ±äìÁ•ÉÍ¥ÍÑ•¹”¥Ì…•ÍÍ•Ñ¡É½Õ É•Á½Í¥Ñ½Éä½…ÁÁ±¥…Ñ¥½¸‰½Õ¹‘…É¥•Ì¸((ŒŒ´ÀÀÌƒŠPQ¡•µ”ÍåÍÑ•´)±°U$½±½ÕÉÌ…É”Í•µ…¹Ñ¥ŒMLÑ½­•¹Ì¸	½Ñ ±¥¡Ğ…¹‘…É¬Ñ¡•µ•Ì…É”™¥ÉÍĞµ±…ÍÌì±¥¡ĞÑ¡•µ”‘½•Ì¹½ĞÉ•ÕÍ”‘…É¬¹•ÍÑ•ÍÕÉ™…•Ì¸((ŒŒ´ÀÀĞƒŠP…±•¹‘…Èµå•…È½İ¹•ÉÍ¡¥À™½ÈÕ¹‘…Ñ••Ù•¹ÑÌ)¸•Ù•¹Ğ¡…Ì…¸¥¹Ñ•É¹…°…±•¹‘…Ée•…É€½İ¹•ÉÍ¡¥ÀÙ…±Õ”¥¸…‘‘¥Ñ¥½¸Ñ¼¹Õ±±…‰±”ÍÑ…ÉÑ…Ñ•€½•¹‘…Ñ•€¸Q¡¥Ì¥ÌÉ•ÅÕ¥É•‰•…ÕÍ”Ñ¡”ÁÉ½‘ÕĞ¡…Ì„Á•Èµå•…ÈÕ¹‘…Ñ•ÅÕ•Õ”…¹Ñ¡”É•Á½Í¥Ñ½Éä½¹ÑÉ…Ğ¥Ì±¥ÍÑÙ•¹ÑÌ¡å•…È°€¸¸¸¥€ì…¸Õ¹‘…Ñ••Ù•¹Ğ½Ñ¡•Éİ¥Í”…¹¹½Ğ‰”…ÍÍ¥¹•Ñ¼…¹äå•…È¸…±•¹‘…Ée•…É€¥ÌÁ•ÉÍ¥ÍÑ•¹”½‘½µ…¥¸‰½½­­••Á¥¹œ°¹½Ğ„É•Á±…•µ•¹Ğ™½È•Ù•¹Ğ‘…Ñ•Ì¸…Ñ••Ù•¹ÑÌ…É”ÍÑ¥±°Ù…±¥‘…Ñ•Í¼Ñ¡•¥È•Ù•¹Ğ‘…Ñ•Ì‰•±½¹œÑ¼Ñ¡”Í•±•Ñ•…±•¹‘…Èå•…È¸((ŒŒ´ÀÀÔƒŠP¥ÉÍĞ½É…¹¥é•ÈÍ±¥”)I•±•…Í”€Ä¸ÀÍÑ…ÉÑÌİ¥Ñ „Ñ•áĞ½É…¹¥é•É9…µ•€™¥•±İ¡¥±”­••Á¥¹œ„‘½Õµ•¹Ñ•µ¥É…Ñ¥½¸Á…Ñ Ñ¼Ñ¡”Ù•ÉÍ¥½¹•½É…¹¥é•È‘¥É•Ñ½Éä‘•ÍÉ¥‰•‰ä5MQI}MA¸á¥ÍÑ¥¹œµ¥É…Ñ¥½¹Ì…É”¹•Ù•È•‘¥Ñ•É•ÑÉ½…Ñ¥Ù•±äì½É…¹¥é•ÈÍÕÁÁ½ÉĞ¥Ì¥¹ÑÉ½‘Õ•‰äµ¥É…Ñ¥½¸€ÀÀÀÈ¸((ŒŒ´ÀÀØƒŠPÑ½µ¥ŒME1¥Ñ”İÉ¥Ñ•Ì±¥Ù”½¸Ñ¡”IÕÍĞÍ¥‘”)Q¡”ÁÉ½‘ÕÑ¥½¸É•Á½Í¥Ñ½Éä‘½•Ì¹½Ğ½µÁ½Í”ÑÉ…¹Í…Ñ¥½¹ÌÑ¡É½Õ É•Á•…Ñ•)…Ù…MÉ¥ÁĞ…±±ÌÑ¼Ñ…ÕÉ¤µ…ÁÁÌ½Á±Õ¥¸µÍÅ±€¸%ÑÌÁÕ‰±¥Œ)…Ù…MÉ¥ÁĞA$•áÁ½Í•Ì¥¹‘•Á•¹‘•¹Ğ•á•ÕÑ”½Í•±•Ñ€½Á•É…Ñ¥½¹Ì‰ÕĞ¹¼ÑÉ…¹Í…Ñ¥½¸¡…¹‘±”°Í¼…¸•Ù•¹ĞµÕÑ…Ñ¥½¸…¹¥ÑÌ…Õ‘¥Ğ•¹ÑÉä…¹¹½Ğ‰”ÁÉ½Ù•¸Ñ¼Í¡…É”½¹”Á½½±•½¹¹•Ñ¥½¸¸…±•¹‘…ÈMÑÕ‘¥¼Ñ¡•É•™½É”½İ¹ÌME1¥Ñ”Ñ¡É½Õ „IÕÍĞÉÕÍÅ±¥Ñ•€½¹¹•Ñ¥½¸‰•¡¥¹Q…ÕÉ¤½µµ…¹‘Ì¸Ù•ÉäµÕÑ…Ñ¥½¸ÕÍ•Ì½¹”%55%Q€ME1¥Ñ”ÑÉ…¹Í…Ñ¥½¸Ñ¡…ĞİÉ¥Ñ•ÌÑ¡”•¹Ñ¥ÑäÍÑ…Ñ”…¹¥ÑÌ…Õ‘¥Ğ•¹ÑÉäÑ½•Ñ¡•È¸I•…ĞÍÑ¥±°‘•Á•¹‘Ì½¹±ä½¸…±•¹‘…ÉI•Á½Í¥Ñ½Éå€ìÑ¡”Q…ÕÉ¤…‘…ÁÑ•È¥Ì…¸¥¹™É…ÍÑÉÕÑÕÉ”‘•Ñ…¥°¸Q¡”…ÁÀµ±½…°‘…Ñ…‰…Í”Á…Ñ ¥Ì½¹±äÑ¡”‰½½ÑÍÑÉ…À½™…±±‰…¬±½…Ñ¥½¸ìÁ•Éµ…¹•¹Ğİ½É­ÍÁ…”‰•¡…Ù¥½È¥Ì‘•™¥¹•¥¸´ÀÄÄ¸(ŒŒ´ÀÀÜƒŠP…±•¹‘…Èµ½Ù•ÌÁÉ•Í•ÉÙ”¥¹Ñ•¹Ğ°¹•Ù•ÈÍ¥±•¹Ñ±ä±¥À)É…œµ…¹µ‘É½ÀÁÉ•Í•ÉÙ•ÌÑ¡”•á¥ÍÑ¥¹œ•Ù•¹Ğ‘ÕÉ…Ñ¥½¸¸5½Ù¥¹œ…¸Õ¹‘…Ñ••Ù•¹ĞÑ¼„‘…äÉ•…Ñ•Ì„½¹”µ‘…ä•Ù•¹Ğ¸5½Ù¥¹œ‰…¬Ñ¼Ñ¡”Õ¹‘…Ñ•ÅÕ•Õ”¥¹Ñ•¹Ñ¥½¹…±±ä±•…ÉÌ‰½Ñ ‘…Ñ•Ì¸%˜ÁÉ•Í•ÉÙ¥¹œ‘ÕÉ…Ñ¥½¸İ½Õ±É½ÍÌÑ¡”½İ¹¥¹œ…±•¹‘…Èµå•…È‰½Õ¹‘…Éä°Ñ¡”µ½Ù”¥ÌÉ•©•Ñ•İ¥Ñ …¸•áÁ±¥¥Ğµ•ÍÍ…”É…Ñ¡•ÈÑ¡…¸Í¥±•¹Ñ±äÑÉÕ¹…Ñ¥¹œ‘…Ñ•Ì¸((ŒŒ´ÀÀàƒŠP=É‘¥¹…ÉäÍÁ…¥¹œ¥Ì•Ù…±Õ…Ñ•¥¸…¥ÉÕ¸…¹¹½¸µ…¥ÉÕ¸ÍÑÉ•…µÌ)Q¡”½É‘¥¹…ÉäÑİ¼µİ••¬İ…É¹¥¹œ‘•±¥‰•É…Ñ•±ä¥¹½É•Ìµ¥á•…¥ÉÕ¸½™¥É•…É´Á…¥ÉÌ¸Q¼ÁÉ•Ù•¹Ğ…¸¥¹Ñ•ÉÙ•¹¥¹œ…¥ÉÕ¸•Ù•¹Ğ™É½´¡¥‘¥¹œ„™¥É•…É´µÑ¼µ™¥É•…É´½¹™±¥Ğ€¡…¹Ù¥”Ù•ÉÍ„¤°Ñ¡”ÉÕ±”¥Ì•Ù…±Õ…Ñ•¥¹‘•Á•¹‘•¹Ñ±ä™½È…¥ÉÕ¸•Ù•¹ÑÌ…¹…±°¹½¸µ…¥ÉÕ¸µ…Ñ •Ù•¹ÑÌ¸QI…¹…±°µIÕÍÍ¥…¸ÉÕ±•ÌÉ•µ…¥¸Í•Á…É…Ñ”¸((ŒŒ´ÀÀäƒŠP…å±¥¡Ğ¥Ì±½…°°‘•Ñ•Éµ¥¹¥ÍÑ¥Œ…¹‘…äµ½™™Í•Ğ…İ…É”)I•±•…Í”€Ä»}üÖÚ$z{-®éÜj×anges.
+# Decisions
+
+## DEC-001 â€” Standalone runtime
+Calendar Studio is a separate application and repository. No MATCH//OS Hub, pairing, runtime integration or shared data folders.
+
+## DEC-002 â€” Storage boundary
+SQLite is local canonical storage. UI components do not call SQLite directly; persistence is accessed through repository/application boundaries.
+
+## DEC-003 â€” Theme system
+All UI colours are semantic CSS tokens. Both light and dark themes are first-class; light theme does not reuse dark nested surfaces.
+
+## DEC-004 â€” Calendar-year ownership for undated events
+An event has an internal `calendarYear` ownership value in addition to nullable `startDate`/`endDate`. This is required because the product has a per-year undated queue and the repository contract is `listEvents(year, ...)`; an undated event otherwise cannot be assigned to any year. `calendarYear` is persistence/domain bookkeeping, not a replacement for event dates. Dated events are still validated so their event dates belong to the selected calendar year.
+
+## DEC-005 â€” First organizer slice
+Release 1.0 starts with a text `organizerName` field while keeping a documented migration path to the versioned organizer directory described by MASTER_SPEC. Existing migrations are never edited retroactively; organizer support is introduced by migration 0002.
+
+## DEC-006 â€” Atomic SQLite writes live on the Rust side
+The production repository does not compose transactions through repeated JavaScript calls to `@tauri-apps/plugin-sql`. Its public JavaScript API exposes independent `execute/select` operations but no transaction handle, so an event mutation and its audit entry cannot be proven to share one pooled connection. Calendar Studio therefore owns SQLite through a Rust `rusqlite` connection behind Tauri commands. Every mutation uses one `IMMEDIATE` SQLite transaction that writes the entity state and its audit entry together. React still depends only on `CalendarRepository`; the Tauri adapter is an infrastructure detail. The app-local database path is only the bootstrap/fallback location; permanent workspace behavior is defined in DEC-011.
+## DEC-007 â€” Calendar moves preserve intent, never silently clip
+Drag-and-drop preserves the existing event duration. Moving an undated event to a day creates a one-day event. Moving back to the undated queue intentionally clears both dates. If preserving duration would cross the owning calendar-year boundary, the move is rejected with an explicit message rather than silently truncating dates.
+
+## DEC-008 â€” Ordinary spacing is evaluated in airgun and non-airgun streams
+The ordinary two-week warning deliberately ignores mixed airgun/firearm pairs. To prevent an intervening airgun event from hiding a firearm-to-firearm conflict (and vice versa), the rule is evaluated independently for airgun events and all non-airgun match events. TRF and all-Russian rules remain separate.
+
+## DEC-009 â€” Daylight is local, deterministic and day-offset aware
+Release 1.0 daylight calculations are local for Saint Petersburg (UTC+3), with no internet dependency. Solar clock values preserve an explicit day offset because civil dusk during white-night dates can occur after local midnight. Night-shift validation checks both the night beginning on the event date and, for early-morning shifts, the safe window that began on the previous date.
+## DEC-010 â€” Portability v1 restores canonical state, it does not replay edits
+The v1 JSON package carries calendar settings, complete events (including IDs/revisions/soft-archive state/shifts) and append-only audit entries plus a deterministic SHA-256 checksum. Import is validated before storage mutation. Production import creates a SQLite backup first, then replaces canonical state inside one immediate transaction. Imported entities and audit rows are inserted as canonical historical state rather than replayed through CRUD methods, because replay would manufacture new IDs/revisions/audit and violate the backup/restore contract. The `organizers` array is present but must be empty in v1 while the product uses text `organizerName`.
+
+
+## DEC-011 â€” Workspace selection preserves data and fails visibly
+The app-local SQLite file is a bootstrap/fallback location, not the permanent workspace contract. The user can select an existing local directory for Calendar Studio. If the target does not yet contain `calendar.db`, the active database is cloned there with SQLite `VACUUM INTO` before the connection is switched. If a saved workspace is unavailable on a later startup, Calendar Studio does not silently recreate an empty database at that path: it opens the bootstrap database and exposes an explicit warning. Workspace selection is an infrastructure concern behind `WorkspaceManager`; React does not gain direct filesystem access.
+
+## DEC-012 â€” Minimal archive is enough for 1.0 restore semantics
+Release 1.0 must expose soft restore because MASTER_SPEC requires archived events to be restorable. The dedicated rich archive/search screen remains a post-1.0 enhancement. Until then, a compact archived-events panel in the calendar sidebar exposes restore with the current optimistic revision while preserving all audit history.
+
+## DEC-013 â€” All-Russian build-overlap warning is collision-based
+The MASTER_SPEC warning about a build zone before an all-Russian event is interpreted conservatively. A dated `build` record merely existing inside the 14-day preparation window is not itself a warning. `all_russian_build_overlap` is emitted only when that build range intersects another active dated calendar record; the warning links the build, conflicting record and target all-Russian event. This avoids inventing a blanket prohibition on planned preparation work.
+
+## DEC-014 â€” Calendar parity restores product behavior, not legacy taxonomy
+The explicitly approved parity pass uses the first annual calendar editor and the MATCH//OS calendar as product references, while `MASTER_SPEC.md` remains the architectural boundary. Useful planning behavior may be restored when it improves the standalone calendar without introducing excluded MATCH//OS runtime functions. Semantic layers are projections over canonical `CalendarEvent` fields and are independent visibility gates: source (`manual`, EKP geography) is combined with optional semantics such as TRF, all-Russian, departmental, airgun, UTM and build. This avoids reintroducing legacy `eventClass`, title-based inference or a second persistence model. A dedicated Â«Ğ’ĞµÑ‡Ğ½Ğ¾ Ğ¶Ğ¸Ğ²Ñ‹ĞµÂ» layer must wait for an explicit semantic field/tag instead of guessing from event titles.
+
+## DEC-015 â€” Annual overview is a projection, never a second calendar state
+The optional 12-month overview is built from the same year-scoped `CalendarEvent` collection, semantic layer/discipline filters and warning engine as the detailed month view. It may aggregate starts, primary records and warning dates for navigation, but it owns no persistence, duplicated Event state or alternate warning rules. Editing actions continue through the existing repository methods and optimistic revision checks; switching views cannot change canonical data.
+
+## DEC-016 â€” Undated library is a query projection over Events
+Search, sorting and empty-state behavior for the Â«Ğ‘ĞµĞ· Ğ´Ğ°Ñ‚Ñ‹Â» library operate only on the already-loaded canonical Event collection. The library does not own a separate queue table or duplicate event records. Dragging an item to the calendar or returning a dated event to the queue continues through the existing repository update path and optimistic revision contract.
+
+## DEC-017 â€” Risk panel is a projection over canonical warning results
+The Â«ĞĞ°Ñ€ÑƒÑˆĞµĞ½Ğ¸Ñ Ğ¸ Ñ€Ğ¸ÑĞºĞ¸Â» panel may group, count and link the output of `calculateWarnings`, but it does not evaluate calendar rules itself and owns no persistence. Rule labels/order are presentation metadata only. Event/date lists are deduplicated for navigation without changing warning payloads. This keeps the domain warning engine as the single source of truth and prevents React from drifting into a second business-rule implementation.
+
+## DEC-018 â€” Archive search is a projection over soft-archived Events
+The richer archive view does not introduce an archive table, deleted copy or alternate restore model. Search and sorting operate over already-loaded Events whose `archivedAt` is non-null. Restore remains the existing optimistic-revision repository mutation, so stable IDs, revision history and append-only audit are preserved.
+
+
+## DEC-019 â€” Existing Build Station is the Windows release gate
+
+**Status:** accepted (2026-09-04)
+
+Calendar Studio must use the existing `KRAIMMARK-BUILD-01` Windows x64 Build Station for trusted Windows release verification instead of creating or provisioning a second desktop build environment.
+
+The repository owns only its routing and project-specific build script. The workflow targets the established labels `self-hosted`, `Windows`, `X64`, `build-station`, `windows-desktop`, `msvc`, `tauri`, then runs tests, lint, production frontend build, rustfmt, clippy and a Tauri NSIS build. Successful executable/installer output is copied to `C:\BuildStation\artifacts\calendar-studio\<timestamp>\` and refreshed in `...\latest\` only after every verification step has passed.
+
+This does not grant repository access to the runner by itself. Runner routing remains an external repository/organization configuration gate. Untrusted public fork/PR code must not be executed on the home self-hosted runner.
+
+
+## DEC-020 â€” Dangerous-action confirmation authorizes an exact state
+
+**Status:** accepted (2026-09-04)
+
+A confirmation checkbox must not remain valid after the state it authorizes has materially changed. For an existing EKP-sourced Event, any subsequent draft edit invalidates the manual-edit confirmation. For daylight overrides, confirmation is tied to the exact calculated warning set (affected shift, date and warning statement), so changing dates, shift timing/type/name, or the daylight buffer re-arms confirmation when the risk statement changes. Unrelated edits that leave the warning set identical do not force a second daylight confirmation.
+
+This is UI safety state only. It introduces no persistence, no Event field, no audit mutation and no second daylight/business-rule engine. The warning identity is derived from canonical `calculateShiftDaylightWarnings` output.
+
+
+## DEC-021 â€” Dirty editor drafts require one consistent discard guard
+
+**Status:** accepted (2026-09-04)
+
+Closing an editable Event editor with unsaved changes is a data-loss action at the user-input level even though canonical SQLite state is unaffected. Escape, backdrop click, header Close and footer Cancel therefore route through one shared close guard. A dirty editable draft requires explicit confirmation before it is discarded; clean drafts and read-only inspection close immediately. Saving cannot be interrupted through the close guard.
+
+This remains transient UI safety behavior only. It adds no Event field, persistence state, audit row or business rule, and does not alter optimistic concurrency, soft archive or repository boundaries.
+
+## DEC-022 â€” Archive is reversible but still requires explicit confirmation
+Soft archive does not destroy an Event, yet it removes the record from active planning and, when triggered from a dirty editor, can also discard unsaved draft input. The archive control therefore always requires an explicit confirmation. The prompt additionally mentions unsaved-draft loss only when the draft is dirty and states that the Event remains recoverable from the archive. This is transient UI safety behavior only: archive persistence, stable ID, optimistic revision checks and append-only audit remain unchanged.
+
+## DEC-023 â€” Calendar approval/reopen is an explicit consequential transition
+Changing a year between `planning` and `approved` is already revisioned and audited, but it changes the editability of the entire calendar. Both directions therefore require an explicit confirmation before the repository mutation starts. The confirmation explains the resulting edit lock or edit re-enable. No new persistence state is introduced, and optimistic concurrency remains the final authority if another revision wins the race after confirmation.
+
+
+
+## DEC-024 â€” Portable import validates semantic audit integrity before replacement
+
+**Status:** accepted (2026-09-04)
+
+A valid SHA-256 checksum proves that a portable package is internally untampered relative to its checksum, not that its records describe a coherent Calendar Studio state. Before the destructive import path can replace SQLite, validation therefore also checks that every audit row references a canonical entity present in the package, that the action belongs to that entity type, and that an audit row never claims a resulting revision newer than the imported entity revision. This remains domain validation in `CalendarPortability`; React only displays validation failure and asks for the existing destructive-import confirmation. No schema, Event field or import format version changes.
 
 
 ## DEC-025 â€” Audit entity type is explicit at the repository boundary

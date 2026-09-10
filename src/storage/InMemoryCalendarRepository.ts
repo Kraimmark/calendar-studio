@@ -1,48 +1,207 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíÛÏ6N‹Z–‹­¦ëeŠw¬Õ¥µÁ½ÉÐÑåÁ”ìÕ‘¥Ñ¹ÑÉä°Õ‘¥ÑEÕ•Éä°…±•¹‘…ÉÕ‘¥Ðô™É½´€œ¸¸½‘½µ…¥¸½…Õ‘¥Ðœì)¥µÁ½ÉÐì…ÍÍ•ÉÑ…±•¹‘…Ée•…Èô™É½´€œ¸¸½‘½µ…¥¸½…±•¹‘…Èœì)¥µÁ½ÉÐì…ÍÍ•ÉÑáÁ•Ñ•‘I•Ù¥Í¥½¸°¹•áÑI•Ù¥Í¥½¸ô™É½´€œ¸¸½‘½µ…¥¸½É•Ù¥Í¥½¸œì)¥µÁ½ÉÐÑåÁ”ì…±•¹‘…ÉÙ•¹Ð°…±•¹‘…ÉM•ÑÑ¥¹Ìô™É½´€œ¸¸½‘½µ…¥¸½ÑåÁ•Ìœì)¥µÁ½ÉÐÑåÁ”ìA½ÉÑ…‰±•…±•¹‘…ÉMÑ…Ñ”°A½ÉÑ…‰±•…±•¹‘…ÉMÑ½É”ô™É½´€œ¸¸½‘½µ…¥¸½Á½ÉÑ…‰¥±¥Ñäœì)¥µÁ½ÉÐÑåÁ”ì…±•¹‘…ÉI•Á½Í¥Ñ½Éä°M…Ù•…±•¹‘…ÉM•ÑÑ¥¹ÍI•ÅÕ•ÍÐ°M…Ù•Ù•¹ÑI•ÅÕ•ÍÐô™É½´€œ¸½…±•¹‘…ÉI•Á½Í¥Ñ½Éäœì()¥µÁ½ÉÐì¹Ñ¥Ñå±É•…‘åá¥ÍÑÍÉÉ½È°¹Ñ¥Ñå9½Ñ½Õ¹‘ÉÉ½Èô™É½´€œ¸½•ÉÉ½ÉÌœì()ÑåÁ”Õ‘¥Ñ%‘…Ñ½Éä€ô€ ¤€ôøÍÑÉ¥¹œì()™Õ¹Ñ¥½¸‘•™…Õ±ÑÕ‘¥Ñ%‘…Ñ½Éä ¤èÍÑÉ¥¹œì(€É•ÑÕÉ¸±½‰…±Q¡¥Ì¹ÉåÁÑ¼¹É…¹‘½µUU% ¤ì)ô()™Õ¹Ñ¥½¸±½¹”ñPø¡Ù…±Õ”èP¤èPì(€É•ÑÕÉ¸ÍÑÉÕÑÕÉ•‘±½¹”¡Ù…±Õ”¤ì)ô()•áÁ½ÉÐ±…ÍÌ%¹5•µ½Éå…±•¹‘…ÉI•Á½Í¥Ñ½Éä¥µÁ±•µ•¹ÑÌ…±•¹‘…ÉI•Á½Í¥Ñ½Éä°…±•¹‘…ÉÕ‘¥Ð°A½ÉÑ…‰±•…±•¹‘…ÉMÑ½É”ì(€ÁÉ¥Ù…Ñ”É•…‘½¹±ä•Ù•¹ÑÌ€ô¹•Ü5…ÀñÍÑÉ¥¹œ°…±•¹‘…ÉÙ•¹Ðø ¤ì(€ÁÉ¥Ù…Ñ”É•…‘½¹±äÍ•ÑÑ¥¹Ì€ô¹•Ü5…Àñ¹Õµ‰•È°…±•¹‘…ÉM•ÑÑ¥¹Ìø ¤ì(€ÁÉ¥Ù…Ñ”É•…‘½¹±ä…Õ‘¥Ñ¹ÑÉ¥•ÌèÕ‘¥Ñ¹ÑÉåmt€ômtì((€½¹ÍÑÉÕÑ½È¡ÁÉ¥Ù…Ñ”É•…‘½¹±ä…Õ‘¥Ñ%‘…Ñ½ÉäèÕ‘¥Ñ%‘…Ñ½Éä€ô‘•™…Õ±ÑÕ‘¥Ñ%‘…Ñ½Éä¤íô((€…Íå¹Œ±¥ÍÑÙ•¹ÑÌ¡å•…Èè¹Õµ‰•È°¥¹±Õ‘•É¡¥Ù•€ô™…±Í”¤èAÉ½µ¥Í”ñ…±•¹‘…ÉÙ•¹Ñmtøì(€€€…ÍÍ•ÉÑ…±•¹‘…Ée•…È¡å•…È¤ì(€€€É•ÑÕÉ¸l¸¸¹Ñ¡¥Ì¹•Ù•¹ÑÌ¹Ù…±Õ•Ì ¥t(€€€€€€¹™¥±Ñ•È ¡•Ù•¹Ð¤€ôø•Ù•¹Ð¹…±•¹‘…Ée•…È€ôôôå•…È€˜˜€¡¥¹±Õ‘•É¡¥Ù•ñð•Ù•¹Ð¹…É¡¥Ù•‘Ð€ôôô¹Õ±°¤¤(€€€€€€¹Í½ÉÐ ¡„°ˆ¤€ôø€¡„¹ÍÑ…ÉÑ…Ñ”€üü€œääää´ÄÈ´ÌÄœ¤¹±½…±•½µÁ…É”¡ˆ¹ÍÑ…ÉÑ…Ñ”€üü€œääää´ÄÈ´ÌÄœ¤ñð„¹Ñ¥Ñ±”¹±½…±•½µÁ…É”¡ˆ¹Ñ¥Ñ±”°€ÉÔœ¤¤(€€€€€€¹µ…À¡±½¹”¤ì(€ô((€…Íå¹Œ•ÑÙ•¹Ð¡¥èÍÑÉ¥¹œ¤èAÉ½µ¥Í”ñ…±•¹‘…ÉÙ•¹Ðð¹Õ±°øì(€€€½¹ÍÐ•Ù•¹Ð€ôÑ¡¥Ì¹•Ù•¹ÑÌ¹•Ð¡¥¤ì(€€€É•ÑÕÉ¸•Ù•¹Ð€ü±½¹”¡•Ù•¹Ð¤€è¹Õ±°ì(€ô((€…Íå¹ŒÍ…Ù•Ù•¹Ð¡É•ÅÕ•ÍÐèM…Ù•Ù•¹ÑI•ÅÕ•ÍÐ°•áÁ•Ñ•‘I•Ù¥Í¥½¸è¹Õµ‰•Èð¹Õ±°¤èAÉ½µ¥Í”ñ…±•¹‘…ÉÙ•¹Ðøì(€€€¥˜€¡É•ÅÕ•ÍÐ¹­¥¹€ôôô€É•…Ñ”œ¤ì(€€€€€…ÍÍ•ÉÑ…±•¹‘…Ée•…È¡É•ÅÕ•ÍÐ¹…±•¹‘…Ée•…È¤ì(€€€€€¥˜€¡•áÁ•Ñ•‘I•Ù¥Í¥½¸€„ôô¹Õ±°¤Ñ¡É½Ü¹•ÜÉÉ½È É•…Ñ”É•ÅÕ¥É•Ì•áÁ•Ñ•‘I•Ù¥Í¥½¸õ¹Õ±°œ¤ì(€€€€€¥˜€¡Ñ¡¥Ì¹•Ù•¹ÑÌ¹¡…Ì¡É•ÅÕ•ÍÐ¹¥¤¤Ñ¡É½Ü¹•Ü¹Ñ¥Ñå±É•…‘åá¥ÍÑÍÉÉ½È¡É•ÅÕ•ÍÐ¹¥¤ì(€€€€€½¹ÍÐ•Ù•¹Ðè…±•¹‘…ÉÙ•¹Ð€ôì(€€€€€€€€¸¸¹±½¹”¡É•ÅÕ•ÍÐ¹‘…Ñ„¤°(€€€€€€€¥èÉ•ÅÕ•ÍÐ¹¥°(€€€€€€€…±•¹‘…Ée•…ÈèÉ•ÅÕ•ÍÐ¹…±•¹‘…Ée•…È°(€€€€€€€É•Ù¥Í¥½¸è€Ä°(€€€€€€€É•…Ñ•‘ÐèÉ•ÅÕ•ÍÐ¹Ñ¥µ•ÍÑ…µÀ°(€€€€€€€É•…Ñ•‘	äèÉ•ÅÕ•ÍÐ¹…Ñ½È°(€€€€€€€ÕÁ‘…Ñ•‘ÐèÉ•ÅÕ•ÍÐ¹Ñ¥µ•ÍÑ…µÀ°(€€€€€€€ÕÁ‘…Ñ•‘	äèÉ•ÅÕ•ÍÐ¹…Ñ½È°(€€€€€€€…É¡¥Ù•‘Ðè¹Õ±°°(€€€€€ôì(€€€€€Ñ¡¥Ì¹•Ù•¹ÑÌ¹Í•Ð¡•Ù•¹Ð¹¥°±½¹”¡•Ù•¹Ð¤¤ì(€€€€€Ñ¡¥Ì¹É•½É‘Õ‘¥Ð •Ù•¹Ðœ°•Ù•¹Ð¹¥°É•ÅÕ•ÍÐ¹…Ñ½È°É•ÅÕ•ÍÐ¹Ñ¥µ•ÍÑ…µÀ°€É•…Ñ”œ°¹Õ±°°€Ä°€É•…Ñ•œ¤ì(€€€€€É•ÑÕÉ¸±½¹”¡•Ù•¹Ð¤ì(€€€ô((€€€½¹ÍÐÕÉÉ•¹Ð€ôÑ¡¥Ì¹•Ù•¹ÑÌ¹•Ð¡É•ÅÕ•ÍÐ¹¥¤ì(€€€¥˜€ …ÕÉÉ•¹Ð¤Ñ¡É½Ü¹•Ü¹Ñ¥Ñå9½Ñ½Õ¹‘ÉÉ½È¡É•ÅÕ•ÍÐ¹¥¤ì(€€€¥˜€¡•áÁ•Ñ•‘I•Ù¥Í¥½¸€ôôô¹Õ±°¤Ñ¡É½Ü¹•ÜÉÉ½È UÁ‘…Ñ”É•ÅÕ¥É•Ì•áÁ•Ñ•‘I•Ù¥Í¥½¸œ¤ì(€€€…ÍÍ•ÉÑáÁ•Ñ•‘I•Ù¥Í¥½¸¡É•ÅÕ•ÍÐ¹¥°ÕÉÉ•¹Ð¹É•Ù¥Í¥½¸°•áÁ•Ñ•‘I•Ù¥Í¥½¸¤ì((€€€½¹ÍÐÉ•Ù¥Í¥½¸€ô¹•áÑI•Ù¥Í¥½¸¡ÕÉÉ•¹Ð¹É•Ù¥Í¥½¸¤ì(€€€½¹ÍÐÕÁ‘…Ñ•è…±•¹‘…ÉÙ•¹Ð€ôì(€€€€€€¸¸¹ÕÉÉ•¹Ð°(€€€€€€¸¸¹±½¹”¡É•ÅÕ•ÍÓÏ6¶‰žËkºwµç[[ÙHOOH	Ü[›š[™ÉÈ	‰ˆÝ\œ™[›[ÙHOOH	Ü[›š[™ÉÎÂˆÛÛœÝ\]YˆØ[[™\”Ù][™ÜÈHÂˆ‹‹˜Ý\œ™[ˆ[ÙNˆ™\]Y\Ý›[ÙKˆ™]š\Ú[Û‹ˆ\›Ý™Y]ˆ\›Ýš[™ÈÈ™\]Y\Ý[Y\Ý[\ˆÝ\œ™[˜\›Ý™Y]ˆ\›Ý™YžNˆ\›Ýš[™ÈÈ™\]Y\Ý˜XÝÜˆˆÝ\œ™[˜\›Ý™YžKˆ™[Ü[™Y]ˆ™[Ü[š[™ÈÈ™\]Y\Ý[Y\Ý[\ˆÝ\œ™[œ™[Ü[™Y]ˆ™[Ü[™YžNˆ™[Ü[š[™ÈÈ™\]Y\Ý˜XÝÜˆˆÝ\œ™[œ™[Ü[™YžKˆNÂˆ\ËœÙ][™ÜËœÙ]
-™\]Y\ÝžYX\‹ÛÛ™J\]Y
-JNÂˆ\Ëœ™XÛÜ™]Y]
-	ØØ[[™\—ÜÙ][™ÜÉËÝš[™Ê™\]Y\ÝžYX\ŠK™\]Y\Ý˜XÝÜ‹™\]Y\Ý[Y\Ý[\\›Ýš[™ÈÈ	Ø\›Ý™IÈˆ™[Ü[š[™ÈÈ	Ü™[Ü[‰Èˆ	Ý\]IËÝ\œ™[œ™]š\Ú[Û‹™]š\Ú[Û‹[ÙN‰Ü™\]Y\Ý›[Ù_X
-NÂˆ™]\›ˆÛÛ™J\]Y
-NÂˆB‚ˆ\Þ[˜È\[™
-[žNˆ]Y][žJNˆ›ÛZ\ÙO›ÚYˆÂˆYˆ
-\Ë˜]Y][šY\ËœÛÛYJ
-Ø[™Y]JHOˆØ[™Y]K˜]Y]YOOH[žK˜]Y]Y
-JH›ÝÈ™]È[]P[™XYQ^\ÝÑ\œ›ÜŠ[žK˜]Y]Y
-NÂˆ\Ë˜]Y][šY\Ëœ\Ú
-ÛÛ™J[žJJNÂˆB‚ˆ\Þ[˜È\Ý
-]Y\žNˆ]Y]]Y\žHHßJNˆ›ÛZ\ÙO]Y][žV×OˆÂˆ™]\›ˆ\Ë˜]Y][šY\Âˆ™š[\Š
-[žJHOˆ\]Y\žK™[]RY[žK™[]RYOOH]Y\žK™[]RY
-Bˆ™š[\Š
-[žJHOˆ\]Y\žK™œ›ÛH[žK[Y\Ý[\H]Y\žK™œ›ÛJBˆ™š[\Š
-[žJHOˆ\]Y\žKÈ[žK[Y\Ý[\H]Y\žKÊBˆ›X\
-ÛÛ™JNÂˆB‚ˆ\Þ[˜È^ÜÜX›TÝ]J
-Nˆ›ÛZ\ÙOÜX›PØ[[™\”Ý]OˆÂˆ™]\›ˆÂˆØ[[™\–YX\œÎˆË‹‹\ËœÙ][™ÜË˜[Y\Ê
-WK›X\
-ÛÛ™JKˆ]™[ÎˆË‹‹\Ë™]™[Ë˜[Y\Ê
-WK›X\
-ÛÛ™JKˆÜ™Ø[š^™\œÎˆ×Kˆ]Y]ˆ\Ë˜]Y][šY\Ë›X\
-ÛÛ™JKˆNÂˆB‚ˆ\Þ[˜È™\XÙTÜX›TÝ]JÝ]NˆÜX›PØ[[™\”Ý]JNˆ›ÛZ\ÙOÈ˜XÚÝ\™Y™\™[˜ÙNˆÝš[™È[OˆÂˆÛÛœÝ™]š[Ý\ÈH]ØZ]\Ë™^ÜÜX›TÝ]J
-NÂˆžHÂˆ\Ë™]™[Ë˜ÛX\Š
-NÂˆ\ËœÙ][™ÜË˜ÛX\Š
-NÂˆ\Ë˜]Y][šY\Ë›[™ÝHÂˆ›Üˆ
-ÛÛœÝ]™[ÙˆÝ]K™]™[ÊH\Ë™]™[ËœÙ]
-]™[šYÛÛ™J]™[
-JNÂˆ›Üˆ
-ÛÛœÝÙ][™ÜÈÙˆÝ]K˜Ø[[™\–YX\œÊH\ËœÙ][™ÜËœÙ]
-Ù][™ÜËžYX\‹ÛÛ™JÙ][™ÜÊJNÂˆ\Ë˜]Y][šY\Ëœ\Ú
-‹‹œÝ]K˜]Y]›X\
-ÛÛ™JJNÂˆHØ]Ú
-\œ›ÜŠHÂˆ\Ë™]™[Ë˜ÛX\Š
-NÂˆ\ËœÙ][™ÜË˜ÛX\Š
-NÂˆ\Ë˜]Y][šY\Ë›[™ÝHÂˆ›Üˆ
-ÛÛœÝ]™[Ùˆ™]š[Ý\Ë™]™[ÊH\Ë™]™[ËœÙ]
-]™[šYÛÛ™J]™[
-JNÂˆ›Üˆ
-ÛÛœÝÙ][™ÜÈÙˆ™]š[Ý\Ë˜Ø[[™\–YX\œÊH\ËœÙ][™ÜËœÙ]
-Ù][™ÜËžYX\‹ÛÛ™JÙ][™ÜÊJNÂˆ\Ë˜]Y][šY\Ëœ\Ú
-‹‹œ™]š[Ý\Ë˜]Y]›X\
-ÛÛ™JJNÂˆ›ÝÈ\œ›ÜŽÂˆBˆ™]\›ˆÈ˜XÚÝ\™Y™\™[˜ÙNˆ	ÛY[[ÜžN‹ËÜ™KZ[\Ü	ÈNÂˆB‚ˆš]˜]H™XÛÜ™]Y]
-ˆ[]U\Nˆ]Y][žVÉÙ[]U\I×Kˆ[]RYˆÝš[™ËˆXÝÜŽˆÝš[™Ëˆ[Y\Ý[\ˆÝš[™ËˆXÝ[ÛŽˆ]Y][žVÉØXÝ[Û‰×Kˆ˜\ÙT™]š\Ú[ÛŽˆ[X™\ˆ[ˆ™\Ý[[™Ô™]š\Ú[ÛŽˆ[X™\‹ˆ^[ØYÝ[[X\žNˆÝš[™Ëˆ
-Nˆ›ÚYÂˆ\Ë˜]Y][šY\Ëœ\Ú
-Âˆ]Y]Yˆ\Ë˜]Y]Y˜XÝÜžJ
-Kˆ[Y\Ý[\ˆXÝÜ‹ˆ[]U\Kˆ[]RYˆXÝ[Û‹ˆ˜\ÙT™]š\Ú[Û‹ˆ™\Ý[[™Ô™]š\Ú[Û‹ˆ^[ØYÝ[[X\žKˆJNÂˆBŸB
+import type { AuditEntry, AuditQuery, CalendarAudit } from '../domain/audit';
+import { assertCalendarYear } from '../domain/calendar';
+import { assertExpectedRevision, nextRevision } from '../domain/revision';
+import type { CalendarEvent, CalendarSettings } from '../domain/types';
+import type { PortableCalendarState, PortableCalendarStore } from '../domain/portability';
+import type { CalendarRepository, SaveCalendarSettingsRequest, SaveEventRequest } from './CalendarRepository';
+
+import { EntityAlreadyExistsError, EntityNotFoundError } from './errors';
+
+type AuditIdFactory = () => string;
+
+function defaultAuditIdFactory(): string {
+  return globalThis.crypto.randomUUID();
+}
+
+function clone<T>(value: T): T {
+  return structuredClone(value);
+}
+
+export class InMemoryCalendarRepository implements CalendarRepository, CalendarAudit, PortableCalendarStore {
+  private readonly events = new Map<string, CalendarEvent>();
+  private readonly settings = new Map<number, CalendarSettings>();
+  private readonly auditEntries: AuditEntry[] = [];
+
+  constructor(private readonly auditIdFactory: AuditIdFactory = defaultAuditIdFactory) {}
+
+  async listEvents(year: number, includeArchived = false): Promise<CalendarEvent[]> {
+    assertCalendarYear(year);
+    return [...this.events.values()]
+      .filter((event) => event.calendarYear === year && (includeArchived || event.archivedAt === null))
+      .sort((a, b) => (a.startDate ?? '9999-12-31').localeCompare(b.startDate ?? '9999-12-31') || a.title.localeCompare(b.title, 'ru'))
+      .map(clone);
+  }
+
+  async getEvent(id: string): Promise<CalendarEvent | null> {
+    const event = this.events.get(id);
+    return event ? clone(event) : null;
+  }
+
+  async saveEvent(request: SaveEventRequest, expectedRevision: number | null): Promise<CalendarEvent> {
+    if (request.kind === 'create') {
+      assertCalendarYear(request.calendarYear);
+      if (expectedRevision !== null) throw new Error('Create requires expectedRevision=null');
+      if (this.events.has(request.id)) throw new EntityAlreadyExistsError(request.id);
+      const event: CalendarEvent = {
+        ...clone(request.data),
+        id: request.id,
+        calendarYear: request.calendarYear,
+        revision: 1,
+        createdAt: request.timestamp,
+        createdBy: request.actor,
+        updatedAt: request.timestamp,
+        updatedBy: request.actor,
+        archivedAt: null,
+      };
+      this.events.set(event.id, clone(event));
+      this.recordAudit('event', event.id, request.actor, request.timestamp, 'create', null, 1, 'created');
+      return clone(event);
+    }
+
+    const current = this.events.get(request.id);
+    if (!current) throw new EntityNotFoundError(request.id);
+    if (expectedRevision === null) throw new Error('Update requires expectedRevision');
+    assertExpectedRevision(request.id, current.revision, expectedRevision);
+
+    const revision = nextRevision(current.revision);
+    const updated: CalendarEvent = {
+      ...current,
+      ...clone(request.changes),
+      id: current.id,
+      calendarYear: current.calendarYear,
+      revision,
+      createdAt: current.createdAt,
+      createdBy: current.createdBy,
+      updatedAt: request.timestamp,
+      updatedBy: request.actor,
+      archivedAt: current.archivedAt,
+    };
+    this.events.set(updated.id, clone(updated));
+    const changedFields = Object.keys(request.changes).sort().join(',') || 'no-fields';
+    this.recordAudit('event', updated.id, request.actor, request.timestamp, 'update', current.revision, revision, `fields:${changedFields}`);
+    return clone(updated);
+  }
+
+  async archiveEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<CalendarEvent> {
+    const current = this.events.get(id);
+    if (!current) throw new EntityNotFoundError(id);
+    assertExpectedRevision(id, current.revision, expectedRevision);
+    const revision = nextRevision(current.revision);
+    const updated = { ...current, revision, updatedAt: timestamp, updatedBy: actor, archivedAt: timestamp };
+    this.events.set(id, clone(updated));
+    this.recordAudit('event', id, actor, timestamp, 'archive', current.revision, revision, 'soft-archived');
+    return clone(updated);
+  }
+
+  async restoreEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<CalendarEvent> {
+    const current = this.events.get(id);
+    if (!current) throw new EntityNotFoundError(id);
+    assertExpectedRevision(id, current.revision, expectedRevision);
+    const revision = nextRevision(current.revision);
+    const updated = { ...current, revision, updatedAt: timestamp, updatedBy: actor, archivedAt: null };
+    this.events.set(id, clone(updated));
+    this.recordAudit('event', id, actor, timestamp, 'restore', current.revision, revision, 'restored');
+    return clone(updated);
+  }
+
+  async getCalendarSettings(year: number): Promise<CalendarSettings> {
+    assertCalendarYear(year);
+    const existing = this.settings.get(year);
+    return clone(existing ?? {
+      year,
+      mode: 'planning',
+      revision: 1,
+      approvedAt: null,
+      approvedBy: null,
+      reopenedAt: null,
+      reopenedBy: null,
+    });
+  }
+
+  async saveCalendarSettings(request: SaveCalendarSettingsRequest, expectedRevision: number): Promise<CalendarSettings> {
+    assertCalendarYear(request.year);
+    const current = await this.getCalendarSettings(request.year);
+    assertExpectedRevision(String(request.year), current.revision, expectedRevision);
+    const revision = nextRevision(current.revision);
+    const approving = request.mode === 'approved' && current.mode !== 'approved';
+    const reopening = request.mode === 'planning' && current.mode !== 'planning';
+    const updated: CalendarSettings = {
+      ...current,
+      mode: request.mode,
+      revision,
+      approvedAt: approving ? request.timestamp : current.approvedAt,
+      approvedBy: approving ? request.actor : current.approvedBy,
+      reopenedAt: reopening ? request.timestamp : current.reopenedAt,
+      reopenedBy: reopening ? request.actor : current.reopenedBy,
+    };
+    this.settings.set(request.year, clone(updated));
+    this.recordAudit('calendar_settings', String(request.year), request.actor, request.timestamp, approving ? 'approve' : reopening ? 'reopen' : 'update', current.revision, revision, `mode:${request.mode}`);
+    return clone(updated);
+  }
+
+  async append(entry: AuditEntry): Promise<void> {
+    if (this.auditEntries.some((candidate) => candidate.auditId === entry.auditId)) throw new EntityAlreadyExistsError(entry.auditId);
+    this.auditEntries.push(clone(entry));
+  }
+
+  async list(query: AuditQuery = {}): Promise<AuditEntry[]> {
+    return this.auditEntries
+      .filter((entry) => !query.entityId || entry.entityId === query.entityId)
+      .filter((entry) => !query.from || entry.timestamp >= query.from)
+      .filter((entry) => !query.to || entry.timestamp <= query.to)
+      .map(clone);
+  }
+
+  async exportPortableState(): Promise<PortableCalendarState> {
+    return {
+      calendarYears: [...this.settings.values()].map(clone),
+      events: [...this.events.values()].map(clone),
+      organizers: [],
+      audit: this.auditEntries.map(clone),
+    };
+  }
+
+  async replacePortableState(state: PortableCalendarState): Promise<{ backupReference: string | null }> {
+    const previous = await this.exportPortableState();
+    try {
+      this.events.clear();
+      this.settings.clear();
+      this.auditEntries.length = 0;
+      for (const event of state.events) this.events.set(event.id, clone(event));
+      for (const settings of state.calendarYears) this.settings.set(settings.year, clone(settings));
+      this.auditEntries.push(...state.audit.map(clone));
+    } catch (error) {
+      this.events.clear();
+      this.settings.clear();
+      this.auditEntries.length = 0;
+      for (const event of previous.events) this.events.set(event.id, clone(event));
+      for (const settings of previous.calendarYears) this.settings.set(settings.year, clone(settings));
+      this.auditEntries.push(...previous.audit.map(clone));
+      throw error;
+    }
+    return { backupReference: 'memory://pre-import' };
+  }
+
+  private recordAudit(
+    entityType: AuditEntry['entityType'],
+    entityId: string,
+    actor: string,
+    timestamp: string,
+    action: AuditEntry['action'],
+    baseRevision: number | null,
+    resultingRevision: number,
+    payloadSummary: string,
+  ): void {
+    this.auditEntries.push({
+      auditId: this.auditIdFactory(),
+      timestamp,
+      actor,
+      entityType,
+      entityId,
+      action,
+      baseRevision,
+      resultingRevision,
+      payloadSummary,
+    });
+  }
+}

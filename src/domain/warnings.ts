@@ -1,40 +1,150 @@
-Y™Áäx-ÆÈ‹j◊ù¢Îi∫⁄+äßj[hëÈ‹¢ÈÌ€n˚NãZñã≠¶Îeäw¨’•µ¡Ω…–ÅÏÅÖëëÖÂÃ∞Åë•ôôï…ïπçï%πÖÂÃ∞Å¡Ö…ÕïÖ—ï=π±‰∞Å—Â¡îÅÖ—ï=π±‰ÅÙÅô…Ω¥Äú∏ΩëÖ—ï=π±‰úÏ)•µ¡Ω…–Å—Â¡îÅÏÅÖ±ïπëÖ…Ÿïπ–ÅÙÅô…Ω¥Äú∏Ω—Â¡ïÃúÏ()ï·¡Ω…–Å—Â¡îÅÖ±ïπëÖ…]Ö…π•πùΩëîÄÙÄùµΩπ—°±Â}µÖ—ç°}ΩŸï…±ΩÖêúÅÄùµÖ—ç°}Õ¡Öç•πúúÅÄù—…ô}Õ¡Öç•πúúÅÄùÖ±±}…’ÕÕ•Öπ}â’ôôï»úÅÄùÖ±±}…’ÕÕ•Öπ}â’•±ë}ΩŸï…±Ö¿úÏ()ï·¡Ω…–Å•π—ï…ôÖçîÅÖ±ïπëÖ…]Ö…π•πúÅÏ(ÄÅçΩëîËÅÖ±ïπëÖ…]Ö…π•πùΩëîÏ(ÄÅµïÕÕÖùîËÅÕ—…•πúÏ(ÄÅïŸïπ—%ëÃËÅÕ—…•πùmtÏ(ÄÅëÖ—ïÃËÅÖ—ï=π±ÂmtÏ)Ù()•π—ï…ôÖçîÅÖ—ïë5Ö—ç†Åï·—ïπëÃÅÖ±ïπëÖ…Ÿïπ–ÅÏ(ÄÅÕ—Ö…—Ö—îËÅÖ—ï=π±‰Ï(ÄÅïπëÖ—îËÅÖ—ï=π±‰Ï)Ù()•π—ï…ôÖçîÅÖ—ïëŸïπ–Åï·—ïπëÃÅÖ±ïπëÖ…Ÿïπ–ÅÏ(ÄÅÕ—Ö…—Ö—îËÅÖ—ï=π±‰Ï(ÄÅïπëÖ—îËÅÖ—ï=π±‰Ï)Ù()ô’πç—•Ω∏ÅÖç—•ŸïÖ—ïëŸïπ—Ã°ïŸïπ—ÃËÅ…ïÖëΩπ±‰ÅÖ±ïπëÖ…Ÿïπ—mt∞ÅÂïÖ»ËÅπ’µâï»§ËÅÖ—ïëŸïπ—mtÅÏ(ÄÅ…ï—’…∏ÅïŸïπ—Ã(ÄÄÄÄπô•±—ï»†°ïŸïπ–§ËÅïŸïπ–Å•ÃÅÖ—ïëŸïπ–ÄÙ¯ÅïŸïπ–πçÖ±ïπëÖ…eïÖ»ÄÙÙÙÅÂïÖ»ÄòòÅïŸïπ–πÖ…ç°•Ÿïë–ÄÙÙÙÅπ’±∞ÄòòÅïŸïπ–πÕ—Ö…—Ö—îÄÑÙÙÅπ’±∞ÄòòÅïŸïπ–πïπëÖ—îÄÑÙÙÅπ’±∞§(ÄÄÄÄπÕΩ…–†°Ñ∞Åà§ÄÙ¯ÅÑπÕ—Ö…—Ö—îπ±ΩçÖ±ïΩµ¡Ö…î°àπÕ—Ö…—Ö—î§ÅÒÅÑπïπëÖ—îπ±ΩçÖ±ïΩµ¡Ö…î°àπïπëÖ—î§ÅÒÅÑπ•êπ±ΩçÖ±ïΩµ¡Ö…î°àπ•ê§§Ï)Ù()ô’πç—•Ω∏Å…ÖπùïÕ=Ÿï…±Ö¿°±ïô—M—Ö…–ËÅÖ—ï=π±‰∞Å±ïô—πêËÅÖ—ï=π±‰∞Å…•ù°—M—Ö…–ËÅÖ—ï=π±‰∞Å…•ù°—πêËÅÖ—ï=π±‰§ËÅâΩΩ±ïÖ∏ÅÏ(ÄÅ…ï—’…∏Å±ïô—M—Ö…–π±ΩçÖ±ïΩµ¡Ö…î°…•ù°—πê§ÄÙÄ¿ÄòòÅ…•ù°—M—Ö…–π±ΩçÖ±ïΩµ¡Ö…î°±ïô—πê§ÄÙÄ¿Ï)Ù()ô’πç—•Ω∏ÅëÖ—ïë5Ö—ç°ïÃ°ïŸïπ—ÃËÅ…ïÖëΩπ±‰ÅÖ±ïπëÖ…Ÿïπ—mt∞ÅÂïÖ»ËÅπ’µâï»§ËÅÖ—ïë5Ö—ç°mtÅÏ(ÄÅ…ï—’…∏ÅïŸïπ—Ã(ÄÄÄÄπô•±—ï»†°ïŸïπ–§ËÅïŸïπ–Å•ÃÅÖ—ïë5Ö—ç†ÄÙ¯ÅïŸïπ–πçÖ±ïπëÖ…eïÖ»ÄÙÙÙÅÂïÖ»ÄòòÅïŸïπ–πÖ…ç°•Ÿïë–ÄÙÙÙÅπ’±∞ÄòòÅïŸïπ–π≠•πêÄÙÙÙÄùµÖ—ç†úÄòòÅïŸïπ–πÕ—Ö…—Ö—îÄÑÙÙÅπ’±∞ÄòòÅïŸïπ–πïπëÖ—îÄÑÙÙÅπ’±∞§(ÄÄÄÄπÕΩ…–†°Ñ∞Åà§ÄÙ¯ÅÑπÕ—Ö…—Ö—îπ±ΩçÖ±ïΩµ¡Ö…î°àπÕ—Ö…—Ö—î§ÅÒÅÑπïπëÖ—îπ±ΩçÖ±ïΩµ¡Ö…î°àπïπëÖ—î§ÅÒÅÑπ•êπ±ΩçÖ±ïΩµ¡Ö…î°àπ•ê§§Ï)Ù()ô’πç—•Ω∏Åô’±±…ïïÖÂÕ	ï—›ïï∏°±ïô–ËÅÖ—ïë5Ö—ç†∞Å…•ù°–ËÅÖ—ïë5Ö—ç†§ËÅπ’µâï»ÅÏ(ÄÅ…ï—’…∏Åë•ôôï…ïπçï%πÖÂÃ°…•ù°–πÕ—Ö…—Ö—î∞Å±ïô–πïπëÖ—î§Ä¥ÄƒÏ)Ù()ô’πç—•Ω∏ÅµΩπ—°-ï‰°ëÖ—îËÅÖ—ï=π±‰§ËÅÕ—…•πúÅÏ(ÄÅçΩπÕ–Å¡Ö…ÕïêÄÙÅ¡Ö…ÕïÖ—ï=π±‰°ëÖ—î§Ï(ÄÅ•òÄ†Ö¡Ö…Õïê§Å—°…Ω‹Åπï‹ÅIÖπùï……Ω»°Å%πŸÖ±•êÅëÖ—îµΩπ±‰ÅŸÖ±’îËÄëÌëÖ—ïıÄ§Ï(ÄÅ…ï—’…∏ÅÄëÌ¡Ö…ÕïêπÂïÖ…Ù¥ëÌM—…•πú°¡Ö…ÕïêπµΩπ—†§π¡ÖëM—Ö…–†»∞Äú¿ú•ıÄÏ)Ù()ï·¡Ω…–Åô’πç—•Ω∏ÅçÖ±ç’±Ö—ï]Ö…π•πùÃ°ïŸïπ—ÃËÅ…ïÖëΩπ±‰ÅÖ±ïπëÖ…Ÿïπ—mt∞ÅÂïÖ»ËÅπ’µâï»§ËÅÖ±ïπëÖ…]Ö…π•πùmtÅÏ(ÄÅçΩπÕ–ÅµÖ—ç°ïÃÄÙÅëÖ—ïë5Ö—ç°ïÃ°ïŸïπ—Ã∞ÅÂïÖ»§Ï(ÄÅçΩπÕ–Å›Ö…π•πùÃËÅÖ±ïπëÖ…]Ö…π•πùmtÄÙÅmtÏ((ÄÅçΩπÕ–ÅâÂ5Ωπ—†ÄÙÅπï‹Å5Ö¿ÒÕ—…•πú∞ÅÖ—ïë5Ö—ç°mt¯†§Ï(ÄÅôΩ»Ä°çΩπÕ–ÅïŸïπ–ÅΩòÅµÖ—ç°ïÃ§ÅÏ(ÄÄÄÅçΩπÕ–Å≠ï‰ÄÙÅµΩπ—°-ï‰°ïŸïπ–πÕ—Ö…—Ö—î§Ï(ÄÄÄÅçΩπÕ–Åâ’ç≠ï–ÄÙÅâÂ5Ωπ—†πùï–°≠ï‰§Ä¸¸ÅmtÏ(ÄÄÄÅâ’ç≠ï–π¡’Õ†°ïŸïπ–§Ï(ÄÄÄÅâÂ5Ωπ—†πÕï–°≠ï‰∞Åâ’ç≠ï–§Ï(ÄÅÙ(ÄÅôΩ»Ä°çΩπÕ–Åm≠ï‰∞Åâ’ç≠ï—tÅΩòÅl∏∏πâÂ5Ωπ—†πïπ—…•ïÃ†•tπÕΩ…–†°mÖt∞Åmât§ÄÙ¯ÅÑπ±ΩçÖ±ïΩµ¡Ö…î°à§§§ÅÏ(ÄÄÄÅ•òÄ°â’ç≠ï–π±ïπù—†ÄÙÄ»§ÅçΩπ—•π’îÏ(ÄÄÄÅ›Ö…π•πùÃπ¡’Õ†°Ï(ÄÄÄÄÄÅçΩëîËÄùµΩπ—°±Â}µÖ—ç°}ΩŸï…±ΩÖêú∞(ÄÄÄÄÄÅµïÕÕÖùîËÅÉBHÄëÌ≠ïÂÙÉBﬂB√BˇBÔB√B˜B„FB˚BÀB√B˜B¯ÄëÌâ’ç≠ï–π±ïπù—°ÙÉBÛB√FFB¿ËÉB«B˚BÔF3F#B‘ÉB”BÀFFÉBÛB◊FB˚BˇFB„F?FB„B‰ÉB»ÉB˚B”B˜B˚BÉBÛB◊FF?FB‘πÄ∞(ÄÄÄÄÄÅïŸïπ—%ëÃËÅâ’ç≠ï–πµÖ¿†°ïŸïπ–§ÄÙ¯ÅïŸïπ–π•ê§∞(ÄÄÄÄÄÅëÖ—ïÃËÅâ’ç≠ï–πµÖ¿†°ïŸïπ–§ÄÙ¯ÅïŸïπ–πÕ—Ö…—Ö—î§∞(ÄÄÄÅÙ§Ï(ÄÅÙ((ÄÄººÅ•…ù’∏ÅÖπêÅô•…ïÖ…¥µ±•≠îÅë•Õç•¡±•πïÃÅÖ…îÅ•πëï¡ïπëïπ–ÅÕ¡Öç•πúÅÕ—…ïÖµÃËÅÖ∏(ÄÄººÅÖ•…ù’∏ÅµÖ—ç†Åâï—›ïï∏Å—›ºÅô•…ïÖ…¥ÅµÖ—ç°ïÃÅµ’Õ–ÅπΩ–Å°•ëîÅÑÉn˚∂âûÀk∫wµÁHHX]⁄\Àôö[\ä
-]ô[ù
-HOà]ô[ùúŸ\öY\»OOH	›ôâ N¬àõ‹à
-][ô^HN»[ô^ôãõ[ô›»[ô^
-œHJH¬à€€ú›ô]ö[›\»Hôñ⁄[ô^HWHN¬à€€ú››\úô[ùHôñ⁄[ô^HN¬à€€ú›úôYQ^\»Hù[úôYQ^\–ô]ŸY[äô]ö[›\À›\úô[ù
-N¬àYà
-úôYQ^\»èHÃ
-H€€ù[ùYN¬àÿ\õö[ô‹Àú\⁄
-¬à€ŸNà	›ôó‹‹X⁄[ô…ÀàY\‹ÿYŸNà4'4-t-¥-4`»4/4,4`¥aÙ,4/4.4(¥(4)0™…‹ô]ö[›\Àù]_pÆ»4.0™…ÿ›\úô[ùù]_pÆ»4`¥/¥.Ùc4.¥/à	”X]õX^
-úôYQ^\ _H4/Ù/¥.Ù/tbÙaH4`t,¥/¥,t/¥-4/tbÙaH4-4/t-t.N»4`¥`4-t,t`Ù-t`¥`tc»Ãòà]ô[ùYŒà‹ô]ö[›\ÀöY›\úô[ùöYKà]\Œà‹ô]ö[›\Àô[ô]K›\úô[ùú›\ù]WKàJN¬àBÇàõ‹à
-€€ú›\ôŸ]ŸàX]⁄\Àôö[\ä
-]ô[ù
-HOà]ô[ùúŸ\öY\»OOH	ÿ[ù\‹⁄X[â JH¬à€€ú›ô]ö[›\»HX]⁄\¬àôö[\ä
-]ô[ù
-HOà]ô[ùöYOOH\ôŸ]öY	âà]ô[ùô\ÿ⁄\[ôHOOH\ôŸ]ô\ÿ⁄\[ôH	âà]ô[ùú›\ù]Kõÿÿ[P€€\\ôJ\ôŸ]ú›\ù]JHH
-Bàú€‹ù
+import { addDays, differenceInDays, parseDateOnly, type DateOnly } from './dateOnly';
+import type { CalendarEvent } from './types';
 
-KäHOàãô[ô]Kõÿÿ[P€€\\ôJKô[ô]JHãú›\ù]Kõÿÿ[P€€\\ôJKú›\ù]JJVÃN¬àYà
-ô]ö[›\ H¬à€€ú›úôYQ^\»Hù[úôYQ^\–ô]ŸY[äô]ö[›\À\ôŸ]
-N¬àYà
-úôYQ^\»M
-H¬àÿ\õö[ô‹Àú\⁄
-¬à€ŸNà	ÿ[‹ù\‹⁄X[óÿùYôô\âÀàY\‹ÿYŸNà4'Ù-t`4-t-4,¥`t-t`4/¥`t`t.4.t`t.¥.4/4/4-t`4/¥/Ù`4.4cÙ`¥.4-t/0™…›\ôŸ]ù]_pÆ»4/t-t`à4-4,¥`ÙaH4`t,¥/¥,t/¥-4/tbÙaH4/t-t-4-t.Ùc4,à4-4.4`ta¥.4/Ù.Ù.4/t-H0™…›\ôŸ]ô\ÿ⁄\[ô_pÆŒà4/Ù/¥`t.Ù-H0™…‹ô]ö[›\Àù]_pÆ»4/¥`t`¥,4dt`¥`tc»	”X]õX^
-úôYQ^\ _H4/Ù/¥.Ù/tbÙaH4-4/t-t.Kòà]ô[ùYŒà‹ô]ö[›\ÀöY\ôŸ]öYKà]\Œà‹ô]ö[›\Àô[ô]K\ôŸ]ú›\ù]WKàJN¬àBàBàBÇàÀ»HùZ[[ùûH[ú⁄YHH€À]ŸYZ»ô\\ò][€àõ€ôH\»[›ŸYûH]Ÿ[ãÇàÀ»Hÿ\õö[ô»\X\ú»€õH⁄[à][õôYùZ[ò[ôŸH€€Y\»⁄]€€YBàÀ»›\àX›]ôHÿ[[ô\àôX€‹ôX]⁄[ô»HPT’Tó‘‘P»€‹ô[ôÀÇà€€ú›]Y]ô[ù»HX›]ôQ]Y]ô[ù ]ô[ùÀYX\äN¬àõ‹à
-€€ú›\ôŸ]ŸàX]⁄\Àôö[\ä
-]ô[ù
-HOà]ô[ùúŸ\öY\»OOH	ÿ[ù\‹⁄X[â JH¬à€€ú›ô\\ò][€î›\ùHY^\ \ôŸ]ú›\ù]KLM
-N¬à€€ú›ô\\ò][€ë[ôHY^\ \ôŸ]ú›\ù]KLJN¬à€€ú›ùZ[»H]Y]ô[ùÀôö[\ä
-]ô[ù
-HOÇà]ô[ùö⁄[ôOOH	ÿùZ[	»	âàò[ôŸ\”›ô\õ\
-]ô[ùú›\ù]K]ô[ùô[ô]Kô\\ò][€î›\ùô\\ò][€ë[ô
-Kà
-N¬àõ‹à
-€€ú›ùZ[ŸàùZ[ H¬à€€ú›€€ôõX›»H]Y]ô[ùÀôö[\ä
-]ô[ù
-HOÇà]ô[ùöYOOHùZ[öY	âÇà]ô[ùöYOOH\ôŸ]öY	âÇàò[ôŸ\”›ô\õ\
-ùZ[ú›\ù]KùZ[ô[ô]K]ô[ùú›\ù]K]ô[ùô[ô]JKà
-N¬àõ‹à
-€€ú›€€ôõX›Ÿà€€ôõX› H¬àÿ\õö[ô‹Àú\⁄
-¬à€ŸNà	ÿ[‹ù\‹⁄X[óÿùZ[€›ô\õ\	ÀàY\‹ÿYŸNà4%Ù,4`t`¥`4/¥.t.¥,0™…ÿùZ[ù]_pÆ»4/Ù-t`4-t-4,¥`t-t`4/¥`t`t.4.t`t.¥.4/4/4-t`4/¥/Ù`4.4cÙ`¥.4-t/0™…›\ôŸ]ù]_pÆ»4/Ù-t`4-t`t-t.¥,4-t`¥`tc»4`H4-Ù,4/Ù.4`tc4cà0™…ÿ€€ôõX›ù]_pÆÀòà]ô[ùYŒàÿùZ[öY€€ôõX›öY\ôŸ]öYKà]\ŒàÿùZ[ú›\ù]KùZ[ô[ô]K\ôŸ]ú›\ù]WKàJN¬àBàBàBÇàô]\õàÿ\õö[ô‹Œ¬üB
+export type CalendarWarningCode = 'monthly_match_overload' | 'match_spacing' | 'trf_spacing' | 'all_russian_buffer' | 'all_russian_build_overlap';
+
+export interface CalendarWarning {
+  code: CalendarWarningCode;
+  message: string;
+  eventIds: string[];
+  dates: DateOnly[];
+}
+
+interface DatedMatch extends CalendarEvent {
+  startDate: DateOnly;
+  endDate: DateOnly;
+}
+
+interface DatedEvent extends CalendarEvent {
+  startDate: DateOnly;
+  endDate: DateOnly;
+}
+
+function activeDatedEvents(events: readonly CalendarEvent[], year: number): DatedEvent[] {
+  return events
+    .filter((event): event is DatedEvent => event.calendarYear === year && event.archivedAt === null && event.startDate !== null && event.endDate !== null)
+    .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.id.localeCompare(b.id));
+}
+
+function rangesOverlap(leftStart: DateOnly, leftEnd: DateOnly, rightStart: DateOnly, rightEnd: DateOnly): boolean {
+  return leftStart.localeCompare(rightEnd) <= 0 && rightStart.localeCompare(leftEnd) <= 0;
+}
+
+function datedMatches(events: readonly CalendarEvent[], year: number): DatedMatch[] {
+  return events
+    .filter((event): event is DatedMatch => event.calendarYear === year && event.archivedAt === null && event.kind === 'match' && event.startDate !== null && event.endDate !== null)
+    .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.id.localeCompare(b.id));
+}
+
+function fullFreeDaysBetween(left: DatedMatch, right: DatedMatch): number {
+  return differenceInDays(right.startDate, left.endDate) - 1;
+}
+
+function monthKey(date: DateOnly): string {
+  const parsed = parseDateOnly(date);
+  if (!parsed) throw new RangeError(`Invalid date-only value: ${date}`);
+  return `${parsed.year}-${String(parsed.month).padStart(2, '0')}`;
+}
+
+export function calculateWarnings(events: readonly CalendarEvent[], year: number): CalendarWarning[] {
+  const matches = datedMatches(events, year);
+  const warnings: CalendarWarning[] = [];
+
+  const byMonth = new Map<string, DatedMatch[]>();
+  for (const event of matches) {
+    const key = monthKey(event.startDate);
+    const bucket = byMonth.get(key) ?? [];
+    bucket.push(event);
+    byMonth.set(key, bucket);
+  }
+  for (const [key, bucket] of [...byMonth.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+    if (bucket.length <= 2) continue;
+    warnings.push({
+      code: 'monthly_match_overload',
+      message: `–í ${key} –∑–∞–ø–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–æ ${bucket.length} –º–∞—Ç—á–∞: –±–æ–ª—å—à–µ –¥–≤—É—Ö –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π –≤ –æ–¥–Ω–æ–º –º–µ—Å—è—Ü–µ.`,
+      eventIds: bucket.map((event) => event.id),
+      dates: bucket.map((event) => event.startDate),
+    });
+  }
+
+  // Airgun and firearm-like disciplines are independent spacing streams: an
+  // airgun match between two firearm matches must not hide a firearm conflict.
+  const spacingGroups = [
+    matches.filter((event) => event.discipline === 'airgun'),
+    matches.filter((event) => event.discipline !== 'airgun'),
+  ];
+  for (const group of spacingGroups) {
+    for (let index = 1; index < group.length; index += 1) {
+      const previous = group[index - 1]!;
+      const current = group[index]!;
+      const freeDays = fullFreeDaysBetween(previous, current);
+      if (freeDays >= 14) continue;
+      warnings.push({
+        code: 'match_spacing',
+        message: `–ú–µ–∂–¥—É ¬´${previous.title}¬ª –∏ ¬´${current.title}¬ª —Ç–æ–ª—å–∫–æ ${Math.max(0, freeDays)} –ø–æ–ª–Ω—ã—Ö —Å–≤–æ–±–æ–¥–Ω—ã—Ö –¥–Ω–µ–π; —Ç—Ä–µ–±—É–µ—Ç—Å—è –¥–≤–µ –Ω–µ–¥–µ–ª–∏.`,
+        eventIds: [previous.id, current.id],
+        dates: [previous.endDate, current.startDate],
+      });
+    }
+  }
+
+  const trf = matches.filter((event) => event.series === 'trf');
+  for (let index = 1; index < trf.length; index += 1) {
+    const previous = trf[index - 1]!;
+    const current = trf[index]!;
+    const freeDays = fullFreeDaysBetween(previous, current);
+    if (freeDays >= 30) continue;
+    warnings.push({
+      code: 'trf_spacing',
+      message: `–ú–µ–∂–¥—É –º–∞—Ç—á–∞–º–∏ –¢–†–§ ¬´${previous.title}¬ª –∏ ¬´${current.title}¬ª —Ç–æ–ª—å–∫–æ ${Math.max(0, freeDays)} –ø–æ–ª–Ω—ã—Ö —Å–≤–æ–±–æ–¥–Ω—ã—Ö –¥–Ω–µ–π; —Ç—Ä–µ–±—É–µ—Ç—Å—è 30.`,
+      eventIds: [previous.id, current.id],
+      dates: [previous.endDate, current.startDate],
+    });
+  }
+
+  for (const target of matches.filter((event) => event.series === 'allRussian')) {
+    const previous = matches
+      .filter((event) => event.id !== target.id && event.discipline === target.discipline && event.startDate.localeCompare(target.startDate) <= 0)
+      .sort((a, b) => b.endDate.localeCompare(a.endDate) || b.startDate.localeCompare(a.startDate))[0];
+    if (previous) {
+      const freeDays = fullFreeDaysBetween(previous, target);
+      if (freeDays < 14) {
+        warnings.push({
+          code: 'all_russian_buffer',
+          message: `–ü–µ—Ä–µ–¥ –≤—Å–µ—Ä–æ—Å—Å–∏–π—Å–∫–∏–º –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ–º ¬´${target.title}¬ª –Ω–µ—Ç –¥–≤—É—Ö —Å–≤–æ–±–æ–¥–Ω—ã—Ö –Ω–µ–¥–µ–ª—å –≤ –¥–∏—Å—Ü–∏–ø–ª–∏–Ω–µ ¬´${target.discipline}¬ª: –ø–æ—Å–ª–µ ¬´${previous.title}¬ª –æ—Å—Ç–∞—ë—Ç—Å—è ${Math.max(0, freeDays)} –ø–æ–ª–Ω—ã—Ö –¥–Ω–µ–π.`,
+          eventIds: [previous.id, target.id],
+          dates: [previous.endDate, target.startDate],
+        });
+      }
+    }
+  }
+
+  // A build entry inside the two-week preparation zone is allowed by itself.
+  // The warning appears only when that planned build range collides with some
+  // other active calendar record, matching the MASTER_SPEC wording.
+  const datedEvents = activeDatedEvents(events, year);
+  for (const target of matches.filter((event) => event.series === 'allRussian')) {
+    const preparationStart = addDays(target.startDate, -14);
+    const preparationEnd = addDays(target.startDate, -1);
+    const builds = datedEvents.filter((event) =>
+      event.kind === 'build' && rangesOverlap(event.startDate, event.endDate, preparationStart, preparationEnd),
+    );
+    for (const build of builds) {
+      const conflicts = datedEvents.filter((event) =>
+        event.id !== build.id &&
+        event.id !== target.id &&
+        rangesOverlap(build.startDate, build.endDate, event.startDate, event.endDate),
+      );
+      for (const conflict of conflicts) {
+        warnings.push({
+          code: 'all_russian_build_overlap',
+          message: `–ó–∞—Å—Ç—Ä–æ–π–∫–∞ ¬´${build.title}¬ª –ø–µ—Ä–µ–¥ –≤—Å–µ—Ä–æ—Å—Å–∏–π—Å–∫–∏–º –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ–º ¬´${target.title}¬ª –ø–µ—Ä–µ—Å–µ–∫–∞–µ—Ç—Å—è —Å –∑–∞–ø–∏—Å—å—é ¬´${conflict.title}¬ª.`,
+          eventIds: [build.id, conflict.id, target.id],
+          dates: [build.startDate, build.endDate, target.startDate],
+        });
+      }
+    }
+  }
+
+  return warnings;
+}

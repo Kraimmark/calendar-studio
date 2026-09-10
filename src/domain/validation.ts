@@ -1,46 +1,112 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíÛûN‹Z–‹­¦ëeŠw¬Õ¥µÁ½ÉĞì5a}19I}eH°5%9}19I}eHô™É½´€œ¸½…±•¹‘…Èœì)¥µÁ½ÉĞì½µÁ…É•…Ñ•=¹±ä°Á…ÉÍ•…Ñ•=¹±äô™É½´€œ¸½‘…Ñ•=¹±äœì)¥µÁ½ÉĞÑåÁ”ì…±•¹‘…ÉÙ•¹Ğ°…±•¹‘…ÉÙ•¹Ñ…Ñ„ô™É½´€œ¸½ÑåÁ•Ìœì()•áÁ½ÉĞÑåÁ”Y…±¥‘…Ñ¥½¹M•Ù•É¥Ñä€ô€•ÉÉ½Èœğ€İ…É¹¥¹œœì()•áÁ½ÉĞ¥¹Ñ•É™…”Y…±¥‘…Ñ¥½¹%ÍÍÕ”ì(€½‘”èÍÑÉ¥¹œì(€Í•Ù•É¥ÑäèY…±¥‘…Ñ¥½¹M•Ù•É¥Ñäì(€™¥•±èÍÑÉ¥¹œğ¹Õ±°ì(€µ•ÍÍ…”èÍÑÉ¥¹œì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”Ù•¹ÑY…±¥‘…Ñ¥½¹½¹Ñ•áĞì(€å•…Èè¹Õµ‰•Èì(€•Ù•¹Ñ%üèÍÑÉ¥¹œì(€•Ù•¹ÑÌüèÉ•…‘½¹±äA¥¬ñ…±•¹‘…ÉÙ•¹Ğ°€¥œğ€Á…É•¹ÑÙ•¹Ñ%œùmtì)ô()½¹ÍĞ!a}=1=I}I€ô€½xlÀ´åµ„µ™uìÙô¼ì)½¹ÍĞQ%5}I€ô€½x¡lÀÅuq‘ğÉlÀ´Ít¤élÀ´Õuq¼ì()™Õ¹Ñ¥½¸ÁÕÍ¡…Ñ•%ÍÍÕ”¡¥ÍÍÕ•ÌèY…±¥‘…Ñ¥½¹%ÍÍÕ•mt°Ù…±Õ”èÍÑÉ¥¹œğ¹Õ±°°™¥•±èÍÑÉ¥¹œ°å•…Èè¹Õµ‰•È¤èÙ½¥ì(€¥˜€¡Ù…±Õ”€ôôô¹Õ±°¤É•ÑÕÉ¸ì(€½¹ÍĞÁ…ÉÍ•€ôÁ…ÉÍ•…Ñ•=¹±ä¡Ù…±Õ”¤ì(€¥˜€ …Á…ÉÍ•¤ì(€€€¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€¥¹Ù…±¥‘}‘…Ñ”œ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±°µ•ÍÍ…”è€ŸBBëBÃBÛBãFBÔƒBëBûFFB×BëFB÷FF8ƒBÓBÃFF¸œô¤ì(€ô•±Í”¥˜€¡Á…ÉÍ•¹å•…È€„ôôå•…È¤ì(€€€¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€‘…Ñ•}½ÕÑÍ¥‘•}å•…Èœ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±°µ•ÍÍ…”èƒBSBÃFBÀƒBÓBûBïBÛB÷BÀƒBÿFBãB÷BÃBÓBïB×BÛBÃFF0€‘íå•…ÉôƒBÏBûBÓF¹€ô¤ì(€ô)ô()™Õ¹Ñ¥½¸¡…ÍA…É•¹Ñå±”¡•Ù•¹Ñ%èÍÑÉ¥¹œ°Á…É•¹ÑÙ•¹Ñ%èÍÑÉ¥¹œ°•Ù•¹ÑÌèÉ•…‘½¹±äA¥¬ñ…±•¹‘…ÉÙ•¹Ğ°€¥œğ€Á…É•¹ÑÙ•¹Ñ%œùmt¤è‰½½±•…¸ì(€½¹ÍĞ‰å%€ô¹•Ü5…À¡•Ù•¹ÑÌ¹µ…À ¡•Ù•¹Ğ¤€ôøm•Ù•¹Ğ¹¥°•Ù•¹Ñt¤¤ì(€½¹ÍĞÍ••¸€ô¹•ÜM•ĞñÍÑÉ¥¹œø¡m•Ù•¹Ñ%‘t¤ì(€±•ĞÕÉÉ•¹ĞèÍÑÉ¥¹œğ¹Õ±°€ôÁ…É•¹ÑÙ•¹Ñ%ì(€İ¡¥±”€¡ÕÉÉ•¹Ğ¤ì(€€€¥˜€¡Í••¸¹¡…Ì¡ÕÉÉ•¹Ğ¤¤É•ÑÕÉ¸ÑÉÕ”ì(€€€Í••¸¹…‘¡ÕÉÉ•¹Ğ¤ì(€€€ÕÉÉ•¹Ğ€ô‰å%¹•Ğ¡ÕÉÉ•¹Ğ¤ü¹Á…É•¹ÑÙ•¹Ñ%€üü¹Õ±°ì(€ô(€É•ÑÕÉ¸™…±Í”ì)ô()•áÁ½ÉĞ™Õ¹Ñ¥½¸Ù…±¥‘…Ñ•Ù•¹Ğ¡‘…Ñ„è…±•¹‘…ÉÙ•¹Ñ…Ñ„°½¹Ñ•áĞèÙ•¹ÑY…±¥‘…Ñ¥½¹½¹Ñ•áĞ¤èY…±¥‘…Ñ¥½¹%ÍÍÕ•mtì(€½¹ÍĞ¥ÍÍÕ•ÌèY…±¥‘…Ñ¥½¹%ÍÍÕ•mt€ômtì(€¥˜€ …9Õµ‰•È¹¥Í%¹Ñ••È¡½¹Ñ•áĞ¹å•…È¤ñğ½¹Ñ•áĞ¹å•…È€ğ5%9}19I}eHñğ½¹Ñ•áĞ¹å•…È€ø5a}19I}eH¤ì(€€€¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€¥¹Ù…±¥‘}…±•¹‘…É}å•…Èœ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±è¹Õ±°°µ•ÍÍ…”èƒBOBûBĞƒBëBÃBïB×B÷BÓBÃFF<ƒBÓBûBïBÛB×BôƒBÇF/FF0€‘í5%9}19I}eI÷ŠL‘í5a}19I}eIô¹€ô¤ì(€€€É•ÑÕÉ¸¥ÍÍÕ•Ìì(€ô((€¥˜€ …‘…Ñ„¹Ñ¥Ñ±”¹ÑÉ¥´ ¤¤¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€Ñ¥Ñ±•}É•ÅÕ¥É•œ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±è€Ñ¥Ñ±”œ°µ•ÍÍ…”è€ŸBwBÃBßBËBÃB÷BãBÔƒBóB×FBûBÿFBãF?FBãF<ƒBûBÇF?BßBÃFB×BïF3B÷Bø¸œô¤ì(€¥˜€ …!a}=1=I}I¹Ñ•ÍĞ¡‘…Ñ„¹ÍÑ¥­•É½±½È¤¤¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€¥¹Ù…±¥‘}ÍÑ¥­•É}½±½Èœ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±è€ÍÑ¥­•É½±½Èœ°µ•ÍÍ…”è€ŸB›BËB×FƒBÓBûBïBÛB×BôƒBÇF/FF0ƒFBëBÃBßBÃBôƒBëBÃBè€II	¸œô¤ì((€¥˜€ ¡‘…Ñ„¹ÍÑ…ÉÑ…Ñ”€ôôô¹Õ±°¤€„ôô€¡‘…Ñ„¹•¹‘…Ñ”€ôôô¹Õ±°¤¤ì(€€€¥ÍÍÕ•Ì¹ÁÕÍ ¡ì½‘”è€•Ù•¹Ñ}‘…Ñ•Í}¥¹½µÁ±•Ñ”œ°Í•Ù•É¥Ñäè€•ÉÉ½Èœ°™¥•±è€ÍÑ…ÉÑ…Ñ”œ°µ•ÍÍ…”è€ŸBSBïF<ƒBóB×FBûBÿFBãF?FBãF<ƒFBëBÃBÛBãFBÔƒBûBÇBÔƒBÓBÃFF,ƒBãBïBàƒBûFFBÃBËF3FBÔƒBûBÇBÔƒBÿFFFF/BóBà¸œô¤ì(€ô(€ÁÕÍ¡…Ñ•%ÍÍÕ”¡¥ÍÍÕ•Ì°‘…Ñ„¹ÍÑ…ÉÑ…Ñ”°€ÍÑ…ÉÑ…Ñ”œ°½¹Ñ•áĞ¹å•…È¤ì(€ÁÕÍ¡…Ñ•%ÍÍÕ”¡¥ÍÍÕ•Ì°‘…Ñ„¹•¹‘…Ñ”°€•¹‘…Ñ”œ°½¹Ñ•áĞ¹å•…È¤ì(€¥˜€¡‘…Ñ„¹ÍÑ…ÉÑ…Ñ”€˜˜‘…Ñ„¹•¹‘…Ñ”€˜˜Á…ÉÍ•…Ñ•=¹±ä¡‘…Ñ„¹ÍÑ…ÉÑ…Ñ”¤€˜˜Á…ÉÍ•…Ñ•=¹±ä¡‘…Ñ„¹•¹‘…Ñ”¤€˜˜½µÁ…É•…Ñ•=¹±ä¡‘…Ñ„¹•¹‘…Ñ”°‘…Ñ„¹ÍÓû¶‰Ëkºwµç\Ûİ\˜ÙHOOH	ÙZÜ	ÊHÂˆYˆ
-Y]K™ZÜ]™[Ëš[J
-JH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	ÙZÜÛ]™[Ü™\]Z\™Y	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	ÙZÜ]™[	ËY\ÜØYÙNˆ	ô%4.ôcÈ4-ô,4/ô.4`t.4%t&´'È4`ô.´,4-´.4`´-H4`ô`4/´,´-t/tc‰ÈJNÂˆYˆ
-S[X™\‹š\Ò[YÙ\Š]K™ZÜİYÙS[X™\ŠH
-]K™ZÜİYÙS[X™\ˆÏÈ
-HJH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	ÙZÜÜİYÙWÜ™\]Z\™Y	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	ÙZÜİYÙS[X™\‰ËY\ÜØYÙNˆ	ô%4.ôcÈ4-ô,4/ô.4`t.4%t&´'È4`ô.´,4-´.4`´-H4/t/´/4-t`4ct`´,4/ô,‰ÈJNÂˆB‚ˆYˆ
-S[X™\‹š\Ò[YÙ\Š]K™^[YÚY™™\“Z[]\ÊH]K™^[YÚY™™\“Z[]\È]K™^[YÚY™™\“Z[]\ÈˆLŒ
-HÂˆ\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ú[˜[YÙ^[YÚØY™™\‰ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	Ù^[YÚY™™\“Z[]\ÉËY\ÜØYÙNˆ	ô(4-t-ô-t`4,ˆ4`t,´-t`´/´,´/´,ô/ˆ4/´.´/t,4-4/´.ô-´-t/H4,tbô`´c4/´`ˆ4-4/ˆLŒ4/4.4/t`ô`‹‰ÈJNÂˆBˆYˆ
-]Kœ[›™Y^\˜Ú\ÙPÛİ[OOH[	‰ˆ
-S[X™\‹š\Ò[YÙ\Š]Kœ[›™Y^\˜Ú\ÙPÛİ[
-H]Kœ[›™Y^\˜Ú\ÙPÛİ[H]Kœ[›™Y^\˜Ú\ÙPÛİ[ˆ
-JHÂˆ\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ú[˜[YÙ^\˜Ú\ÙWØÛİ[	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	Ü[›™Y^\˜Ú\ÙPÛİ[	ËY\ÜØYÙNˆ	ô'´a´-t/t.´,4.´/´.ô.4aô-t`t`´,´,4`ô/ô`4,4-´/t-t/t.4.H4-4/´.ô-´/t,4,tbô`´c4/´`ˆH4-4/ˆ‰ÈJNÂˆBˆYˆ
-]Kœ[›™YÜ]XYÛİ[OOH[	‰ˆ
-S[X™\‹š\Ò[YÙ\Š]Kœ[›™YÜ]XYÛİ[
-H]Kœ[›™YÜ]XYÛİ[H]Kœ[›™YÜ]XYÛİ[ˆ
-JHÂˆ\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ú[˜[YÜÜ]XYØÛİ[	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	Ü[›™YÜ]XYÛİ[	ËY\ÜØYÙNˆ	ô'´a´-t/t.´,4.´/´.ô.4aô-t`t`´,´,4`t.´,´/´-4/´,ˆ4-4/´.ô-´/t,4,tbô`´c4/´`ˆH4-4/ˆ‰ÈJNÂˆB‚ˆÛÛœİÚYYÈH™]ÈÙ]İš[™ÏŠ
-NÂˆ›Üˆ
-ÛÛœİÚYÙˆ]KœÚYÊHÂˆYˆ
-\ÚYšYš[J
-HÚYYËš\ÊÚYšY
-JH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ú[˜[YÜÚYÚY	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	ÜÚYÉËY\ÜØYÙNˆ	ô&´,4-´-4,4cÈ4`t/4-t/t,4-4/´.ô-´/t,4.4/4-t`´c4`ô/t.4.´,4.ôc4/tbô.H4`t`´,4,t.4.ôc4/tbô.HQ‰ÈJNÂˆÚYYË˜Y
-ÚYšY
-NÂˆYˆ
-\ÚY›˜[YKš[J
-JH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	ÜÚYÛ˜[YWÜ™\]Z\™Y	ËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	ÜÚYÉËY\ÜØYÙNˆ	ô't,4-ô,´,4/t.4-H4`t/4-t/tbÈ4/´,tcô-ô,4`´-t.ôc4/t/‹‰ÈJNÂˆYˆ
-USQWÔ‘K\İ
-ÚYœİ\Ğ]
-HUSQWÔ‘K\İ
-ÚY™[™Ğ]
-JH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ú[˜[YÜÚYİ[YIËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	ÜÚYÉËY\ÜØYÙNˆ	ô$´`4-t/4cÈ4`t/4-t/tbÈ4`ô.´,4-ôbô,´,4-t`´`tcÈ4,ˆ4a4/´`4/4,4`´-H“SK‰ÈJNÂˆB‚ˆYˆ
-]Kœ\™[]™[Y	‰ˆÛÛ^™]™[Y
-HÂˆYˆ
-]Kœ\™[]™[YOOHÛÛ^™]™[Y
-H\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ü\™[ÜÙ[—ØŞXÛIËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	Ü\™[]™[Y	ËY\ÜØYÙNˆ	ô'4-t`4/´/ô`4.4cô`´.4-H4/t-H4/4/´-´-t`ˆ4,tbô`´c4`4/´-4.4`´-t.ô-t/4`t,4/4/ˆ4`t-t,t-K‰ÈJNÂˆ[ÙHYˆ
-ÛÛ^™]™[È	‰ˆ\Ô\™[ŞXÛJÛÛ^™]™[Y]Kœ\™[]™[YÛÛ^™]™[ÊJH\ÜİY\Ëœ\Ú
-ÈÛÙNˆ	Ü\™[ØŞXÛIËÙ]™\š]Nˆ	Ù\œ›Ü‰ËšY[ˆ	Ü\™[]™[Y	ËY\ÜØYÙNˆ	ô't-t.ôc4-ôcÈ4`t/´-ô-4,4`´c4a´.4.´.ô.4aô-t`t.´`ôcˆ4`t,´cô-ôc4/4-t`4/´/ô`4.4cô`´.4.K‰ÈJNÂˆB‚ˆ™]\›ˆ\ÜİY\ÎÂŸB‚™^Ü[˜İ[Ûˆ\Ğ›ØÚÚ[™Ò\ÜİY\Ê\ÜİY\Îˆ™XYÛ›H˜[Y][Û’\ÜİYV×JNˆ›ÛÛX[ˆÂˆ™]\›ˆ\ÜİY\ËœÛÛYJ
-\ÜİYJHOˆ\ÜİYKœÙ]™\š]HOOH	Ù\œ›Ü‰ÊNÂŸB
+import { MAX_CALENDAR_YEAR, MIN_CALENDAR_YEAR } from './calendar';
+import { compareDateOnly, parseDateOnly } from './dateOnly';
+import type { CalendarEvent, CalendarEventData } from './types';
+
+export type ValidationSeverity = 'error' | 'warning';
+
+export interface ValidationIssue {
+  code: string;
+  severity: ValidationSeverity;
+  field: string | null;
+  message: string;
+}
+
+export interface EventValidationContext {
+  year: number;
+  eventId?: string;
+  events?: readonly Pick<CalendarEvent, 'id' | 'parentEventId'>[];
+}
+
+const HEX_COLOR_RE = /^#[0-9A-Fa-f]{6}$/;
+const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
+
+function pushDateIssue(issues: ValidationIssue[], value: string | null, field: string, year: number): void {
+  if (value === null) return;
+  const parsed = parseDateOnly(value);
+  if (!parsed) {
+    issues.push({ code: 'invalid_date', severity: 'error', field, message: 'Ğ£ĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ Ğ´Ğ°Ñ‚Ñƒ.' });
+  } else if (parsed.year !== year) {
+    issues.push({ code: 'date_outside_year', severity: 'error', field, message: `Ğ”Ğ°Ñ‚Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ¿Ñ€Ğ¸Ğ½Ğ°Ğ´Ğ»ĞµĞ¶Ğ°Ñ‚ÑŒ ${year} Ğ³Ğ¾Ğ´Ñƒ.` });
+  }
+}
+
+function hasParentCycle(eventId: string, parentEventId: string, events: readonly Pick<CalendarEvent, 'id' | 'parentEventId'>[]): boolean {
+  const byId = new Map(events.map((event) => [event.id, event]));
+  const seen = new Set<string>([eventId]);
+  let current: string | null = parentEventId;
+  while (current) {
+    if (seen.has(current)) return true;
+    seen.add(current);
+    current = byId.get(current)?.parentEventId ?? null;
+  }
+  return false;
+}
+
+export function validateEvent(data: CalendarEventData, context: EventValidationContext): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  if (!Number.isInteger(context.year) || context.year < MIN_CALENDAR_YEAR || context.year > MAX_CALENDAR_YEAR) {
+    issues.push({ code: 'invalid_calendar_year', severity: 'error', field: null, message: `Ğ“Ğ¾Ğ´ ĞºĞ°Ğ»ĞµĞ½Ğ´Ğ°Ñ€Ñ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ ${MIN_CALENDAR_YEAR}â€“${MAX_CALENDAR_YEAR}.` });
+    return issues;
+  }
+
+  if (!data.title.trim()) issues.push({ code: 'title_required', severity: 'error', field: 'title', message: 'ĞĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ñ Ğ¾Ğ±ÑĞ·Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾.' });
+  if (!HEX_COLOR_RE.test(data.stickerColor)) issues.push({ code: 'invalid_sticker_color', severity: 'error', field: 'stickerColor', message: 'Ğ¦Ğ²ĞµÑ‚ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ ÑƒĞºĞ°Ğ·Ğ°Ğ½ ĞºĞ°Ğº #RRGGBB.' });
+
+  if ((data.startDate === null) !== (data.endDate === null)) {
+    issues.push({ code: 'event_dates_incomplete', severity: 'error', field: 'startDate', message: 'Ğ”Ğ»Ñ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ñ ÑƒĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ Ğ¾Ğ±Ğµ Ğ´Ğ°Ñ‚Ñ‹ Ğ¸Ğ»Ğ¸ Ğ¾ÑÑ‚Ğ°Ğ²ÑŒÑ‚Ğµ Ğ¾Ğ±Ğµ Ğ¿ÑƒÑÑ‚Ñ‹Ğ¼Ğ¸.' });
+  }
+  pushDateIssue(issues, data.startDate, 'startDate', context.year);
+  pushDateIssue(issues, data.endDate, 'endDate', context.year);
+  if (data.startDate && data.endDate && parseDateOnly(data.startDate) && parseDateOnly(data.endDate) && compareDateOnly(data.endDate, data.startDate) < 0) {
+    issues.push({ code: 'end_before_start', severity: 'error', field: 'endDate', message: 'ĞĞºĞ¾Ğ½Ñ‡Ğ°Ğ½Ğ¸Ğµ Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ñ€Ğ°Ğ½ÑŒÑˆĞµ Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ°.' });
+  }
+
+  if (data.registration.mode === 'scheduled') {
+    if (!data.registration.opensAt || !data.registration.closesAt) {
+      issues.push({ code: 'registration_dates_required', severity: 'error', field: 'registration', message: 'Ğ”Ğ»Ñ Ñ€ĞµĞ³Ğ¸ÑÑ‚Ñ€Ğ°Ñ†Ğ¸Ğ¸ Ğ¿Ğ¾ Ğ´Ğ°Ñ‚Ğ°Ğ¼ Ğ½ÑƒĞ¶Ğ½Ñ‹ Ğ´Ğ°Ñ‚Ğ° Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ Ğ¸ Ğ´Ğ°Ñ‚Ğ° Ğ·Ğ°ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ.' });
+    }
+    if (data.registration.opensAt && !parseDateOnly(data.registration.opensAt)) {
+      issues.push({ code: 'invalid_registration_open_date', severity: 'error', field: 'registration.opensAt', message: 'Ğ£ĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ Ğ´Ğ°Ñ‚Ñƒ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ Ñ€ĞµĞ³Ğ¸ÑÑ‚Ñ€Ğ°Ñ†Ğ¸Ğ¸.' });
+    }
+    if (data.registration.closesAt && !parseDateOnly(data.registration.closesAt)) {
+      issues.push({ code: 'invalid_registration_close_date', severity: 'error', field: 'registration.closesAt', message: 'Ğ£ĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½ÑƒÑ Ğ´Ğ°Ñ‚Ñƒ Ğ·Ğ°ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ Ñ€ĞµĞ³Ğ¸ÑÑ‚Ñ€Ğ°Ñ†Ğ¸Ğ¸.' });
+    }
+    if (data.registration.opensAt && data.registration.closesAt && parseDateOnly(data.registration.opensAt) && parseDateOnly(data.registration.closesAt) && compareDateOnly(data.registration.closesAt, data.registration.opensAt) < 0) {
+      issues.push({ code: 'registration_close_before_open', severity: 'error', field: 'registration.closesAt', message: 'Ğ ĞµĞ³Ğ¸ÑÑ‚Ñ€Ğ°Ñ†Ğ¸Ñ Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ·Ğ°ĞºÑ€Ñ‹Ñ‚ÑŒÑÑ Ñ€Ğ°Ğ½ÑŒÑˆĞµ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ.' });
+    }
+  }
+
+  if (data.source === 'ekp') {
+    if (!data.ekpLevel?.trim()) issues.push({ code: 'ekp_level_required', severity: 'error', field: 'ekpLevel', message: 'Ğ”Ğ»Ñ Ğ·Ğ°Ğ¿Ğ¸ÑĞ¸ Ğ•ĞšĞŸ ÑƒĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ ÑƒÑ€Ğ¾Ğ²ĞµĞ½ÑŒ.' });
+    if (!Number.isInteger(data.ekpStageNumber) || (data.ekpStageNumber ?? 0) < 1) issues.push({ code: 'ekp_stage_required', severity: 'error', field: 'ekpStageNumber', message: 'Ğ”Ğ»Ñ Ğ·Ğ°Ğ¿Ğ¸ÑĞ¸ Ğ•ĞšĞŸ ÑƒĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ ÑÑ‚Ğ°Ğ¿Ğ°.' });
+  }
+
+  if (!Number.isInteger(data.daylightBufferMinutes) || data.daylightBufferMinutes < 0 || data.daylightBufferMinutes > 120) {
+    issues.push({ code: 'invalid_daylight_buffer', severity: 'error', field: 'daylightBufferMinutes', message: 'Ğ ĞµĞ·ĞµÑ€Ğ² ÑĞ²ĞµÑ‚Ğ¾Ğ²Ğ¾Ğ³Ğ¾ Ğ¾ĞºĞ½Ğ° Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚ 0 Ğ´Ğ¾ 120 Ğ¼Ğ¸Ğ½ÑƒÑ‚.' });
+  }
+  if (data.plannedExerciseCount !== null && (!Number.isInteger(data.plannedExerciseCount) || data.plannedExerciseCount < 1 || data.plannedExerciseCount > 40)) {
+    issues.push({ code: 'invalid_exercise_count', severity: 'error', field: 'plannedExerciseCount', message: 'ĞÑ†ĞµĞ½ĞºĞ° ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ° ÑƒĞ¿Ñ€Ğ°Ğ¶Ğ½ĞµĞ½Ğ¸Ğ¹ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚ 1 Ğ´Ğ¾ 40.' });
+  }
+  if (data.plannedSquadCount !== null && (!Number.isInteger(data.plannedSquadCount) || data.plannedSquadCount < 1 || data.plannedSquadCount > 80)) {
+    issues.push({ code: 'invalid_squad_count', severity: 'error', field: 'plannedSquadCount', message: 'ĞÑ†ĞµĞ½ĞºĞ° ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ° ÑĞºĞ²Ğ¾Ğ´Ğ¾Ğ² Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚ 1 Ğ´Ğ¾ 80.' });
+  }
+
+  const shiftIds = new Set<string>();
+  for (const shift of data.shifts) {
+    if (!shift.id.trim() || shiftIds.has(shift.id)) issues.push({ code: 'invalid_shift_id', severity: 'error', field: 'shifts', message: 'ĞšĞ°Ğ¶Ğ´Ğ°Ñ ÑĞ¼ĞµĞ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ¸Ğ¼ĞµÑ‚ÑŒ ÑƒĞ½Ğ¸ĞºĞ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑÑ‚Ğ°Ğ±Ğ¸Ğ»ÑŒĞ½Ñ‹Ğ¹ ID.' });
+    shiftIds.add(shift.id);
+    if (!shift.name.trim()) issues.push({ code: 'shift_name_required', severity: 'error', field: 'shifts', message: 'ĞĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ÑĞ¼ĞµĞ½Ñ‹ Ğ¾Ğ±ÑĞ·Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾.' });
+    if (!TIME_RE.test(shift.startsAt) || !TIME_RE.test(shift.endsAt)) issues.push({ code: 'invalid_shift_time', severity: 'error', field: 'shifts', message: 'Ğ’Ñ€ĞµĞ¼Ñ ÑĞ¼ĞµĞ½Ñ‹ ÑƒĞºĞ°Ğ·Ñ‹Ğ²Ğ°ĞµÑ‚ÑÑ Ğ² Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ‚Ğµ HH:MM.' });
+  }
+
+  if (data.parentEventId && context.eventId) {
+    if (data.parentEventId === context.eventId) issues.push({ code: 'parent_self_cycle', severity: 'error', field: 'parentEventId', message: 'ĞœĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğµ Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ñ€Ğ¾Ğ´Ğ¸Ñ‚ĞµĞ»ĞµĞ¼ ÑĞ°Ğ¼Ğ¾ ÑĞµĞ±Ğµ.' });
+    else if (context.events && hasParentCycle(context.eventId, data.parentEventId, context.events)) issues.push({ code: 'parent_cycle', severity: 'error', field: 'parentEventId', message: 'ĞĞµĞ»ÑŒĞ·Ñ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ Ñ†Ğ¸ĞºĞ»Ğ¸Ñ‡ĞµÑĞºÑƒÑ ÑĞ²ÑĞ·ÑŒ Ğ¼ĞµÑ€Ğ¾Ğ¿Ñ€Ğ¸ÑÑ‚Ğ¸Ğ¹.' });
+  }
+
+  return issues;
+}
+
+export function hasBlockingIssues(issues: readonly ValidationIssue[]): boolean {
+  return issues.some((issue) => issue.severity === 'error');
+}

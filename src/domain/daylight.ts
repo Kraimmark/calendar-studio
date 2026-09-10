@@ -1,4 +1,180 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíßwN‹Z–‹­¦ëeŠw¬Õ¥µÁ½ÉĞì…‘‘…åÌ°‘¥™™•É•¹•%¹…åÌ°Á…ÉÍ•…Ñ•=¹±ä°ÑåÁ”…Ñ•=¹±äô™É½´€œ¸½‘…Ñ•=¹±äœì)¥µÁ½ÉĞÑåÁ”ì…±•¹‘…ÉÙ•¹Ñ…Ñ„°Ù•¹ÑM¡¥™Ğô™É½´€œ¸½ÑåÁ•Ìœì()•áÁ½ÉĞ¥¹Ñ•É™…”…å±¥¡Ñ1½…Ñ¥½¸ì(€¥èÍÑÉ¥¹œì(€¹…µ”èÍÑÉ¥¹œì(€±…Ñ¥ÑÕ‘”è¹Õµ‰•Èì(€±½¹¥ÑÕ‘”è¹Õµ‰•Èì(€ÕÑ=™™Í•Ñ5¥¹ÕÑ•Ìè¹Õµ‰•Èì)ô()•áÁ½ÉĞ½¹ÍĞM%9Q}AQIM	UIè…å±¥¡Ñ1½…Ñ¥½¸€ôì(€¥è€Í…¥¹ĞµÁ•Ñ•ÉÍ‰ÕÉœœ°(€¹…µ”è€ŸB‡BÃB÷BëF·BB×FB×FBÇFFBÌœ°(€±…Ñ¥ÑÕ‘”è€Ôä¸äÌĞÌ°(€±½¹¥ÑÕ‘”è€ÌÀ¸ÌÌÔÄ°(€ÕÑ=™™Í•Ñ5¥¹ÕÑ•Ìè€ÄàÀ°)ôì()•áÁ½ÉĞ¥¹Ñ•É™…”M…™•Q¥µ•]¥¹‘½Üì(€ÍÑ…ÉÑÍĞèÍÑÉ¥¹œì(€•¹‘ÍĞèÍÑÉ¥¹œì(€ÍÑ…ÉÑÍ…å=™™Í•Ğè¹Õµ‰•Èì(€•¹‘Í…å=™™Í•Ğè¹Õµ‰•Èì(€ÍÁ…¹Í5¥‘¹¥¡Ğè‰½½±•…¸ì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”…å±¥¡Ñ%¹™¼ì(€‘…Ñ”è…Ñ•=¹±äì(€¥Ù¥±…İ¸èÍÑÉ¥¹œğ¹Õ±°ì(€ÍÕ¹É¥Í”èÍÑÉ¥¹œğ¹Õ±°ì(€ÍÕ¹Í•ĞèÍÑÉ¥¹œğ¹Õ±°ì(€¥Ù¥±ÕÍ¬èÍÑÉ¥¹œğ¹Õ±°ì(€¥Ù¥±…İ¹…å=™™Í•Ğè¹Õµ‰•Èğ¹Õ±°ì(€ÍÕ¹É¥Í•…å=™™Í•Ğè¹Õµ‰•Èğ¹Õ±°ì(€ÍÕ¹Í•Ñ…å=™™Í•Ğè¹Õµ‰•Èğ¹Õ±°ì(€¥Ù¥±ÕÍ­…å=™™Í•Ğè¹Õµ‰•Èğ¹Õ±°ì(€‘…å±¥¡Ñ5¥¹ÕÑ•Ìè¹Õµ‰•Èğ¹Õ±°ì(€¹¥¡Ñ5¥¹ÕÑ•Ìè¹Õµ‰•Èğ¹Õ±°ì(€Í…™•…å]¥¹‘½ÜèM…™•Q¥µ•]¥¹‘½Üğ¹Õ±°ì(€Í…™•9¥¡Ñ]¥¹‘½ÜèM…™•Q¥µ•]¥¹‘½Üğ¹Õ±°ì)ô()•áÁ½ÉĞ¥¹Ñ•É™…”M¡¥™Ñ…å±¥¡Ñ]…É¹¥¹œì(€Í¡¥™Ñ%èÍÑÉ¥¹œì(€Í¡¥™Ñ9…µ”èÍÑÉ¥¹œì(€‘…Ñ”è…Ñ•=¹±äì(€µ•ÍÍ…”èÍÑÉ¥¹œì)ô()½¹ÍĞMU9I%M}i9%Q €ô€äÀ¸àÌÌì)½¹ÍĞ%Y%1}i9%Q €ô€äØì()™Õ¹Ñ¥½¸É…‘¥…¹Ì¡Ù…±Õ”è¹Õµ‰•È¤è¹Õµ‰•ÈìÉ•ÑÕÉ¸Ù…±Õ”€¨5…Ñ ¹A$€¼€ÄàÀìô)™Õ¹Ñ¥½¸‘•É••Ì¡Ù…±Õ”è¹Õµ‰•È¤è¹Õµ‰•ÈìÉ•ÑÕÉ¸Ù…±Õ”€¨€ÄàÀ€¼5…Ñ ¹A$ìô)™Õ¹Ñ¥½¸¹½Éµ…±¥é••É••Ì¡Ù…±Õ”è¹Õµ‰•È¤è¹Õµ‰•ÈìÉ•ÑÕÉ¸€ ¡Ù…±Õ”€”€ÌØÀ¤€¬€ÌØÀ¤€”€ÌØÀìô)™Õ¹Ñ¥½¸¹½Éµ…±¥é•!½ÕÉÌ¡Ù…±Õ”è¹Õµ‰•È¤è¹Õµ‰•ÈìÉ•ÑÕÉ¸€ ¡Ù…±Õ”€”€ÈĞ¤€¬€ÈĞ¤€”€ÈĞìô()™Õ¹Ñ¥½¸‘…å=™e•…È¡‘…Ñ”è…Ñ•=¹±ä¤è¹Õµ‰•Èì(€½¹ÍĞÁ…ÉÑÌ€ôÁ…ÉÍ•…Ñ•=¹±ä¡‘…Ñ”¤ì(€¥˜€ …Á…ÉÑÌ¤Ñ¡É½Ü¹•ÜI…¹•ÉÉ½È¡%¹Ù…±¥‘…Ñ”µ½¹±äÙ…±Õ”è€‘í‘…Ñ•õ€¤ì(€É•ÑÕÉ¸‘¥™™•É•¹•%¹…åÌ¡‘…Ñ”°€‘íÁ…ÉÑÌ¹å•…Éô´ÀÄ´ÀÅ€¤€¬€Äì)ô((¼¨¨]¥±±¥…µÌ½UM9<ÍÕ¹É¥Í”…±½É¥Ñ¡´¸I•ÑÕÉ¹Ì±½…°±½¬µ¥¹ÕÑ•Ì€À¸¸ÄĞÌä¸€¨¼)™Õ¹Ñ¥½¸Í½±…É±½­5¥¹ÕÑ•Ì¡‘…Ñ”è…Ñ•=¹±ä°±½…Ñ¥½¸è…å±¥¡Ñ1½…Ñ¥½¸°é•¹¥Ñ è¹Õµ‰•È°ÍÕ¹É¥Í”è‰½½±•…¸¤è¹Õµ‰•Èğ¹Õ±°ì(€½¹ÍĞ¸€ô‘…å=™e•…È¡‘…Ñ”¤ì(€½¹ÍĞ±¹!½ÕÈ€ô±½…Ñ¥½¸¹±½¹¥ÑÕ‘”€¼€ÄÔì(€½¹ÍĞĞ€ô¸€¬€ ¡ÍÕ¹É¥Í”€ü€Ø€è€Äà¤€´±¹!½ÕÈ¤€¼€ÈĞì(€½¹ÍĞµ•…¹¹½µ…±ä€ô€À¸äàÔØ€¨Ğ€´€Ì¸Èàäì(€±•ĞÑÉÕ•1½¹¥ÑÕ‘”€ôµ•…¹¹½µ…±ä€¬€Ä¸äÄØ€¨5…Ñ ¹Í¥¸¡É…‘¥…¹Ì¡µ•…¹¹½µ…±ä¤¤€¬€À¸ÀÈÀ€¨5…Ñ ¹Í¥¸¡É…‘¥…¹Ì È€¨µ•…¹¹½µ…±ä¤¤€¬€ÈàÈ¸ØÌĞì(€ÑÉÕ•1½¹¥ÑÕ‘”€ô¹½Éµ…±¥é••É••Ì¡ÑÉÕ•1½¹¥ÑÕ‘”¤ì((€±•ĞÉ¥¡ÑÍ•¹Í¥½¸€ô‘•É••Ì¡5…Ñ ¹…Ñ…¸ À¸äÄÜØĞ€¨5…Ñ ¹Ñ…¸¡É…‘¥…¹Ì¡ÑÉÕ•1½¹¥ÑÕ‘”¤¤¤¤ì(€É¥¡ÑÍ•¹Í¥½¸€ô¹½Éµ…±¥é••É••Ì¡É¥¡ÑÍ•¹Í¥½¸¤ì(€½¹ÍĞ±½¹¥ÑÕ‘•EÕ…‘É…¹Ğ€ô5…Ñ ¹™±½½È¡ÑÉÕ•1½¹¥ÑÕ‘”€¼€äÀ¤€¨€äÀì(€½¹ÍĞÉ…EÕ…‘É…¹Ğ€ô5…Ñ ¹™±½½È¡É¥¡ÑÍ•¹Í¥½¸€¼€äÀ¤€¨€äÀì(€É¥¡ÑÍ•¹Í¥½¸€ô€¡É¥¡ÑÍ•¹Í¥½¸€¬±½¹¥ÑÕ‘•EÕ…‘É…¹Ğ€´É…EÕ…‘É…¹Ğ¤€¼€ÄÔì((€½¹ÍĞÍ¥¹•±¥¹…Ñ¥½¸€ô€À¸ÌäÜàÈ€¨5…Ñ ¹Í¥¸¡É…‘¥…¹Ì¡ÑÉÕ•1½¹¥ÑÕ‘”¤¤ì(€½¹ÍĞ½Í•±¥¹…Ñ¥½¸€ô5…Ñ ¹½Ì¡5…Ñ ¹…Í¥¸¡Í¥¹•±¥¹…Ñ¥½¸¤¤ì(€½¹ÍĞ½Í!½ÕÈ€ô€¡5…Ñ ¹½Ì¡É…‘¥…¹Ì¡é•¹¥Ñ ¤¤€´Í¥¹•±¥¹…Ñ¥½¸€¨5…Ñ ¹Í¥¸¡É…‘¥…¹Ì¡±½…Ñ¥½¸¹±…Ñ¥ÑÕ‘”¤¤¤€¼(€€€€¡½Í•±¥¹…Ñ¥½¸€¨5…Ñ ¹½Ì¡É…‘¥…¹Ì¡±½…Ñ¥½¸¹±…Ñ¥ÑÕ‘”¤¤¤ì(€¥˜€¡½Í!½ÕÈ€û]ıŞÚ$z{-®éÜj×nd: number } | null {
+import { addDays, differenceInDays, parseDateOnly, type DateOnly } from './dateOnly';
+import type { CalendarEventData, EventShift } from './types';
+
+export interface DaylightLocation {
+  id: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  utcOffsetMinutes: number;
+}
+
+export const SAINT_PETERSBURG: DaylightLocation = {
+  id: 'saint-petersburg',
+  name: 'Ğ¡Ğ°Ğ½ĞºÑ‚-ĞŸĞµÑ‚ĞµÑ€Ğ±ÑƒÑ€Ğ³',
+  latitude: 59.9343,
+  longitude: 30.3351,
+  utcOffsetMinutes: 180,
+};
+
+export interface SafeTimeWindow {
+  startsAt: string;
+  endsAt: string;
+  startsDayOffset: number;
+  endsDayOffset: number;
+  spansMidnight: boolean;
+}
+
+export interface DaylightInfo {
+  date: DateOnly;
+  civilDawn: string | null;
+  sunrise: string | null;
+  sunset: string | null;
+  civilDusk: string | null;
+  civilDawnDayOffset: number | null;
+  sunriseDayOffset: number | null;
+  sunsetDayOffset: number | null;
+  civilDuskDayOffset: number | null;
+  daylightMinutes: number | null;
+  nightMinutes: number | null;
+  safeDayWindow: SafeTimeWindow | null;
+  safeNightWindow: SafeTimeWindow | null;
+}
+
+export interface ShiftDaylightWarning {
+  shiftId: string;
+  shiftName: string;
+  date: DateOnly;
+  message: string;
+}
+
+const SUNRISE_ZENITH = 90.833;
+const CIVIL_ZENITH = 96;
+
+function radians(value: number): number { return value * Math.PI / 180; }
+function degrees(value: number): number { return value * 180 / Math.PI; }
+function normalizeDegrees(value: number): number { return ((value % 360) + 360) % 360; }
+function normalizeHours(value: number): number { return ((value % 24) + 24) % 24; }
+
+function dayOfYear(date: DateOnly): number {
+  const parts = parseDateOnly(date);
+  if (!parts) throw new RangeError(`Invalid date-only value: ${date}`);
+  return differenceInDays(date, `${parts.year}-01-01`) + 1;
+}
+
+/** Ed Williams/USNO sunrise algorithm. Returns local clock minutes 0..1439. */
+function solarClockMinutes(date: DateOnly, location: DaylightLocation, zenith: number, sunrise: boolean): number | null {
+  const n = dayOfYear(date);
+  const lngHour = location.longitude / 15;
+  const t = n + ((sunrise ? 6 : 18) - lngHour) / 24;
+  const meanAnomaly = 0.9856 * t - 3.289;
+  let trueLongitude = meanAnomaly + 1.916 * Math.sin(radians(meanAnomaly)) + 0.020 * Math.sin(radians(2 * meanAnomaly)) + 282.634;
+  trueLongitude = normalizeDegrees(trueLongitude);
+
+  let rightAscension = degrees(Math.atan(0.91764 * Math.tan(radians(trueLongitude))));
+  rightAscension = normalizeDegrees(rightAscension);
+  const longitudeQuadrant = Math.floor(trueLongitude / 90) * 90;
+  const raQuadrant = Math.floor(rightAscension / 90) * 90;
+  rightAscension = (rightAscension + longitudeQuadrant - raQuadrant) / 15;
+
+  const sinDeclination = 0.39782 * Math.sin(radians(trueLongitude));
+  const cosDeclination = Math.cos(Math.asin(sinDeclination));
+  const cosHour = (Math.cos(radians(zenith)) - sinDeclination * Math.sin(radians(location.latitude))) /
+    (cosDeclination * Math.cos(radians(location.latitude)));
+  if (cosHour > 1 || cosHour < -1) return null;
+
+  let localHourAngle = sunrise ? 360 - degrees(Math.acos(cosHour)) : degrees(Math.acos(cosHour));
+  localHourAngle /= 15;
+  const localMeanTime = localHourAngle + rightAscension - 0.06571 * t - 6.622;
+  const utcHours = normalizeHours(localMeanTime - lngHour);
+  const localMinutes = Math.round(utcHours * 60 + location.utcOffsetMinutes);
+  return ((localMinutes % 1440) + 1440) % 1440;
+}
+
+/**
+ * Anchors a solar event to the requested civil date instead of losing the day
+ * when a late sunset/dusk occurs after 00:00. Dawn belongs before local noon;
+ * dusk belongs after local noon, possibly on date+1 at high latitude.
+ */
+function anchoredSolarMinutes(date: DateOnly, location: DaylightLocation, zenith: number, sunrise: boolean): number | null {
+  const clock = solarClockMinutes(date, location, zenith, sunrise);
+  if (clock === null) return null;
+  if (sunrise && clock >= 12 * 60) return clock - 1440;
+  if (!sunrise && clock < 12 * 60) return clock + 1440;
+  return clock;
+}
+
+export function parseClockMinutes(value: string): number | null {
+  const match = /^([01]\d|2[0-3]):([0-5]\d)$/.exec(value);
+  if (!match) return null;
+  return Number(match[1]) * 60 + Number(match[2]);
+}
+
+export function formatClockMinutes(value: number): string {
+  const normalized = ((Math.round(value) % 1440) + 1440) % 1440;
+  const hours = Math.floor(normalized / 60);
+  const minutes = normalized % 60;
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+}
+
+function dayOffset(value: number): number {
+  return Math.floor(value / 1440);
+}
+
+function buildSafeWindow(start: number | null, end: number | null, buffer: number): SafeTimeWindow | null {
+  if (start === null || end === null) return null;
+  const safeStart = start + buffer;
+  const safeEnd = end - buffer;
+  if (safeEnd <= safeStart) return null;
+  const startsDayOffset = dayOffset(safeStart);
+  const endsDayOffset = dayOffset(safeEnd);
+  return {
+    startsAt: formatClockMinutes(safeStart),
+    endsAt: formatClockMinutes(safeEnd),
+    startsDayOffset,
+    endsDayOffset,
+    spansMidnight: startsDayOffset !== endsDayOffset,
+  };
+}
+
+function displaySolar(value: number | null): { time: string | null; offset: number | null } {
+  return value === null ? { time: null, offset: null } : { time: formatClockMinutes(value), offset: dayOffset(value) };
+}
+
+export function calculateDaylight(date: DateOnly, location: DaylightLocation = SAINT_PETERSBURG, bufferMinutes = 15): DaylightInfo {
+  if (!Number.isInteger(bufferMinutes) || bufferMinutes < 0 || bufferMinutes > 120) throw new RangeError('Daylight buffer must be 0..120 minutes');
+  const civilDawnMinutes = anchoredSolarMinutes(date, location, CIVIL_ZENITH, true);
+  const sunriseMinutes = anchoredSolarMinutes(date, location, SUNRISE_ZENITH, true);
+  const sunsetMinutes = anchoredSolarMinutes(date, location, SUNRISE_ZENITH, false);
+  const civilDuskMinutes = anchoredSolarMinutes(date, location, CIVIL_ZENITH, false);
+  const nextCivilDawnForNextDate = anchoredSolarMinutes(addDays(date, 1), location, CIVIL_ZENITH, true);
+  const nextCivilDawnMinutes = nextCivilDawnForNextDate === null ? null : nextCivilDawnForNextDate + 1440;
+
+  const daylightMinutes = sunriseMinutes !== null && sunsetMinutes !== null ? sunsetMinutes - sunriseMinutes : null;
+  const nightMinutes = daylightMinutes === null ? null : 1440 - daylightMinutes;
+  const civilDawn = displaySolar(civilDawnMinutes);
+  const sunrise = displaySolar(sunriseMinutes);
+  const sunset = displaySolar(sunsetMinutes);
+  const civilDusk = displaySolar(civilDuskMinutes);
+
+  return {
+    date,
+    civilDawn: civilDawn.time,
+    sunrise: sunrise.time,
+    sunset: sunset.time,
+    civilDusk: civilDusk.time,
+    civilDawnDayOffset: civilDawn.offset,
+    sunriseDayOffset: sunrise.offset,
+    sunsetDayOffset: sunset.offset,
+    civilDuskDayOffset: civilDusk.offset,
+    daylightMinutes,
+    nightMinutes,
+    safeDayWindow: buildSafeWindow(sunriseMinutes, sunsetMinutes, bufferMinutes),
+    safeNightWindow: buildSafeWindow(civilDuskMinutes, nextCivilDawnMinutes, bufferMinutes),
+  };
+}
+
+function shiftRange(shift: EventShift): { start: number; end: number } | null {
   const start = parseClockMinutes(shift.startsAt);
   const rawEnd = parseClockMinutes(shift.endsAt);
   if (start === null || rawEnd === null) return null;

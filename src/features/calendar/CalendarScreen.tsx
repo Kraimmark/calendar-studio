@@ -1,10 +1,827 @@
-Y™Áäx-ÆÈ‹j◊ù¢Îi∫⁄+äßj[hëÈ‹¢ÈÌ◊ÆºÌ:-jZ.∂õ≠ñ)ﬁ≥Vñ◊˜'B∞¢W6T6∆∆&6≤¿¢W6TVffV7B¿¢W6T÷V÷Ú¿¢W6U7FFR¿¢GóR555&˜W'FñW2¿¢GóR6ÜÊvTWfVÁB¿¢GóRG&tWfVÁB2&V7DG&tWfVÁB¿¢GóR∂Wñ&ˆ&DWfVÁB2&V7D∂Wñ&ˆ&DWfVÁB¿¢GóR÷˜W6TWfVÁB2&V7D÷˜W6TWfVÁB¿ß“g&ˆ“w&V7Bs∞¶ñ◊˜'B≤'Vñ∆D÷ˆÁFÇ¬‘ÖÙ4ƒT‰D%ıîT"¬‘îÂÙ4ƒT‰D%ıîT"“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆ6∆VÊF"s∞¶ñ◊˜'B≤'Vñ∆DÊÁVƒ˜fW'fñWr“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆÊÁVƒ˜fW'fñWrs∞¶ñ◊˜'B≤'Vñ∆D&6ÜófVD∆ñ'&'í¬GóR&6ÜófVE6˜'B“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆ&6ÜófVD∆ñ'&'ís∞¶ñ◊˜'B≤'Vñ∆EVÊFFVD∆ñ'&'í¬GóRVÊFFVE6˜'B“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜VÊFFVD∆ñ'&'ís∞¶ñ◊˜'B≤'6TFFTˆÊ«í¬GóRFFTˆÊ«í“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆFFTˆÊ«ís∞¶ñ◊˜'B≤6∆7V∆FTFñ∆ñváB“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆFñ∆ñváBs∞¶ñ◊˜'B≤DTdT≈EÙ4ƒT‰D%ÙƒîU%2¬ó4WfVÁEfó6ñ&∆T'îFó66ó∆ñÊR¬ó4WfVÁEfó6ñ&∆T'î∆ñW'2¬GóR6∆VÊF$∆ñW$∂Wí¬GóR6∆VÊF$∆ñW%7FFR¬GóRFó66ó∆ñÊTfñ«FW"“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆ6∆VÊF$∆ñW'2s∞¶ñ◊˜'B≤'Vñ∆D÷ˆÁFÑWfVÁE6Vv÷VÁG2¬÷ˆÁFÑ∆ÊT6˜VÁB“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚ˆ÷ˆÁFÑ∆ñ˜WBs∞¶ñ◊˜'B≤FFTñÂ&ÊvR¬÷˜fTWfVÁEFÙFFUF6Ç¬÷˜fTWfVÁEFıVWVUF6Ç¬Ê˜&÷∆ó¶TFFU&ÊvR¬GóRFFU&ÊvR“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜∆ÊÊñÊrs∞¶ñ◊˜'BGóR≤6∆VÊF%˜'F&ñ∆óGí“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜˜'F&ñ∆óGís∞¶ñ◊˜'BGóR≤6∆VÊF$WfVÁB¬6∆VÊF$WfVÁDFF¬6∆VÊF%6WGFñÊw2“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜GóW2s∞¶ñ◊˜'B≤Ü4&∆ˆ6∂ñÊtó77VW2¬f∆ñFFTWfVÁB¬GóRf∆ñFFñˆ‰ó77VR“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜f∆ñFFñˆ‚s∞¶ñ◊˜'B≤6∆7V∆FUv&ÊñÊw2“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜v&ÊñÊw2s∞¶ñ◊˜'B≤7V÷÷&ó¶T6∆VÊF%v&ÊñÊw2“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜v&ÊñÊu7V÷÷'ís∞¶ñ◊˜'B≤&Wfó6ñˆ‰6ˆÊf∆ñ7DW'&˜"“g&ˆ“r‚‚Ú‚‚ˆFˆ÷ñ‚˜&Wfó6ñˆ‚s∞¶ñ◊˜'BGóR≤6∆VÊF%&W˜6óF˜'í“g&ˆ“r‚‚Ú‚‚˜7F˜&vRÙ6∆VÊF%&W˜6óF˜'ís∞¶ñ◊˜'BGóR≤v˜&∑76T÷ÊvW"¬v˜&∑76U7FGW2“g&ˆ“r‚‚Ú‚‚˜∆Ff˜&“ıv˜&∑76T÷ÊvW"s∞¶ñ◊˜'B≤WfVÁDVFóF˜"“g&ˆ“r‚ÙWfVÁDVFóF˜"s∞¶ñ◊˜'B≤7&VFTWfVÁDFF¬FñfdWfVÁDFF¬WfVÁDFFˆb“g&ˆ“r‚ˆWfVÁDG&gBs∞¶ñ◊˜'B≤6∆VÊF$÷ˆFT6ˆÊfó&÷Fñˆ‰÷W76vR“g&ˆ“r‚ˆ6ˆÊfó&÷FñˆÂ7FFRs∞†¶ñÁFW&f6R6∆VÊF%67&VVÂ&˜2∞¢FÜV÷S¢vF&≤r¬v∆ñváBs∞¢ˆÂFˆvv∆UFÜV÷S¢Çí”‚fˆñC∞¢&W˜6óF˜'ì¢6∆VÊF%&W˜6óF˜'ì∞¢˜'F&ñ∆óGì¢6∆VÊF%˜'F&ñ∆óGì∞¢v˜&∑76S¢v˜&∑76T÷ÊvW#∞ß–†ßGóRVFóF˜%7FFR“≤WfVÁC¢6∆VÊF$WfVÁB¬ÁV∆√≤ñÊóFñƒFF¢6∆VÊF$WfVÁDFF≤&VDˆÊ«ì¢&ˆˆ∆V‚“¬ÁV∆√∞ßGóRVFóF˜$6ˆÊf∆ñ7E7FFR“≤WáV7FVE&Wfó6ñˆ„¢ÁV÷&W#≤7GV≈&Wfó6ñˆ„¢ÁV÷&W"“¬ÁV∆√∞ßGóR6˜VÁE66˜R“v∆¬r¬w&ñ÷'ís∞ßGóR6∆VÊF%fñWr“v÷ˆÁFÇr¬wñV"s∞¶ñÁFW&f6R&ÊvT÷VÁU7FFR≤É¢ÁV÷&W#≤ì¢ÁV÷&W#≤&ÊvS¢FFU&ÊvR–†¶6ˆÁ7BvVV∂Fó2“≤}	˝“r¬}	-"r¬}
-r¬}
-}"r¬}	˝"r¬}
-r¬}	-u”∞¶6ˆÁ7B÷ˆÁFÑÊ÷W2“≤}
-˝›-¬r¬}
-M]-Ω¬r¬}	Õ"r¬}	˝]Ω¬r¬}	Õír¬}	çÌ›¬r¬}	çÌΩ¬r¬}	-=="r¬}
-]›-˝¬r¬}	Ì≠-˝¬r¬}	›Ì˝¬r¬}	M]≠¬u”∞¶6ˆÁ7BFó66ó∆ñÊT∆&V«3¢&V6˜&Cƒ6∆VÊF$WfVÁE≤vFó66ó∆ñÊRu“¬7G&ñÊs‚“≤ó7Fˆ√¢}	˝ç-ÌΩ]"r¬6&&ñÊS¢}	≠ç“r¬6Ü˜FwV„¢}
-=mÕr¬ó&wV„¢}	˝›]-Õ-ç≠r¬◊V«FñwV„¢}	Õ=ΩÕ-ç=“r¬˜FÜW#¢}	M==ÌRr”∞¶6ˆÁ7B7FGW4∆&V«3¢&V6˜-xÎŒÌ¢Gß≤⁄Óù∆≠y÷WBÁf«VR2&6ÜófVE6˜'Bó“&ñ÷∆&V√“-
-Ì-çÌ-≠]ç-#‡¢∆˜Fñˆ‚f«VS“&&6ÜófVB÷FW62#Ì	›]M-›‚]ç-çÌ-››ΩS¬ˆ˜Fñˆ„‡¢∆˜Fñˆ‚f«VS“'FóF∆R÷62#Ì	˝‚›}-›ç„¬ˆ˜Fñˆ„‡¢∆˜Fñˆ‚f«VS“&FFR÷62#Ì	˝‚M-RÕ]Ì˝ç˝-çÛ¬ˆ˜Fñˆ„‡¢∆˜Fñˆ‚f«VS“&Fó66ó∆ñÊR÷62#Ì	˝‚Mçmç˝Ωç›S¬ˆ˜Fñˆ„‡¢¬˜6V∆V7C‡¢¬ˆFóc‡¢ó–¢∂&6ÜófUVW'íÁG&ñ“Çíbb&6ÜófVDWfVÁG2Ê∆VÊwFÇ‚bb«6∆74Ê÷S“'VWVR◊&W7V«B÷6˜VÁB#Ì	›ùM]›„¢∂&6ÜófVBÊ∆VÊwFá“çr∂&6ÜófVDWfVÁG2Ê∆VÊwFá”¬˜Á–¢∂&6ÜófVBÊ∆VÊwFÇ””“ÚÄ¢∆Fób6∆74Ê÷S“&V◊Gí◊7FFR#Á∂&6ÜófVDWfVÁG2Ê∆VÊwFÇ””“Ú}	]ç"˝="‚	]ç-çÌ-››ΩRÕ]Ì˝ç˝-çÚÌ-Ì-Ú"}RÇm=›ΩR=Mç-‚r¢}	˝‚-]≠=ù]Õ2˝Ìç≠2"]ç-R›ç}]=‚›R›ùM]›‚‚w”¬ˆFóc‡¢í¢Ä¢∆Fób6∆74Ê÷S“&&6ÜófR÷∆ó7B#‡¢∂&6ÜófVBÊ÷ÇÜWfVÁBí”‚Ä¢∆'Fñ6∆R6∆74Ê÷S“&&6ÜófR÷6&B"∂Wì◊∂WfVÁBÊñG”‡¢∆Fóc‡¢«7G&ˆÊsÁ∂WfVÁBÁFóF∆W”¬˜7G&ˆÊs‡¢«7„Á∂WfVÁBÁ7F'DFFRÚÜWfVÁBÁ7F'DFFR””“WfVÁBÊVÊDFFRÚWfVÁBÁ7F'DFFR¢G∂WfVÁBÁ7F'DFFW“(	BG∂WfVÁBÊVÊDFFW÷í¢}	]rM-≤w“+r]M≠mçÚ∂WfVÁBÁ&Wfó6ñˆÁ”¬˜7„‡¢¬ˆFóc‡¢∆'WGFˆ‚6∆74Ê÷S“&'WGFˆ‚'WGFˆ‚◊6V6ˆÊF'í"GóS“&'WGFˆ‚"ˆ‰6∆ñ6≥◊≤Çí”‚fˆñB&W7F˜&T&6ÜófVDWfVÁBÜWfVÁBó“Fó6&∆VC◊≤VFóF&∆R«¬'W7ó“FóF∆S◊≤VFóF&∆RÚ}	-]›ç-R≠Ω]›M¬"]mç¬˝Ω›çÌ-›çÚMΩÚ-Ì-›Ì-Ω]›çÚ‚r¢VÊFVfñÊVG”Ì	-Ì-›Ì-ç-√¬ˆ'WGFˆ„‡¢¬ˆ'Fñ6∆S‡¢íó–¢¬ˆFóc‡¢ó–¢¬˜6V7Fñˆ„‡¢¬ˆ6ñFS‡¢¬˜6V7Fñˆ„‡†¢∑&ÊvT÷VÁRbbÄ¢∆Fób6∆74Ê÷S“'&ÊvR÷6ˆÁFWáB÷÷VÁR"7Gñ∆S◊∑≤∆VgC¢&ÊvT÷VÁRÁÇ¬F˜¢&ÊvT÷VÁRÁí◊“&ˆ∆S“&÷VÁR"ˆ‰6∆ñ6≥◊≤Ü6∆ñ6≥¢&V7D÷˜W6TWfVÁCƒÖD‘ƒFódV∆V÷VÁC‚í”‚6∆ñ6≤Á7F˜&˜vFñˆ‚Çó”‡¢∆'WGFˆ‚GóS“&'WGFˆ‚"&ˆ∆S“&÷VÁVóFV“"ˆ‰6∆ñ6≥◊≤Çí”‚˜V‰ÊWrá&ÊvT÷VÁRÁ&ÊvRó”Ì
-Ì}M-¬Õ]Ì˝ç˝-çS¬ˆ'WGFˆ„‡¢«7„Á∑&ÊvT÷VÁRÁ&ÊvRÁ7F'B””“&ÊvT÷VÁRÁ&ÊvRÊVÊBÚ&ÊvT÷VÁRÁ&ÊvRÁ7F'B¢G∑&ÊvT÷VÁRÁ&ÊvRÁ7F'G“(	BG∑&ÊvT÷VÁRÁ&ÊvRÊVÊG÷”¬˜7„‡¢¬ˆFóc‡¢ó–†¢∂VFóF˜"bbƒWfVÁDVFóF˜"ñV#◊∑ñV'“WfVÁC◊∂VFóF˜"ÊWfVÁG“ñÊóFñƒFF◊∂VFóF˜"ÊñÊóFñƒFF“ó77VW3◊∂ó77VW7“6fñÊs◊∑6fñÊw“&VDˆÊ«ì◊∂VFóF˜"Á&VDˆÊ«ó“&VÁD6ÊFñFFW3◊∂WfVÁG7“&WVó&TV∑6ˆÊfó&÷Fñˆ„◊∂VFóF˜"ÊWfVÁCÚÁ6˜W&6R””“vV∑w“&Wfó6ñˆ‰6ˆÊf∆ñ7C◊∂VFóF˜$6ˆÊf∆ñ7G“ˆÂ&Vg&W6Ñ6ˆÊf∆ñ7C◊≤Çí”‚fˆñB&Vg&W6Ñ6ˆÊf∆ñ7DVFóF˜"Çó“ˆ‰6Ê6V√◊≤Çí”‚≤6WDVFóF˜"ÜÁV∆¬ì≤6WDVFóF˜$6ˆÊf∆ñ7BÜÁV∆¬ì≤6WDó77VW2Öµ“ì≤◊“ˆÂ6fS◊∑6fTVFóF˜'“ˆ‰&6ÜófS◊∂VFóF˜"ÊWfVÁBbbVFóF˜"Á&VDˆÊ«íÚ&6ÜófTVFóF˜"¢VÊFVfñÊVG“ÛÁ–¢¬ˆ÷ñ„‡¢ì∞ß–
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type CSSProperties,
+  type ChangeEvent,
+  type DragEvent as ReactDragEvent,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type MouseEvent as ReactMouseEvent,
+} from 'react';
+import { buildMonth, MAX_CALENDAR_YEAR, MIN_CALENDAR_YEAR } from '../../domain/calendar';
+import { buildAnnualOverview } from '../../domain/annualOverview';
+import { buildArchivedLibrary, type ArchivedSort } from '../../domain/archivedLibrary';
+import { buildUndatedLibrary, type UndatedSort } from '../../domain/undatedLibrary';
+import { parseDateOnly, type DateOnly } from '../../domain/dateOnly';
+import { calculateDaylight } from '../../domain/daylight';
+import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLayers, type CalendarLayerKey, type CalendarLayerState, type DisciplineFilter } from '../../domain/calendarLayers';
+import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
+import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
+import type { CalendarPortability } from '../../domain/portability';
+import type { CalendarEvent, CalendarEventData, CalendarSettings } from '../../domain/types';
+import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
+import { calculateWarnings } from '../../domain/warnings';
+import { summarizeCalendarWarnings } from '../../domain/warningSummary';
+import { RevisionConflictError } from '../../domain/revision';
+import type { CalendarRepository } from '../../storage/CalendarRepository';
+import type { WorkspaceManager, WorkspaceStatus } from '../../platform/WorkspaceManager';
+import { EventEditor } from './EventEditor';
+import { createEventData, diffEventData, eventDataOf } from './eventDraft';
+import { calendarModeConfirmationMessage } from './confirmationState';
+
+interface CalendarScreenProps {
+  theme: 'dark' | 'light';
+  onToggleTheme: () => void;
+  repository: CalendarRepository;
+  portability: CalendarPortability;
+  workspace: WorkspaceManager;
+}
+
+type EditorState = { event: CalendarEvent | null; initialData: CalendarEventData; readOnly: boolean } | null;
+type EditorConflictState = { expectedRevision: number; actualRevision: number } | null;
+type CountScope = 'all' | 'primary';
+type CalendarView = 'month' | 'year';
+interface RangeMenuState { x: number; y: number; range: DateRange }
+
+const weekdays = ['–ü–Ω', '–í—Ç', '–°—Ä', '–ß—Ç', '–ü—Ç', '–°–±', '–í—Å'];
+const monthNames = ['–Ø–Ω–≤–∞—Ä—å', '–§–µ–≤—Ä–∞–ª—å', '–ú–∞—Ä—Ç', '–ê–ø—Ä–µ–ª—å', '–ú–∞–π', '–ò—é–Ω—å', '–ò—é–ª—å', '–ê–≤–≥—É—Å—Ç', '–°–µ–Ω—Ç—è–±—Ä—å', '–û–∫—Ç—è–±—Ä—å', '–ù–æ—è–±—Ä—å', '–î–µ–∫–∞–±—Ä—å'];
+const disciplineLabels: Record<CalendarEvent['discipline'], string> = { pistol: '–ü–∏—Å—Ç–æ–ª–µ—Ç', carbine: '–ö–∞—Ä–∞–±–∏–Ω', shotgun: '–†—É–∂—å—ë', airgun: '–ü–Ω–µ–≤–º–∞—Ç–∏–∫–∞', multigun: '–ú—É–ª—å—Ç–∏–≥–∞–Ω', other: '–î—Ä—É–≥–æ–µ' };
+const statusLabels: Record<CalendarEvent['status'], string> = { draft: '–ß–µ—Ä–Ω–æ–≤–∏–∫', tentative: '–ü—Ä–µ–¥–≤–∞—Ä–∏—Ç–µ–ª—å–Ω–æ', confirmed: '–ü–æ–¥—Ç–≤–µ—Ä–∂–¥–µ–Ω–æ' };
+const layerLabels: Record<CalendarLayerKey, string> = { ownPlan: '–ù–∞—à –ø–ª–∞–Ω', ekpSpb: '–ï–ö–ü ¬∑ –°–ü–±', ekpOther: '–ï–ö–ü ¬∑ –¥—Ä—É–≥–∏–µ —Ä–µ–≥–∏–æ–Ω—ã', trf: '–¢–†–§', allRussian: '–í—Å–µ—Ä–æ—Å—Å–∏–π—Å–∫–∏–µ', departmental: '–í–µ–¥–æ–º—Å—Ç–≤–µ–Ω–Ω—ã–µ', airgun: '–ü–Ω–µ–≤–º–∞—Ç–∏–∫–∞', utm: '–£–¢–ú / —Ç—Ä–µ–Ω–∏—Ä–æ–≤–∫–∏', build: '–ó–∞—Å—Ç—Ä–æ–π–∫–∞' };
+const disciplineFilterLabels: Record<DisciplineFilter, string> = { all: '–í—Å–µ –¥–∏—Å—Ü–∏–ø–ª–∏–Ω—ã', pistol: '–ü–∏—Å—Ç–æ–ª–µ—Ç', carbine: '–ö–∞—Ä–∞–±–∏–Ω', shotgun: '–†—É–∂—å—ë', airgun: '–ü–Ω–µ–≤–º–∞—Ç–∏–∫–∞', multigun: '–ú—É–ª—å—Ç–∏–≥–∞–Ω', other: '–î—Ä—É–≥–æ–µ' };
+const disciplineFilterOrder: DisciplineFilter[] = ['all', 'pistol', 'carbine', 'shotgun', 'airgun', 'multigun', 'other'];
+const DRAG_EVENT_MIME = 'application/x-calendar-studio-event';
+
+function calendarToday(): { year: number; month: number; day: number } {
+  const parts = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Moscow', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date());
+  const read = (type: Intl.DateTimeFormatPartTypes) => Number(parts.find((part) => part.type === type)?.value ?? 0);
+  const year = Math.min(MAX_CALENDAR_YEAR, Math.max(MIN_CALENDAR_YEAR, read('year')));
+  return { year, month: read('month'), day: read('day') };
+}
+
+function eventClasses(event: CalendarEvent): string {
+  const classes = ['event-strip'];
+  if (event.series === 'trf') classes.push('event-trf');
+  if (event.source === 'ekp' && event.venueScope === 'nevsky') classes.push('event-ekp-nevsky');
+  else if (event.source === 'ekp' && event.venueScope === 'otherRegion') classes.push('event-ekp-other');
+  if (event.kind === 'build') classes.push('event-build');
+  return classes.join(' ');
+}
+
+function dateBelongsToYear(date: DateOnly, year: number): boolean {
+  return parseDateOnly(date)?.year === year;
+}
+
+function dragEventId(event: ReactDragEvent<HTMLElement>): string | null {
+  return event.dataTransfer.getData(DRAG_EVENT_MIME) || event.dataTransfer.getData('text/plain') || null;
+}
+
+function formatMinutesDuration(value: number | null): string {
+  if (value === null) return '‚Äî';
+  const hours = Math.floor(value / 60);
+  const minutes = value % 60;
+  return `${hours} —á ${String(minutes).padStart(2, '0')} –º–∏–Ω`;
+}
+
+function formatSolarTime(value: string | null, offset: number | null): string {
+  if (!value) return '‚Äî';
+  if (!offset) return value;
+  return `${value} (${offset > 0 ? '+' : ''}${offset} –¥.)`;
+}
+
+function formatSafeWindow(window: ReturnType<typeof calculateDaylight>['safeDayWindow']): string {
+  if (!window) return '–Ω–µ—Ç –±–µ–∑–æ–ø–∞—Å–Ω–æ–≥–æ –æ–∫–Ω–∞';
+  const suffix = window.startsDayOffset || window.endsDayOffset
+    ? ` [${window.startsDayOffset >= 0 ? '+' : ''}${window.startsDayOffset} / ${window.endsDayOffset >= 0 ? '+' : ''}${window.endsDayOffset} –¥.]`
+    : '';
+  return `${window.startsAt} ‚Äî ${window.endsAt}${suffix}`;
+}
+
+export function CalendarScreen({ theme, onToggleTheme, repository, portability, workspace }: CalendarScreenProps) {
+  const initial = useMemo(calendarToday, []);
+  const [year, setYear] = useState(initial.year);
+  const [month, setMonth] = useState(initial.month);
+  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const [archivedEvents, setArchivedEvents] = useState<CalendarEvent[]>([]);
+  const [settings, setSettings] = useState<CalendarSettings | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [interactionError, setInteractionError] = useState<string | null>(null);
+  const [editor, setEditor] = useState<EditorState>(null);
+  const [editorConflict, setEditorConflict] = useState<EditorConflictState>(null);
+  const [issues, setIssues] = useState<ValidationIssue[]>([]);
+  const [saving, setSaving] = useState(false);
+  const [countScope, setCountScope] = useState<CountScope>('all');
+  const [calendarView, setCalendarView] = useState<CalendarView>('month');
+  const [queueQuery, setQueueQuery] = useState('');
+  const [queueSort, setQueueSort] = useState<UndatedSort>('updated-desc');
+  const [archiveQuery, setArchiveQuery] = useState('');
+  const [archiveSort, setArchiveSort] = useState<ArchivedSort>('archived-desc');
+  const [layers, setLayers] = useState<CalendarLayerState>(() => ({ ...DEFAULT_CALENDAR_LAYERS }));
+  const [disciplineFilter, setDisciplineFilter] = useState<DisciplineFilter>('all');
+  const [selectionAnchor, setSelectionAnchor] = useState<DateOnly | null>(null);
+  const [selectionFocus, setSelectionFocus] = useState<DateOnly | null>(null);
+  const [selecting, setSelecting] = useState(false);
+  const [rangeMenu, setRangeMenu] = useState<RangeMenuState | null>(null);
+  const [hoverDate, setHoverDate] = useState<DateOnly | null>(null);
+  const [porting, setPorting] = useState(false);
+  const [portabilityStatus, setPortabilityStatus] = useState<string | null>(null);
+  const [workspaceStatus, setWorkspaceStatus] = useState<WorkspaceStatus | null>(null);
+  const [workspaceChanging, setWorkspaceChanging] = useState(false);
+
+  const reload = useCallback(async () => {
+    setLoading(true);
+    setLoadError(null);
+    try {
+      const [allYearEvents, nextSettings] = await Promise.all([repository.listEvents(year, true), repository.getCalendarSettings(year)]);
+      setEvents(allYearEvents.filter((event) => event.archivedAt === null));
+      setArchivedEvents(allYearEvents.filter((event) => event.archivedAt !== null));
+      setSettings(nextSettings);
+    } catch (error) {
+      setLoadError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setLoading(false);
+    }
+  }, [repository, year]);
+
+  useEffect(() => { void reload(); }, [reload]);
+  useEffect(() => {
+    let active = true;
+    workspace.getStatus()
+      .then((status) => { if (active) setWorkspaceStatus(status); })
+      .catch((error) => { if (active) setInteractionError(error instanceof Error ? error.message : String(error)); });
+    return () => { active = false; };
+  }, [workspace]);
+  useEffect(() => {
+    setSelectionAnchor(null);
+    setSelectionFocus(null);
+    setRangeMenu(null);
+    setHoverDate(null);
+  }, [year, month]);
+  useEffect(() => {
+    if (!selecting) return;
+    const stopSelecting = () => setSelecting(false);
+    window.addEventListener('mouseup', stopSelecting);
+    return () => window.removeEventListener('mouseup', stopSelecting);
+  }, [selecting]);
+
+  const model = useMemo(() => buildMonth(year, month), [year, month]);
+  const selection = useMemo(() => selectionAnchor && selectionFocus ? normalizeDateRange(selectionAnchor, selectionFocus) : null, [selectionAnchor, selectionFocus]);
+  const scopedEvents = useMemo(() => countScope === 'primary' ? events.filter((event) => event.isPrimary) : events, [countScope, events]);
+  const visibleEvents = useMemo(() => scopedEvents.filter((event) => isEventVisibleByLayers(event, layers) && isEventVisibleByDiscipline(event, disciplineFilter)), [disciplineFilter, layers, scopedEvents]);
+  const segments = useMemo(() => buildMonthEventSegments(model, visibleEvents), [model, visibleEvents]);
+  const byId = useMemo(() => new Map(events.map((event) => [event.id, event])), [events]);
+  const undatedTotal = useMemo(() => visibleEvents.filter((event) => event.startDate === null && event.endDate === null).length, [visibleEvents]);
+  const undated = useMemo(() => buildUndatedLibrary(visibleEvents, queueQuery, queueSort), [queueQuery, queueSort, visibleEvents]);
+  const scopedUndatedCount = useMemo(() => scopedEvents.filter((event) => event.startDate === null && event.endDate === null).length, [scopedEvents]);
+  const scopedDatedCount = scopedEvents.length - scopedUndatedCount;
+  const primaryCount = useMemo(() => events.filter((event) => event.isPrimary).length, [events]);
+  const archived = useMemo(() => buildArchivedLibrary(archivedEvents, archiveQuery, archiveSort), [archiveQuery, archiveSort, archivedEvents]);
+  const warnings = useMemo(() => calculateWarnings(events, year), [events, year]);
+  const warningSummary = useMemo(() => summarizeCalendarWarnings(warnings), [warnings]);
+  const annualOverview = useMemo(() => buildAnnualOverview(year, visibleEvents, warnings), [visibleEvents, warnings, year]);
+  const editable = settings?.mode === 'planning';
+  const busy = loading || saving || porting || workspaceChanging;
+  const daylightDate = hoverDate ?? selectionFocus;
+  const daylightInfo = useMemo(() => daylightDate && dateBelongsToYear(daylightDate, year) ? calculateDaylight(daylightDate) : null, [daylightDate, year]);
+
+  const exportPortable = async () => {
+    if (busy) return;
+    setPorting(true);
+    setInteractionError(null);
+    try {
+      const pkg = await portability.exportPackage();
+      const blob = new Blob([JSON.stringify(pkg, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = `calendar-studio-export-v1-${pkg.exportedAt.slice(0, 10)}.json`;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+      setPortabilityStatus(`–≠–∫—Å–ø–æ—Ä—Ç –ø–æ–¥–≥–æ—Ç–æ–≤–ª–µ–Ω: ${pkg.events.length} –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π, ${pkg.audit.length} –∑–∞–ø–∏—Å–µ–π –∞—É–¥–∏—Ç–∞.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
+  };
+
+  const importPortable = async (change: ChangeEvent<HTMLInputElement>) => {
+    const file = change.target.files?.[0];
+    change.target.value = '';
+    if (!file || busy || !editable) return;
+    setPorting(true);
+    setInteractionError(null);
+    setPortabilityStatus(null);
+    try {
+      const parsed: unknown = JSON.parse(await file.text());
+      const validation = await portability.validateImport(parsed);
+      if (!validation.valid) throw new Error(`–ò–º–ø–æ—Ä—Ç –æ—Ç–∫–ª–æ–Ω—ë–Ω: ${validation.errors.join(' ')}`);
+      if (!window.confirm('–ò–º–ø–æ—Ä—Ç –ø–æ–ª–Ω–æ—Å—Ç—å—é –∑–∞–º–µ–Ω–∏—Ç —Ç–µ–∫—É—â—É—é –ª–æ–∫–∞–ª—å–Ω—É—é –±–∞–∑—É –¥–∞–Ω–Ω—ã–º–∏ –∏–∑ –ø–∞–∫–µ—Ç–∞. –ü–µ—Ä–µ–¥ –∑–∞–º–µ–Ω–æ–π –±—É–¥–µ—Ç —Å–æ–∑–¥–∞–Ω–∞ —Ä–µ–∑–µ—Ä–≤–Ω–∞—è –∫–æ–ø–∏—è. –ü—Ä–æ–¥–æ–ª–∂–∏—Ç—å?')) return;
+      const result = await portability.importPackage(parsed);
+      setEditor(null);
+      setEditorConflict(null);
+      setIssues([]);
+      await reload();
+      setPortabilityStatus(result.backupReference ? `–ò–º–ø–æ—Ä—Ç –∑–∞–≤–µ—Ä—à—ë–Ω. –†–µ–∑–µ—Ä–≤–Ω–∞—è –∫–æ–ø–∏—è: ${result.backupReference}` : '–ò–º–ø–æ—Ä—Ç –∑–∞–≤–µ—Ä—à—ë–Ω; —Ö—Ä–∞–Ω–∏–ª–∏—â–µ —Å–æ–æ–±—â–∏–ª–æ –æ–± —É—Å–ø–µ—à–Ω–æ–π –∑–∞–º–µ–Ω–µ —Å–æ—Å—Ç–æ—è–Ω–∏—è.');
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
+  };
+
+  const chooseWorkspace = async () => {
+    if (busy) return;
+    setWorkspaceChanging(true);
+    setInteractionError(null);
+    setPortabilityStatus(null);
+    try {
+      const status = await workspace.chooseAndSwitch();
+      if (!status) return;
+      setWorkspaceStatus(status);
+      setEditor(null);
+      setEditorConflict(null);
+      setIssues([]);
+      await reload();
+      setPortabilityStatus(`–†–∞–±–æ—á–∞—è –±–∞–∑–∞: ${status.directoryPath}`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setWorkspaceChanging(false);
+    }
+  };
+
+  const moveMonth = (delta: number) => {
+    let nextYear = year;
+    let nextMonth = month + delta;
+    if (nextMonth < 1) { nextMonth = 12; nextYear -= 1; }
+    if (nextMonth > 12) { nextMonth = 1; nextYear += 1; }
+    if (nextYear < MIN_CALENDAR_YEAR || nextYear > MAX_CALENDAR_YEAR) return;
+    setYear(nextYear);
+    setMonth(nextMonth);
+  };
+
+  const openEvent = (event: CalendarEvent) => {
+    setIssues([]);
+    setInteractionError(null);
+    setEditorConflict(null);
+    setEditor({ event, initialData: eventDataOf(event), readOnly: !editable });
+  };
+
+  const openNew = (range: DateRange | null = null) => {
+    if (!editable) return;
+    setIssues([]);
+    setInteractionError(null);
+    setEditorConflict(null);
+    setEditor({ event: null, initialData: createEventData(range?.start ?? null, range?.end ?? null), readOnly: false });
+    setRangeMenu(null);
+  };
+
+  const saveEditor = async (data: CalendarEventData) => {
+    if (!editor || editor.readOnly) return;
+    const nextIssues = validateEvent(data, { year, eventId: editor.event?.id, events });
+    setIssues(nextIssues);
+    if (hasBlockingIssues(nextIssues)) return;
+
+    setSaving(true);
+    try {
+      const timestamp = new Date().toISOString();
+      if (editor.event) {
+        const changes = diffEventData(editor.initialData, data);
+        if (Object.keys(changes).length === 0) {
+          setEditor(null);
+          setIssues([]);
+          return;
+        }
+        await repository.saveEvent({ kind: 'update', id: editor.event.id, actor: 'local-owner', timestamp, changes }, editor.event.revision);
+      } else {
+        await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data }, null);
+      }
+      setEditor(null);
+      setIssues([]);
+      await reload();
+    } catch (error) {
+      if (error instanceof RevisionConflictError && editor?.event) {
+        setEditorConflict({ expectedRevision: error.expectedRevision, actualRevision: error.actualRevision });
+        setIssues([]);
+      } else {
+        setIssues([{ code: 'save_failed', severity: 'error', field: null, message: error instanceof Error ? error.message : String(error) }]);
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const archiveEditor = async () => {
+    if (!editor?.event || editor.readOnly) return;
+    setSaving(true);
+    try {
+      await repository.archiveEvent(editor.event.id, editor.event.revision, 'local-owner', new Date().toISOString());
+      setEditor(null);
+      setIssues([]);
+      await reload();
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        setEditorConflict({ expectedRevision: error.expectedRevision, actualRevision: error.actualRevision });
+        setIssues([]);
+      } else {
+        setIssues([{ code: 'archive_failed', severity: 'error', field: null, message: error instanceof Error ? error.message : String(error) }]);
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const refreshConflictEditor = async () => {
+    if (!editor?.event) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const latest = await repository.getEvent(editor.event.id);
+      if (!latest || latest.archivedAt !== null) {
+        setEditor(null);
+        setEditorConflict(null);
+        await reload();
+        setInteractionError('–ú–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ –±–æ–ª—å—à–µ –Ω–µ–¥–æ—Å—Ç—É–ø–Ω–æ –¥–ª—è —Ä–µ–¥–∞–∫—Ç–∏—Ä–æ–≤–∞–Ω–∏—è. –°–æ—Å—Ç–æ—è–Ω–∏–µ –∫–∞–ª–µ–Ω–¥–∞—Ä—è –æ–±–Ω–æ–≤–ª–µ–Ω–æ.');
+        return;
+      }
+      setEditor({ event: latest, initialData: eventDataOf(latest), readOnly: !editable });
+      setEditorConflict(null);
+      setIssues([]);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const restoreArchivedEvent = async (event: CalendarEvent) => {
+    if (!editable || busy) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      await repository.restoreEvent(event.id, event.revision, 'local-owner', new Date().toISOString());
+      await reload();
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setInteractionError('–ú–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ —É–∂–µ –∏–∑–º–µ–Ω–∏–ª–æ—Å—å. –ö–∞–ª–µ–Ω–¥–∞—Ä—å –æ–±–Ω–æ–≤–ª—ë–Ω ‚Äî –ø–æ–≤—Ç–æ—Ä–∏—Ç–µ –¥–µ–π—Å—Ç–≤–∏–µ –Ω–∞ –∞–∫—Ç—É–∞–ª—å–Ω–æ–π —Ä–µ–¥–∞–∫—Ü–∏–∏.');
+      } else {
+        setInteractionError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const updateEventDates = async (event: CalendarEvent, changes: Pick<CalendarEventData, 'startDate' | 'endDate'>) => {
+    if (!editable || busy) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      await repository.saveEvent({ kind: 'update', id: event.id, actor: 'local-owner', timestamp: new Date().toISOString(), changes }, event.revision);
+      await reload();
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setInteractionError('–ú–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ —É–∂–µ –∏–∑–º–µ–Ω–∏–ª–æ—Å—å. –ö–∞–ª–µ–Ω–¥–∞—Ä—å –æ–±–Ω–æ–≤–ª—ë–Ω ‚Äî –ø–æ–≤—Ç–æ—Ä–∏—Ç–µ –ø–µ—Ä–µ–Ω–æ—Å –Ω–∞ –∞–∫—Ç—É–∞–ª—å–Ω–æ–π —Ä–µ–¥–∞–∫—Ü–∏–∏.');
+      } else {
+        setInteractionError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const dropOnDate = (drop: ReactDragEvent<HTMLElement>, date: DateOnly) => {
+    drop.preventDefault();
+    if (!editable || busy || !dateBelongsToYear(date, year)) return;
+    const id = dragEventId(drop);
+    const event = id ? byId.get(id) : null;
+    if (!event) return;
+    try {
+      void updateEventDates(event, moveEventToDatePatch(event, date));
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    }
+  };
+
+  const dropOnQueue = (drop: ReactDragEvent<HTMLElement>) => {
+    drop.preventDefault();
+    if (!editable || busy) return;
+    const id = dragEventId(drop);
+    const event = id ? byId.get(id) : null;
+    if (!event || (event.startDate === null && event.endDate === null)) return;
+    void updateEventDates(event, moveEventToQueuePatch());
+  };
+
+  const beginDrag = (drag: ReactDragEvent<HTMLElement>, event: CalendarEvent) => {
+    if (!editable || busy) {
+      drag.preventDefault();
+      return;
+    }
+    drag.dataTransfer.effectAllowed = 'move';
+    drag.dataTransfer.setData(DRAG_EVENT_MIME, event.id);
+    drag.dataTransfer.setData('text/plain', event.id);
+  };
+
+  const beginSelection = (mouse: ReactMouseEvent<HTMLElement>, date: DateOnly) => {
+    if (!editable || mouse.button !== 0 || !dateBelongsToYear(date, year)) return;
+    setRangeMenu(null);
+    setSelectionAnchor(date);
+    setSelectionFocus(date);
+    setSelecting(true);
+  };
+
+  const extendSelection = (date: DateOnly) => {
+    if (!editable || !selecting || !selectionAnchor || !dateBelongsToYear(date, year)) return;
+    setSelectionFocus(date);
+  };
+
+  const openRangeContext = (mouse: ReactMouseEvent<HTMLElement>, date: DateOnly) => {
+    if (!editable || !dateBelongsToYear(date, year)) return;
+    mouse.preventDefault();
+    const activeRange = selection && dateInRange(date, selection) ? selection : normalizeDateRange(date, date);
+    setSelectionAnchor(activeRange.start);
+    setSelectionFocus(activeRange.end);
+    const x = Math.max(8, Math.min(mouse.clientX, window.innerWidth - 250));
+    const y = Math.max(8, Math.min(mouse.clientY, window.innerHeight - 100));
+    setRangeMenu({ x, y, range: activeRange });
+  };
+
+  const keyOnDay = (key: ReactKeyboardEvent<HTMLElement>, date: DateOnly) => {
+    if (!editable || !dateBelongsToYear(date, year)) return;
+    if (key.key === 'Enter' || key.key === ' ') {
+      key.preventDefault();
+      openNew(normalizeDateRange(date, date));
+    }
+  };
+
+  const navigateToDate = (date: DateOnly) => {
+    const parts = parseDateOnly(date);
+    if (!parts || parts.year !== year) return;
+    setMonth(parts.month);
+    setCalendarView('month');
+    setSelectionAnchor(date);
+    setSelectionFocus(date);
+  };
+
+  const changeCalendarMode = async () => {
+    if (!settings || busy) return;
+    if (!window.confirm(calendarModeConfirmationMessage(settings.mode, year))) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const nextMode = settings.mode === 'planning' ? 'approved' : 'planning';
+      await repository.saveCalendarSettings({ year, mode: nextMode, actor: 'local-owner', timestamp: new Date().toISOString() }, settings.revision);
+      setEditor(null);
+      await reload();
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setInteractionError('–†–µ–∂–∏–º –∫–∞–ª–µ–Ω–¥–∞—Ä—è —É–∂–µ –∏–∑–º–µ–Ω–∏–ª—Å—è –≤ –¥—Ä—É–≥–æ–π —Ä–µ–¥–∞–∫—Ü–∏–∏. –°–æ—Å—Ç–æ—è–Ω–∏–µ –æ–±–Ω–æ–≤–ª–µ–Ω–æ ‚Äî –ø–æ–≤—Ç–æ—Ä–∏—Ç–µ –¥–µ–π—Å—Ç–≤–∏–µ.');
+      } else {
+        setInteractionError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <main className="app-shell" onClick={() => rangeMenu && setRangeMenu(null)}>
+      <header className="topbar">
+        <div>
+          <p className="eyebrow">CALENDAR STUDIO</p>
+          <h1>–ö–∞–ª–µ–Ω–¥–∞—Ä—å –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π</h1>
+          <p className="subtitle">–û—Ç–¥–µ–ª—å–Ω—ã–π –ª–æ–∫–∞–ª—å–Ω—ã–π –ø–ª–∞–Ω–∏—Ä–æ–≤—â–∏–∫ —Å–æ—Ä–µ–≤–Ω–æ–≤–∞–Ω–∏–π</p>
+        </div>
+        <div className="topbar-actions">
+          <button className="button button-secondary" type="button" onClick={() => void chooseWorkspace()} disabled={busy}>–ü–∞–ø–∫–∞ –¥–∞–Ω–Ω—ã—Ö</button>
+          <button className="button button-secondary" type="button" onClick={() => void exportPortable()} disabled={busy}>–≠–∫—Å–ø–æ—Ä—Ç JSON</button>
+          <label className={`button button-secondary file-button ${busy || !editable ? 'is-disabled' : ''}`} title={!editable ? '–í–µ—Ä–Ω–∏—Ç–µ –∫–∞–ª–µ–Ω–¥–∞—Ä—å –≤ —Ä–µ–∂–∏–º –ø–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–∏—è –ø–µ—Ä–µ–¥ –∏–º–ø–æ—Ä—Ç–æ–º.' : undefined}>
+            –ò–º–ø–æ—Ä—Ç JSON
+            <input className="file-input-hidden" type="file" accept="application/json,.json" onChange={(change: ChangeEvent<HTMLInputElement>) => void importPortable(change)} disabled={busy || !editable} />
+          </label>
+          <button className="button button-secondary" type="button" onClick={onToggleTheme}>–¢–µ–º–∞: {theme === 'dark' ? '–Ω–æ—á–Ω–∞—è' : '–¥–Ω–µ–≤–Ω–∞—è'}</button>
+          <button className="button button-secondary" type="button" onClick={() => void changeCalendarMode()} disabled={!settings || busy}>
+            {settings?.mode === 'approved' ? '–í–µ—Ä–Ω—É—Ç—å –≤ –ø–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–∏–µ' : '–°–æ–≥–ª–∞—Å–æ–≤–∞—Ç—å –∫–∞–ª–µ–Ω–¥–∞—Ä—å'}
+          </button>
+          <button className="button button-primary" type="button" onClick={() => openNew()} disabled={!editable || busy}>–ù–æ–≤–æ–µ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ</button>
+        </div>
+      </header>
+
+      {loadError && <div className="error-banner" role="alert"><strong>–õ–æ–∫–∞–ª—å–Ω–∞—è –±–∞–∑–∞ –Ω–µ–¥–æ—Å—Ç—É–ø–Ω–∞.</strong> {loadError}</div>}
+      {interactionError && <div className="error-banner" role="alert"><strong>–î–µ–π—Å—Ç–≤–∏–µ –Ω–µ –≤—ã–ø–æ–ª–Ω–µ–Ω–æ.</strong> {interactionError}</div>}
+      {workspaceStatus?.warning && <div className="warning-banner" role="alert"><strong>–†–∞–±–æ—á–∞—è –ø–∞–ø–∫–∞ –Ω–µ–¥–æ—Å—Ç—É–ø–Ω–∞.</strong> {workspaceStatus.warning}</div>}
+      {workspaceStatus?.isBootstrap && !workspaceStatus.warning && (
+        <div className="warning-banner" role="status"><strong>–ò—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è —Ä–µ–∑–µ—Ä–≤–Ω–∞—è –ª–æ–∫–∞–ª—å–Ω–∞—è –±–∞–∑–∞.</strong> –í—ã–±–µ—Ä–∏—Ç–µ –ø–æ—Å—Ç–æ—è–Ω–Ω—É—é –ø–∞–ø–∫—É Calendar Studio ‚Äî —Ç–µ–∫—É—â–∏–µ –¥–∞–Ω–Ω—ã–µ –±—É–¥—É—Ç –ø–µ—Ä–µ–Ω–µ—Å–µ–Ω—ã —Ç—É–¥–∞ –±–µ–∑ –ø–æ—Ç–µ—Ä–∏ ID –∏ –∏—Å—Ç–æ—Ä–∏–∏.</div>
+      )}
+      {workspaceStatus && !workspaceStatus.isBootstrap && (
+        <div className="workspace-banner" role="status" title={workspaceStatus.databasePath}><strong>–î–∞–Ω–Ω—ã–µ:</strong> {workspaceStatus.directoryPath}</div>
+      )}
+      {portabilityStatus && <div className="success-banner" role="status">{portabilityStatus}</div>}
+      {settings?.mode === 'approved' && <div className="approved-banner">–ö–∞–ª–µ–Ω–¥–∞—Ä—å —Å–æ–≥–ª–∞—Å–æ–≤–∞–Ω. –†–µ–¥–∞–∫—Ç–∏—Ä–æ–≤–∞–Ω–∏–µ, –ø–µ—Ä–µ–Ω–æ—Å—ã –∏ —Å–æ–∑–¥–∞–Ω–∏–µ –∑–∞—Ñ–∏–∫—Å–∏—Ä–æ–≤–∞–Ω—ã; –∫–∞—Ä—Ç–æ—á–∫–∏ –¥–æ—Å—Ç—É–ø–Ω—ã —Ç–æ–ª—å–∫–æ –¥–ª—è –ø—Ä–æ—Å–º–æ—Ç—Ä–∞ –¥–æ —è–≤–Ω–æ–≥–æ –≤–æ–∑–≤—Ä–∞—Ç–∞ –≤ –ø–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–∏–µ.</div>}
+
+      <section className="status-strip status-strip-six" aria-label="–°–æ—Å—Ç–æ—è–Ω–∏–µ –∫–∞–ª–µ–Ω–¥–∞—Ä—è">
+        <div><span>–†–µ–∂–∏–º</span><strong>{settings?.mode === 'approved' ? '–°–æ–≥–ª–∞—Å–æ–≤–∞–Ω–Ω—ã–π' : '–ü–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–∏–µ'}</strong></div>
+        <div><span>{countScope === 'primary' ? '–û—Å–Ω–æ–≤–Ω—ã—Ö' : '–í—Å–µ–≥–æ'}</span><strong>{scopedEvents.length}</strong></div>
+        <div><span>–í –∫–∞–ª–µ–Ω–¥–∞—Ä–µ</span><strong>{scopedDatedCount}</strong></div>
+        <div><span>–ë–µ–∑ –¥–∞—Ç</span><strong>{scopedUndatedCount}</strong></div>
+        <div><span>–û—Å–Ω–æ–≤–Ω—ã—Ö –≤—Å–µ–≥–æ</span><strong>{primaryCount}</strong></div>
+        <div><span>–ü—Ä–µ–¥—É–ø—Ä–µ–∂–¥–µ–Ω–∏—è</span><strong>{warnings.length}</strong></div>
+      </section>
+
+      <section className="control-strip panel" aria-label="–§–∏–ª—å—Ç—Ä—ã –∫–∞–ª–µ–Ω–¥–∞—Ä—è">
+        <div className="control-group">
+          <span className="control-label">–°—á—ë—Ç—á–∏–∫–∏</span>
+          <div className="segmented" aria-label="–°–æ—Å—Ç–∞–≤ —Å—á—ë—Ç—á–∏–∫–æ–≤">
+            <button type="button" className={countScope === 'all' ? 'is-active' : ''} onClick={() => setCountScope('all')}>–í—Å–µ –∑–∞–ø–∏—Å–∏</button>
+            <button type="button" className={countScope === 'primary' ? 'is-active' : ''} onClick={() => setCountScope('primary')}>–û—Å–Ω–æ–≤–Ω—ã–µ</button>
+          </div>
+        </div>
+        <div className="control-group layer-controls" aria-label="–°–ª–æ–∏">
+          <span className="control-label">–°–ª–æ–∏</span>
+          {(Object.keys(layers) as CalendarLayerKey[]).map((layer) => (
+            <label className="layer-toggle" key={layer}>
+              <input type="checkbox" checked={layers[layer]} onChange={(change: ChangeEvent<HTMLInputElement>) => setLayers((current) => ({ ...current, [layer]: change.target.checked }))} />
+              {layerLabels[layer]}
+            </label>
+          ))}
+        </div>
+        <div className="control-group discipline-controls" aria-label="–§–∏–ª—å—Ç—Ä –ø–æ –¥–∏—Å—Ü–∏–ø–ª–∏–Ω–µ">
+          <span className="control-label">–î–∏—Å—Ü–∏–ø–ª–∏–Ω–∞</span>
+          <select className="compact-select" value={disciplineFilter} onChange={(change: ChangeEvent<HTMLSelectElement>) => setDisciplineFilter(change.target.value as DisciplineFilter)}>
+            {disciplineFilterOrder.map((discipline) => <option key={discipline} value={discipline}>{disciplineFilterLabels[discipline]}</option>)}
+          </select>
+        </div>
+        <button className="button button-secondary compact-control-button" type="button" onClick={() => { setLayers({ ...DEFAULT_CALENDAR_LAYERS }); setDisciplineFilter('all'); }}>–ü–æ–∫–∞–∑–∞—Ç—å –≤—Å—ë</button>
+        <span className="shown-count">–ü–æ–∫–∞–∑–∞–Ω–æ: {visibleEvents.length}</span>
+      </section>
+
+      {warningSummary.warningCount > 0 && (
+        <section className="risk-panel panel" aria-label="–ù–∞—Ä—É—à–µ–Ω–∏—è –∏ —Ä–∏—Å–∫–∏ –∫–∞–ª–µ–Ω–¥–∞—Ä—è">
+          <div className="risk-panel-heading">
+            <div><p className="eyebrow">–ö–û–ù–¢–†–û–õ–¨ –ü–õ–ê–ù–ê</p><h2>–ù–∞—Ä—É—à–µ–Ω–∏—è –∏ —Ä–∏—Å–∫–∏</h2></div>
+            <div className="risk-metrics" aria-label="–°–≤–æ–¥–∫–∞ –Ω–∞—Ä—É—à–µ–Ω–∏–π">
+              <span><strong>{warningSummary.warningCount}</strong> —Ä–∏—Å–∫–æ–≤</span>
+              <span><strong>{warningSummary.affectedEventCount}</strong> –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π</span>
+              <span><strong>{warningSummary.affectedDateCount}</strong> –¥–∞—Ç</span>
+            </div>
+          </div>
+          <div className="risk-groups">
+            {warningSummary.groups.map((group) => (
+              <article className="risk-group" key={group.code}>
+                <div className="risk-group-heading">
+                  <div><strong>{group.label}</strong><span>{group.description}</span></div>
+                  <span className="badge">{group.warnings.length}</span>
+                </div>
+                <div className="risk-group-links" aria-label={`–ë—ã—Å—Ç—Ä—ã–µ –ø–µ—Ä–µ—Ö–æ–¥—ã: ${group.label}`}>
+                  {group.dates.map((date) => <button type="button" key={date} onClick={() => navigateToDate(date)}>{date}</button>)}
+                  {group.eventIds.map((id) => {
+                    const event = byId.get(id);
+                    return event ? <button type="button" key={id} onClick={() => openEvent(event)}>{event.title}</button> : null;
+                  })}
+                </div>
+                <div className="risk-items">
+                  {group.warnings.map((warning, index) => (
+                    <p key={`${warning.code}-${warning.eventIds.join('-')}-${index}`}>{warning.message}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {selection && editable && (
+        <div className="selection-toolbar" role="status">
+          <span>–í—ã–±—Ä–∞–Ω–æ: <strong>{selection.start === selection.end ? selection.start : `${selection.start} ‚Äî ${selection.end}`}</strong></span>
+          <button className="button button-primary" type="button" onClick={() => openNew(selection)}>–°–æ–∑–¥–∞—Ç—å –Ω–∞ –≤—ã–±—Ä–∞–Ω–Ω—ã–µ –¥–∞—Ç—ã</button>
+          <button className="button button-secondary" type="button" onClick={() => { setSelectionAnchor(null); setSelectionFocus(null); }}>–°–Ω—è—Ç—å –≤—ã–¥–µ–ª–µ–Ω–∏–µ</button>
+        </div>
+      )}
+
+      <section className="workspace-grid">
+        <article className="panel calendar-panel" aria-busy={loading}>
+          <div className="panel-heading calendar-heading">
+            <div>
+              <p className="eyebrow">{calendarView === 'month' ? `${monthNames[month - 1]?.toUpperCase()} ${year}` : `${year} –ì–û–î`}</p>
+              <h2>{calendarView === 'month' ? '–ú–µ—Å—è—Ü' : '–ì–æ–¥–æ–≤–æ–π –æ–±–∑–æ—Ä'}</h2>
+            </div>
+            <div className="calendar-heading-actions">
+              <div className="segmented" aria-label="–ü—Ä–µ–¥—Å—Ç–∞–≤–ª–µ–Ω–∏–µ –∫–∞–ª–µ–Ω–¥–∞—Ä—è">
+                <button type="button" className={calendarView === 'month' ? 'is-active' : ''} onClick={() => setCalendarView('month')}>–ú–µ—Å—è—Ü</button>
+                <button type="button" className={calendarView === 'year' ? 'is-active' : ''} onClick={() => setCalendarView('year')}>12 –º–µ—Å—è—Ü–µ–≤</button>
+              </div>
+              {calendarView === 'month' ? (
+                <div className="segmented" aria-label="–ù–∞–≤–∏–≥–∞—Ü–∏—è –ø–æ –º–µ—Å—è—Ü—É">
+                  <button type="button" onClick={() => moveMonth(-1)} disabled={year === MIN_CALENDAR_YEAR && month === 1}>–ü—Ä–µ–¥.</button>
+                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); }}>–°–µ–≥–æ–¥–Ω—è</button>
+                  <button type="button" onClick={() => moveMonth(1)} disabled={year === MAX_CALENDAR_YEAR && month === 12}>–°–ª–µ–¥.</button>
+                </div>
+              ) : (
+                <div className="segmented" aria-label="–ù–∞–≤–∏–≥–∞—Ü–∏—è –ø–æ –≥–æ–¥—É">
+                  <button type="button" onClick={() => year > MIN_CALENDAR_YEAR && setYear(year - 1)} disabled={year === MIN_CALENDAR_YEAR}>–ü—Ä–µ–¥. –≥–æ–¥</button>
+                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); }}>–¢–µ–∫—É—â–∏–π</button>
+                  <button type="button" onClick={() => year < MAX_CALENDAR_YEAR && setYear(year + 1)} disabled={year === MAX_CALENDAR_YEAR}>–°–ª–µ–¥. –≥–æ–¥</button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {calendarView === 'month' ? (<>
+            <div className="calendar-grid calendar-weekdays">{weekdays.map((day) => <div key={day}>{day}</div>)}</div>
+            <div className="calendar-month" aria-label={`${monthNames[month - 1]} ${year}`} onMouseUp={() => setSelecting(false)} onMouseLeave={() => setHoverDate(null)}>
+              {Array.from({ length: model.weeks }, (_, weekIndex) => {
+                const cells = model.cells.slice(weekIndex * 7, weekIndex * 7 + 7);
+                const weekSegments = segments.filter((segment) => segment.weekIndex === weekIndex);
+                const lanes = monthLaneCount(segments, weekIndex);
+                const style = { '--event-lanes': lanes } as CSSProperties;
+                return (
+                  <div className="calendar-week" style={style} key={`${year}-${month}-week-${weekIndex}`}>
+                    <div className="calendar-grid week-days">
+                      {cells.map((cell) => {
+                        const selectable = dateBelongsToYear(cell.date, year);
+                        const selected = dateInRange(cell.date, selection);
+                        return (
+                          <div
+                            className={`day-cell ${cell.inCurrentMonth ? '' : 'day-outside'} ${selected ? 'day-selected' : ''} ${selectable && editable ? 'day-interactive' : ''}`}
+                            key={cell.date}
+                            data-date={cell.date}
+                            role="gridcell"
+                            tabIndex={selectable && editable ? 0 : -1}
+                            aria-selected={selected}
+                            onMouseDown={(mouse: ReactMouseEvent<HTMLDivElement>) => beginSelection(mouse, cell.date)}
+                            onMouseEnter={() => { setHoverDate(cell.date); extendSelection(cell.date); }}
+                            onContextMenu={(mouse: ReactMouseEvent<HTMLDivElement>) => openRangeContext(mouse, cell.date)}
+                            onKeyDown={(key: ReactKeyboardEvent<HTMLDivElement>) => keyOnDay(key, cell.date)}
+                            onDoubleClick={() => selectable && editable && openNew(normalizeDateRange(cell.date, cell.date))}
+                            onDragOver={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+                            onDrop={(drop: ReactDragEvent<HTMLDivElement>) => dropOnDate(drop, cell.date)}
+                            title={editable && selectable ? '–í—ã–¥–µ–ª–∏—Ç–µ –¥–∏–∞–ø–∞–∑–æ–Ω –º—ã—à—å—é, –Ω–∞–∂–º–∏—Ç–µ –ü–ö–ú –¥–ª—è –±—ã—Å—Ç—Ä–æ–≥–æ —Å–æ–∑–¥–∞–Ω–∏—è –∏–ª–∏ –ø–µ—Ä–µ—Ç–∞—â–∏—Ç–µ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ –Ω–∞ –¥–∞—Ç—É.' : undefined}
+                          >
+                            <span className="day-number">{cell.day}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="week-events" aria-label={`–°–æ–±—ã—Ç–∏—è –Ω–µ–¥–µ–ª–∏ ${weekIndex + 1}`}>
+                      {weekSegments.map((segment) => {
+                        const event = byId.get(segment.eventId);
+                        if (!event) return null;
+                        const segmentStyle = { gridColumn: `${segment.startColumn + 1} / span ${segment.span}`, '--event-lane': segment.lane, '--event-accent': event.stickerColor } as CSSProperties;
+                        return (
+                          <button type="button" key={`${event.id}-${weekIndex}`} className={`${eventClasses(event)} ${segment.startsHere ? 'segment-start' : ''} ${segment.endsHere ? 'segment-end' : ''}`} style={segmentStyle}
+                            onClick={(click: ReactMouseEvent<HTMLButtonElement>) => { click.stopPropagation(); openEvent(event); }}
+                            title={`${event.title} ¬∑ ${disciplineLabels[event.discipline]}${editable ? ' ¬∑ –º–æ–∂–Ω–æ –ø–µ—Ä–µ—Ç–∞—â–∏—Ç—å' : ''}`} draggable={editable && !busy}
+                            onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)}>
+                            <span className="event-status">{statusLabels[event.status]}</span><strong>{event.title}</strong><span className="event-meta">{disciplineLabels[event.discipline]}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </>) : (
+            <div className="annual-overview" aria-label={`–ì–æ–¥–æ–≤–æ–π –æ–±–∑–æ—Ä ${year}`}>
+              {annualOverview.map((summary) => (
+                <section className="annual-month" key={`${year}-${summary.month}`}>
+                  <button className="annual-month-heading" type="button" onClick={() => { setMonth(summary.month); setCalendarView('month'); }}>
+                    <strong>{monthNames[summary.month - 1]}</strong>
+                    <span>{summary.eventCount} —Å—Ç–∞—Ä—Ç–æ–≤ ¬∑ {summary.primaryCount} –æ—Å–Ω–æ–≤–Ω—ã—Ö ¬∑ {summary.warningCount} —Ä–∏—Å–∫–æ–≤</span>
+                  </button>
+                  <div className="annual-weekdays">{weekdays.map((day) => <span key={day}>{day}</span>)}</div>
+                  <div className="annual-days">
+                    {summary.days.map((day) => (
+                      <button type="button" key={day.date} className={`annual-day ${day.inCurrentMonth ? '' : 'annual-day-outside'} ${day.warningCount ? 'annual-day-warning' : ''}`}
+                        tabIndex={day.inCurrentMonth ? 0 : -1} disabled={!day.inCurrentMonth}
+                        onClick={() => navigateToDate(day.date)}
+                        onDoubleClick={() => editable && openNew(normalizeDateRange(day.date, day.date))}
+                        onDragOver={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+                        onDrop={(drop: ReactDragEvent<HTMLButtonElement>) => dropOnDate(drop, day.date)}
+                        title={`${day.date}${day.eventCount ? ` ¬∑ —Å—Ç–∞—Ä—Ç–æ–≤: ${day.eventCount}` : ''}${day.warningCount ? ` ¬∑ —Ä–∏—Å–∫–æ–≤: ${day.warningCount}` : ''}`}>
+                        <span>{day.day}</span>
+                        {(day.eventCount > 0 || day.warningCount > 0) && <small>{day.eventCount > 0 ? day.eventCount : ''}{day.warningCount > 0 ? ` !${day.warningCount}` : ''}</small>}
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          )}
+          {loading && <div className="loading-overlay">–ó–∞–≥—Ä—É–∑–∫–∞ –∫–∞–ª–µ–Ω–¥–∞—Ä—è‚Ä¶</div>}
+        </article>
+
+        <aside className="side-stack">
+          <section className="panel daylight-panel">
+            <p className="eyebrow">–°–í–ï–¢–û–í–û–ï –û–ö–ù–û ¬∑ –°–ü–ë UTC+3</p>
+            {!daylightInfo ? <>
+              <h2>–î–∞—Ç–∞ –Ω–µ –≤—ã–±—Ä–∞–Ω–∞</h2>
+              <p className="muted">–ù–∞–≤–µ–¥–∏—Ç–µ –∫—É—Ä—Å–æ—Ä –Ω–∞ –¥–µ–Ω—å –∏–ª–∏ –≤—ã–¥–µ–ª–∏—Ç–µ –¥–∞—Ç—É. –†–∞—Å—á—ë—Ç –ø–æ–ª–Ω–æ—Å—Ç—å—é –ª–æ–∫–∞–ª—å–Ω—ã–π, —Ä–µ–∑–µ—Ä–≤ –ø–æ —É–º–æ–ª—á–∞–Ω–∏—é 15 –º–∏–Ω—É—Ç.</p>
+            </> : <>
+              <h2>{daylightInfo.date}</h2>
+              <dl className="daylight-grid">
+                <div><dt>–ì—Ä–∞–∂–¥. —Ä–∞—Å—Å–≤–µ—Ç</dt><dd>{formatSolarTime(daylightInfo.civilDawn, daylightInfo.civilDawnDayOffset)}</dd></div>
+                <div><dt>–í–æ—Å—Ö–æ–¥</dt><dd>{formatSolarTime(daylightInfo.sunrise, daylightInfo.sunriseDayOffset)}</dd></div>
+                <div><dt>–ó–∞–∫–∞—Ç</dt><dd>{formatSolarTime(daylightInfo.sunset, daylightInfo.sunsetDayOffset)}</dd></div>
+                <div><dt>–ì—Ä–∞–∂–¥. —Å—É–º–µ—Ä–∫–∏</dt><dd>{formatSolarTime(daylightInfo.civilDusk, daylightInfo.civilDuskDayOffset)}</dd></div>
+                <div><dt>–°–≤–µ—Ç</dt><dd>{formatMinutesDuration(daylightInfo.daylightMinutes)}</dd></div>
+                <div><dt>–ù–æ—á—å</dt><dd>{formatMinutesDuration(daylightInfo.nightMinutes)}</dd></div>
+              </dl>
+              <div className="safe-window"><span>–î–Ω–µ–≤–Ω–æ–µ –æ–∫–Ω–æ +15</span><strong>{formatSafeWindow(daylightInfo.safeDayWindow)}</strong></div>
+              <div className="safe-window"><span>–ù–æ—á–Ω–æ–µ –æ–∫–Ω–æ +15</span><strong>{formatSafeWindow(daylightInfo.safeNightWindow)}</strong></div>
+            </>}
+          </section>
+          <section
+            className={`panel queue-panel ${editable ? 'queue-drop-target' : ''}`}
+            onDragOver={(drag: ReactDragEvent<HTMLElement>) => { if (editable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+            onDrop={dropOnQueue}
+          >
+            <div className="panel-heading compact">
+              <div><p className="eyebrow">–û–ß–ï–†–ï–î–¨</p><h2>–ë–µ–∑ –¥–∞—Ç—ã</h2></div>
+              <span className="badge">{undated.length}</span>
+            </div>
+            {editable && <p className="queue-hint">–ü–µ—Ä–µ—Ç–∞—â–∏—Ç–µ —Å—é–¥–∞ –¥–∞—Ç–∏—Ä–æ–≤–∞–Ω–Ω–æ–µ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ, —á—Ç–æ–±—ã –≤–µ—Ä–Ω—É—Ç—å –µ–≥–æ –≤ –æ—á–µ—Ä–µ–¥—å.</p>}
+            <div className="queue-tools">
+              <input type="search" value={queueQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setQueueQuery(change.target.value)} placeholder="–ù–∞–π—Ç–∏ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ‚Ä¶" aria-label="–ü–æ–∏—Å–∫ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π –±–µ–∑ –¥–∞—Ç—ã" />
+              <select value={queueSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueSort(change.target.value as UndatedSort)} aria-label="–°–æ—Ä—Ç–∏—Ä–æ–≤–∫–∞ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π –±–µ–∑ –¥–∞—Ç—ã">
+                <option value="updated-desc">–°–Ω–∞—á–∞–ª–∞ —Å–≤–µ–∂–∏–µ</option>
+                <option value="title-asc">–ü–æ –Ω–∞–∑–≤–∞–Ω–∏—é</option>
+                <option value="discipline-asc">–ü–æ –¥–∏—Å—Ü–∏–ø–ª–∏–Ω–µ</option>
+                <option value="status-asc">–ü–æ —Å—Ç–∞—Ç—É—Å—É</option>
+              </select>
+            </div>
+            {queueQuery.trim() && <p className="queue-result-count">–ù–∞–π–¥–µ–Ω–æ: {undated.length} –∏–∑ {undatedTotal}</p>}
+            {undated.length === 0 ? <div className="empty-state">{undatedTotal === 0 ? '–ü–æ–∫–∞ –ø—É—Å—Ç–æ. –ó–¥–µ—Å—å –±—É–¥—É—Ç –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏—è, –∫–æ—Ç–æ—Ä—ã–º –µ—â—ë –Ω–µ –Ω–∞–∑–Ω–∞—á–∏–ª–∏ –¥–∞—Ç—É.' : '–ü–æ —Ç–µ–∫—É—â–µ–º—É –ø–æ–∏—Å–∫—É –Ω–∏—á–µ–≥–æ –Ω–µ –Ω–∞–π–¥–µ–Ω–æ.'}</div> : (
+              <div className="queue-list">
+                {undated.map((event) => (
+                  <button
+                    type="button"
+                    className="queue-card"
+                    key={event.id}
+                    onClick={() => openEvent(event)}
+                    draggable={editable && !busy}
+                    onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)}
+                  >
+                    <span className="queue-card-status">{statusLabels[event.status]} ¬∑ {disciplineLabels[event.discipline]}</span>
+                    <strong>{event.title}</strong>
+                    <span>{event.organizerName || '–û—Ä–≥–∞–Ω–∏–∑–∞—Ç–æ—Ä –Ω–µ —É–∫–∞–∑–∞–Ω'}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </section>
+          <section className="panel archive-panel" aria-label="–ê—Ä—Ö–∏–≤ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π">
+            <div className="panel-heading compact">
+              <div><p className="eyebrow">–ê–†–•–ò–í</p><h2>–ú—è–≥–∫–æ —É–¥–∞–ª—ë–Ω–Ω—ã–µ</h2></div>
+              <span className="badge">{archived.length}</span>
+            </div>
+            {archivedEvents.length > 0 && (
+              <div className="queue-tools archive-tools">
+                <input type="search" value={archiveQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setArchiveQuery(change.target.value)} placeholder="–ù–∞–π—Ç–∏ –≤ –∞—Ä—Ö–∏–≤–µ‚Ä¶" aria-label="–ü–æ–∏—Å–∫ –∞—Ä—Ö–∏–≤–∏—Ä–æ–≤–∞–Ω–Ω—ã—Ö –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–π" />
+                <select value={archiveSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setArchiveSort(change.target.value as ArchivedSort)} aria-label="–°–æ—Ä—Ç–∏—Ä–æ–≤–∫–∞ –∞—Ä—Ö–∏–≤–∞">
+                  <option value="archived-desc">–ù–µ–¥–∞–≤–Ω–æ –∞—Ä—Ö–∏–≤–∏—Ä–æ–≤–∞–Ω–Ω—ã–µ</option>
+                  <option value="title-asc">–ü–æ –Ω–∞–∑–≤–∞–Ω–∏—é</option>
+                  <option value="date-asc">–ü–æ –¥–∞—Ç–µ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏—è</option>
+                  <option value="discipline-asc">–ü–æ –¥–∏—Å—Ü–∏–ø–ª–∏–Ω–µ</option>
+                </select>
+              </div>
+            )}
+            {archiveQuery.trim() && archivedEvents.length > 0 && <p className="queue-result-count">–ù–∞–π–¥–µ–Ω–æ: {archived.length} –∏–∑ {archivedEvents.length}</p>}
+            {archived.length === 0 ? (
+              <div className="empty-state">{archivedEvents.length === 0 ? '–ê—Ä—Ö–∏–≤ –ø—É—Å—Ç. –ê—Ä—Ö–∏–≤–∏—Ä–æ–≤–∞–Ω–Ω—ã–µ –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏—è –æ—Å—Ç–∞—é—Ç—Å—è –≤ –±–∞–∑–µ –∏ –∂—É—Ä–Ω–∞–ª–µ –∞—É–¥–∏—Ç–∞.' : '–ü–æ —Ç–µ–∫—É—â–µ–º—É –ø–æ–∏—Å–∫—É –≤ –∞—Ä—Ö–∏–≤–µ –Ω–∏—á–µ–≥–æ –Ω–µ –Ω–∞–π–¥–µ–Ω–æ.'}</div>
+            ) : (
+              <div className="archive-list">
+                {archived.map((event) => (
+                  <article className="archive-card" key={event.id}>
+                    <div>
+                      <strong>{event.title}</strong>
+                      <span>{event.startDate ? (event.startDate === event.endDate ? event.startDate : `${event.startDate} ‚Äî ${event.endDate}`) : '–ë–µ–∑ –¥–∞—Ç—ã'} ¬∑ —Ä–µ–¥–∞–∫—Ü–∏—è {event.revision}</span>
+                    </div>
+                    <button className="button button-secondary" type="button" onClick={() => void restoreArchivedEvent(event)} disabled={!editable || busy} title={!editable ? '–í–µ—Ä–Ω–∏—Ç–µ –∫–∞–ª–µ–Ω–¥–∞—Ä—å –≤ —Ä–µ–∂–∏–º –ø–ª–∞–Ω–∏—Ä–æ–≤–∞–Ω–∏—è –¥–ª—è –≤–æ—Å—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω–∏—è.' : undefined}>–í–æ—Å—Å—Ç–∞–Ω–æ–≤–∏—Ç—å</button>
+                  </article>
+                ))}
+              </div>
+            )}
+          </section>
+        </aside>
+      </section>
+
+      {rangeMenu && (
+        <div className="range-context-menu" style={{ left: rangeMenu.x, top: rangeMenu.y }} role="menu" onClick={(click: ReactMouseEvent<HTMLDivElement>) => click.stopPropagation()}>
+          <button type="button" role="menuitem" onClick={() => openNew(rangeMenu.range)}>–°–æ–∑–¥–∞—Ç—å –º–µ—Ä–æ–ø—Ä–∏—è—Ç–∏–µ</button>
+          <span>{rangeMenu.range.start === rangeMenu.range.end ? rangeMenu.range.start : `${rangeMenu.range.start} ‚Äî ${rangeMenu.range.end}`}</span>
+        </div>
+      )}
+
+      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} />}
+    </main>
+  );
+}
