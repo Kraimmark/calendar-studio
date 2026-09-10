@@ -32,6 +32,12 @@ jobs:
           clean: true
           fetch-depth: 0
 
+      - name: Preserve repository line endings
+        shell: powershell
+        run: |
+          git config core.autocrlf false
+          git reset --hard HEAD
+
       - name: Verify clean source provenance
         shell: powershell
         run: |
