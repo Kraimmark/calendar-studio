@@ -1,0 +1,59 @@
+name: Calendar Studio 0.9.18 Clean Source Gate
+
+on:
+  push:
+    branches:
+      - release/0.9.18
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: calendar-studio-0918-clean-source-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build clean Calendar Studio source
+    runs-on:
+      - self-hosted
+      - Windows
+      - X64
+      - build-station
+      - windows-desktop
+      - msvc
+      - tauri
+    timeout-minutes: 60
+    steps:
+      - name: Checkout clean release source
+        uses: actions/checkout@v6
+        with:
+          clean: true
+          fetch-depth: 0
+
+      - name: Verify clean source provenance
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $expected = @{
+            'package-lock.json' = '7112b3911575e0d9aff1e2c95e7caa09fd43fa2b1dae5cd748ee99e1601b3012'
+            'src-tauri\Cargo.lock' = '16c708e3f5fa2ebbcba2e42b91b82cb6cb99396c26f71ed6799fced750e74eef'
+            'src-tauri\src\lib.rs' = 'ce190b3111e6d9818ea4bbf4e4b2f3fc7650eee7985f81e1d81d3fa3a9c0ef15'
+            'src-tauri\src\storage.rs' = '4c6d0c8a2b70e628521ef40926b5655f66fed0c8d3702d7b00acfd390833c3f5'
+          }
+          foreach ($path in $expected.Keys) {
+            if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing clean-source input: $path" }
+            $actual = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actual -ne $expected[$path]) { throw "Unexpected SHA-256 for $path: $actual" }
+          }
+          $forbidden = @('.build', '.migration', '.tmp', 'node_modules', 'dist', 'src-tauri/target')
+          $trackedForbidden = @(git ls-files -- $forbidden)
+          if ($trackedForbidden.Count -gt 0) {
+            throw "Generated or bootstrap files are tracked: $($trackedForbidden -join ', ')"
+          }
+          Write-Host 'Clean source provenance verified.'
+
+      - name: Build from clean source
+        shell: powershell
+        run: .\scripts\build-station-release.ps1
