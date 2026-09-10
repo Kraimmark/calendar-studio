@@ -1,0 +1,32 @@
+name: Windows Build Station
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: calendar-studio-build-station
+  cancel-in-progress: false
+
+jobs:
+  windows-release:
+    name: Verify and build Calendar Studio
+    runs-on:
+      - self-hosted
+      - Windows
+      - X64
+      - build-station
+      - windows-desktop
+      - msvc
+      - tauri
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build on KRAIMMARK-BUILD-01
+        shell: powershell
+        run: ./scripts/build-station-release.ps1
