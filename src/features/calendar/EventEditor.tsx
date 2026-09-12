@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type MouseEvent as ReactMouseEvent } from 'react';
-import { calculateShiftDaylightWarnings } from '../../domain/daylight';
-import type { CalendarEvent, CalendarEventData, Discipline, EventKind, EventSeries, EventSource, EventStatus, ShiftKind, VenueScope } from '../../domain/types';
+import type { CalendarEvent, CalendarEventData, Discipline, EventKind, EventSeries, EventSource, EventStatus, VenueScope } from '../../domain/types';
 import type { ValidationIssue } from '../../domain/validation';
-import { archiveConfirmationMessage, daylightConfirmationKey, requiresDiscardConfirmation } from './confirmationState';
+import { archiveConfirmationMessage, requiresDiscardConfirmation } from './confirmationState';
 
 interface EventEditorProps {
   year: number;
@@ -33,17 +32,21 @@ function nullableNumber(value: string): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function studioEventData(data: CalendarEventData): CalendarEventData {
+  return { ...data, daylightBufferMinutes: 0, shifts: [] };
+}
+
 export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict }: EventEditorProps) {
-  const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(initialData));
+  const normalizedInitialData = useMemo(() => studioEventData(initialData), [initialData]);
+  const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(normalizedInitialData));
   const [ekpConfirmed, setEkpConfirmed] = useState(false);
-  const [daylightConfirmed, setDaylightConfirmed] = useState(false);
   const dialogRef = useRef<HTMLElement | null>(null);
   const savingRef = useRef(saving);
   const cancelRef = useRef(onCancel);
 
-  useEffect(() => { setDraft(structuredClone(initialData)); setEkpConfirmed(false); setDaylightConfirmed(false); }, [initialData]);
+  useEffect(() => { setDraft(structuredClone(normalizedInitialData)); setEkpConfirmed(false); }, [normalizedInitialData]);
   useEffect(() => { savingRef.current = saving; }, [saving]);
-  const dirty = useMemo(() => JSON.stringify(draft) !== JSON.stringify(initialData), [draft, initialData]);
+  const dirty = useMemo(() => JSON.stringify(draft) !== JSON.stringify(normalizedInitialData), [draft, normalizedInitialData]);
   const requestClose = useCallback(() => {
     if (savingRef.current) return;
     if (requiresDiscardConfirmation(dirty, readOnly) && !window.confirm('Закрыть редактор? Несохранённые изменения будут потеряны.')) return;
@@ -101,14 +104,7 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
   const groupedIssues = useMemo(() => issues.filter((issue) => issue.severity === 'error'), [issues]);
   useEffect(() => { setEkpConfirmed(false); }, [draft]);
   const needsEkpConfirmation = !readOnly && requireEkpConfirmation && dirty;
-  const daylightWarnings = useMemo(() => calculateShiftDaylightWarnings(draft), [draft]);
-  const daylightWarningKey = useMemo(() => daylightConfirmationKey(daylightWarnings), [daylightWarnings]);
-  useEffect(() => { setDaylightConfirmed(false); }, [daylightWarningKey]);
-  const needsDaylightConfirmation = !readOnly && dirty && daylightWarnings.length > 0;
   const patch = <K extends keyof CalendarEventData>(key: K, value: CalendarEventData[K]) => setDraft((current) => ({ ...current, [key]: value }));
-  const updateShift = (id: string, changes: Partial<CalendarEventData['shifts'][number]>) => setDraft((current) => ({ ...current, shifts: current.shifts.map((shift) => shift.id === id ? { ...shift, ...changes } : shift) }));
-  const addShift = () => setDraft((current) => ({ ...current, shifts: [...current.shifts, { id: crypto.randomUUID(), name: `Смена ${current.shifts.length + 1}`, kind: 'day', startsAt: '10:00', endsAt: '18:00' }] }));
-  const removeShift = (id: string) => setDraft((current) => ({ ...current, shifts: current.shifts.filter((shift) => shift.id !== id) }));
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(mouse: ReactMouseEvent<HTMLDivElement>) => { if (mouse.target === mouse.currentTarget) requestClose(); }}>
@@ -242,62 +238,22 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
           </fieldset>
 
           <fieldset className="form-section" disabled={readOnly}>
-            <legend>Смены и световое окно</legend>
-            <div className="form-grid two-columns">
-              <label className="field">Резерв светового окна, минут
-                <input type="number" min="0" max="120" value={draft.daylightBufferMinutes} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('daylightBufferMinutes', Number(e.target.value))} />
-              </label>
-            </div>
-            <div className="shift-list">
-              {draft.shifts.map((shift) => (
-                <div className="shift-row" key={shift.id}>
-                  <label className="field">Название
-                    <input value={shift.name} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { name: e.target.value })} />
-                  </label>
-                  <label className="field">Тип
-                    <select value={shift.kind} onChange={(e: ChangeEvent<HTMLSelectElement>) => updateShift(shift.id, { kind: e.target.value as ShiftKind })}>
-                      <option value="day">Дневная</option>
-                      <option value="night">Ночная</option>
-                    </select>
-                  </label>
-                  <label className="field">Начало
-                    <input type="time" value={shift.startsAt} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { startsAt: e.target.value })} />
-                  </label>
-                  <label className="field">Окончание
-                    <input type="time" value={shift.endsAt} onChange={(e: ChangeEvent<HTMLInputElement>) => updateShift(shift.id, { endsAt: e.target.value })} />
-                  </label>
-                  <button className="button button-danger shift-remove" type="button" onClick={() => removeShift(shift.id)}>Удалить</button>
-                </div>
-              ))}
-            </div>
-            <button className="button button-secondary" type="button" onClick={addShift}>Добавить смену</button>
-          </fieldset>
-
-          <fieldset className="form-section" disabled={readOnly}>
             <legend>Рабочий комментарий</legend>
             <label className="field"><textarea rows={5} value={draft.notes} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => patch('notes', e.target.value)} /></label>
           </fieldset>
+          {needsEkpConfirmation && (
+            <label className="danger-confirmation">
+              <input type="checkbox" checked={ekpConfirmed} onChange={(change: ChangeEvent<HTMLInputElement>) => setEkpConfirmed(change.target.checked)} />
+              <span><strong>Подтверждаю ручное изменение записи ЕКП.</strong> Запись получена из официального источника, и это изменение будет осознанно сохранено как локальная редакция.</span>
+            </label>
+          )}
         </div>
-
-        {needsDaylightConfirmation && (
-          <label className="danger-confirmation danger-confirmation-red">
-            <input type="checkbox" checked={daylightConfirmed} onChange={(change: ChangeEvent<HTMLInputElement>) => setDaylightConfirmed(change.target.checked)} />
-            <span><strong>Подтверждаю выход смены за безопасное световое окно.</strong> {daylightWarnings.slice(0, 3).map((warning) => warning.message).join(' ')}</span>
-          </label>
-        )}
-
-        {needsEkpConfirmation && (
-          <label className="danger-confirmation">
-            <input type="checkbox" checked={ekpConfirmed} onChange={(change: ChangeEvent<HTMLInputElement>) => setEkpConfirmed(change.target.checked)} />
-            <span><strong>Подтверждаю ручное изменение записи ЕКП.</strong> Запись получена из официального источника, и это изменение будет осознанно сохранено как локальная редакция.</span>
-          </label>
-        )}
 
         <footer className="editor-footer">
           <div>{!readOnly && event && onArchive ? <button className="button button-danger" type="button" onClick={requestArchive} disabled={saving}>Архивировать</button> : null}</div>
           <div className="editor-actions">
             <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>{readOnly ? 'Закрыть' : 'Отмена'}</button>
-            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(draft)} disabled={saving || (needsEkpConfirmation && !ekpConfirmed) || (needsDaylightConfirmation && !daylightConfirmed)}>{saving ? 'Сохранение…' : 'Сохранить'}</button>}
+            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(studioEventData(draft))} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : 'Сохранить'}</button>}
           </div>
         </footer>
       </section>

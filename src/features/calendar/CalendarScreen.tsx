@@ -14,7 +14,6 @@ import { buildAnnualOverview } from '../../domain/annualOverview';
 import { buildArchivedLibrary, type ArchivedSort } from '../../domain/archivedLibrary';
 import { buildUndatedLibrary, type UndatedSort } from '../../domain/undatedLibrary';
 import { parseDateOnly, type DateOnly } from '../../domain/dateOnly';
-import { calculateDaylight } from '../../domain/daylight';
 import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLayers, type CalendarLayerKey, type CalendarLayerState, type DisciplineFilter } from '../../domain/calendarLayers';
 import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
 import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
@@ -42,6 +41,7 @@ type EditorState = { event: CalendarEvent | null; initialData: CalendarEventData
 type EditorConflictState = { expectedRevision: number; actualRevision: number } | null;
 type CountScope = 'all' | 'primary';
 type CalendarView = 'month' | 'year';
+type WorkspaceTab = 'calendar' | 'archive';
 interface RangeMenuState { x: number; y: number; range: DateRange }
 
 const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
@@ -77,27 +77,6 @@ function dragEventId(event: ReactDragEvent<HTMLElement>): string | null {
   return event.dataTransfer.getData(DRAG_EVENT_MIME) || event.dataTransfer.getData('text/plain') || null;
 }
 
-function formatMinutesDuration(value: number | null): string {
-  if (value === null) return '—';
-  const hours = Math.floor(value / 60);
-  const minutes = value % 60;
-  return `${hours} ч ${String(minutes).padStart(2, '0')} мин`;
-}
-
-function formatSolarTime(value: string | null, offset: number | null): string {
-  if (!value) return '—';
-  if (!offset) return value;
-  return `${value} (${offset > 0 ? '+' : ''}${offset} д.)`;
-}
-
-function formatSafeWindow(window: ReturnType<typeof calculateDaylight>['safeDayWindow']): string {
-  if (!window) return 'нет безопасного окна';
-  const suffix = window.startsDayOffset || window.endsDayOffset
-    ? ` [${window.startsDayOffset >= 0 ? '+' : ''}${window.startsDayOffset} / ${window.endsDayOffset >= 0 ? '+' : ''}${window.endsDayOffset} д.]`
-    : '';
-  return `${window.startsAt} — ${window.endsAt}${suffix}`;
-}
-
 export function CalendarScreen({ theme, onToggleTheme, repository, portability, workspace }: CalendarScreenProps) {
   const initial = useMemo(calendarToday, []);
   const [year, setYear] = useState(initial.year);
@@ -114,6 +93,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [saving, setSaving] = useState(false);
   const [countScope, setCountScope] = useState<CountScope>('all');
   const [calendarView, setCalendarView] = useState<CalendarView>('month');
+  const [activeTab, setActiveTab] = useState<WorkspaceTab>('calendar');
   const [queueQuery, setQueueQuery] = useState('');
   const [queueSort, setQueueSort] = useState<UndatedSort>('updated-desc');
   const [archiveQuery, setArchiveQuery] = useState('');
@@ -124,7 +104,6 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [selectionFocus, setSelectionFocus] = useState<DateOnly | null>(null);
   const [selecting, setSelecting] = useState(false);
   const [rangeMenu, setRangeMenu] = useState<RangeMenuState | null>(null);
-  const [hoverDate, setHoverDate] = useState<DateOnly | null>(null);
   const [porting, setPorting] = useState(false);
   const [portabilityStatus, setPortabilityStatus] = useState<string | null>(null);
   const [workspaceStatus, setWorkspaceStatus] = useState<WorkspaceStatus | null>(null);
@@ -157,7 +136,6 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setSelectionAnchor(null);
     setSelectionFocus(null);
     setRangeMenu(null);
-    setHoverDate(null);
   }, [year, month]);
   useEffect(() => {
     if (!selecting) return;
@@ -183,8 +161,6 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const annualOverview = useMemo(() => buildAnnualOverview(year, visibleEvents, warnings), [visibleEvents, warnings, year]);
   const editable = settings?.mode === 'planning';
   const busy = loading || saving || porting || workspaceChanging;
-  const daylightDate = hoverDate ?? selectionFocus;
-  const daylightInfo = useMemo(() => daylightDate && dateBelongsToYear(daylightDate, year) ? calculateDaylight(daylightDate) : null, [daylightDate, year]);
 
   const exportPortable = async () => {
     if (busy) return;
@@ -283,7 +259,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
 
   const saveEditor = async (data: CalendarEventData) => {
     if (!editor || editor.readOnly) return;
-    const nextIssues = validateEvent(data, { year, eventId: editor.event?.id, events });
+    const studioData: CalendarEventData = { ...data, daylightBufferMinutes: 0, shifts: [] };
+    const nextIssues = validateEvent(studioData, { year, eventId: editor.event?.id, events });
     setIssues(nextIssues);
     if (hasBlockingIssues(nextIssues)) return;
 
@@ -291,7 +268,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     try {
       const timestamp = new Date().toISOString();
       if (editor.event) {
-        const changes = diffEventData(editor.initialData, data);
+        const changes = diffEventData(editor.initialData, studioData);
         if (Object.keys(changes).length === 0) {
           setEditor(null);
           setIssues([]);
@@ -299,7 +276,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         }
         await repository.saveEvent({ kind: 'update', id: editor.event.id, actor: 'local-owner', timestamp, changes }, editor.event.revision);
       } else {
-        await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data }, null);
+        await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data: studioData }, null);
       }
       setEditor(null);
       setIssues([]);
@@ -501,6 +478,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
           <p className="subtitle">Отдельный локальный планировщик соревнований</p>
         </div>
         <div className="topbar-actions">
+          <div className="segmented workspace-tabs" aria-label="Раздел Calendar Studio">
+            <button type="button" className={activeTab === 'calendar' ? 'is-active' : ''} onClick={() => setActiveTab('calendar')}>Календарь</button>
+            <button type="button" className={activeTab === 'archive' ? 'is-active' : ''} onClick={() => setActiveTab('archive')}>Архив{archivedEvents.length ? ` (${archivedEvents.length})` : ''}</button>
+          </div>
           <button className="button button-secondary" type="button" onClick={() => void chooseWorkspace()} disabled={busy}>Папка данных</button>
           <button className="button button-secondary" type="button" onClick={() => void exportPortable()} disabled={busy}>Экспорт JSON</button>
           <label className={`button button-secondary file-button ${busy || !editable ? 'is-disabled' : ''}`} title={!editable ? 'Верните календарь в режим планирования перед импортом.' : undefined}>
@@ -527,6 +508,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
       {portabilityStatus && <div className="success-banner" role="status">{portabilityStatus}</div>}
       {settings?.mode === 'approved' && <div className="approved-banner">Календарь согласован. Редактирование, переносы и создание зафиксированы; карточки доступны только для просмотра до явного возврата в планирование.</div>}
 
+      {activeTab === 'calendar' && <>
       <section className="status-strip status-strip-six" aria-label="Состояние календаря">
         <div><span>Режим</span><strong>{settings?.mode === 'approved' ? 'Согласованный' : 'Планирование'}</strong></div>
         <div><span>{countScope === 'primary' ? 'Основных' : 'Всего'}</span><strong>{scopedEvents.length}</strong></div>
@@ -636,7 +618,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
 
           {calendarView === 'month' ? (<>
             <div className="calendar-grid calendar-weekdays">{weekdays.map((day) => <div key={day}>{day}</div>)}</div>
-            <div className="calendar-month" aria-label={`${monthNames[month - 1]} ${year}`} onMouseUp={() => setSelecting(false)} onMouseLeave={() => setHoverDate(null)}>
+            <div className="calendar-month" aria-label={`${monthNames[month - 1]} ${year}`} onMouseUp={() => setSelecting(false)}>
               {Array.from({ length: model.weeks }, (_, weekIndex) => {
                 const cells = model.cells.slice(weekIndex * 7, weekIndex * 7 + 7);
                 const weekSegments = segments.filter((segment) => segment.weekIndex === weekIndex);
@@ -657,7 +639,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                             tabIndex={selectable && editable ? 0 : -1}
                             aria-selected={selected}
                             onMouseDown={(mouse: ReactMouseEvent<HTMLDivElement>) => beginSelection(mouse, cell.date)}
-                            onMouseEnter={() => { setHoverDate(cell.date); extendSelection(cell.date); }}
+                            onMouseEnter={() => extendSelection(cell.date)}
                             onContextMenu={(mouse: ReactMouseEvent<HTMLDivElement>) => openRangeContext(mouse, cell.date)}
                             onKeyDown={(key: ReactKeyboardEvent<HTMLDivElement>) => keyOnDay(key, cell.date)}
                             onDoubleClick={() => selectable && editable && openNew(normalizeDateRange(cell.date, cell.date))}
@@ -720,35 +702,16 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         </article>
 
         <aside className="side-stack">
-          <section className="panel daylight-panel">
-            <p className="eyebrow">СВЕТОВОЕ ОКНО · СПБ UTC+3</p>
-            {!daylightInfo ? <>
-              <h2>Дата не выбрана</h2>
-              <p className="muted">Наведите курсор на день или выделите дату. Расчёт полностью локальный, резерв по умолчанию 15 минут.</p>
-            </> : <>
-              <h2>{daylightInfo.date}</h2>
-              <dl className="daylight-grid">
-                <div><dt>Гражд. рассвет</dt><dd>{formatSolarTime(daylightInfo.civilDawn, daylightInfo.civilDawnDayOffset)}</dd></div>
-                <div><dt>Восход</dt><dd>{formatSolarTime(daylightInfo.sunrise, daylightInfo.sunriseDayOffset)}</dd></div>
-                <div><dt>Закат</dt><dd>{formatSolarTime(daylightInfo.sunset, daylightInfo.sunsetDayOffset)}</dd></div>
-                <div><dt>Гражд. сумерки</dt><dd>{formatSolarTime(daylightInfo.civilDusk, daylightInfo.civilDuskDayOffset)}</dd></div>
-                <div><dt>Свет</dt><dd>{formatMinutesDuration(daylightInfo.daylightMinutes)}</dd></div>
-                <div><dt>Ночь</dt><dd>{formatMinutesDuration(daylightInfo.nightMinutes)}</dd></div>
-              </dl>
-              <div className="safe-window"><span>Дневное окно +15</span><strong>{formatSafeWindow(daylightInfo.safeDayWindow)}</strong></div>
-              <div className="safe-window"><span>Ночное окно +15</span><strong>{formatSafeWindow(daylightInfo.safeNightWindow)}</strong></div>
-            </>}
-          </section>
           <section
             className={`panel queue-panel ${editable ? 'queue-drop-target' : ''}`}
             onDragOver={(drag: ReactDragEvent<HTMLElement>) => { if (editable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
             onDrop={dropOnQueue}
           >
             <div className="panel-heading compact">
-              <div><p className="eyebrow">ОЧЕРЕДЬ</p><h2>Без даты</h2></div>
+              <div><p className="eyebrow">ПЛАНИРОВАНИЕ</p><h2>Корзина матчей</h2></div>
               <span className="badge">{undated.length}</span>
             </div>
-            {editable && <p className="queue-hint">Перетащите сюда датированное мероприятие, чтобы вернуть его в очередь.</p>}
+            {editable && <p className="queue-hint">Тяните карточку на день, чтобы поставить матч в календарь. Чтобы снять дату — верните карточку сюда.</p>}
             <div className="queue-tools">
               <input type="search" value={queueQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setQueueQuery(change.target.value)} placeholder="Найти мероприятие…" aria-label="Поиск мероприятий без даты" />
               <select value={queueSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueSort(change.target.value as UndatedSort)} aria-label="Сортировка мероприятий без даты">
@@ -759,7 +722,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
               </select>
             </div>
             {queueQuery.trim() && <p className="queue-result-count">Найдено: {undated.length} из {undatedTotal}</p>}
-            {undated.length === 0 ? <div className="empty-state">{undatedTotal === 0 ? 'Пока пусто. Здесь будут мероприятия, которым ещё не назначили дату.' : 'По текущему поиску ничего не найдено.'}</div> : (
+            {undated.length === 0 ? <div className="empty-state">{undatedTotal === 0 ? 'Корзина пуста. Создайте мероприятие без даты — оно появится здесь для перетаскивания.' : 'По текущему поиску ничего не найдено.'}</div> : (
               <div className="queue-list">
                 {undated.map((event) => (
                   <button
@@ -778,41 +741,45 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
               </div>
             )}
           </section>
-          <section className="panel archive-panel" aria-label="Архив мероприятий">
-            <div className="panel-heading compact">
-              <div><p className="eyebrow">АРХИВ</p><h2>Мягко удалённые</h2></div>
-              <span className="badge">{archived.length}</span>
-            </div>
-            {archivedEvents.length > 0 && (
-              <div className="queue-tools archive-tools">
-                <input type="search" value={archiveQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setArchiveQuery(change.target.value)} placeholder="Найти в архиве…" aria-label="Поиск архивированных мероприятий" />
-                <select value={archiveSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setArchiveSort(change.target.value as ArchivedSort)} aria-label="Сортировка архива">
-                  <option value="archived-desc">Недавно архивированные</option>
-                  <option value="title-asc">По названию</option>
-                  <option value="date-asc">По дате мероприятия</option>
-                  <option value="discipline-asc">По дисциплине</option>
-                </select>
-              </div>
-            )}
-            {archiveQuery.trim() && archivedEvents.length > 0 && <p className="queue-result-count">Найдено: {archived.length} из {archivedEvents.length}</p>}
-            {archived.length === 0 ? (
-              <div className="empty-state">{archivedEvents.length === 0 ? 'Архив пуст. Архивированные мероприятия остаются в базе и журнале аудита.' : 'По текущему поиску в архиве ничего не найдено.'}</div>
-            ) : (
-              <div className="archive-list">
-                {archived.map((event) => (
-                  <article className="archive-card" key={event.id}>
-                    <div>
-                      <strong>{event.title}</strong>
-                      <span>{event.startDate ? (event.startDate === event.endDate ? event.startDate : `${event.startDate} — ${event.endDate}`) : 'Без даты'} · редакция {event.revision}</span>
-                    </div>
-                    <button className="button button-secondary" type="button" onClick={() => void restoreArchivedEvent(event)} disabled={!editable || busy} title={!editable ? 'Верните календарь в режим планирования для восстановления.' : undefined}>Восстановить</button>
-                  </article>
-                ))}
-              </div>
-            )}
-          </section>
         </aside>
       </section>
+      </>}
+
+      {activeTab === 'archive' && (
+        <section className="panel archive-workspace" aria-label="Архив мероприятий">
+          <div className="panel-heading">
+            <div><p className="eyebrow">АРХИВ</p><h2>Архивированные мероприятия</h2><p className="muted">Записи остаются в базе и журнале аудита; их можно восстановить в планирование.</p></div>
+            <span className="badge">{archived.length}</span>
+          </div>
+          {archivedEvents.length > 0 && (
+            <div className="queue-tools archive-tools">
+              <input type="search" value={archiveQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setArchiveQuery(change.target.value)} placeholder="Найти в архиве…" aria-label="Поиск архивированных мероприятий" />
+              <select value={archiveSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setArchiveSort(change.target.value as ArchivedSort)} aria-label="Сортировка архива">
+                <option value="archived-desc">Недавно архивированные</option>
+                <option value="title-asc">По названию</option>
+                <option value="date-asc">По дате мероприятия</option>
+                <option value="discipline-asc">По дисциплине</option>
+              </select>
+            </div>
+          )}
+          {archiveQuery.trim() && archivedEvents.length > 0 && <p className="queue-result-count">Найдено: {archived.length} из {archivedEvents.length}</p>}
+          {archived.length === 0 ? (
+            <div className="empty-state">{archivedEvents.length === 0 ? 'Архив пуст.' : 'По текущему поиску в архиве ничего не найдено.'}</div>
+          ) : (
+            <div className="archive-list">
+              {archived.map((event) => (
+                <article className="archive-card" key={event.id}>
+                  <div>
+                    <strong>{event.title}</strong>
+                    <span>{event.startDate ? (event.startDate === event.endDate ? event.startDate : `${event.startDate} — ${event.endDate}`) : 'Без даты'} · редакция {event.revision}</span>
+                  </div>
+                  <button className="button button-secondary" type="button" onClick={() => void restoreArchivedEvent(event)} disabled={!editable || busy} title={!editable ? 'Верните календарь в режим планирования для восстановления.' : undefined}>Восстановить</button>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       {rangeMenu && (
         <div className="range-context-menu" style={{ left: rangeMenu.x, top: rangeMenu.y }} role="menu" onClick={(click: ReactMouseEvent<HTMLDivElement>) => click.stopPropagation()}>
