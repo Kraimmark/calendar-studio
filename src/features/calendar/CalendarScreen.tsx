@@ -20,14 +20,14 @@ import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDate
 import type { CalendarPortability } from '../../domain/portability';
 import type { CalendarEvent, CalendarEventData, CalendarSettings, Discipline, EventSeries } from '../../domain/types';
 import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
-import { calculateWarnings } from '../../domain/warnings';
+import { calendarWarningKey, calculateWarnings } from '../../domain/warnings';
 import { summarizeCalendarWarnings } from '../../domain/warningSummary';
 import { RevisionConflictError } from '../../domain/revision';
 import type { CalendarRepository } from '../../storage/CalendarRepository';
 import type { WorkspaceManager, WorkspaceStatus } from '../../platform/WorkspaceManager';
 import { EventEditor, type RelatedEventAvailability, type RelatedEventSelection } from './EventEditor';
 import { createEventData, diffEventData, eventDataOf, normalizeStudioEventData } from './eventDraft';
-import { calendarModeConfirmationMessage } from './confirmationState';
+import { calendarModeConfirmationMessage, permanentDeleteConfirmationMessage } from './confirmationState';
 import { exportSpreadsheet, importSpreadsheet } from './eventSpreadsheet';
 
 interface CalendarScreenProps {
@@ -100,6 +100,12 @@ function eventClasses(event: CalendarEvent): string {
   else if (event.source === 'ekp' && event.venueScope === 'otherRegion') classes.push('event-ekp-other');
   if (event.kind === 'build') classes.push('event-build');
   return classes.join(' ');
+}
+
+function shortEventLabel(event: CalendarEvent): string {
+  const phase = event.competitionPhase?.trim();
+  if (phase) return phase.length > 30 ? `${phase.slice(0, 29)}…` : phase;
+  return event.title.length > 42 ? `${event.title.slice(0, 41)}…` : event.title;
 }
 
 function dateBelongsToYear(date: DateOnly, year: number): boolean {
@@ -200,8 +206,11 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const primaryCount = useMemo(() => events.filter((event) => event.isPrimary).length, [events]);
   const archived = useMemo(() => buildArchivedLibrary(archivedEvents, archiveQuery, archiveSort), [archiveQuery, archiveSort, archivedEvents]);
   const warnings = useMemo(() => calculateWarnings(events, year), [events, year]);
-  const warningSummary = useMemo(() => summarizeCalendarWarnings(warnings), [warnings]);
-  const annualOverview = useMemo(() => buildAnnualOverview(year, visibleEvents, warnings), [visibleEvents, warnings, year]);
+  const acceptedWarningKeys = useMemo(() => new Set(settings?.acceptedWarningKeys ?? []), [settings?.acceptedWarningKeys]);
+  const activeWarnings = useMemo(() => warnings.filter((warning) => !acceptedWarningKeys.has(calendarWarningKey(warning))), [acceptedWarningKeys, warnings]);
+  const acceptedWarnings = useMemo(() => warnings.filter((warning) => acceptedWarningKeys.has(calendarWarningKey(warning))), [acceptedWarningKeys, warnings]);
+  const warningSummary = useMemo(() => summarizeCalendarWarnings(activeWarnings), [activeWarnings]);
+  const annualOverview = useMemo(() => buildAnnualOverview(year, visibleEvents, activeWarnings), [activeWarnings, visibleEvents, year]);
   const editable = settings?.mode === 'planning';
   const busy = loading || saving || porting || workspaceChanging;
 
@@ -435,6 +444,41 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     }
   };
 
+  const deleteEventPermanently = async (event: CalendarEvent) => {
+    if (!editable || busy) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const deletedIds = await repository.deleteEvent(event.id, event.revision, 'local-owner', new Date().toISOString());
+      setEditor(null);
+      setEditorConflict(null);
+      setIssues([]);
+      await reload();
+      setPortabilityStatus(deletedIds.length > 1 ? `Удалено навсегда: ${deletedIds.length} связанных записей.` : 'Мероприятие удалено навсегда.');
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setInteractionError('Мероприятие уже изменилось. Календарь обновлён — повторите удаление на актуальной редакции.');
+      } else {
+        setInteractionError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const deleteEditorEvent = async () => {
+    if (!editor?.event || editor.readOnly) return;
+    await deleteEventPermanently(editor.event);
+  };
+
+  const deleteArchivedEvent = async (event: CalendarEvent) => {
+    if (!editable || busy) return;
+    const relatedCount = [...events, ...archivedEvents].filter((candidate) => candidate.parentEventId === event.id).length;
+    if (!window.confirm(permanentDeleteConfirmationMessage(event.title, false, relatedCount))) return;
+    await deleteEventPermanently(event);
+  };
+
   const refreshConflictEditor = async () => {
     if (!editor?.event) return;
     setSaving(true);
@@ -475,6 +519,40 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     } finally {
       setSaving(false);
     }
+  };
+
+  const saveAcceptedWarningKeys = async (keys: string[]) => {
+    if (!settings || busy) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const next = await repository.saveCalendarSettings({
+        year,
+        mode: settings.mode,
+        actor: 'local-owner',
+        timestamp: new Date().toISOString(),
+        acceptedWarningKeys: [...new Set(keys)].sort(),
+      }, settings.revision);
+      setSettings(next);
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setInteractionError('Настройки календаря уже изменились. Состояние обновлено — повторите действие.');
+      } else {
+        setInteractionError(error instanceof Error ? error.message : String(error));
+      }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const acceptWarning = async (warning: ReturnType<typeof calculateWarnings>[number]) => {
+    await saveAcceptedWarningKeys([...(settings?.acceptedWarningKeys ?? []), calendarWarningKey(warning)]);
+  };
+
+  const restoreWarning = async (warning: ReturnType<typeof calculateWarnings>[number]) => {
+    const key = calendarWarningKey(warning);
+    await saveAcceptedWarningKeys((settings?.acceptedWarningKeys ?? []).filter((candidate) => candidate !== key));
   };
 
   const updateEventDates = async (event: CalendarEvent, changes: Pick<CalendarEventData, 'startDate' | 'endDate'>) => {
@@ -595,7 +673,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setInteractionError(null);
     try {
       const nextMode = settings.mode === 'planning' ? 'approved' : 'planning';
-      await repository.saveCalendarSettings({ year, mode: nextMode, actor: 'local-owner', timestamp: new Date().toISOString() }, settings.revision);
+      await repository.saveCalendarSettings({ year, mode: nextMode, actor: 'local-owner', timestamp: new Date().toISOString(), acceptedWarningKeys: settings.acceptedWarningKeys }, settings.revision);
       setEditor(null);
       await reload();
     } catch (error) {
@@ -656,7 +734,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         <div><span>В календаре</span><strong>{scopedDatedCount}</strong></div>
         <div><span>Без дат</span><strong>{scopedUndatedCount}</strong></div>
         <div><span>Основных всего</span><strong>{primaryCount}</strong></div>
-        <div><span>Предупреждения</span><strong>{warnings.length}</strong></div>
+        <div><span>Предупреждения</span><strong>{activeWarnings.length}</strong></div>
       </section>
 
       <section className="control-strip panel" aria-label="Фильтры календаря">
@@ -712,13 +790,31 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                 </div>
                 <div className="risk-items">
                   {group.warnings.map((warning, index) => (
-                    <p key={`${warning.code}-${warning.eventIds.join('-')}-${index}`}>{warning.message}</p>
+                    <div className="risk-item" key={`${warning.code}-${warning.eventIds.join('-')}-${index}`}>
+                      <p>{warning.message}</p>
+                      {editable && <button className="button button-secondary risk-accept-button" type="button" onClick={() => void acceptWarning(warning)} disabled={busy}>Принять риск</button>}
+                    </div>
                   ))}
                 </div>
               </article>
             ))}
           </div>
         </section>
+      )}
+
+      {acceptedWarnings.length > 0 && (
+        <details className="accepted-risks panel">
+          <summary>Принятые риски: {acceptedWarnings.length}</summary>
+          <p className="muted">Они не учитываются в счётчиках и снова появятся автоматически, если изменятся даты или состав затронутых мероприятий.</p>
+          <div className="accepted-risk-list">
+            {acceptedWarnings.map((warning, index) => (
+              <div className="accepted-risk" key={`${calendarWarningKey(warning)}-${index}`}>
+                <span>{warning.message}</span>
+                {editable && <button className="button button-secondary risk-accept-button" type="button" onClick={() => void restoreWarning(warning)} disabled={busy}>Вернуть в контроль</button>}
+              </div>
+            ))}
+          </div>
+        </details>
       )}
 
       {selection && editable && (
@@ -800,11 +896,11 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         if (!event) return null;
                         const segmentStyle = { gridColumn: `${segment.startColumn + 1} / span ${segment.span}`, '--event-lane': segment.lane, '--event-accent': event.stickerColor } as CSSProperties;
                         return (
-                          <button type="button" key={`${event.id}-${weekIndex}`} className={`${eventClasses(event)} ${segment.startsHere ? 'segment-start' : ''} ${segment.endsHere ? 'segment-end' : ''}`} style={segmentStyle}
+                          <button type="button" key={`${event.id}-${weekIndex}`} className={`${eventClasses(event)} ${segment.startsHere ? 'segment-start' : ''} ${segment.endsHere ? 'segment-end' : ''} ${segment.startsHere ? '' : 'segment-continuation'}`} style={segmentStyle}
                             onClick={(click: ReactMouseEvent<HTMLButtonElement>) => { click.stopPropagation(); openEvent(event); }}
                             title={`${event.title} · ${disciplineLabels[event.discipline]}${editable ? ' · можно перетащить' : ''}`} draggable={editable && !busy}
                             onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)} onDragEnd={endDrag}>
-                            <span className="event-status">{statusLabels[event.status]}</span><strong>{event.title}</strong><span className="event-meta">{disciplineLabels[event.discipline]}</span>
+                            {segment.startsHere ? <><span className="event-status">{statusLabels[event.status]}</span><strong>{event.title}</strong><span className="event-meta">{disciplineLabels[event.discipline]}</span></> : <><span className="event-continuation">↳ продолжение</span><strong>{shortEventLabel(event)}</strong><span className="event-meta">до {event.endDate}</span></>}
                           </button>
                         );
                       })}
@@ -831,9 +927,13 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         onDragEnter={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); setDragTarget(`day:${day.date}`); } }}
                         onDragOver={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; setDragTarget(`day:${day.date}`); } }}
                         onDrop={(drop: ReactDragEvent<HTMLButtonElement>) => dropOnDate(drop, day.date)}
-                        title={`${day.date}${day.eventCount ? ` · стартов: ${day.eventCount}` : ''}${day.warningCount ? ` · рисков: ${day.warningCount}` : ''}`}>
+                        title={`${day.date}${day.events.length ? ` · мероприятий: ${day.events.map((event) => event.title).join(', ')}` : ''}${day.warningCount ? ` · рисков: ${day.warningCount}` : ''}`}>
                         <span>{day.day}</span>
-                        {(day.eventCount > 0 || day.warningCount > 0) && <small>{day.eventCount > 0 ? day.eventCount : ''}{day.warningCount > 0 ? ` !${day.warningCount}` : ''}</small>}
+                        {day.events.length > 0 && <span className="annual-event-list" aria-hidden="true">
+                          {day.events.slice(0, 1).map((event) => <span className={`annual-event-chip ${event.startsHere ? 'annual-event-start' : 'annual-event-continues'}`} key={event.id} style={{ '--annual-event-accent': event.color } as CSSProperties}>{event.label}</span>)}
+                          {day.events.length > 1 && <span className="annual-event-overflow">+{day.events.length - 1}</span>}
+                        </span>}
+                        {day.warningCount > 0 && <small>!{day.warningCount}</small>}
                       </button>
                     ))}
                   </div>
@@ -927,7 +1027,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                     <strong>{event.title}</strong>
                     <span>{event.startDate ? (event.startDate === event.endDate ? event.startDate : `${event.startDate} — ${event.endDate}`) : 'Без даты'} · редакция {event.revision}</span>
                   </div>
-                  <button className="button button-secondary" type="button" onClick={() => void restoreArchivedEvent(event)} disabled={!editable || busy} title={!editable ? 'Верните календарь в режим планирования для восстановления.' : undefined}>Восстановить</button>
+                  <div className="archive-actions">
+                    <button className="button button-secondary" type="button" onClick={() => void restoreArchivedEvent(event)} disabled={!editable || busy} title={!editable ? 'Верните календарь в режим планирования для восстановления.' : undefined}>Восстановить</button>
+                    <button className="button button-danger button-danger-quiet" type="button" onClick={() => void deleteArchivedEvent(event)} disabled={!editable || busy} title={!editable ? 'Верните календарь в режим планирования для удаления.' : undefined}>Удалить</button>
+                  </div>
                 </article>
               ))}
             </div>
@@ -942,10 +1045,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         </div>
       )}
 
-      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} relatedAvailability={((): RelatedEventAvailability => {
+      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} relatedEventCount={editor.event ? [...events, ...archivedEvents].filter((candidate) => candidate.parentEventId === editor.event?.id).length : 0} relatedAvailability={((): RelatedEventAvailability => {
         const children = editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : [];
         return { regional: children.some((candidate) => candidate.competitionStatus === 'Региональные соревнования'), physical: children.some((candidate) => candidate.competitionStatus === 'Физкультурное мероприятие') };
-      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} />}
+      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} onDelete={editor.event && !editor.readOnly ? deleteEditorEvent : undefined} />}
     </main>
   );
 }
