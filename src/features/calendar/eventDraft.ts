@@ -26,7 +26,7 @@ export function createEventData(startDate: DateOnly | null = null, endDate: Date
     ekpLevel: null,
     ekpStageNumber: null,
     coverPath: null,
-    daylightBufferMinutes: 15,
+    daylightBufferMinutes: 0,
     shifts: [],
     plannedExerciseCount: null,
     plannedSquadCount: null,
