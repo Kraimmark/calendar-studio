@@ -10,6 +10,19 @@ export interface CalendarWarning {
   dates: DateOnly[];
 }
 
+/**
+ * A warning is accepted only for this exact set of affected records and
+ * dates. Moving a match (or changing the combination behind a risk) creates
+ * a new key and brings the check back into view.
+ */
+export function calendarWarningKey(warning: CalendarWarning): string {
+  return [
+    warning.code,
+    [...warning.eventIds].sort().join(','),
+    [...warning.dates].sort().join(','),
+  ].join('|');
+}
+
 interface DatedMatch extends CalendarEvent {
   startDate: DateOnly;
   endDate: DateOnly;
