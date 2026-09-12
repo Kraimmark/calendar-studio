@@ -1,5 +1,5 @@
 import type { CalendarEvent, CalendarEventData, Discipline, EventSeries, EventStatus, VenueScope } from '../../domain/types';
-import type { DateOnly } from '../../domain/dateOnly';
+import { formatDateOnly, parseDateOnly, type DateOnly } from '../../domain/dateOnly';
 import { createEventData, normalizeStudioEventData } from './eventDraft';
 
 export interface SpreadsheetEventRow {
@@ -22,6 +22,20 @@ const labels = {
 };
 
 function normal(value: string | undefined): string { return (value ?? '').trim().toLowerCase(); }
+function spreadsheetDate(value: string, row: number, column: string): DateOnly | null {
+  const source = value.trim();
+  if (!source) return null;
+  if (parseDateOnly(source)) return source as DateOnly;
+  const russianDate = /^(\d{1,2})[./](\d{1,2})[./](\d{4})$/.exec(source);
+  if (russianDate) {
+    try {
+      return formatDateOnly({ day: Number(russianDate[1]), month: Number(russianDate[2]), year: Number(russianDate[3]) });
+    } catch {
+      throw new Error(`Строка ${row}: в колонке «${column}» укажите корректную дату.`);
+    }
+  }
+  throw new Error(`Строка ${row}: в колонке «${column}» укажите дату в формате ГГГГ-ММ-ДД или ДД.ММ.ГГГГ.`);
+}
 function escape(value: string | null | number | boolean): string {
   const text = String(value ?? '');
   return /[;"\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
@@ -81,7 +95,7 @@ export function importSpreadsheet(text: string): SpreadsheetEventRow[] {
     const stageText = get(row, 'Номер этапа').trim();
     const stage = stageText ? Number(stageText) : null;
     if (stageText && (!Number.isInteger(stage) || (stage ?? 0) < 1)) throw new Error(`Строка ${rowIndex + 2}: номер этапа должен быть положительным целым числом.`);
-    const date = (name: string): DateOnly | null => { const value = get(row, name).trim(); return value ? value as DateOnly : null; };
+    const date = (name: string): DateOnly | null => spreadsheetDate(get(row, name), rowIndex + 2, name);
     return [{
       parentTitle: get(row, 'Родительское мероприятие').trim() || null,
       data: normalizeStudioEventData({
