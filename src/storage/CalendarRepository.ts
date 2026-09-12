@@ -24,6 +24,7 @@ export interface SaveCalendarSettingsRequest {
   actor: string;
   timestamp: string;
   mode: CalendarSettings['mode'];
+  acceptedWarningKeys: string[];
 }
 
 export interface CalendarRepository {
@@ -32,6 +33,7 @@ export interface CalendarRepository {
   saveEvent(request: SaveEventRequest, expectedRevision: number | null): Promise<CalendarEvent>;
   archiveEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<CalendarEvent>;
   restoreEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<CalendarEvent>;
+  deleteEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<string[]>;
   getCalendarSettings(year: number): Promise<CalendarSettings>;
   saveCalendarSettings(request: SaveCalendarSettingsRequest, expectedRevision: number): Promise<CalendarSettings>;
 }
