@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { CalendarScreen } from './features/calendar/CalendarScreen';
 import { CalendarPortabilityService } from './domain/portability';
+import { CalendarYearProjectService } from './domain/yearProject';
 import { TauriCalendarRepository } from './platform/TauriCalendarRepository';
 import { TauriWorkspaceManager } from './platform/TauriWorkspaceManager';
 
@@ -16,6 +17,7 @@ export function App() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const repository = useMemo(() => new TauriCalendarRepository(), []);
   const portability = useMemo(() => new CalendarPortabilityService(repository), [repository]);
+  const yearProjects = useMemo(() => new CalendarYearProjectService(repository), [repository]);
   const workspace = useMemo(() => new TauriWorkspaceManager(), []);
 
   useEffect(() => {
@@ -23,5 +25,5 @@ export function App() {
     localStorage.setItem('calendar-studio-theme', theme);
   }, [theme]);
 
-  return <CalendarScreen theme={theme} repository={repository} portability={portability} workspace={workspace} onToggleTheme={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))} />;
+  return <CalendarScreen theme={theme} repository={repository} portability={portability} yearProjects={yearProjects} workspace={workspace} onToggleTheme={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))} />;
 }

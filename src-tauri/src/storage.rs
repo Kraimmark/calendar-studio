@@ -410,6 +410,21 @@ pub struct ReplaceStatePayload {
     state: PortableState,
 }
 
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ReplaceYearProjectPayload {
+    state: YearProjectState,
+}
+
+#[derive(Debug, Clone, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct YearProjectState {
+    year: i64,
+    events: Vec<CalendarEvent>,
+    settings: CalendarSettings,
+    audit: Vec<AuditEntry>,
+}
+
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ReplaceStateResult {
@@ -1274,6 +1289,124 @@ pub fn calendar_replace_state(
             "INSERT INTO audit_log(audit_id,timestamp,actor,entity_type,entity_id,action,base_revision,resulting_revision,payload_summary) VALUES(?1,?2,?3,?4,?5,?6,?7,?8,?9)",
             params![entry.audit_id,entry.timestamp,entry.actor,entry.entity_type,entry.entity_id,entry.action,entry.base_revision,entry.resulting_revision,entry.payload_summary],
         ).map_err(CommandError::sqlite)?;
+    }
+    transaction.commit().map_err(CommandError::sqlite)?;
+    Ok(ReplaceStateResult {
+        backup_reference: backup_path.to_string_lossy().to_string(),
+    })
+}
+
+/// Atomically replaces exactly one calendar year and keeps every other year untouched.
+/// A full SQLite backup is made first so a transferred project can never destroy a local plan silently.
+#[tauri::command]
+pub fn calendar_replace_year_project(
+    state: tauri::State<'_, StorageState>,
+    payload: ReplaceYearProjectPayload,
+) -> CommandResult<ReplaceStateResult> {
+    let project = payload.state;
+    if project.settings.year != project.year {
+        return Err(CommandError::invalid("Настройки проекта принадлежат другому году."));
+    }
+    if project
+        .events
+        .iter()
+        .any(|event| event.calendar_year != project.year)
+    {
+        return Err(CommandError::invalid("Проект содержит мероприятия другого года."));
+    }
+    let event_ids = project
+        .events
+        .iter()
+        .map(|event| event.id.as_str())
+        .collect::<std::collections::HashSet<_>>();
+    if project.audit.iter().any(|entry| {
+        (entry.entity_type == "event" && !event_ids.contains(entry.entity_id.as_str()))
+            || (entry.entity_type == "calendar_settings" && entry.entity_id != project.year.to_string())
+    }) {
+        return Err(CommandError::invalid("Журнал проекта ссылается на данные вне выбранного года."));
+    }
+
+    let mut connection = state.lock()?;
+    let database_path = state.current_database_path()?;
+    let backup_path = backup_database(&connection, &database_path, "before-year-import")
+        .map_err(CommandError::sqlite)?;
+    let transaction = connection
+        .transaction_with_behavior(TransactionBehavior::Immediate)
+        .map_err(CommandError::sqlite)?;
+
+    transaction
+        .execute(
+            "DELETE FROM audit_log WHERE entity_type='event' AND entity_id IN (SELECT id FROM events WHERE calendar_year=?1)",
+            [project.year],
+        )
+        .map_err(CommandError::sqlite)?;
+    transaction.execute(
+        "DELETE FROM audit_log WHERE entity_type='calendar_settings' AND entity_id=?1",
+        [project.year.to_string()],
+    )
+    .map_err(CommandError::sqlite)?;
+    transaction.execute(
+        "DELETE FROM event_shifts WHERE event_id IN (SELECT id FROM events WHERE calendar_year=?1)",
+        [project.year],
+    )
+    .map_err(CommandError::sqlite)?;
+    transaction.execute(
+        "UPDATE events SET parent_event_id=NULL WHERE calendar_year=?1",
+        [project.year],
+    )
+    .map_err(CommandError::sqlite)?;
+    transaction
+        .execute("DELETE FROM events WHERE calendar_year=?1", [project.year])
+        .map_err(CommandError::sqlite)?;
+    transaction
+        .execute("DELETE FROM calendar_settings WHERE year=?1", [project.year])
+        .map_err(CommandError::sqlite)?;
+
+    for event in &project.events {
+        let mut without_parent = event.clone();
+        without_parent.data.parent_event_id = None;
+        insert_event(&transaction, &without_parent).map_err(CommandError::sqlite)?;
+    }
+    for event in &project.events {
+        if let Some(parent_id) = &event.data.parent_event_id {
+            transaction.execute(
+                "UPDATE events SET parent_event_id=?2 WHERE id=?1",
+                params![event.id, parent_id],
+            )
+            .map_err(CommandError::sqlite)?;
+        }
+    }
+    transaction.execute(
+        "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",
+        params![
+            project.settings.year,
+            project.settings.mode,
+            project.settings.revision,
+            project.settings.approved_at,
+            project.settings.approved_by,
+            project.settings.reopened_at,
+            project.settings.reopened_by,
+            serde_json::to_string(&project.settings.accepted_warning_keys)
+                .map_err(CommandError::json)?
+        ],
+    )
+    .map_err(CommandError::sqlite)?;
+    for entry in &project.audit {
+        transaction.execute(
+            "INSERT INTO audit_log(audit_id,timestamp,actor,entity_type,entity_id,action,base_revision,resulting_revision,payload_summary) VALUES(?1,?2,?3,?4,?5,?6,?7,?8,?9)",
+            params![
+                entry.audit_id,
+                entry.timestamp,
+                entry.actor,
+                entry.entity_type,
+                entry.entity_id,
+                entry.action,
+                entry.base_revision,
+                entry.resulting_revision,
+                entry.payload_summary
+            ],
+        )
+        .map_err(CommandError::sqlite)?;
     }
     transaction.commit().map_err(CommandError::sqlite)?;
     Ok(ReplaceStateResult {

@@ -18,6 +18,7 @@ import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLa
 import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
 import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
 import type { CalendarPortability } from '../../domain/portability';
+import type { CalendarYearProjects } from '../../domain/yearProject';
 import type { CalendarEvent, CalendarEventData, CalendarSettings, Discipline, EventSeries } from '../../domain/types';
 import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
 import { calendarWarningKey, calculateWarnings } from '../../domain/warnings';
@@ -35,6 +36,7 @@ interface CalendarScreenProps {
   onToggleTheme: () => void;
   repository: CalendarRepository;
   portability: CalendarPortability;
+  yearProjects: CalendarYearProjects;
   workspace: WorkspaceManager;
 }
 
@@ -124,7 +126,7 @@ function dateAtPointer(clientX: number, clientY: number): DateOnly | null {
   return null;
 }
 
-export function CalendarScreen({ theme, onToggleTheme, repository, portability, workspace }: CalendarScreenProps) {
+export function CalendarScreen({ theme, onToggleTheme, repository, portability, yearProjects, workspace }: CalendarScreenProps) {
   const initial = useMemo(calendarToday, []);
   const [year, setYear] = useState(initial.year);
   const [month, setMonth] = useState(initial.month);
@@ -230,6 +232,77 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
       anchor.remove();
       URL.revokeObjectURL(url);
       setPortabilityStatus(`Экспорт подготовлен: ${pkg.events.length} мероприятий, ${pkg.audit.length} записей аудита.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
+  };
+
+  const download = (blob: Blob, filename: string) => {
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const exportYearProject = async () => {
+    if (busy) return;
+    setPorting(true);
+    setInteractionError(null);
+    try {
+      const project = await yearProjects.exportProject(year);
+      download(new Blob([JSON.stringify(project, null, 2)], { type: 'application/json' }), `calendar-studio-year-${year}.json`);
+      setPortabilityStatus(`Проект ${year} года сохранён: ${project.events.length} мероприятий и ${project.audit.length} записей истории.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
+  };
+
+  const importYearProject = async (change: ChangeEvent<HTMLInputElement>) => {
+    const file = change.target.files?.[0];
+    change.target.value = '';
+    if (!file || busy) return;
+    setPorting(true);
+    setInteractionError(null);
+    setPortabilityStatus(null);
+    try {
+      const parsed: unknown = JSON.parse(await file.text());
+      const validation = await yearProjects.validateImport(parsed);
+      if (!validation.valid) throw new Error(validation.errors.join(' '));
+      const project = parsed as { year: number; events: unknown[] };
+      if (!window.confirm(`Открыть проект ${project.year} года? Будут заменены только данные ${project.year} года (${project.events.length} мероприятий). Другие годы не затрагиваются, перед заменой создаётся резервная копия базы.`)) return;
+      const result = await yearProjects.importProject(parsed);
+      setEditor(null);
+      setEditorConflict(null);
+      setIssues([]);
+      setMonth(1);
+      setYear(project.year);
+      if (project.year === year) await reload();
+      setPortabilityStatus(result.backupReference ? `Проект ${project.year} года открыт. Резервная копия: ${result.backupReference}` : `Проект ${project.year} года открыт.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
+  };
+
+  const exportPublicPlan = async () => {
+    if (busy) return;
+    setPorting(true);
+    setInteractionError(null);
+    try {
+      const { buildPublicPlanDocument } = await import('./publicPlanDocument');
+      const document = await buildPublicPlanDocument(year, events);
+      download(document, `project-calendar-plan-${year}.docx`);
+      const count = events.filter((event) => event.archivedAt === null && event.kind === 'match' && event.startDate && event.endDate).length;
+      setPortabilityStatus(`Word-план подготовлен: ${count} мероприятий без УТМ, застройки и архива.`);
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
     } finally {
@@ -702,6 +775,12 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
             <button type="button" className={activeTab === 'archive' ? 'is-active' : ''} onClick={() => setActiveTab('archive')}>Архив{archivedEvents.length ? ` (${archivedEvents.length})` : ''}</button>
           </div>
           <button className="button button-secondary" type="button" onClick={() => void chooseWorkspace()} disabled={busy}>Папка данных</button>
+          <button className="button button-secondary" type="button" onClick={() => void exportYearProject()} disabled={busy}>Сохранить проект года</button>
+          <label className={`button button-secondary file-button ${busy ? 'is-disabled' : ''}`}>
+            Открыть проект года
+            <input className="file-input-hidden" type="file" accept="application/json,.json" onChange={(change: ChangeEvent<HTMLInputElement>) => void importYearProject(change)} disabled={busy} />
+          </label>
+          <button className="button button-secondary" type="button" onClick={() => void exportPublicPlan()} disabled={busy}>План Word</button>
           <button className="button button-secondary" type="button" onClick={() => void exportPortable()} disabled={busy}>Экспорт JSON</button>
           <label className={`button button-secondary file-button ${busy || !editable ? 'is-disabled' : ''}`} title={!editable ? 'Верните календарь в режим планирования перед импортом.' : undefined}>
             Импорт JSON
