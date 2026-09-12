@@ -18,16 +18,17 @@ import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLa
 import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
 import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
 import type { CalendarPortability } from '../../domain/portability';
-import type { CalendarEvent, CalendarEventData, CalendarSettings } from '../../domain/types';
+import type { CalendarEvent, CalendarEventData, CalendarSettings, Discipline, EventSeries } from '../../domain/types';
 import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
 import { calculateWarnings } from '../../domain/warnings';
 import { summarizeCalendarWarnings } from '../../domain/warningSummary';
 import { RevisionConflictError } from '../../domain/revision';
 import type { CalendarRepository } from '../../storage/CalendarRepository';
 import type { WorkspaceManager, WorkspaceStatus } from '../../platform/WorkspaceManager';
-import { EventEditor } from './EventEditor';
-import { createEventData, diffEventData, eventDataOf } from './eventDraft';
+import { EventEditor, type RelatedEventAvailability, type RelatedEventSelection } from './EventEditor';
+import { createEventData, diffEventData, eventDataOf, normalizeStudioEventData } from './eventDraft';
 import { calendarModeConfirmationMessage } from './confirmationState';
+import { exportSpreadsheet, importSpreadsheet } from './eventSpreadsheet';
 
 interface CalendarScreenProps {
   theme: 'dark' | 'light';
@@ -52,6 +53,38 @@ const layerLabels: Record<CalendarLayerKey, string> = { ownPlan: 'Наш пла�
 const disciplineFilterLabels: Record<DisciplineFilter, string> = { all: 'Все дисциплины', pistol: 'Пистолет', carbine: 'Карабин', shotgun: 'Ружьё', airgun: 'Пневматика', multigun: 'Мультиган', other: 'Другое' };
 const disciplineFilterOrder: DisciplineFilter[] = ['all', 'pistol', 'carbine', 'shotgun', 'airgun', 'multigun', 'other'];
 const DRAG_EVENT_MIME = 'application/x-calendar-studio-event';
+const basketDisciplines: Array<[Discipline, string]> = [['pistol', 'Пистолет'], ['carbine', 'Карабин'], ['shotgun', 'Ружьё'], ['airgun', 'Пневматика'], ['multigun', 'Мультиган']];
+
+function basketDraft(title: string, discipline: Discipline, series: EventSeries): CalendarEventData {
+  return normalizeStudioEventData({
+    ...createEventData(), title, discipline, series, venue: 'ССК «Невский»', venueScope: 'nevsky', organizerName: 'ССК «Невский»',
+    competitionRegion: 'Санкт-Петербург', stickerColor: series === 'trf' ? '#b63b36' : '#808080',
+  });
+}
+
+function buildDefaultBasket(): CalendarEventData[] {
+  const cityEvents = basketDisciplines.flatMap(([discipline, label]) => [
+    basketDraft(`Кубок Санкт-Петербурга (${label})`, discipline, 'spbCup'),
+    basketDraft(`Чемпионат Санкт-Петербурга (${label})`, discipline, 'regular'),
+  ]);
+  const trf = (title: string, count: number, discipline: Discipline) => Array.from({ length: count }, (_, index) => basketDraft(`${title} · №${index + 1}`, discipline, 'trf'));
+  return [...cityEvents, ...trf('Охота на нежить', 3, 'multigun'), ...trf('Двудулочка', 2, 'shotgun'), ...trf('Идиси Сикубэ', 2, 'pistol'), ...trf('Пращуры против ящеров', 2, 'carbine')];
+}
+
+function relatedEventData(parentId: string, parent: CalendarEventData, type: 'regional' | 'physical'): CalendarEventData {
+  const label = type === 'regional' ? 'Региональные соревнования' : 'Физкультурное мероприятие';
+  return normalizeStudioEventData({
+    ...parent,
+    title: `${label} (${disciplineLabels[parent.discipline].toLowerCase()})`,
+    competitionStatus: label,
+    parentEventId: parentId,
+    isPrimary: false,
+    source: 'manual',
+    status: 'draft',
+    notes: parent.notes ? `${parent.notes}\nСоздано вместе с родительским мероприятием.` : 'Создано вместе с родительским мероприятием.',
+    stickerColor: type === 'regional' ? '#767676' : '#8a7864',
+  });
+}
 
 function calendarToday(): { year: number; month: number; day: number } {
   const parts = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Moscow', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date());
@@ -75,6 +108,14 @@ function dateBelongsToYear(date: DateOnly, year: number): boolean {
 
 function dragEventId(event: ReactDragEvent<HTMLElement>): string | null {
   return event.dataTransfer.getData(DRAG_EVENT_MIME) || event.dataTransfer.getData('text/plain') || null;
+}
+
+function dateAtPointer(clientX: number, clientY: number): DateOnly | null {
+  for (const cell of document.querySelectorAll<HTMLElement>('.day-cell[data-date]')) {
+    const bounds = cell.getBoundingClientRect();
+    if (clientX >= bounds.left && clientX <= bounds.right && clientY >= bounds.top && clientY <= bounds.bottom) return cell.dataset.date as DateOnly;
+  }
+  return null;
 }
 
 export function CalendarScreen({ theme, onToggleTheme, repository, portability, workspace }: CalendarScreenProps) {
@@ -108,6 +149,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [portabilityStatus, setPortabilityStatus] = useState<string | null>(null);
   const [workspaceStatus, setWorkspaceStatus] = useState<WorkspaceStatus | null>(null);
   const [workspaceChanging, setWorkspaceChanging] = useState(false);
+  const [draggedEventId, setDraggedEventId] = useState<string | null>(null);
+  const [dragTarget, setDragTarget] = useState<string | null>(null);
 
   const reload = useCallback(async () => {
     setLoading(true);
@@ -185,6 +228,59 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     }
   };
 
+  const exportEventSpreadsheet = () => {
+    const csv = exportSpreadsheet(events);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `calendar-studio-template-${year}.csv`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+    setPortabilityStatus(events.length ? `Excel-совместимый шаблон выгружен: ${events.length} мероприятий.` : 'Пустой Excel-совместимый шаблон выгружен. Заполните строки и импортируйте файл обратно.');
+  };
+
+  const importEventSpreadsheet = async (change: ChangeEvent<HTMLInputElement>) => {
+    const file = change.target.files?.[0];
+    change.target.value = '';
+    if (!file || busy || !editable) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const rows = importSpreadsheet(await file.text());
+      if (rows.length === 0) throw new Error('В шаблоне нет заполненных строк для импорта.');
+      const validation = rows.flatMap((row, index) => validateEvent(row.data, { year })
+        .filter((issue) => issue.severity === 'error')
+        .map((issue) => `Строка ${index + 2}: ${issue.message}`));
+      if (validation.length > 0) throw new Error(validation.join(' '));
+      const existingByTitle = new Map(events.map((event) => [event.title.trim().toLocaleLowerCase('ru-RU'), event.id]));
+      const importedByTitle = new Map<string, string>();
+      const timestamp = new Date().toISOString();
+      for (const row of rows) {
+        const id = crypto.randomUUID();
+        importedByTitle.set(row.data.title.trim().toLocaleLowerCase('ru-RU'), id);
+        await repository.saveEvent({ kind: 'create', id, calendarYear: year, actor: 'local-owner', timestamp, data: { ...row.data, parentEventId: null } }, null);
+      }
+      for (const row of rows) {
+        if (!row.parentTitle) continue;
+        const childId = importedByTitle.get(row.data.title.trim().toLocaleLowerCase('ru-RU'));
+        const parentId = importedByTitle.get(row.parentTitle.trim().toLocaleLowerCase('ru-RU')) ?? existingByTitle.get(row.parentTitle.trim().toLocaleLowerCase('ru-RU'));
+        if (!childId || !parentId) throw new Error(`Не найден родитель «${row.parentTitle}» для «${row.data.title}». Строки уже импортированы без связи.`);
+        const child = await repository.getEvent(childId);
+        if (child) await repository.saveEvent({ kind: 'update', id: childId, actor: 'local-owner', timestamp, changes: { parentEventId: parentId } }, child.revision);
+      }
+      await reload();
+      setPortabilityStatus(`Импорт из Excel-совместимого шаблона завершён: ${rows.length} мероприятий добавлено в календарь.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+      await reload();
+    } finally {
+      setSaving(false);
+    }
+  };
+
   const importPortable = async (change: ChangeEvent<HTMLInputElement>) => {
     const file = change.target.files?.[0];
     change.target.value = '';
@@ -257,27 +353,35 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setRangeMenu(null);
   };
 
-  const saveEditor = async (data: CalendarEventData) => {
+  const saveEditor = async (data: CalendarEventData, related: RelatedEventSelection) => {
     if (!editor || editor.readOnly) return;
-    const studioData: CalendarEventData = { ...data, daylightBufferMinutes: 0, shifts: [] };
+    const studioData = normalizeStudioEventData(data);
     const nextIssues = validateEvent(studioData, { year, eventId: editor.event?.id, events });
     setIssues(nextIssues);
     if (hasBlockingIssues(nextIssues)) return;
 
+    const existingChildren = editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : [];
+    const addRegional = related.regional && !existingChildren.some((candidate) => candidate.competitionStatus === 'Региональные соревнования');
+    const addPhysical = related.physical && !existingChildren.some((candidate) => candidate.competitionStatus === 'Физкультурное мероприятие');
     setSaving(true);
     try {
       const timestamp = new Date().toISOString();
+      let parentId: string;
       if (editor.event) {
         const changes = diffEventData(editor.initialData, studioData);
-        if (Object.keys(changes).length === 0) {
+        if (Object.keys(changes).length === 0 && !addRegional && !addPhysical) {
           setEditor(null);
           setIssues([]);
           return;
         }
-        await repository.saveEvent({ kind: 'update', id: editor.event.id, actor: 'local-owner', timestamp, changes }, editor.event.revision);
+        if (Object.keys(changes).length > 0) await repository.saveEvent({ kind: 'update', id: editor.event.id, actor: 'local-owner', timestamp, changes }, editor.event.revision);
+        parentId = editor.event.id;
       } else {
-        await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data: studioData }, null);
+        parentId = crypto.randomUUID();
+        await repository.saveEvent({ kind: 'create', id: parentId, calendarYear: year, actor: 'local-owner', timestamp, data: studioData }, null);
       }
+      if (addRegional) await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data: relatedEventData(parentId, studioData, 'regional') }, null);
+      if (addPhysical) await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data: relatedEventData(parentId, studioData, 'physical') }, null);
       setEditor(null);
       setIssues([]);
       await reload();
@@ -288,6 +392,24 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
       } else {
         setIssues([{ code: 'save_failed', severity: 'error', field: null, message: error instanceof Error ? error.message : String(error) }]);
       }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const createDefaultBasket = async () => {
+    if (!editable || busy) return;
+    const drafts = buildDefaultBasket();
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      const timestamp = new Date().toISOString();
+      for (const data of drafts) await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp, data }, null);
+      await reload();
+      setPortabilityStatus(`В корзину добавлен стандартный набор: ${drafts.length} мероприятий.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+      await reload();
     } finally {
       setSaving(false);
     }
@@ -376,24 +498,25 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
 
   const dropOnDate = (drop: ReactDragEvent<HTMLElement>, date: DateOnly) => {
     drop.preventDefault();
-    if (!editable || busy || !dateBelongsToYear(date, year)) return;
-    const id = dragEventId(drop);
+    if (!editable || busy || !dateBelongsToYear(date, year)) { endDrag(); return; }
+    const id = dragEventId(drop) || draggedEventId;
     const event = id ? byId.get(id) : null;
-    if (!event) return;
+    if (!event) { endDrag(); return; }
     try {
       void updateEventDates(event, moveEventToDatePatch(event, date));
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
-    }
+    } finally { setDraggedEventId(null); setDragTarget(null); }
   };
 
   const dropOnQueue = (drop: ReactDragEvent<HTMLElement>) => {
     drop.preventDefault();
-    if (!editable || busy) return;
-    const id = dragEventId(drop);
+    if (!editable || busy) { endDrag(); return; }
+    const id = dragEventId(drop) || draggedEventId;
     const event = id ? byId.get(id) : null;
-    if (!event || (event.startDate === null && event.endDate === null)) return;
+    if (!event || (event.startDate === null && event.endDate === null)) { endDrag(); return; }
     void updateEventDates(event, moveEventToQueuePatch());
+    endDrag();
   };
 
   const beginDrag = (drag: ReactDragEvent<HTMLElement>, event: CalendarEvent) => {
@@ -404,6 +527,24 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     drag.dataTransfer.effectAllowed = 'move';
     drag.dataTransfer.setData(DRAG_EVENT_MIME, event.id);
     drag.dataTransfer.setData('text/plain', event.id);
+    setDraggedEventId(event.id);
+  };
+
+  const endDrag = () => { setDraggedEventId(null); setDragTarget(null); };
+
+  const handleCalendarOverlayDrag = (drag: ReactDragEvent<HTMLElement>) => {
+    if (!editable) return;
+    const date = dateAtPointer(drag.clientX, drag.clientY);
+    if (!date || !dateBelongsToYear(date, year)) return;
+    drag.preventDefault();
+    drag.dataTransfer.dropEffect = 'move';
+    setDragTarget(`day:${date}`);
+  };
+
+  const dropOnCalendarOverlay = (drop: ReactDragEvent<HTMLElement>) => {
+    const date = dateAtPointer(drop.clientX, drop.clientY);
+    if (!date) { endDrag(); return; }
+    dropOnDate(drop, date);
   };
 
   const beginSelection = (mouse: ReactMouseEvent<HTMLElement>, date: DateOnly) => {
@@ -632,7 +773,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         const selected = dateInRange(cell.date, selection);
                         return (
                           <div
-                            className={`day-cell ${cell.inCurrentMonth ? '' : 'day-outside'} ${selected ? 'day-selected' : ''} ${selectable && editable ? 'day-interactive' : ''}`}
+                            className={`day-cell ${cell.inCurrentMonth ? '' : 'day-outside'} ${selected ? 'day-selected' : ''} ${selectable && editable ? 'day-interactive' : ''} ${dragTarget === `day:${cell.date}` ? 'is-drop-target' : ''}`}
                             key={cell.date}
                             data-date={cell.date}
                             role="gridcell"
@@ -643,7 +784,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                             onContextMenu={(mouse: ReactMouseEvent<HTMLDivElement>) => openRangeContext(mouse, cell.date)}
                             onKeyDown={(key: ReactKeyboardEvent<HTMLDivElement>) => keyOnDay(key, cell.date)}
                             onDoubleClick={() => selectable && editable && openNew(normalizeDateRange(cell.date, cell.date))}
-                            onDragOver={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+                            onDragEnter={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); setDragTarget(`day:${cell.date}`); } }}
+                            onDragOver={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; setDragTarget(`day:${cell.date}`); } }}
                             onDrop={(drop: ReactDragEvent<HTMLDivElement>) => dropOnDate(drop, cell.date)}
                             title={editable && selectable ? 'Выделите диапазон мышью, нажмите ПКМ для быстрого создания или перетащите мероприятие на дату.' : undefined}
                           >
@@ -652,7 +794,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         );
                       })}
                     </div>
-                    <div className="week-events" aria-label={`События недели ${weekIndex + 1}`}>
+                    <div className="week-events" aria-label={`События недели ${weekIndex + 1}`} onDragEnter={handleCalendarOverlayDrag} onDragOver={handleCalendarOverlayDrag} onDrop={dropOnCalendarOverlay}>
                       {weekSegments.map((segment) => {
                         const event = byId.get(segment.eventId);
                         if (!event) return null;
@@ -661,7 +803,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                           <button type="button" key={`${event.id}-${weekIndex}`} className={`${eventClasses(event)} ${segment.startsHere ? 'segment-start' : ''} ${segment.endsHere ? 'segment-end' : ''}`} style={segmentStyle}
                             onClick={(click: ReactMouseEvent<HTMLButtonElement>) => { click.stopPropagation(); openEvent(event); }}
                             title={`${event.title} · ${disciplineLabels[event.discipline]}${editable ? ' · можно перетащить' : ''}`} draggable={editable && !busy}
-                            onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)}>
+                            onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)} onDragEnd={endDrag}>
                             <span className="event-status">{statusLabels[event.status]}</span><strong>{event.title}</strong><span className="event-meta">{disciplineLabels[event.discipline]}</span>
                           </button>
                         );
@@ -686,7 +828,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         tabIndex={day.inCurrentMonth ? 0 : -1} disabled={!day.inCurrentMonth}
                         onClick={() => navigateToDate(day.date)}
                         onDoubleClick={() => editable && openNew(normalizeDateRange(day.date, day.date))}
-                        onDragOver={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+                        onDragEnter={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); setDragTarget(`day:${day.date}`); } }}
+                        onDragOver={(drag: ReactDragEvent<HTMLButtonElement>) => { if (editable && day.inCurrentMonth) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; setDragTarget(`day:${day.date}`); } }}
                         onDrop={(drop: ReactDragEvent<HTMLButtonElement>) => dropOnDate(drop, day.date)}
                         title={`${day.date}${day.eventCount ? ` · стартов: ${day.eventCount}` : ''}${day.warningCount ? ` · рисков: ${day.warningCount}` : ''}`}>
                         <span>{day.day}</span>
@@ -703,15 +846,25 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
 
         <aside className="side-stack">
           <section
-            className={`panel queue-panel ${editable ? 'queue-drop-target' : ''}`}
-            onDragOver={(drag: ReactDragEvent<HTMLElement>) => { if (editable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; } }}
+            className={`panel queue-panel ${editable ? 'queue-drop-target' : ''} ${dragTarget === 'queue' ? 'is-drop-target' : ''}`}
+            onDragEnter={(drag: ReactDragEvent<HTMLElement>) => { if (editable) { drag.preventDefault(); setDragTarget('queue'); } }}
+            onDragOver={(drag: ReactDragEvent<HTMLElement>) => { if (editable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; setDragTarget('queue'); } }}
             onDrop={dropOnQueue}
           >
-            <div className="panel-heading compact">
+            <div className="panel-heading compact queue-heading">
               <div><p className="eyebrow">ПЛАНИРОВАНИЕ</p><h2>Корзина матчей</h2></div>
               <span className="badge">{undated.length}</span>
             </div>
-            {editable && <p className="queue-hint">Тяните карточку на день, чтобы поставить матч в календарь. Чтобы снять дату — верните карточку сюда.</p>}
+            {editable && <div className="queue-actions">
+              <button className="button button-primary" type="button" onClick={() => openNew()} disabled={busy}>Создать в корзину</button>
+              <button className="button button-secondary" type="button" onClick={() => void createDefaultBasket()} disabled={busy}>Заполнить стандартный набор</button>
+              <button className="button button-secondary" type="button" onClick={exportEventSpreadsheet} disabled={busy}>Экспорт Excel</button>
+              <label className={`button button-secondary file-button ${busy ? 'is-disabled' : ''}`}>
+                Импорт Excel
+                <input className="file-input-hidden" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" onChange={(change: ChangeEvent<HTMLInputElement>) => void importEventSpreadsheet(change)} disabled={busy} />
+              </label>
+            </div>}
+            {editable && <p className="queue-hint">Тяните карточку на день, чтобы поставить матч в календарь. Чтобы снять дату — верните карточку сюда. {draggedEventId ? (dragTarget === 'queue' ? 'Отпустите: даты будут сняты.' : 'Отпустите карточку на нужный день.') : 'Если перетаскивание не сработало, отпустите и начните движение с самой карточки.'}</p>}
             <div className="queue-tools">
               <input type="search" value={queueQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setQueueQuery(change.target.value)} placeholder="Найти мероприятие…" aria-label="Поиск мероприятий без даты" />
               <select value={queueSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueSort(change.target.value as UndatedSort)} aria-label="Сортировка мероприятий без даты">
@@ -732,6 +885,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                     onClick={() => openEvent(event)}
                     draggable={editable && !busy}
                     onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)}
+                    onDragEnd={endDrag}
                   >
                     <span className="queue-card-status">{statusLabels[event.status]} · {disciplineLabels[event.discipline]}</span>
                     <strong>{event.title}</strong>
@@ -788,7 +942,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         </div>
       )}
 
-      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} />}
+      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} relatedAvailability={((): RelatedEventAvailability => {
+        const children = editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : [];
+        return { regional: children.some((candidate) => candidate.competitionStatus === 'Региональные соревнования'), physical: children.some((candidate) => candidate.competitionStatus === 'Физкультурное мероприятие') };
+      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} />}
     </main>
   );
 }

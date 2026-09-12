@@ -2,6 +2,17 @@ import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, ty
 import type { CalendarEvent, CalendarEventData, Discipline, EventKind, EventSeries, EventSource, EventStatus, VenueScope } from '../../domain/types';
 import type { ValidationIssue } from '../../domain/validation';
 import { archiveConfirmationMessage, requiresDiscardConfirmation } from './confirmationState';
+import { normalizeStudioEventData } from './eventDraft';
+
+export interface RelatedEventSelection {
+  regional: boolean;
+  physical: boolean;
+}
+
+export interface RelatedEventAvailability {
+  regional: boolean;
+  physical: boolean;
+}
 
 interface EventEditorProps {
   year: number;
@@ -10,13 +21,14 @@ interface EventEditorProps {
   issues: ValidationIssue[];
   saving: boolean;
   onCancel: () => void;
-  onSave: (data: CalendarEventData) => void;
+  onSave: (data: CalendarEventData, related: RelatedEventSelection) => void;
   onArchive?: () => void;
   readOnly?: boolean;
   parentCandidates?: CalendarEvent[];
   requireEkpConfirmation?: boolean;
   revisionConflict?: { expectedRevision: number; actualRevision: number } | null;
   onRefreshConflict?: () => void;
+  relatedAvailability?: RelatedEventAvailability;
 }
 
 const kinds: Array<[EventKind, string]> = [['match', 'Матч'], ['utm', 'УТМ / тренировка'], ['build', 'Застройка']];
@@ -32,19 +44,16 @@ function nullableNumber(value: string): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-function studioEventData(data: CalendarEventData): CalendarEventData {
-  return { ...data, daylightBufferMinutes: 0, shifts: [] };
-}
-
-export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict }: EventEditorProps) {
-  const normalizedInitialData = useMemo(() => studioEventData(initialData), [initialData]);
+export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false } }: EventEditorProps) {
+  const normalizedInitialData = useMemo(() => normalizeStudioEventData(initialData), [initialData]);
   const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(normalizedInitialData));
   const [ekpConfirmed, setEkpConfirmed] = useState(false);
+  const [related, setRelated] = useState<RelatedEventSelection>({ regional: false, physical: false });
   const dialogRef = useRef<HTMLElement | null>(null);
   const savingRef = useRef(saving);
   const cancelRef = useRef(onCancel);
 
-  useEffect(() => { setDraft(structuredClone(normalizedInitialData)); setEkpConfirmed(false); }, [normalizedInitialData]);
+  useEffect(() => { setDraft(structuredClone(normalizedInitialData)); setEkpConfirmed(false); setRelated({ regional: false, physical: false }); }, [normalizedInitialData]);
   useEffect(() => { savingRef.current = saving; }, [saving]);
   const dirty = useMemo(() => JSON.stringify(draft) !== JSON.stringify(normalizedInitialData), [draft, normalizedInitialData]);
   const requestClose = useCallback(() => {
@@ -190,6 +199,21 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
             <label className="check-field"><input type="checkbox" checked={draft.isPrimary} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('isPrimary', e.target.checked)} /> Основное мероприятие</label>
           </fieldset>
 
+          {!draft.parentEventId && (
+            <fieldset className="form-section related-events" disabled={readOnly}>
+              <legend>{event ? 'Досоздать дочерние мероприятия' : 'Создать дочерние мероприятия'}</legend>
+              <p className="form-copy">Связанные записи получат ту же дисциплину и те же даты, что и это мероприятие.</p>
+              <label className="check-field">
+                <input type="checkbox" checked={related.regional} disabled={relatedAvailability.regional} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, regional: change.target.checked }))} />
+                Региональные соревнования{relatedAvailability.regional ? ' — уже есть' : ''}
+              </label>
+              <label className="check-field">
+                <input type="checkbox" checked={related.physical} disabled={relatedAvailability.physical} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, physical: change.target.checked }))} />
+                Физкультурное мероприятие{relatedAvailability.physical ? ' — уже есть' : ''}
+              </label>
+            </fieldset>
+          )}
+
           <fieldset className="form-section" disabled={readOnly}>
             <legend>Источник и площадка</legend>
             <div className="form-grid two-columns">
@@ -217,27 +241,6 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
           </fieldset>
 
           <fieldset className="form-section" disabled={readOnly}>
-            <legend>Регистрация</legend>
-            <div className="form-grid two-columns">
-              <label className="field">Режим
-                <select value={draft.registration.mode} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('registration', { ...draft.registration, mode: e.target.value as CalendarEventData['registration']['mode'] })}>
-                  <option value="free">Свободная / без расписания</option>
-                  <option value="scheduled">По датам</option>
-                </select>
-              </label>
-              {draft.registration.mode === 'scheduled' && <>
-                <label className="field">Открытие
-                  <input type="date" value={draft.registration.opensAt ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, opensAt: (e.target.value || null) as CalendarEventData['registration']['opensAt'] })} />
-                </label>
-                <label className="field">Закрытие
-                  <input type="date" value={draft.registration.closesAt ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, closesAt: (e.target.value || null) as CalendarEventData['registration']['closesAt'] })} />
-                </label>
-              </>}
-            </div>
-            <label className="check-field"><input type="checkbox" checked={draft.registration.priorityOneAlerts} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('registration', { ...draft.registration, priorityOneAlerts: e.target.checked })} /> Уведомления первой степени</label>
-          </fieldset>
-
-          <fieldset className="form-section" disabled={readOnly}>
             <legend>Рабочий комментарий</legend>
             <label className="field"><textarea rows={5} value={draft.notes} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => patch('notes', e.target.value)} /></label>
           </fieldset>
@@ -253,7 +256,7 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
           <div>{!readOnly && event && onArchive ? <button className="button button-danger" type="button" onClick={requestArchive} disabled={saving}>Архивировать</button> : null}</div>
           <div className="editor-actions">
             <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>{readOnly ? 'Закрыть' : 'Отмена'}</button>
-            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(studioEventData(draft))} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : 'Сохранить'}</button>}
+            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(normalizeStudioEventData(draft), related)} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : related.regional || related.physical ? 'Сохранить и создать' : 'Сохранить'}</button>}
           </div>
         </footer>
       </section>

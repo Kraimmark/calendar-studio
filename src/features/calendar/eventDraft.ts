@@ -1,6 +1,13 @@
 import type { DateOnly } from '../../domain/dateOnly';
 import type { CalendarEvent, CalendarEventData } from '../../domain/types';
 
+const studioRegistration = { mode: 'free' as const, opensAt: null, closesAt: null, priorityOneAlerts: false };
+
+/** Calendar Studio deliberately keeps no registration planning surface. */
+export function normalizeStudioEventData(data: CalendarEventData): CalendarEventData {
+  return { ...data, registration: { ...studioRegistration }, daylightBufferMinutes: 0, shifts: [] };
+}
+
 export function createEventData(startDate: DateOnly | null = null, endDate: DateOnly | null = null): CalendarEventData {
   return {
     title: '',
@@ -22,7 +29,7 @@ export function createEventData(startDate: DateOnly | null = null, endDate: Date
     venueScope: 'unspecified',
     notes: '',
     stickerColor: '#808080',
-    registration: { mode: 'free', opensAt: null, closesAt: null, priorityOneAlerts: false },
+    registration: { ...studioRegistration },
     ekpLevel: null,
     ekpStageNumber: null,
     coverPath: null,
