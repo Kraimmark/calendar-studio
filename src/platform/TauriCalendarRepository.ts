@@ -3,6 +3,7 @@ import type { AuditEntry, AuditQuery, CalendarAudit } from '../domain/audit';
 import { RevisionConflictError } from '../domain/revision';
 import type { CalendarEvent, CalendarSettings } from '../domain/types';
 import type { PortableCalendarState, PortableCalendarStore } from '../domain/portability';
+import type { YearProjectState, YearProjectStore } from '../domain/yearProject';
 import type { CalendarRepository, SaveCalendarSettingsRequest, SaveEventRequest } from '../storage/CalendarRepository';
 import { EntityAlreadyExistsError, EntityNotFoundError } from '../storage/errors';
 
@@ -32,7 +33,7 @@ async function call<T>(command: string, payload: object): Promise<T> {
   }
 }
 
-export class TauriCalendarRepository implements CalendarRepository, CalendarAudit, PortableCalendarStore {
+export class TauriCalendarRepository implements CalendarRepository, CalendarAudit, PortableCalendarStore, YearProjectStore {
   listEvents(year: number, includeArchived = false): Promise<CalendarEvent[]> {
     return call('calendar_list_events', { year, includeArchived });
   }
@@ -79,5 +80,9 @@ export class TauriCalendarRepository implements CalendarRepository, CalendarAudi
 
   replacePortableState(state: PortableCalendarState): Promise<{ backupReference: string | null }> {
     return call('calendar_replace_state', { state });
+  }
+
+  replaceYearProjectState(state: YearProjectState): Promise<{ backupReference: string | null }> {
+    return call('calendar_replace_year_project', { state });
   }
 }

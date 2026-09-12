@@ -43,10 +43,10 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $expected = @{
-            'package-lock.json' = '7112b3911575e0d9aff1e2c95e7caa09fd43fa2b1dae5cd748ee99e1601b3012'
+            'package-lock.json' = '6c9eb041a907920874ca2ace518de3d5c06682a54effc909a1201a1ca84a0e4c'
             'src-tauri\Cargo.lock' = '16c708e3f5fa2ebbcba2e42b91b82cb6cb99396c26f71ed6799fced750e74eef'
-            'src-tauri\src\lib.rs' = 'ce190b3111e6d9818ea4bbf4e4b2f3fc7650eee7985f81e1d81d3fa3a9c0ef15'
-            'src-tauri\src\storage.rs' = '4c6d0c8a2b70e628521ef40926b5655f66fed0c8d3702d7b00acfd390833c3f5'
+            'src-tauri\src\lib.rs' = 'e87e914a029e0c9bde0e565c8de1393fb1383be64caf068a235036e35442397d'
+            'src-tauri\src\storage.rs' = 'b82caa7b955497d270c3c761d062e0aca1d02e3269ab6dc40918eef4dc2f0ded'
           }
           foreach ($path in $expected.Keys) {
             if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing clean-source input: $path" }

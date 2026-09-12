@@ -3,6 +3,7 @@ import { assertCalendarYear } from '../domain/calendar';
 import { assertExpectedRevision, nextRevision } from '../domain/revision';
 import type { CalendarEvent, CalendarSettings } from '../domain/types';
 import type { PortableCalendarState, PortableCalendarStore } from '../domain/portability';
+import type { YearProjectState, YearProjectStore } from '../domain/yearProject';
 import type { CalendarRepository, SaveCalendarSettingsRequest, SaveEventRequest } from './CalendarRepository';
 
 import { EntityAlreadyExistsError, EntityNotFoundError } from './errors';
@@ -17,7 +18,7 @@ function clone<T>(value: T): T {
   return structuredClone(value);
 }
 
-export class InMemoryCalendarRepository implements CalendarRepository, CalendarAudit, PortableCalendarStore {
+export class InMemoryCalendarRepository implements CalendarRepository, CalendarAudit, PortableCalendarStore, YearProjectStore {
   private readonly events = new Map<string, CalendarEvent>();
   private readonly settings = new Map<number, CalendarSettings>();
   private readonly auditEntries: AuditEntry[] = [];
@@ -210,6 +211,27 @@ export class InMemoryCalendarRepository implements CalendarRepository, CalendarA
       throw error;
     }
     return { backupReference: 'memory://pre-import' };
+  }
+
+  async replaceYearProjectState(state: YearProjectState): Promise<{ backupReference: string | null }> {
+    if (state.settings.year !== state.year || state.events.some((event) => event.calendarYear !== state.year)) throw new Error('Year project contains data from another year.');
+    const previous = await this.exportPortableState();
+    try {
+      const ids = new Set([...this.events.values()].filter((event) => event.calendarYear === state.year).map((event) => event.id));
+      for (const id of ids) this.events.delete(id);
+      this.settings.delete(state.year);
+      for (let index = this.auditEntries.length - 1; index >= 0; index -= 1) {
+        const entry = this.auditEntries[index]!;
+        if ((entry.entityType === 'event' && ids.has(entry.entityId)) || (entry.entityType === 'calendar_settings' && entry.entityId === String(state.year))) this.auditEntries.splice(index, 1);
+      }
+      for (const event of state.events) this.events.set(event.id, clone(event));
+      this.settings.set(state.year, clone(state.settings));
+      this.auditEntries.push(...state.audit.map(clone));
+    } catch (error) {
+      await this.replacePortableState(previous);
+      throw error;
+    }
+    return { backupReference: 'memory://before-year-import' };
   }
 
   private recordAudit(
