@@ -32,6 +32,12 @@ export function archiveConfirmationMessage(dirty: boolean): string {
     : 'Архивировать мероприятие? Оно исчезнет из активного календаря. Восстановить мероприятие можно из архива.';
 }
 
+export function permanentDeleteConfirmationMessage(title: string, dirty: boolean, relatedCount: number): string {
+  const related = relatedCount > 0 ? ` Будут также удалены ${relatedCount} связанные ${relatedCount === 1 ? 'запись' : 'записи'}.` : '';
+  const draft = dirty ? ' Несохранённые изменения в форме будут потеряны.' : '';
+  return `Удалить «${title}» навсегда? Восстановить запись из архива или резервной копии уже не получится.${related}${draft}`;
+}
+
 
 /**
  * Switching calendar mode changes whether the whole year can be edited.
