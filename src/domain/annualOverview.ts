@@ -10,6 +10,16 @@ export interface AnnualDaySummary {
   eventCount: number;
   primaryCount: number;
   warningCount: number;
+  events: AnnualDayEvent[];
+}
+
+export interface AnnualDayEvent {
+  id: string;
+  label: string;
+  title: string;
+  color: string;
+  startsHere: boolean;
+  endsHere: boolean;
 }
 
 export interface AnnualMonthSummary {
@@ -23,6 +33,19 @@ export interface AnnualMonthSummary {
 
 function dateMonth(date: DateOnly): number | null {
   return parseDateOnly(date)?.month ?? null;
+}
+
+function compactEventLabel(event: CalendarEvent): string {
+  const phase = event.competitionPhase?.trim();
+  if (phase) return phase.length > 17 ? `${phase.slice(0, 16)}…` : phase;
+  const replacements: Array<[RegExp, string]> = [
+    [/Кубок Санкт-Петербурга/giu, 'Кубок СПб'],
+    [/Чемпионат Санкт-Петербурга/giu, 'Чемп. СПб'],
+    [/Международные соревнования/giu, 'Междунар.'],
+    [/Всероссийские соревнования/giu, 'Всерос.'],
+  ];
+  const compact = replacements.reduce((title, [pattern, replacement]) => title.replace(pattern, replacement), event.title).trim();
+  return compact.length > 17 ? `${compact.slice(0, 16)}…` : compact;
 }
 
 export function buildAnnualOverview(
@@ -67,6 +90,19 @@ export function buildAnnualOverview(
       warningCount: monthWarnings.length,
       days: model.cells.map((cell) => {
         const starts = cell.inCurrentMonth ? (startsByDate.get(cell.date) ?? []) : [];
+        const dayEvents = cell.inCurrentMonth
+          ? events
+            .filter((event) => event.calendarYear === year && event.archivedAt === null && event.startDate && event.endDate && event.startDate <= cell.date && event.endDate >= cell.date)
+            .sort((left, right) => left.startDate!.localeCompare(right.startDate!) || left.title.localeCompare(right.title, 'ru'))
+            .map((event): AnnualDayEvent => ({
+              id: event.id,
+              label: compactEventLabel(event),
+              title: event.title,
+              color: event.stickerColor,
+              startsHere: event.startDate === cell.date,
+              endsHere: event.endDate === cell.date,
+            }))
+          : [];
         return {
           date: cell.date,
           day: cell.day,
@@ -74,6 +110,7 @@ export function buildAnnualOverview(
           eventCount: starts.length,
           primaryCount: starts.filter((event) => event.isPrimary).length,
           warningCount: cell.inCurrentMonth ? (warningsByDate.get(cell.date) ?? 0) : 0,
+          events: dayEvents,
         };
       }),
     };

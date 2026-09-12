@@ -74,4 +74,6 @@ export interface CalendarSettings {
   approvedBy: string | null;
   reopenedAt: string | null;
   reopenedBy: string | null;
+  /** Stable keys of risks that the planner explicitly accepted for this year. */
+  acceptedWarningKeys: string[];
 }

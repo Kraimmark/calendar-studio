@@ -46,3 +46,16 @@ test('warning summary follows visible event ids and does not mutate warnings', (
   assert.equal(overview[2].days.find((day) => day.date === '2027-03-05').warningCount, 1);
   assert.equal(JSON.stringify(warnings), original);
 });
+
+test('annual overview renders a compact entry on every day of a multi-day match', () => {
+  const overview = buildAnnualOverview(2027, [
+    event('cup', '2027-03-05', { title: 'Кубок Санкт-Петербурга · Пистолет', endDate: '2027-03-07', stickerColor: '#123456' }),
+  ], []);
+  const march = overview[2];
+  const first = march.days.find((day) => day.date === '2027-03-05');
+  const middle = march.days.find((day) => day.date === '2027-03-06');
+  assert.equal(first.events[0].label, 'Кубок СПб · Пист…');
+  assert.equal(first.events[0].startsHere, true);
+  assert.equal(middle.events[0].startsHere, false);
+  assert.equal(middle.events[0].color, '#123456');
+});

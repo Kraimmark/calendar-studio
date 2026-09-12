@@ -48,6 +48,17 @@ test('archive is soft, hidden by default and restorable', async () => {
   assert.equal(restored.revision, 3);
 });
 
+test('permanent deletion removes a parent, its descendants and their audit history', async () => {
+  const storage = repo();
+  const parent = await storage.saveEvent({ kind: 'create', id: 'parent', calendarYear: 2027, actor: 'owner', timestamp: '2026-09-03T08:00:00+03:00', data: data() }, null);
+  await storage.saveEvent({ kind: 'create', id: 'child', calendarYear: 2027, actor: 'owner', timestamp: '2026-09-03T08:01:00+03:00', data: data({ parentEventId: 'parent', isPrimary: false }) }, null);
+  await storage.saveEvent({ kind: 'create', id: 'grandchild', calendarYear: 2027, actor: 'owner', timestamp: '2026-09-03T08:02:00+03:00', data: data({ parentEventId: 'child', isPrimary: false }) }, null);
+  assert.deepEqual(await storage.deleteEvent('parent', parent.revision, 'owner', '2026-09-03T08:03:00+03:00'), ['parent', 'child', 'grandchild']);
+  assert.equal(await storage.getEvent('parent'), null);
+  assert.equal(await storage.getEvent('child'), null);
+  assert.equal((await storage.list({})).filter((entry) => ['parent', 'child', 'grandchild'].includes(entry.entityId)).length, 0);
+});
+
 test('audit is append-only for create, update, archive and restore', async () => {
   const storage = repo();
   const created = await storage.saveEvent({ kind: 'create', id: 'event-1', calendarYear: 2026, actor: 'owner', timestamp: '2026-09-03T08:00:00+03:00', data: data() }, null);
@@ -62,8 +73,9 @@ test('audit is append-only for create, update, archive and restore', async () =>
 test('calendar settings update keeps calendar_settings audit entity type even when mode does not change', async () => {
   const storage = repo();
   const initial = await storage.getCalendarSettings(2027);
-  const updated = await storage.saveCalendarSettings({ year: 2027, mode: 'planning', actor: 'owner', timestamp: '2026-09-03T08:05:00+03:00' }, initial.revision);
+  const updated = await storage.saveCalendarSettings({ year: 2027, mode: 'planning', actor: 'owner', timestamp: '2026-09-03T08:05:00+03:00', acceptedWarningKeys: ['risk-b', 'risk-a', 'risk-a'] }, initial.revision);
   assert.equal(updated.revision, 2);
+  assert.deepEqual(updated.acceptedWarningKeys, ['risk-a', 'risk-b']);
   const audit = await storage.list({ entityId: '2027' });
   assert.equal(audit.length, 1);
   assert.equal(audit[0].action, 'update');

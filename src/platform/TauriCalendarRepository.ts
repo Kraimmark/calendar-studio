@@ -53,6 +53,10 @@ export class TauriCalendarRepository implements CalendarRepository, CalendarAudi
     return call('calendar_restore_event', { id, expectedRevision, actor, timestamp });
   }
 
+  deleteEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<string[]> {
+    return call('calendar_delete_event', { id, expectedRevision, actor, timestamp });
+  }
+
   getCalendarSettings(year: number): Promise<CalendarSettings> {
     return call('calendar_get_settings', { year });
   }

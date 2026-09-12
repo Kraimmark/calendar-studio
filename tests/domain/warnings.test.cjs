@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { calculateWarnings } = require('../../.tmp/domain-test/src/domain/warnings.js');
+const { calendarWarningKey, calculateWarnings } = require('../../.tmp/domain-test/src/domain/warnings.js');
 
 function event(id, startDate, overrides = {}) {
   return {
@@ -28,6 +28,14 @@ test('more than two matches starting in one month creates monthly overload warni
   const monthly = warnings.filter((warning) => warning.code === 'monthly_match_overload');
   assert.equal(monthly.length, 1);
   assert.deepEqual(monthly[0].eventIds, ['a', 'b', 'c']);
+});
+
+test('warning key is independent from event and date ordering but changes with the actual risk', () => {
+  const left = { code: 'match_spacing', message: 'old wording', eventIds: ['b', 'a'], dates: ['2027-03-10', '2027-03-01'] };
+  const sameRisk = { ...left, message: 'new wording', eventIds: ['a', 'b'], dates: ['2027-03-01', '2027-03-10'] };
+  const movedRisk = { ...sameRisk, dates: ['2027-03-02', '2027-03-10'] };
+  assert.equal(calendarWarningKey(left), calendarWarningKey(sameRisk));
+  assert.notEqual(calendarWarningKey(left), calendarWarningKey(movedRisk));
 });
 
 test('ordinary neighboring matches require fourteen full free days', () => {

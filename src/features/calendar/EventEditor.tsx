@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type MouseEvent as ReactMouseEvent } from 'react';
 import type { CalendarEvent, CalendarEventData, Discipline, EventKind, EventSeries, EventSource, EventStatus, VenueScope } from '../../domain/types';
 import type { ValidationIssue } from '../../domain/validation';
-import { archiveConfirmationMessage, requiresDiscardConfirmation } from './confirmationState';
+import { archiveConfirmationMessage, permanentDeleteConfirmationMessage, requiresDiscardConfirmation } from './confirmationState';
 import { normalizeStudioEventData } from './eventDraft';
 
 export interface RelatedEventSelection {
@@ -23,6 +23,8 @@ interface EventEditorProps {
   onCancel: () => void;
   onSave: (data: CalendarEventData, related: RelatedEventSelection) => void;
   onArchive?: () => void;
+  onDelete?: () => void;
+  relatedEventCount?: number;
   readOnly?: boolean;
   parentCandidates?: CalendarEvent[];
   requireEkpConfirmation?: boolean;
@@ -44,7 +46,7 @@ function nullableNumber(value: string): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false } }: EventEditorProps) {
+export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, onDelete, relatedEventCount = 0, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false } }: EventEditorProps) {
   const normalizedInitialData = useMemo(() => normalizeStudioEventData(initialData), [initialData]);
   const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(normalizedInitialData));
   const [ekpConfirmed, setEkpConfirmed] = useState(false);
@@ -66,6 +68,11 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
     if (!window.confirm(archiveConfirmationMessage(dirty))) return;
     onArchive();
   }, [dirty, onArchive]);
+  const requestDelete = useCallback(() => {
+    if (savingRef.current || !onDelete || !event) return;
+    if (!window.confirm(permanentDeleteConfirmationMessage(event.title, dirty, relatedEventCount))) return;
+    onDelete();
+  }, [dirty, event, onDelete, relatedEventCount]);
   useEffect(() => { cancelRef.current = requestClose; }, [requestClose]);
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -253,7 +260,10 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
         </div>
 
         <footer className="editor-footer">
-          <div>{!readOnly && event && onArchive ? <button className="button button-danger" type="button" onClick={requestArchive} disabled={saving}>Архивировать</button> : null}</div>
+          <div className="editor-danger-actions">
+            {!readOnly && event && onArchive ? <button className="button button-danger" type="button" onClick={requestArchive} disabled={saving}>Архивировать</button> : null}
+            {!readOnly && event && onDelete ? <button className="button button-danger button-danger-quiet" type="button" onClick={requestDelete} disabled={saving}>Удалить навсегда</button> : null}
+          </div>
           <div className="editor-actions">
             <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>{readOnly ? 'Закрыть' : 'Отмена'}</button>
             {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(normalizeStudioEventData(draft), related)} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : related.regional || related.physical ? 'Сохранить и создать' : 'Сохранить'}</button>}

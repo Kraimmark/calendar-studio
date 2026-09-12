@@ -8,7 +8,7 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 
-const LATEST_SCHEMA_VERSION: i64 = 4;
+const LATEST_SCHEMA_VERSION: i64 = 5;
 
 pub struct StorageState {
     connection: Mutex<Connection>,
@@ -205,6 +205,10 @@ fn migrate(connection: &mut Connection) -> rusqlite::Result<()> {
             4_i64,
             include_str!("../migrations/0004_backfill_calendar_year.sql"),
         ),
+        (
+            5_i64,
+            include_str!("../migrations/0005_accepted_warning_keys.sql"),
+        ),
     ];
 
     for (target, sql) in migrations {
@@ -370,6 +374,8 @@ pub struct CalendarSettings {
     approved_by: Option<String>,
     reopened_at: Option<String>,
     reopened_by: Option<String>,
+    #[serde(default)]
+    accepted_warning_keys: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -489,6 +495,8 @@ pub struct SaveSettingsPayload {
     timestamp: String,
     mode: String,
     expected_revision: i64,
+    #[serde(default)]
+    accepted_warning_keys: Vec<String>,
 }
 
 #[derive(Debug, Default, Deserialize)]
@@ -928,6 +936,54 @@ pub fn calendar_restore_event(
     set_archive_state(state, payload, false)
 }
 
+#[tauri::command]
+pub fn calendar_delete_event(
+    state: tauri::State<'_, StorageState>,
+    payload: RevisionActionPayload,
+) -> CommandResult<Vec<String>> {
+    let mut connection = state.lock()?;
+    let transaction = connection
+        .transaction_with_behavior(TransactionBehavior::Immediate)
+        .map_err(CommandError::sqlite)?;
+    let current = load_event(&transaction, &payload.id)
+        .map_err(CommandError::sqlite)?
+        .ok_or_else(|| CommandError::not_found(&payload.id))?;
+    assert_revision(&payload.id, payload.expected_revision, current.revision)?;
+
+    let relationships = {
+        let mut statement = transaction
+            .prepare("SELECT id,parent_event_id FROM events")
+            .map_err(CommandError::sqlite)?;
+        statement
+            .query_map([], |row| Ok((row.get::<_, String>(0)?, row.get::<_, Option<String>>(1)?)))
+            .map_err(CommandError::sqlite)?
+            .collect::<Result<Vec<_>, _>>()
+            .map_err(CommandError::sqlite)?
+    };
+    let mut deleted_ids = vec![payload.id.clone()];
+    let mut index = 0;
+    while index < deleted_ids.len() {
+        let parent = &deleted_ids[index];
+        for (id, parent_id) in &relationships {
+            if parent_id.as_deref() == Some(parent.as_str()) && !deleted_ids.contains(id) {
+                deleted_ids.push(id.clone());
+            }
+        }
+        index += 1;
+    }
+
+    for id in deleted_ids.iter().rev() {
+        transaction
+            .execute("DELETE FROM audit_log WHERE entity_type='event' AND entity_id=?1", [id])
+            .map_err(CommandError::sqlite)?;
+        transaction
+            .execute("DELETE FROM events WHERE id=?1", [id])
+            .map_err(CommandError::sqlite)?;
+    }
+    transaction.commit().map_err(CommandError::sqlite)?;
+    Ok(deleted_ids)
+}
+
 fn default_settings(year: i64) -> CalendarSettings {
     CalendarSettings {
         year,
@@ -937,15 +993,16 @@ fn default_settings(year: i64) -> CalendarSettings {
         approved_by: None,
         reopened_at: None,
         reopened_by: None,
+        accepted_warning_keys: Vec::new(),
     }
 }
 
 fn load_settings(connection: &Connection, year: i64) -> rusqlite::Result<Option<CalendarSettings>> {
     connection.query_row(
-        "SELECT year,mode,revision,approved_at,approved_by,reopened_at,reopened_by FROM calendar_settings WHERE year=?1",
+        "SELECT year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys FROM calendar_settings WHERE year=?1",
         [year],
         |row| Ok(CalendarSettings {
-            year: row.get(0)?, mode: row.get(1)?, revision: row.get(2)?, approved_at: row.get(3)?, approved_by: row.get(4)?, reopened_at: row.get(5)?, reopened_by: row.get(6)?,
+            year: row.get(0)?, mode: row.get(1)?, revision: row.get(2)?, approved_at: row.get(3)?, approved_by: row.get(4)?, reopened_at: row.get(5)?, reopened_by: row.get(6)?, accepted_warning_keys: serde_json::from_str(&row.get::<_, String>(7)?).unwrap_or_default(),
         }),
     ).optional()
 }
@@ -1007,10 +1064,17 @@ pub fn calendar_save_settings(
         } else {
             current.reopened_by
         },
+        accepted_warning_keys: {
+            let mut keys = payload.accepted_warning_keys;
+            keys.sort();
+            keys.dedup();
+            keys
+        },
     };
+    let accepted_warning_keys = serde_json::to_string(&updated.accepted_warning_keys).map_err(CommandError::json)?;
     transaction.execute(
-        "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by) VALUES(?1,?2,?3,?4,?5,?6,?7)\n         ON CONFLICT(year) DO UPDATE SET mode=excluded.mode,revision=excluded.revision,approved_at=excluded.approved_at,approved_by=excluded.approved_by,reopened_at=excluded.reopened_at,reopened_by=excluded.reopened_by\n         WHERE calendar_settings.revision=?8",
-        params![updated.year,updated.mode,updated.revision,updated.approved_at,updated.approved_by,updated.reopened_at,updated.reopened_by,payload.expected_revision],
+        "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)\n         ON CONFLICT(year) DO UPDATE SET mode=excluded.mode,revision=excluded.revision,approved_at=excluded.approved_at,approved_by=excluded.approved_by,reopened_at=excluded.reopened_at,reopened_by=excluded.reopened_by,accepted_warning_keys=excluded.accepted_warning_keys\n         WHERE calendar_settings.revision=?9",
+        params![updated.year,updated.mode,updated.revision,updated.approved_at,updated.approved_by,updated.reopened_at,updated.reopened_by,accepted_warning_keys,payload.expected_revision],
     ).map_err(CommandError::sqlite)?;
     let action = if approving {
         "approve"
@@ -1101,7 +1165,7 @@ fn load_all_events(connection: &Connection) -> rusqlite::Result<Vec<CalendarEven
 
 fn load_all_settings(connection: &Connection) -> rusqlite::Result<Vec<CalendarSettings>> {
     let mut statement = connection.prepare(
-        "SELECT year,mode,revision,approved_at,approved_by,reopened_at,reopened_by FROM calendar_settings ORDER BY year",
+        "SELECT year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys FROM calendar_settings ORDER BY year",
     )?;
     let settings = statement
         .query_map([], |row| {
@@ -1113,6 +1177,7 @@ fn load_all_settings(connection: &Connection) -> rusqlite::Result<Vec<CalendarSe
                 approved_by: row.get(4)?,
                 reopened_at: row.get(5)?,
                 reopened_by: row.get(6)?,
+                accepted_warning_keys: serde_json::from_str(&row.get::<_, String>(7)?).unwrap_or_default(),
             })
         })?
         .collect();
@@ -1192,8 +1257,8 @@ pub fn calendar_replace_state(
     }
     for settings in &payload.state.calendar_years {
         transaction.execute(
-            "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by) VALUES(?1,?2,?3,?4,?5,?6,?7)",
-            params![settings.year,settings.mode,settings.revision,settings.approved_at,settings.approved_by,settings.reopened_at,settings.reopened_by],
+            "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",
+            params![settings.year,settings.mode,settings.revision,settings.approved_at,settings.approved_by,settings.reopened_at,settings.reopened_by,serde_json::to_string(&settings.accepted_warning_keys).map_err(CommandError::json)?],
         ).map_err(CommandError::sqlite)?;
     }
     for entry in &payload.state.audit {

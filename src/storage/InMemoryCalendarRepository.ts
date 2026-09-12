@@ -115,6 +115,7 @@ export class InMemoryCalendarRepository implements CalendarRepository, CalendarA
       approvedBy: null,
       reopenedAt: null,
       reopenedBy: null,
+      acceptedWarningKeys: [],
     });
   }
 
@@ -133,10 +134,34 @@ export class InMemoryCalendarRepository implements CalendarRepository, CalendarA
       approvedBy: approving ? request.actor : current.approvedBy,
       reopenedAt: reopening ? request.timestamp : current.reopenedAt,
       reopenedBy: reopening ? request.actor : current.reopenedBy,
+      acceptedWarningKeys: [...new Set(request.acceptedWarningKeys)].sort(),
     };
     this.settings.set(request.year, clone(updated));
     this.recordAudit('calendar_settings', String(request.year), request.actor, request.timestamp, approving ? 'approve' : reopening ? 'reopen' : 'update', current.revision, revision, `mode:${request.mode}`);
     return clone(updated);
+  }
+
+  async deleteEvent(id: string, expectedRevision: number, _actor: string, _timestamp: string): Promise<string[]> {
+    const current = this.events.get(id);
+    if (!current) throw new EntityNotFoundError(id);
+    assertExpectedRevision(id, current.revision, expectedRevision);
+    const deleted = new Set<string>([id]);
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const event of this.events.values()) {
+        if (event.parentEventId && deleted.has(event.parentEventId) && !deleted.has(event.id)) {
+          deleted.add(event.id);
+          changed = true;
+        }
+      }
+    }
+    for (const eventId of deleted) this.events.delete(eventId);
+    for (let index = this.auditEntries.length - 1; index >= 0; index -= 1) {
+      const entry = this.auditEntries[index];
+      if (entry?.entityType === 'event' && deleted.has(entry.entityId)) this.auditEntries.splice(index, 1);
+    }
+    return [...deleted];
   }
 
   async append(entry: AuditEntry): Promise<void> {

@@ -123,10 +123,12 @@ function validateEventShape(value: unknown, errors: string[], index: number): va
 
 function validateSettingsShape(value: unknown, errors: string[], index: number): value is CalendarSettings {
   if (!isRecord(value) || !isCalendarYear(value.year) || (value.mode !== 'planning' && value.mode !== 'approved') || !Number.isInteger(value.revision) || Number(value.revision) < 1 ||
-      !isNullableString(value.approvedAt) || !isNullableString(value.approvedBy) || !isNullableString(value.reopenedAt) || !isNullableString(value.reopenedBy)) {
+      !isNullableString(value.approvedAt) || !isNullableString(value.approvedBy) || !isNullableString(value.reopenedAt) || !isNullableString(value.reopenedBy) ||
+      (value.acceptedWarningKeys !== undefined && (!Array.isArray(value.acceptedWarningKeys) || value.acceptedWarningKeys.some((key) => typeof key !== 'string')))) {
     errors.push(`calendarYears[${index}] имеет некорректную структуру.`);
     return false;
   }
+  if (Array.isArray(value.acceptedWarningKeys) && new Set(value.acceptedWarningKeys).size !== value.acceptedWarningKeys.length) errors.push(`calendarYears[${index}].acceptedWarningKeys не должен содержать повторов.`);
   return true;
 }
 
@@ -422,7 +424,7 @@ export class CalendarPortabilityService implements CalendarPortability {
     if (!validation.valid) throw new Error(`Импорт отклонён: ${validation.errors.join(' ')}`);
     const pkg = value as CalendarStudioExportPackage;
     return this.store.replacePortableState({
-      calendarYears: structuredClone(pkg.calendarYears),
+      calendarYears: pkg.calendarYears.map((settings) => ({ ...structuredClone(settings), acceptedWarningKeys: [...new Set(settings.acceptedWarningKeys ?? [])].sort() })),
       events: structuredClone(pkg.events),
       organizers: [],
       audit: structuredClone(pkg.audit),
