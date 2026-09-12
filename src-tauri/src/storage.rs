@@ -954,18 +954,19 @@ pub fn calendar_delete_event(
         let mut statement = transaction
             .prepare("SELECT id,parent_event_id FROM events")
             .map_err(CommandError::sqlite)?;
-        statement
+        let rows = statement
             .query_map([], |row| {
                 Ok((row.get::<_, String>(0)?, row.get::<_, Option<String>>(1)?))
             })
             .map_err(CommandError::sqlite)?
             .collect::<Result<Vec<_>, _>>()
-            .map_err(CommandError::sqlite)?
+            .map_err(CommandError::sqlite)?;
+        rows
     };
     let mut deleted_ids = vec![payload.id.clone()];
     let mut index = 0;
     while index < deleted_ids.len() {
-        let parent = &deleted_ids[index];
+        let parent = deleted_ids[index].clone();
         for (id, parent_id) in &relationships {
             if parent_id.as_deref() == Some(parent.as_str()) && !deleted_ids.contains(id) {
                 deleted_ids.push(id.clone());
