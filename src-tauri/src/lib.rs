@@ -1,7 +1,7 @@
 mod storage;
 
 use storage::{
-    calendar_append_audit, calendar_archive_event, calendar_export_state, calendar_get_event,
+    calendar_append_audit, calendar_archive_event, calendar_delete_event, calendar_export_state, calendar_get_event,
     calendar_get_settings, calendar_get_workspace_status, calendar_list_audit,
     calendar_list_events, calendar_replace_state, calendar_restore_event, calendar_save_event,
     calendar_save_settings, calendar_switch_workspace, StorageState,
@@ -28,6 +28,7 @@ pub fn run() {
             calendar_save_event,
             calendar_archive_event,
             calendar_restore_event,
+            calendar_delete_event,
             calendar_get_settings,
             calendar_save_settings,
             calendar_list_audit,
