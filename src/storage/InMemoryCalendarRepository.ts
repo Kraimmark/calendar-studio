@@ -141,7 +141,12 @@ export class InMemoryCalendarRepository implements CalendarRepository, CalendarA
     return clone(updated);
   }
 
-  async deleteEvent(id: string, expectedRevision: number, _actor: string, _timestamp: string): Promise<string[]> {
+  async deleteEvent(id: string, expectedRevision: number, actor: string, timestamp: string): Promise<string[]> {
+    // The in-memory implementation intentionally removes the whole audit
+    // trail with a permanent deletion, but keeps the public call signature
+    // identical to the persistent repository.
+    void actor;
+    void timestamp;
     const current = this.events.get(id);
     if (!current) throw new EntityNotFoundError(id);
     assertExpectedRevision(id, current.revision, expectedRevision);
