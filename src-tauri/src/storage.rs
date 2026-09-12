@@ -955,7 +955,9 @@ pub fn calendar_delete_event(
             .prepare("SELECT id,parent_event_id FROM events")
             .map_err(CommandError::sqlite)?;
         statement
-            .query_map([], |row| Ok((row.get::<_, String>(0)?, row.get::<_, Option<String>>(1)?)))
+            .query_map([], |row| {
+                Ok((row.get::<_, String>(0)?, row.get::<_, Option<String>>(1)?))
+            })
             .map_err(CommandError::sqlite)?
             .collect::<Result<Vec<_>, _>>()
             .map_err(CommandError::sqlite)?
@@ -974,7 +976,10 @@ pub fn calendar_delete_event(
 
     for id in deleted_ids.iter().rev() {
         transaction
-            .execute("DELETE FROM audit_log WHERE entity_type='event' AND entity_id=?1", [id])
+            .execute(
+                "DELETE FROM audit_log WHERE entity_type='event' AND entity_id=?1",
+                [id],
+            )
             .map_err(CommandError::sqlite)?;
         transaction
             .execute("DELETE FROM events WHERE id=?1", [id])
@@ -1071,7 +1076,8 @@ pub fn calendar_save_settings(
             keys
         },
     };
-    let accepted_warning_keys = serde_json::to_string(&updated.accepted_warning_keys).map_err(CommandError::json)?;
+    let accepted_warning_keys =
+        serde_json::to_string(&updated.accepted_warning_keys).map_err(CommandError::json)?;
     transaction.execute(
         "INSERT INTO calendar_settings(year,mode,revision,approved_at,approved_by,reopened_at,reopened_by,accepted_warning_keys) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)\n         ON CONFLICT(year) DO UPDATE SET mode=excluded.mode,revision=excluded.revision,approved_at=excluded.approved_at,approved_by=excluded.approved_by,reopened_at=excluded.reopened_at,reopened_by=excluded.reopened_by,accepted_warning_keys=excluded.accepted_warning_keys\n         WHERE calendar_settings.revision=?9",
         params![updated.year,updated.mode,updated.revision,updated.approved_at,updated.approved_by,updated.reopened_at,updated.reopened_by,accepted_warning_keys,payload.expected_revision],
@@ -1177,7 +1183,8 @@ fn load_all_settings(connection: &Connection) -> rusqlite::Result<Vec<CalendarSe
                 approved_by: row.get(4)?,
                 reopened_at: row.get(5)?,
                 reopened_by: row.get(6)?,
-                accepted_warning_keys: serde_json::from_str(&row.get::<_, String>(7)?).unwrap_or_default(),
+                accepted_warning_keys: serde_json::from_str(&row.get::<_, String>(7)?)
+                    .unwrap_or_default(),
             })
         })?
         .collect();
