@@ -53,7 +53,9 @@ type EditorConflictState = { expectedRevision: number; actualRevision: number } 
 type CountScope = 'all' | 'primary';
 type CalendarView = 'month' | 'year';
 type WorkspaceTab = 'calendar' | 'archive';
+type QueueSeriesFilter = 'all' | EventSeries;
 interface RangeMenuState { x: number; y: number; range: DateRange }
+interface MatchTemplate { id: string; title: string; data: CalendarEventData }
 
 const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
@@ -64,7 +66,9 @@ const disciplineFilterLabels: Record<DisciplineFilter, string> = { all: 'Все 
 const disciplineFilterOrder: DisciplineFilter[] = ['all', 'pistol', 'carbine', 'shotgun', 'airgun', 'multigun', 'other'];
 const DRAG_EVENT_MIME = 'application/x-calendar-studio-event';
 const DAY_BACKGROUND_PALETTE_STORAGE_KEY = 'calendar-studio-day-background-palette';
+const MATCH_TEMPLATE_STORAGE_KEY = 'calendar-studio-match-templates-v1';
 const basketDisciplines: Array<[Discipline, string]> = [['pistol', 'Пистолет'], ['carbine', 'Карабин'], ['shotgun', 'Ружьё'], ['airgun', 'Пневматика'], ['multigun', 'Мультиган']];
+const seriesLabels: Record<EventSeries, string> = { regular: 'Региональная', trf: 'ТРФ', allRussian: 'Всероссийская', departmental: 'Ведомственная', spbCup: 'Кубок СПб', other: 'Другая' };
 
 function readDayBackgroundPalette(): Record<CalendarDayBackgroundKey, string> {
   const fallback = { ...DEFAULT_DAY_BACKGROUND_COLORS };
@@ -110,8 +114,33 @@ function buildDefaultBasket(): CalendarEventData[] {
     basketDraft(`Кубок Санкт-Петербурга (${label})`, discipline, 'spbCup'),
     basketDraft(`Чемпионат Санкт-Петербурга (${label})`, discipline, 'regular'),
   ]);
-  const trf = (title: string, count: number, discipline: Discipline) => Array.from({ length: count }, (_, index) => basketDraft(`${title} · №${index + 1}`, discipline, 'trf'));
-  return [...cityEvents, ...trf('Охота на нежить', 3, 'multigun'), ...trf('Двудулочка', 2, 'shotgun'), ...trf('Идиси Сикубэ', 2, 'pistol'), ...trf('Пращуры против ящеров', 2, 'carbine')];
+  return cityEvents;
+}
+
+const builtInMatchTemplates: MatchTemplate[] = [
+  { id: 'built-in-eternal-living', title: 'Вечно живые', data: basketDraft('Вечно живые', 'multigun', 'trf') },
+  { id: 'built-in-double-barrel', title: 'Двудулочка', data: basketDraft('Двудулочка', 'shotgun', 'trf') },
+  { id: 'built-in-idisi-sikube', title: 'Идиси Сикубэ', data: basketDraft('Идиси Сикубэ', 'pistol', 'trf') },
+  { id: 'built-in-ancestors-lizards', title: 'Пращуры против ящеров', data: basketDraft('Пращуры против ящеров', 'carbine', 'trf') },
+];
+
+function templateData(data: CalendarEventData): CalendarEventData {
+  return normalizeStudioEventData({ ...createEventData(), ...structuredClone(data), kind: 'match', startDate: null, endDate: null, parentEventId: null });
+}
+
+function readMatchTemplates(): MatchTemplate[] {
+  try {
+    const parsed: unknown = JSON.parse(window.localStorage.getItem(MATCH_TEMPLATE_STORAGE_KEY) ?? '[]');
+    if (!Array.isArray(parsed)) return [];
+    return parsed.flatMap((candidate): MatchTemplate[] => {
+      if (!candidate || typeof candidate !== 'object') return [];
+      const item = candidate as Record<string, unknown>;
+      if (typeof item.id !== 'string' || typeof item.title !== 'string' || !item.title.trim() || !item.data || typeof item.data !== 'object') return [];
+      return [{ id: item.id, title: item.title.trim(), data: templateData(item.data as CalendarEventData) }];
+    });
+  } catch {
+    return [];
+  }
 }
 
 function relatedEventData(parentId: string, parent: CalendarEventData, type: 'regional' | 'physical'): CalendarEventData {
@@ -186,6 +215,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [activeTab, setActiveTab] = useState<WorkspaceTab>('calendar');
   const [queueQuery, setQueueQuery] = useState('');
   const [queueSort, setQueueSort] = useState<UndatedSort>('updated-desc');
+  const [queueDisciplineFilter, setQueueDisciplineFilter] = useState<DisciplineFilter>('all');
+  const [queueSeriesFilter, setQueueSeriesFilter] = useState<QueueSeriesFilter>('all');
+  const [userMatchTemplates, setUserMatchTemplates] = useState<MatchTemplate[]>(readMatchTemplates);
+  const [templateEditor, setTemplateEditor] = useState<CalendarEventData | null>(null);
   const [archiveQuery, setArchiveQuery] = useState('');
   const [archiveSort, setArchiveSort] = useState<ArchivedSort>('archived-desc');
   const [layers, setLayers] = useState<CalendarLayerState>(() => ({ ...DEFAULT_CALENDAR_LAYERS }));
@@ -226,6 +259,13 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     }
   }, [dayBackgroundPalette]);
   useEffect(() => {
+    try {
+      window.localStorage.setItem(MATCH_TEMPLATE_STORAGE_KEY, JSON.stringify(userMatchTemplates));
+    } catch {
+      // Templates remain usable for this session even if the browser storage is unavailable.
+    }
+  }, [userMatchTemplates]);
+  useEffect(() => {
     let active = true;
     workspace.getStatus()
       .then((status) => { if (active) setWorkspaceStatus(status); })
@@ -260,8 +300,14 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     ]),
   ), [model.cells, visibleEvents]);
   const byId = useMemo(() => new Map(events.map((event) => [event.id, event])), [events]);
-  const undatedTotal = useMemo(() => visibleEvents.filter((event) => event.startDate === null && event.endDate === null).length, [visibleEvents]);
-  const undated = useMemo(() => buildUndatedLibrary(visibleEvents, queueQuery, queueSort), [queueQuery, queueSort, visibleEvents]);
+  const queueEvents = useMemo(() => events.filter((event) =>
+    event.startDate === null
+    && event.endDate === null
+    && (queueDisciplineFilter === 'all' || event.discipline === queueDisciplineFilter)
+    && (queueSeriesFilter === 'all' || event.series === queueSeriesFilter),
+  ), [events, queueDisciplineFilter, queueSeriesFilter]);
+  const undatedTotal = useMemo(() => events.filter((event) => event.startDate === null && event.endDate === null).length, [events]);
+  const undated = useMemo(() => buildUndatedLibrary(queueEvents, queueQuery, queueSort), [queueEvents, queueQuery, queueSort]);
   const scopedUndatedCount = useMemo(() => scopedEvents.filter((event) => event.startDate === null && event.endDate === null).length, [scopedEvents]);
   const scopedDatedCount = scopedEvents.length - scopedUndatedCount;
   const primaryCount = useMemo(() => events.filter((event) => event.isPrimary).length, [events]);
@@ -551,6 +597,60 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
       await reload();
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const addTemplateToQueue = async (template: MatchTemplate) => {
+    if (!editable || busy) return;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      await repository.saveEvent({
+        kind: 'create',
+        id: crypto.randomUUID(),
+        calendarYear: year,
+        actor: 'local-owner',
+        timestamp: new Date().toISOString(),
+        data: templateData(template.data),
+      }, null);
+      await reload();
+      setPortabilityStatus(`В корзину добавлен шаблон «${template.title}».`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+      await reload();
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const saveMatchTemplate = (data: CalendarEventData) => {
+    const draft = templateData(data);
+    const nextIssues = validateEvent(draft, { year });
+    setIssues(nextIssues);
+    if (hasBlockingIssues(nextIssues)) return;
+    const template: MatchTemplate = { id: crypto.randomUUID(), title: draft.title.trim(), data: draft };
+    setUserMatchTemplates((current) => [...current, template].sort((left, right) => left.title.localeCompare(right.title, 'ru')));
+    setTemplateEditor(null);
+    setIssues([]);
+    setPortabilityStatus(`Шаблон «${template.title}» сохранён. Теперь он добавляется в корзину одной кнопкой.`);
+  };
+
+  const copyEventToQueue = async () => {
+    if (!editor?.event || editor.readOnly || busy) return;
+    const source = eventDataOf(editor.event);
+    const copy = templateData({ ...source, title: `Копия · ${source.title}` });
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      await repository.saveEvent({ kind: 'create', id: crypto.randomUUID(), calendarYear: year, actor: 'local-owner', timestamp: new Date().toISOString(), data: copy }, null);
+      setEditor(null);
+      setIssues([]);
+      await reload();
+      setPortabilityStatus(`Копия «${source.title}» добавлена в корзину без дат.`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
     } finally {
       setSaving(false);
     }
@@ -1122,6 +1222,27 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
             {editable && <div className="queue-actions">
               <button className="button button-primary" type="button" onClick={() => openNew()} disabled={busy}>Создать в корзину</button>
               <button className="button button-secondary" type="button" onClick={() => void createDefaultBasket()} disabled={busy}>Заполнить стандартный набор</button>
+              <details className="quick-match-menu">
+                <summary>Создать матч по умолчанию</summary>
+                <div className="quick-match-menu-popover">
+                  <button className="button button-primary" type="button" onClick={() => { setIssues([]); setTemplateEditor(createEventData()); }}>Добавить шаблон</button>
+                  <section>
+                    <strong>Быстрые шаблоны ТРФ</strong>
+                    <div className="quick-match-template-list">
+                      {builtInMatchTemplates.map((template) => <button type="button" key={template.id} onClick={() => void addTemplateToQueue(template)} disabled={busy}>{template.title}</button>)}
+                    </div>
+                  </section>
+                  {userMatchTemplates.length > 0 && <section>
+                    <strong>Мои шаблоны</strong>
+                    <div className="quick-match-template-list">
+                      {userMatchTemplates.map((template) => <div className="quick-match-template-row" key={template.id}>
+                        <button type="button" onClick={() => void addTemplateToQueue(template)} disabled={busy}>{template.title}</button>
+                        <button className="template-delete-button" type="button" onClick={() => setUserMatchTemplates((current) => current.filter((candidate) => candidate.id !== template.id))} aria-label={`Удалить шаблон ${template.title}`} title="Удалить шаблон">×</button>
+                      </div>)}
+                    </div>
+                  </section>}
+                </div>
+              </details>
               <button className="button button-secondary" type="button" onClick={exportEventSpreadsheet} disabled={busy}>Экспорт Excel</button>
               <label className={`button button-secondary file-button ${busy ? 'is-disabled' : ''}`}>
                 Импорт Excel
@@ -1131,6 +1252,13 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
             {editable && <p className="queue-hint">Тяните карточку на день, чтобы поставить матч в календарь. Чтобы снять дату — верните карточку сюда. {draggedEventId ? (dragTarget === 'queue' ? 'Отпустите: даты будут сняты.' : 'Отпустите карточку на нужный день.') : 'Если перетаскивание не сработало, отпустите и начните движение с самой карточки.'}</p>}
             <div className="queue-tools">
               <input type="search" value={queueQuery} onChange={(change: ChangeEvent<HTMLInputElement>) => setQueueQuery(change.target.value)} placeholder="Найти мероприятие…" aria-label="Поиск мероприятий без даты" />
+              <select value={queueDisciplineFilter} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueDisciplineFilter(change.target.value as DisciplineFilter)} aria-label="Фильтр корзины по дисциплине">
+                {disciplineFilterOrder.map((discipline) => <option key={discipline} value={discipline}>{discipline === 'all' ? 'Все дисциплины' : disciplineFilterLabels[discipline]}</option>)}
+              </select>
+              <select value={queueSeriesFilter} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueSeriesFilter(change.target.value as QueueSeriesFilter)} aria-label="Фильтр корзины по серии">
+                <option value="all">Все серии</option>
+                {(Object.keys(seriesLabels) as EventSeries[]).map((series) => <option key={series} value={series}>{seriesLabels[series]}</option>)}
+              </select>
               <select value={queueSort} onChange={(change: ChangeEvent<HTMLSelectElement>) => setQueueSort(change.target.value as UndatedSort)} aria-label="Сортировка мероприятий без даты">
                 <option value="updated-desc">Сначала свежие</option>
                 <option value="title-asc">По названию</option>
@@ -1138,7 +1266,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                 <option value="status-asc">По статусу</option>
               </select>
             </div>
-            {queueQuery.trim() && <p className="queue-result-count">Найдено: {undated.length} из {undatedTotal}</p>}
+            {(queueQuery.trim() || queueDisciplineFilter !== 'all' || queueSeriesFilter !== 'all') && <p className="queue-result-count">Найдено: {undated.length} из {undatedTotal}</p>}
             {undated.length === 0 ? <div className="empty-state">{undatedTotal === 0 ? 'Корзина пуста. Создайте мероприятие без даты — оно появится здесь для перетаскивания.' : 'По текущему поиску ничего не найдено.'}</div> : (
               <div className="queue-list">
                 {undated.map((event) => (
@@ -1151,7 +1279,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                     onDragStart={(drag: ReactDragEvent<HTMLButtonElement>) => beginDrag(drag, event)}
                     onDragEnd={endDrag}
                   >
-                    <span className="queue-card-status">{statusLabels[event.status]} · {disciplineLabels[event.discipline]}</span>
+                    <span className="queue-card-status">{statusLabels[event.status]} · {disciplineLabels[event.discipline]} · {seriesLabels[event.series]}</span>
                     <strong>{event.title}</strong>
                     <span>{event.organizerName || 'Организатор не указан'}</span>
                   </button>
@@ -1212,7 +1340,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
       {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={events} relatedEventCount={editor.event ? [...events, ...archivedEvents].filter((candidate) => candidate.parentEventId === editor.event?.id).length : 0} relatedAvailability={((): RelatedEventAvailability => {
         const children = editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : [];
         return { regional: children.some((candidate) => candidate.competitionStatus === 'Региональные соревнования'), physical: children.some((candidate) => candidate.competitionStatus === 'Физкультурное мероприятие') };
-      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} onDelete={editor.event && !editor.readOnly ? deleteEditorEvent : undefined} />}
+      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} onDelete={editor.event && !editor.readOnly ? deleteEditorEvent : undefined} onCopyToQueue={editor.event && !editor.readOnly ? () => void copyEventToQueue() : undefined} />}
+      {templateEditor && <EventEditor year={year} event={null} initialData={templateEditor} issues={issues} saving={saving} readOnly={false} templateMode onCancel={() => { setTemplateEditor(null); setIssues([]); }} onSave={(data) => saveMatchTemplate(data)} />}
     </main>
   );
 }
