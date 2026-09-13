@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": ".tmp/domain-test",
+    "rootDir": "."
+  },
+  "include": [
+    "src/domain/**/*.ts",
+    "src/storage/**/*.ts",
+    "src/features/calendar/confirmationState.ts"
+  ]
+}
