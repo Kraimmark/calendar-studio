@@ -249,6 +249,21 @@ h2 { margin-bottom: 8px; font-size: 18px; }
 @media (max-width: 760px) { .revision-conflict { align-items: stretch; flex-direction: column; } .revision-conflict .button { width: 100%; } }
 
 .calendar-heading-actions { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.year-picker { position: relative; display: grid; grid-template-columns: 32px minmax(74px, auto) 32px; align-items: stretch; border: 1px solid var(--border-strong); border-radius: 9px; background: var(--surface-raised); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent); }
+.year-step, .year-picker-trigger { border: 0; background: transparent; color: var(--text); cursor: pointer; }
+.year-step { font-size: 23px; line-height: 1; color: var(--text-muted); transition: color .14s ease, background-color .14s ease; }
+.year-step:not(:disabled):hover { color: var(--text); background: color-mix(in srgb, var(--accent) 13%, transparent); }
+.year-picker-trigger { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 36px; padding: 0 11px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); font-weight: 850; letter-spacing: .03em; }
+.year-picker-trigger span { color: var(--accent); font-size: 13px; transform: translateY(-1px); }
+.year-picker-popover { position: absolute; z-index: 18; top: calc(100% + 8px); right: 0; width: 260px; padding: 11px; border: 1px solid var(--border-strong); border-radius: 11px; background: var(--surface-raised); box-shadow: var(--context-shadow); }
+.year-picker-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; color: var(--text); font-size: 12px; }
+.year-picker-heading button { width: 26px; height: 26px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text-secondary); font-size: 18px; line-height: 1; cursor: pointer; }
+.year-picker-options { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.year-picker-options button { min-height: 35px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); color: var(--text-secondary); font-size: 12px; font-weight: 800; cursor: pointer; }
+.year-picker-options button:hover, .year-picker-options .is-current { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, var(--surface)); color: var(--text); }
+.year-picker-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; margin-top: 9px; }
+.year-picker-form input { min-width: 0; height: 36px; border: 1px solid var(--border); border-radius: 7px; padding: 0 9px; background: var(--field); color: var(--text); font-weight: 750; }
+.year-picker-form button { min-height: 36px; border: 1px solid var(--accent); border-radius: 7px; padding: 0 10px; background: var(--accent); color: var(--accent-contrast); font-weight: 800; cursor: pointer; }
 .annual-overview { display: grid; grid-template-columns: repeat(2, minmax(300px, 1fr)); gap: 12px; min-width: 602px; }
 .annual-month { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
 .annual-month-heading { width: 100%; min-height: 52px; padding: 9px 11px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 0; border-bottom: 1px solid var(--border); background: var(--surface-raised); color: var(--text); text-align: left; }

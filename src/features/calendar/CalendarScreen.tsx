@@ -26,7 +26,7 @@ import { DEFAULT_CALENDAR_LAYERS, isEventVisibleByDiscipline, isEventVisibleByLa
 import { buildMonthEventSegments, monthLaneCount } from '../../domain/monthLayout';
 import { dateInRange, moveEventToDatePatch, moveEventToQueuePatch, normalizeDateRange, type DateRange } from '../../domain/planning';
 import type { CalendarPortability } from '../../domain/portability';
-import type { CalendarYearProjects } from '../../domain/yearProject';
+import type { CalendarYearProjectTemplate, CalendarYearProjects } from '../../domain/yearProject';
 import type { CalendarEvent, CalendarEventData, CalendarSettings, Discipline, EventSeries } from '../../domain/types';
 import { hasBlockingIssues, validateEvent, type ValidationIssue } from '../../domain/validation';
 import { calendarWarningKey, calculateWarnings } from '../../domain/warnings';
@@ -143,6 +143,15 @@ function readMatchTemplates(): MatchTemplate[] {
   }
 }
 
+function mergeMatchTemplates(current: readonly MatchTemplate[], incoming: readonly CalendarYearProjectTemplate[]): MatchTemplate[] {
+  const merged = new Map(current.map((template) => [template.title.trim().toLocaleLowerCase('ru-RU'), template]));
+  for (const template of incoming) {
+    const data = templateData(template.data);
+    merged.set(template.title.trim().toLocaleLowerCase('ru-RU'), { id: crypto.randomUUID(), title: template.title.trim(), data });
+  }
+  return [...merged.values()].sort((left, right) => left.title.localeCompare(right.title, 'ru'));
+}
+
 function relatedEventData(parentId: string, parent: CalendarEventData, type: 'regional' | 'physical'): CalendarEventData {
   const label = type === 'regional' ? 'Региональные соревнования' : 'Физкультурное мероприятие';
   return normalizeStudioEventData({
@@ -212,6 +221,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [saving, setSaving] = useState(false);
   const [countScope, setCountScope] = useState<CountScope>('all');
   const [calendarView, setCalendarView] = useState<CalendarView>('month');
+  const [yearPickerOpen, setYearPickerOpen] = useState(false);
+  const [yearDraft, setYearDraft] = useState(String(initial.year));
   const [activeTab, setActiveTab] = useState<WorkspaceTab>('calendar');
   const [queueQuery, setQueueQuery] = useState('');
   const [queueSort, setQueueSort] = useState<UndatedSort>('updated-desc');
@@ -277,6 +288,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setSelectionFocus(null);
     setRangeMenu(null);
   }, [year, month]);
+  useEffect(() => { setYearDraft(String(year)); }, [year]);
   useEffect(() => {
     if (!selecting) return;
     const stopSelecting = () => setSelecting(false);
@@ -360,9 +372,9 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setPorting(true);
     setInteractionError(null);
     try {
-      const project = await yearProjects.exportProject(year);
+      const project = await yearProjects.exportProject(year, undefined, userMatchTemplates.map((template) => ({ title: template.title, data: templateData(template.data) })));
       download(new Blob([JSON.stringify(project, null, 2)], { type: 'application/json' }), `calendar-studio-year-${year}.json`);
-      setPortabilityStatus(`Проект ${year} года сохранён: ${project.events.length} мероприятий и ${project.audit.length} записей истории.`);
+      setPortabilityStatus(`Проект ${year} года сохранён: ${project.events.length} мероприятий, ${project.templates.length} шаблонов и ${project.audit.length} записей истории.`);
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
     } finally {
@@ -384,13 +396,15 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
       const project = parsed as { year: number; events: unknown[] };
       if (!window.confirm(`Открыть проект ${project.year} года? Будут заменены только данные ${project.year} года (${project.events.length} мероприятий). Другие годы не затрагиваются, перед заменой создаётся резервная копия базы.`)) return;
       const result = await yearProjects.importProject(parsed);
+      if (result.templates.length > 0) setUserMatchTemplates((current) => mergeMatchTemplates(current, result.templates));
       setEditor(null);
       setEditorConflict(null);
       setIssues([]);
       setMonth(1);
       setYear(project.year);
       if (project.year === year) await reload();
-      setPortabilityStatus(result.backupReference ? `Проект ${project.year} года открыт. Резервная копия: ${result.backupReference}` : `Проект ${project.year} года открыт.`);
+      const templateStatus = result.templates.length > 0 ? ` Добавлено шаблонов: ${result.templates.length}.` : '';
+      setPortabilityStatus((result.backupReference ? `Проект ${project.year} года открыт. Резервная копия: ${result.backupReference}` : `Проект ${project.year} года открыт.`) + templateStatus);
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
     } finally {
@@ -523,6 +537,18 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setYear(nextYear);
     setMonth(nextMonth);
   };
+
+  const chooseYear = (candidate: number) => {
+    if (!Number.isInteger(candidate) || candidate < MIN_CALENDAR_YEAR || candidate > MAX_CALENDAR_YEAR) {
+      setInteractionError(`Введите год от ${MIN_CALENDAR_YEAR} до ${MAX_CALENDAR_YEAR}.`);
+      return;
+    }
+    setYear(candidate);
+    setYearPickerOpen(false);
+  };
+
+  const nearbyYears = Array.from({ length: 5 }, (_, index) => year + index - 2)
+    .filter((candidate) => candidate >= MIN_CALENDAR_YEAR && candidate <= MAX_CALENDAR_YEAR);
 
   const openEvent = (event: CalendarEvent) => {
     setIssues([]);
@@ -1098,16 +1124,29 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
               {calendarView === 'month' ? (
                 <div className="segmented" aria-label="Навигация по месяцу">
                   <button type="button" onClick={() => moveMonth(-1)} disabled={year === MIN_CALENDAR_YEAR && month === 1}>Пред.</button>
-                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); }}>Сегодня</button>
+                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); setYearPickerOpen(false); }}>Сегодня</button>
                   <button type="button" onClick={() => moveMonth(1)} disabled={year === MAX_CALENDAR_YEAR && month === 12}>След.</button>
                 </div>
               ) : (
                 <div className="segmented" aria-label="Навигация по году">
-                  <button type="button" onClick={() => year > MIN_CALENDAR_YEAR && setYear(year - 1)} disabled={year === MIN_CALENDAR_YEAR}>Пред. год</button>
-                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); }}>Текущий</button>
-                  <button type="button" onClick={() => year < MAX_CALENDAR_YEAR && setYear(year + 1)} disabled={year === MAX_CALENDAR_YEAR}>След. год</button>
+                  <button type="button" onClick={() => { const today = calendarToday(); setYear(today.year); setMonth(today.month); setYearPickerOpen(false); }}>Сегодня</button>
                 </div>
               )}
+              <div className="year-picker">
+                <button className="year-step" type="button" onClick={() => chooseYear(year - 1)} disabled={year === MIN_CALENDAR_YEAR} aria-label="Предыдущий год">‹</button>
+                <button className="year-picker-trigger" type="button" aria-expanded={yearPickerOpen} onClick={() => setYearPickerOpen((open) => !open)}>{year}<span>⌄</span></button>
+                <button className="year-step" type="button" onClick={() => chooseYear(year + 1)} disabled={year === MAX_CALENDAR_YEAR} aria-label="Следующий год">›</button>
+                {yearPickerOpen && <div className="year-picker-popover" role="dialog" aria-label="Выбор года">
+                  <div className="year-picker-heading"><strong>Перейти к году</strong><button type="button" onClick={() => setYearPickerOpen(false)} aria-label="Закрыть выбор года">×</button></div>
+                  <div className="year-picker-options">
+                    {nearbyYears.map((candidate) => <button type="button" key={candidate} className={candidate === year ? 'is-current' : ''} onClick={() => chooseYear(candidate)}>{candidate}</button>)}
+                  </div>
+                  <form className="year-picker-form" onSubmit={(submit) => { submit.preventDefault(); chooseYear(Number(yearDraft)); }}>
+                    <input type="number" min={MIN_CALENDAR_YEAR} max={MAX_CALENDAR_YEAR} value={yearDraft} onChange={(change: ChangeEvent<HTMLInputElement>) => setYearDraft(change.target.value)} aria-label="Год" />
+                    <button type="submit">Открыть</button>
+                  </form>
+                </div>}
+              </div>
             </div>
           </div>
 

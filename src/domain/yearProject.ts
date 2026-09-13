@@ -1,11 +1,16 @@
 import { MAX_CALENDAR_YEAR, MIN_CALENDAR_YEAR } from './calendar';
 import type { AuditEntry } from './audit';
-import type { CalendarEvent, CalendarSettings } from './types';
+import type { CalendarEvent, CalendarEventData, CalendarSettings } from './types';
 import { validateEvent } from './validation';
 import type { PortableCalendarStore } from './portability';
 
 export const YEAR_PROJECT_FORMAT = 'calendar-studio-year-project' as const;
-export const YEAR_PROJECT_FORMAT_VERSION = 1 as const;
+export const YEAR_PROJECT_FORMAT_VERSION = 2 as const;
+
+export interface CalendarYearProjectTemplate {
+  title: string;
+  data: CalendarEventData;
+}
 
 export interface CalendarYearProject {
   format: typeof YEAR_PROJECT_FORMAT;
@@ -15,6 +20,7 @@ export interface CalendarYearProject {
   events: CalendarEvent[];
   settings: CalendarSettings;
   audit: AuditEntry[];
+  templates: CalendarYearProjectTemplate[];
   checksum: string;
 }
 
@@ -30,9 +36,9 @@ export interface YearProjectStore extends PortableCalendarStore {
 }
 
 export interface CalendarYearProjects {
-  exportProject(year: number, exportedAt?: string): Promise<CalendarYearProject>;
+  exportProject(year: number, exportedAt?: string, templates?: readonly CalendarYearProjectTemplate[]): Promise<CalendarYearProject>;
   validateImport(value: unknown): Promise<YearProjectValidationResult>;
-  importProject(value: unknown): Promise<{ backupReference: string | null }>;
+  importProject(value: unknown): Promise<{ backupReference: string | null; templates: CalendarYearProjectTemplate[] }>;
 }
 
 export interface YearProjectValidationResult {
@@ -89,14 +95,22 @@ function isAuditEntry(value: unknown): value is AuditEntry {
     (value.baseRevision === null || Number.isInteger(value.baseRevision)) && Number.isInteger(value.resultingRevision) && Number(value.resultingRevision) >= 1 && typeof value.payloadSummary === 'string';
 }
 
+function isTemplate(value: unknown, year: number): value is CalendarYearProjectTemplate {
+  if (!isRecord(value) || typeof value.title !== 'string' || !value.title.trim() || !isRecord(value.data)) return false;
+  const data = value.data as unknown as CalendarEventData;
+  if (data.title !== value.title || data.kind !== 'match' || data.startDate !== null || data.endDate !== null || data.parentEventId !== null) return false;
+  return !validateEvent(data, { year }).some((issue) => issue.severity === 'error');
+}
+
 export async function calculateYearProjectChecksum(project: Omit<CalendarYearProject, 'checksum'>): Promise<string> {
   return sha256(canonicalize(project as unknown as JsonValue));
 }
 
-export async function createYearProject(year: number, events: readonly CalendarEvent[], settings: CalendarSettings, audit: readonly AuditEntry[], exportedAt = new Date().toISOString()): Promise<CalendarYearProject> {
+export async function createYearProject(year: number, events: readonly CalendarEvent[], settings: CalendarSettings, audit: readonly AuditEntry[], exportedAt = new Date().toISOString(), templates: readonly CalendarYearProjectTemplate[] = []): Promise<CalendarYearProject> {
   if (!isCalendarYear(year)) throw new RangeError(`Недопустимый год проекта: ${year}.`);
   if (settings.year !== year) throw new Error('Настройки принадлежат другому году календаря.');
   if (events.some((event) => event.calendarYear !== year)) throw new Error('В проект года попали мероприятия другого года.');
+  if (templates.some((template) => !isTemplate(template, year))) throw new Error('В проект года попал некорректный шаблон матча.');
   const unsigned: Omit<CalendarYearProject, 'checksum'> = {
     format: YEAR_PROJECT_FORMAT,
     formatVersion: YEAR_PROJECT_FORMAT_VERSION,
@@ -105,6 +119,7 @@ export async function createYearProject(year: number, events: readonly CalendarE
     events: [...structuredClone(events)].sort((left, right) => (left.startDate ?? '9999-12-31').localeCompare(right.startDate ?? '9999-12-31') || left.title.localeCompare(right.title, 'ru') || left.id.localeCompare(right.id)),
     settings: { ...structuredClone(settings), acceptedWarningKeys: [...new Set(settings.acceptedWarningKeys)].sort() },
     audit: [...structuredClone(audit)].sort((left, right) => left.timestamp.localeCompare(right.timestamp) || left.auditId.localeCompare(right.auditId)),
+    templates: [...structuredClone(templates)].sort((left, right) => left.title.localeCompare(right.title, 'ru')),
   };
   return { ...unsigned, checksum: await calculateYearProjectChecksum(unsigned) };
 }
@@ -113,13 +128,14 @@ export async function validateYearProject(value: unknown): Promise<YearProjectVa
   const errors: string[] = [];
   if (!isRecord(value)) return { valid: false, errors: ['Файл проекта должен содержать JSON-объект.'] };
   if (value.format !== YEAR_PROJECT_FORMAT) errors.push(`Неизвестный формат проекта: ожидался ${YEAR_PROJECT_FORMAT}.`);
-  if (value.formatVersion !== YEAR_PROJECT_FORMAT_VERSION) errors.push(`Неподдерживаемая версия проекта: ${String(value.formatVersion)}.`);
+  if (value.formatVersion !== 1 && value.formatVersion !== YEAR_PROJECT_FORMAT_VERSION) errors.push(`Неподдерживаемая версия проекта: ${String(value.formatVersion)}.`);
   if (!isCalendarYear(value.year)) errors.push('В проекте указан недопустимый год.');
   if (typeof value.exportedAt !== 'string' || !value.exportedAt) errors.push('В проекте отсутствует дата экспорта.');
   if (typeof value.checksum !== 'string' || !value.checksum.startsWith('sha256:')) errors.push('В проекте отсутствует контрольная сумма.');
   if (!Array.isArray(value.events)) errors.push('В проекте отсутствует массив мероприятий.');
   if (!isSettings(value.settings)) errors.push('В проекте некорректные настройки года.');
   if (!Array.isArray(value.audit)) errors.push('В проекте отсутствует журнал изменений.');
+  if (value.formatVersion === YEAR_PROJECT_FORMAT_VERSION && !Array.isArray(value.templates)) errors.push('В проекте отсутствует массив шаблонов матчей.');
   if (errors.length) return { valid: false, errors };
 
   const year = value.year as number;
@@ -142,6 +158,14 @@ export async function validateYearProject(value: unknown): Promise<YearProjectVa
   const settings = value.settings as CalendarSettings;
   if (settings.year !== year) errors.push('Настройки принадлежат другому году.');
   if (new Set(settings.acceptedWarningKeys).size !== settings.acceptedWarningKeys.length) errors.push('Список принятых предупреждений содержит повторы.');
+  const templates = value.formatVersion === YEAR_PROJECT_FORMAT_VERSION ? value.templates as unknown[] : [];
+  const templateTitles = new Set<string>();
+  for (const [index, template] of templates.entries()) {
+    if (!isTemplate(template, year)) { errors.push(`Шаблон матча ${index + 1} имеет некорректную структуру.`); continue; }
+    const title = template.title.trim().toLocaleLowerCase('ru-RU');
+    if (templateTitles.has(title)) errors.push(`Повторяющийся шаблон матча: ${template.title}.`);
+    templateTitles.add(title);
+  }
   const audit = value.audit as unknown[];
   const auditIds = new Set<string>();
   for (const [index, entry] of audit.entries()) {
@@ -177,7 +201,7 @@ export function orderYearProjectEvents(events: readonly CalendarEvent[]): Calend
 export class CalendarYearProjectService implements CalendarYearProjects {
   constructor(private readonly store: YearProjectStore) {}
 
-  async exportProject(year: number, exportedAt = new Date().toISOString()): Promise<CalendarYearProject> {
+  async exportProject(year: number, exportedAt = new Date().toISOString(), templates: readonly CalendarYearProjectTemplate[] = []): Promise<CalendarYearProject> {
     if (!isCalendarYear(year)) throw new RangeError(`Недопустимый год проекта: ${year}.`);
     const state = await this.store.exportPortableState();
     const events = state.events.filter((event) => event.calendarYear === year);
@@ -193,22 +217,23 @@ export class CalendarYearProjectService implements CalendarYearProjects {
     };
     const ids = new Set(events.map((event) => event.id));
     const audit = state.audit.filter((entry) => (entry.entityType === 'event' && ids.has(entry.entityId)) || (entry.entityType === 'calendar_settings' && entry.entityId === String(year)));
-    return createYearProject(year, events, settings, audit, exportedAt);
+    return createYearProject(year, events, settings, audit, exportedAt, templates);
   }
 
   validateImport(value: unknown): Promise<YearProjectValidationResult> {
     return validateYearProject(value);
   }
 
-  async importProject(value: unknown): Promise<{ backupReference: string | null }> {
+  async importProject(value: unknown): Promise<{ backupReference: string | null; templates: CalendarYearProjectTemplate[] }> {
     const validation = await validateYearProject(value);
     if (!validation.valid) throw new Error(`Импорт проекта отклонён: ${validation.errors.join(' ')}`);
     const project = value as CalendarYearProject;
-    return this.store.replaceYearProjectState({
+    const result = await this.store.replaceYearProjectState({
       year: project.year,
       events: structuredClone(project.events),
       settings: { ...structuredClone(project.settings), acceptedWarningKeys: [...new Set(project.settings.acceptedWarningKeys)].sort() },
       audit: structuredClone(project.audit),
     });
+    return { ...result, templates: project.formatVersion === YEAR_PROJECT_FORMAT_VERSION ? structuredClone(project.templates) : [] };
   }
 }
