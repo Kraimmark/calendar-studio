@@ -11,6 +11,14 @@ import {
 } from 'react';
 import { buildMonth, MAX_CALENDAR_YEAR, MIN_CALENDAR_YEAR } from '../../domain/calendar';
 import { buildAnnualOverview } from '../../domain/annualOverview';
+import {
+  DAY_BACKGROUND_LABELS,
+  DAY_BACKGROUND_ORDER,
+  DEFAULT_DAY_BACKGROUND_COLORS,
+  dayBackgroundCategory,
+  orderedDayBackgroundCategories,
+  type CalendarDayBackgroundKey,
+} from '../../domain/dayBackgrounds';
 import { buildArchivedLibrary, type ArchivedSort } from '../../domain/archivedLibrary';
 import { buildUndatedLibrary, type UndatedSort } from '../../domain/undatedLibrary';
 import { parseDateOnly, type DateOnly } from '../../domain/dateOnly';
@@ -55,7 +63,40 @@ const layerLabels: Record<CalendarLayerKey, string> = { ownPlan: 'Наш пла�
 const disciplineFilterLabels: Record<DisciplineFilter, string> = { all: 'Все дисциплины', pistol: 'Пистолет', carbine: 'Карабин', shotgun: 'Ружьё', airgun: 'Пневматика', multigun: 'Мультиган', other: 'Другое' };
 const disciplineFilterOrder: DisciplineFilter[] = ['all', 'pistol', 'carbine', 'shotgun', 'airgun', 'multigun', 'other'];
 const DRAG_EVENT_MIME = 'application/x-calendar-studio-event';
+const DAY_BACKGROUND_PALETTE_STORAGE_KEY = 'calendar-studio-day-background-palette';
 const basketDisciplines: Array<[Discipline, string]> = [['pistol', 'Пистолет'], ['carbine', 'Карабин'], ['shotgun', 'Ружьё'], ['airgun', 'Пневматика'], ['multigun', 'Мультиган']];
+
+function readDayBackgroundPalette(): Record<CalendarDayBackgroundKey, string> {
+  const fallback = { ...DEFAULT_DAY_BACKGROUND_COLORS };
+  try {
+    const raw = window.localStorage.getItem(DAY_BACKGROUND_PALETTE_STORAGE_KEY);
+    if (!raw) return fallback;
+    const saved: unknown = JSON.parse(raw);
+    if (!saved || typeof saved !== 'object') return fallback;
+    for (const category of DAY_BACKGROUND_ORDER) {
+      const candidate = (saved as Record<string, unknown>)[category];
+      if (typeof candidate === 'string' && /^#[0-9a-f]{6}$/iu.test(candidate)) fallback[category] = candidate;
+    }
+  } catch {
+    // Visual preferences must never prevent a calendar from opening.
+  }
+  return fallback;
+}
+
+function dayBackgroundStyle(
+  categories: readonly CalendarDayBackgroundKey[],
+  palette: Record<CalendarDayBackgroundKey, string>,
+): CSSProperties | undefined {
+  const ordered = orderedDayBackgroundCategories(categories);
+  if (ordered.length === 0) return undefined;
+  const primary = ordered[0]!;
+  const secondary = ordered[1] ?? primary;
+  return {
+    '--day-occupancy-color': palette[primary],
+    '--day-occupancy-secondary': palette[secondary],
+    '--day-occupancy-mixed': ordered.length > 1 ? '1' : '0',
+  } as CSSProperties;
+}
 
 function basketDraft(title: string, discipline: Discipline, series: EventSeries): CalendarEventData {
   return normalizeStudioEventData({
@@ -149,6 +190,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const [archiveSort, setArchiveSort] = useState<ArchivedSort>('archived-desc');
   const [layers, setLayers] = useState<CalendarLayerState>(() => ({ ...DEFAULT_CALENDAR_LAYERS }));
   const [disciplineFilter, setDisciplineFilter] = useState<DisciplineFilter>('all');
+  const [dayBackgroundPalette, setDayBackgroundPalette] = useState<Record<CalendarDayBackgroundKey, string>>(readDayBackgroundPalette);
   const [selectionAnchor, setSelectionAnchor] = useState<DateOnly | null>(null);
   const [selectionFocus, setSelectionFocus] = useState<DateOnly | null>(null);
   const [selecting, setSelecting] = useState(false);
@@ -177,6 +219,13 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
 
   useEffect(() => { void reload(); }, [reload]);
   useEffect(() => {
+    try {
+      window.localStorage.setItem(DAY_BACKGROUND_PALETTE_STORAGE_KEY, JSON.stringify(dayBackgroundPalette));
+    } catch {
+      // The palette is a convenience; keep the plan usable if storage is unavailable.
+    }
+  }, [dayBackgroundPalette]);
+  useEffect(() => {
     let active = true;
     workspace.getStatus()
       .then((status) => { if (active) setWorkspaceStatus(status); })
@@ -200,6 +249,16 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const scopedEvents = useMemo(() => countScope === 'primary' ? events.filter((event) => event.isPrimary) : events, [countScope, events]);
   const visibleEvents = useMemo(() => scopedEvents.filter((event) => isEventVisibleByLayers(event, layers) && isEventVisibleByDiscipline(event, disciplineFilter)), [disciplineFilter, layers, scopedEvents]);
   const segments = useMemo(() => buildMonthEventSegments(model, visibleEvents), [model, visibleEvents]);
+  const monthDayBackgrounds = useMemo(() => new Map(
+    model.cells.map((cell) => [
+      cell.date,
+      orderedDayBackgroundCategories(
+        visibleEvents
+          .filter((event) => event.startDate && event.endDate && event.startDate <= cell.date && event.endDate >= cell.date)
+          .map(dayBackgroundCategory),
+      ),
+    ]),
+  ), [model.cells, visibleEvents]);
   const byId = useMemo(() => new Map(events.map((event) => [event.id, event])), [events]);
   const undatedTotal = useMemo(() => visibleEvents.filter((event) => event.startDate === null && event.endDate === null).length, [visibleEvents]);
   const undated = useMemo(() => buildUndatedLibrary(visibleEvents, queueQuery, queueSort), [queueQuery, queueSort, visibleEvents]);
@@ -839,6 +898,26 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
             {disciplineFilterOrder.map((discipline) => <option key={discipline} value={discipline}>{disciplineFilterLabels[discipline]}</option>)}
           </select>
         </div>
+        <details className="day-background-settings">
+          <summary>Фон занятых дней</summary>
+          <div className="day-background-settings-popover">
+            <p>Цвет отмечает занятую дату и выбирается по типу мероприятия. При пересечении приоритет остаётся у более крупного уровня.</p>
+            <div className="day-background-color-list">
+              {DAY_BACKGROUND_ORDER.map((category) => (
+                <label className="day-background-color-row" key={category}>
+                  <input
+                    type="color"
+                    value={dayBackgroundPalette[category]}
+                    onChange={(change: ChangeEvent<HTMLInputElement>) => setDayBackgroundPalette((current) => ({ ...current, [category]: change.target.value }))}
+                  />
+                  <span>{DAY_BACKGROUND_LABELS[category]}</span>
+                  <code>{dayBackgroundPalette[category].toUpperCase()}</code>
+                </label>
+              ))}
+            </div>
+            <button className="button button-secondary compact-control-button" type="button" onClick={() => setDayBackgroundPalette({ ...DEFAULT_DAY_BACKGROUND_COLORS })}>Вернуть палитру</button>
+          </div>
+        </details>
         <button className="button button-secondary compact-control-button" type="button" onClick={() => { setLayers({ ...DEFAULT_CALENDAR_LAYERS }); setDisciplineFilter('all'); }}>Показать всё</button>
         <span className="shown-count">Показано: {visibleEvents.length}</span>
       </section>
@@ -946,10 +1025,12 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                       {cells.map((cell) => {
                         const selectable = dateBelongsToYear(cell.date, year);
                         const selected = dateInRange(cell.date, selection);
+                        const backgroundCategories = monthDayBackgrounds.get(cell.date) ?? [];
                         return (
                           <div
-                            className={`day-cell ${cell.inCurrentMonth ? '' : 'day-outside'} ${selected ? 'day-selected' : ''} ${selectable && editable ? 'day-interactive' : ''} ${dragTarget === `day:${cell.date}` ? 'is-drop-target' : ''}`}
+                            className={`day-cell ${cell.inCurrentMonth ? '' : 'day-outside'} ${backgroundCategories.length > 0 ? 'day-occupied' : ''} ${backgroundCategories.length > 1 ? 'day-occupied-mixed' : ''} ${selected ? 'day-selected' : ''} ${selectable && editable ? 'day-interactive' : ''} ${dragTarget === `day:${cell.date}` ? 'is-drop-target' : ''}`}
                             key={cell.date}
+                            style={dayBackgroundStyle(backgroundCategories, dayBackgroundPalette)}
                             data-date={cell.date}
                             role="gridcell"
                             tabIndex={selectable && editable ? 0 : -1}
@@ -962,7 +1043,7 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                             onDragEnter={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); setDragTarget(`day:${cell.date}`); } }}
                             onDragOver={(drag: ReactDragEvent<HTMLDivElement>) => { if (editable && selectable) { drag.preventDefault(); drag.dataTransfer.dropEffect = 'move'; setDragTarget(`day:${cell.date}`); } }}
                             onDrop={(drop: ReactDragEvent<HTMLDivElement>) => dropOnDate(drop, cell.date)}
-                            title={editable && selectable ? 'Выделите диапазон мышью, нажмите ПКМ для быстрого создания или перетащите мероприятие на дату.' : undefined}
+                            title={`${backgroundCategories.length > 0 ? `Занято: ${backgroundCategories.map((category) => DAY_BACKGROUND_LABELS[category]).join(', ')}. ` : ''}${editable && selectable ? 'Выделите диапазон мышью, нажмите ПКМ для быстрого создания или перетащите мероприятие на дату.' : ''}` || undefined}
                           >
                             <span className="day-number">{cell.day}</span>
                           </div>
@@ -998,8 +1079,11 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                   </button>
                   <div className="annual-weekdays">{weekdays.map((day) => <span key={day}>{day}</span>)}</div>
                   <div className="annual-days">
-                    {summary.days.map((day) => (
-                      <button type="button" key={day.date} className={`annual-day ${day.inCurrentMonth ? '' : 'annual-day-outside'} ${day.warningCount ? 'annual-day-warning' : ''}`}
+                    {summary.days.map((day) => {
+                      const backgroundCategories = orderedDayBackgroundCategories(day.events.map((event) => event.backgroundCategory));
+                      return (
+                      <button type="button" key={day.date} className={`annual-day ${day.inCurrentMonth ? '' : 'annual-day-outside'} ${backgroundCategories.length > 0 ? 'annual-day-occupied' : ''} ${backgroundCategories.length > 1 ? 'annual-day-occupied-mixed' : ''} ${day.warningCount ? 'annual-day-warning' : ''}`}
+                        style={dayBackgroundStyle(backgroundCategories, dayBackgroundPalette)}
                         tabIndex={day.inCurrentMonth ? 0 : -1} disabled={!day.inCurrentMonth}
                         onClick={() => navigateToDate(day.date)}
                         onDoubleClick={() => editable && openNew(normalizeDateRange(day.date, day.date))}
@@ -1014,7 +1098,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                         </span>}
                         {day.warningCount > 0 && <small>!{day.warningCount}</small>}
                       </button>
-                    ))}
+                      );
+                    })}
                   </div>
                 </section>
               ))}

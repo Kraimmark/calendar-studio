@@ -1,4 +1,5 @@
 import { buildMonth, type MonthModel } from './calendar';
+import { dayBackgroundCategory, type CalendarDayBackgroundKey } from './dayBackgrounds';
 import { parseDateOnly, type DateOnly } from './dateOnly';
 import type { CalendarEvent } from './types';
 import type { CalendarWarning } from './warnings';
@@ -18,6 +19,7 @@ export interface AnnualDayEvent {
   label: string;
   title: string;
   color: string;
+  backgroundCategory: CalendarDayBackgroundKey;
   startsHere: boolean;
   endsHere: boolean;
 }
@@ -99,6 +101,7 @@ export function buildAnnualOverview(
               label: compactEventLabel(event),
               title: event.title,
               color: event.stickerColor,
+              backgroundCategory: dayBackgroundCategory(event),
               startsHere: event.startDate === cell.date,
               endsHere: event.endDate === cell.date,
             }))
