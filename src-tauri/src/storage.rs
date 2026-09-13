@@ -1305,14 +1305,18 @@ pub fn calendar_replace_year_project(
 ) -> CommandResult<ReplaceStateResult> {
     let project = payload.state;
     if project.settings.year != project.year {
-        return Err(CommandError::invalid("Настройки проекта принадлежат другому году."));
+        return Err(CommandError::invalid(
+            "Настройки проекта принадлежат другому году.",
+        ));
     }
     if project
         .events
         .iter()
         .any(|event| event.calendar_year != project.year)
     {
-        return Err(CommandError::invalid("Проект содержит мероприятия другого года."));
+        return Err(CommandError::invalid(
+            "Проект содержит мероприятия другого года.",
+        ));
     }
     let event_ids = project
         .events
@@ -1321,9 +1325,12 @@ pub fn calendar_replace_year_project(
         .collect::<std::collections::HashSet<_>>();
     if project.audit.iter().any(|entry| {
         (entry.entity_type == "event" && !event_ids.contains(entry.entity_id.as_str()))
-            || (entry.entity_type == "calendar_settings" && entry.entity_id != project.year.to_string())
+            || (entry.entity_type == "calendar_settings"
+                && entry.entity_id != project.year.to_string())
     }) {
-        return Err(CommandError::invalid("Журнал проекта ссылается на данные вне выбранного года."));
+        return Err(CommandError::invalid(
+            "Журнал проекта ссылается на данные вне выбранного года.",
+        ));
     }
 
     let mut connection = state.lock()?;
@@ -1340,26 +1347,31 @@ pub fn calendar_replace_year_project(
             [project.year],
         )
         .map_err(CommandError::sqlite)?;
-    transaction.execute(
-        "DELETE FROM audit_log WHERE entity_type='calendar_settings' AND entity_id=?1",
-        [project.year.to_string()],
-    )
-    .map_err(CommandError::sqlite)?;
+    transaction
+        .execute(
+            "DELETE FROM audit_log WHERE entity_type='calendar_settings' AND entity_id=?1",
+            [project.year.to_string()],
+        )
+        .map_err(CommandError::sqlite)?;
     transaction.execute(
         "DELETE FROM event_shifts WHERE event_id IN (SELECT id FROM events WHERE calendar_year=?1)",
         [project.year],
     )
     .map_err(CommandError::sqlite)?;
-    transaction.execute(
-        "UPDATE events SET parent_event_id=NULL WHERE calendar_year=?1",
-        [project.year],
-    )
-    .map_err(CommandError::sqlite)?;
+    transaction
+        .execute(
+            "UPDATE events SET parent_event_id=NULL WHERE calendar_year=?1",
+            [project.year],
+        )
+        .map_err(CommandError::sqlite)?;
     transaction
         .execute("DELETE FROM events WHERE calendar_year=?1", [project.year])
         .map_err(CommandError::sqlite)?;
     transaction
-        .execute("DELETE FROM calendar_settings WHERE year=?1", [project.year])
+        .execute(
+            "DELETE FROM calendar_settings WHERE year=?1",
+            [project.year],
+        )
         .map_err(CommandError::sqlite)?;
 
     for event in &project.events {
@@ -1369,11 +1381,12 @@ pub fn calendar_replace_year_project(
     }
     for event in &project.events {
         if let Some(parent_id) = &event.data.parent_event_id {
-            transaction.execute(
-                "UPDATE events SET parent_event_id=?2 WHERE id=?1",
-                params![event.id, parent_id],
-            )
-            .map_err(CommandError::sqlite)?;
+            transaction
+                .execute(
+                    "UPDATE events SET parent_event_id=?2 WHERE id=?1",
+                    params![event.id, parent_id],
+                )
+                .map_err(CommandError::sqlite)?;
         }
     }
     transaction.execute(
