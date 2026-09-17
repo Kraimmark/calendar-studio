@@ -1,4 +1,5 @@
 import { addDays, differenceInDays, parseDateOnly, type DateOnly } from './dateOnly';
+import { planningEvents } from './eventBundle';
 import type { CalendarEvent } from './types';
 
 export type CalendarWarningCode = 'monthly_match_overload' | 'match_spacing' | 'trf_spacing' | 'all_russian_buffer' | 'all_russian_build_overlap';
@@ -34,7 +35,7 @@ interface DatedEvent extends CalendarEvent {
 }
 
 function activeDatedEvents(events: readonly CalendarEvent[], year: number): DatedEvent[] {
-  return events
+  return planningEvents(events)
     .filter((event): event is DatedEvent => event.calendarYear === year && event.archivedAt === null && event.startDate !== null && event.endDate !== null)
     .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.id.localeCompare(b.id));
 }
@@ -44,7 +45,7 @@ function rangesOverlap(leftStart: DateOnly, leftEnd: DateOnly, rightStart: DateO
 }
 
 function datedMatches(events: readonly CalendarEvent[], year: number): DatedMatch[] {
-  return events
+  return planningEvents(events)
     .filter((event): event is DatedMatch => event.calendarYear === year && event.archivedAt === null && event.kind === 'match' && event.startDate !== null && event.endDate !== null)
     .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.id.localeCompare(b.id));
 }

@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { normalizeDateRange, dateInRange, moveEventToDatePatch, moveEventToQueuePatch } = require('../../.tmp/domain-test/src/domain/planning.js');
+const { normalizeDateRange, dateInRange, moveEventToDatePatch, moveEventToQueuePatch, resizeEventEndToDatePatch } = require('../../.tmp/domain-test/src/domain/planning.js');
 
 function event(startDate, endDate, calendarYear = 2027) {
   return { calendarYear, startDate, endDate };
@@ -28,4 +28,10 @@ test('move refuses silent clipping at year boundary', () => {
 
 test('queue move intentionally clears both dates', () => {
   assert.deepEqual(moveEventToQueuePatch(), { startDate: null, endDate: null });
+});
+
+test('right-edge resize preserves start and never inverts the range', () => {
+  assert.deepEqual(resizeEventEndToDatePatch(event('2027-03-10', '2027-03-12'), '2027-03-18'), { startDate: '2027-03-10', endDate: '2027-03-18' });
+  assert.deepEqual(resizeEventEndToDatePatch(event('2027-03-10', '2027-03-12'), '2027-03-04'), { startDate: '2027-03-10', endDate: '2027-03-10' });
+  assert.deepEqual(resizeEventEndToDatePatch(event(null, null), '2027-03-18'), { startDate: '2027-03-18', endDate: '2027-03-18' });
 });

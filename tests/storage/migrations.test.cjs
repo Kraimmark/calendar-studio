@@ -10,12 +10,20 @@ test('SQLite migrations apply in order and organizer column exists', () => {
   db.exec(fs.readFileSync(path.resolve('src-tauri/migrations/0002_event_organizer_name.sql'), 'utf8'));
   db.exec(fs.readFileSync(path.resolve('src-tauri/migrations/0003_event_calendar_year.sql'), 'utf8'));
   db.exec(fs.readFileSync(path.resolve('src-tauri/migrations/0004_backfill_calendar_year.sql'), 'utf8'));
+  db.exec(fs.readFileSync(path.resolve('src-tauri/migrations/0005_accepted_warning_keys.sql'), 'utf8'));
+  db.exec('PRAGMA foreign_keys = OFF');
+  db.exec(fs.readFileSync(path.resolve('src-tauri/migrations/0006_cpc_discipline.sql'), 'utf8'));
+  db.exec('PRAGMA foreign_keys = ON');
   const columns = db.prepare('PRAGMA table_info(events)').all().map((row) => row.name);
   assert.ok(columns.includes('organizer_name'));
   assert.ok(columns.includes('calendar_year'));
   assert.ok(columns.includes('revision'));
   assert.ok(columns.includes('archived_at'));
   assert.ok(columns.includes('parent_event_id'));
+  assert.doesNotThrow(() => db.prepare(`INSERT INTO events(
+    id,revision,created_at,created_by,updated_at,updated_by,title,kind,discipline,series,source,status,
+    is_primary,venue,venue_scope,notes,sticker_color,registration_mode,priority_one_alerts,daylight_buffer_minutes,organizer_name,calendar_year
+  ) VALUES('cpc',1,'x','owner','x','owner','КПК','match','cpc','regular','manual','draft',1,'','unspecified','','#808080','free',0,15,'',2027)`).run());
   db.close();
 });
 

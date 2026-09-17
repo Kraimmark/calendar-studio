@@ -42,3 +42,16 @@ export function moveEventToDatePatch(event: Pick<CalendarEvent, 'calendarYear' |
 export function moveEventToQueuePatch(): Pick<CalendarEvent, 'startDate' | 'endDate'> {
   return { startDate: null, endDate: null };
 }
+
+/**
+ * Adjusts the right edge of an event.  A resize cannot invert the range or
+ * silently escape the owning calendar year; an undated card becomes one day.
+ */
+export function resizeEventEndToDatePatch(event: Pick<CalendarEvent, 'calendarYear' | 'startDate' | 'endDate'>, target: DateOnly): Pick<CalendarEvent, 'startDate' | 'endDate'> {
+  const targetParts = parseDateOnly(target);
+  if (!targetParts || targetParts.year !== event.calendarYear) {
+    throw new RangeError(`Дата изменения должна принадлежать ${event.calendarYear} году.`);
+  }
+  if (event.startDate === null || event.endDate === null) return { startDate: target, endDate: target };
+  return { startDate: event.startDate, endDate: compareDateOnly(target, event.startDate) < 0 ? event.startDate : target };
+}

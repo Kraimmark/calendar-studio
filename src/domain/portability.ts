@@ -97,7 +97,7 @@ function isEventDataShape(value: unknown): value is CalendarEventData {
   if (!isRecord(value) || !isRecord(value.registration) || !Array.isArray(value.shifts)) return false;
   const stringFields = ['title','organizerName','kind','discipline','series','source','status','venue','venueScope','notes','stickerColor'] as const;
   if (stringFields.some((field) => typeof value[field] !== 'string')) return false;
-  if (!['match','utm','build'].includes(String(value.kind)) || !['pistol','carbine','shotgun','airgun','multigun','other'].includes(String(value.discipline)) ||
+  if (!['match','utm','build'].includes(String(value.kind)) || !['pistol','carbine','cpc','shotgun','airgun','multigun','other'].includes(String(value.discipline)) ||
       !['regular','trf','allRussian','departmental','spbCup','other'].includes(String(value.series)) || !['manual','ekp'].includes(String(value.source)) ||
       !['draft','tentative','confirmed'].includes(String(value.status)) || !['nevsky','spb','otherRegion','unspecified'].includes(String(value.venueScope))) return false;
   const nullableStrings = ['competitionStatus','competitionRegion','competitionPhase','startDate','endDate','parentEventId','ekpLevel','coverPath'] as const;

@@ -1,5 +1,7 @@
 import { buildMonth, type MonthModel } from './calendar';
+import { dayBackgroundCategory, type CalendarDayBackgroundKey } from './dayBackgrounds';
 import { parseDateOnly, type DateOnly } from './dateOnly';
+import { bundleBadges, planningEvents } from './eventBundle';
 import type { CalendarEvent } from './types';
 import type { CalendarWarning } from './warnings';
 
@@ -18,8 +20,10 @@ export interface AnnualDayEvent {
   label: string;
   title: string;
   color: string;
+  backgroundCategory: CalendarDayBackgroundKey;
   startsHere: boolean;
   endsHere: boolean;
+  badges: string[];
 }
 
 export interface AnnualMonthSummary {
@@ -53,11 +57,12 @@ export function buildAnnualOverview(
   events: readonly CalendarEvent[],
   warnings: readonly CalendarWarning[],
 ): AnnualMonthSummary[] {
-  const visibleIds = new Set(events.map((event) => event.id));
+  const roots = planningEvents(events);
+  const visibleIds = new Set(roots.map((event) => event.id));
   const activeWarnings = warnings.filter((warning) => warning.eventIds.some((id) => visibleIds.has(id)));
 
   const startsByDate = new Map<DateOnly, CalendarEvent[]>();
-  for (const event of events) {
+  for (const event of roots) {
     if (event.calendarYear !== year || event.archivedAt !== null || !event.startDate || !event.endDate) continue;
     const bucket = startsByDate.get(event.startDate) ?? [];
     bucket.push(event);
@@ -76,7 +81,7 @@ export function buildAnnualOverview(
   return Array.from({ length: 12 }, (_, index): AnnualMonthSummary => {
     const month = index + 1;
     const model = buildMonth(year, month);
-    const monthEvents = events.filter((event) => event.calendarYear === year && event.archivedAt === null && event.startDate && dateMonth(event.startDate) === month);
+    const monthEvents = roots.filter((event) => event.calendarYear === year && event.archivedAt === null && event.startDate && dateMonth(event.startDate) === month);
     const monthWarnings = activeWarnings.filter((warning) => warning.dates.some((date) => {
       const parts = parseDateOnly(date);
       return parts?.year === year && parts.month === month;
@@ -91,7 +96,7 @@ export function buildAnnualOverview(
       days: model.cells.map((cell) => {
         const starts = cell.inCurrentMonth ? (startsByDate.get(cell.date) ?? []) : [];
         const dayEvents = cell.inCurrentMonth
-          ? events
+          ? roots
             .filter((event) => event.calendarYear === year && event.archivedAt === null && event.startDate && event.endDate && event.startDate <= cell.date && event.endDate >= cell.date)
             .sort((left, right) => left.startDate!.localeCompare(right.startDate!) || left.title.localeCompare(right.title, 'ru'))
             .map((event): AnnualDayEvent => ({
@@ -99,8 +104,10 @@ export function buildAnnualOverview(
               label: compactEventLabel(event),
               title: event.title,
               color: event.stickerColor,
+              backgroundCategory: dayBackgroundCategory(event),
               startsHere: event.startDate === cell.date,
               endsHere: event.endDate === cell.date,
+              badges: bundleBadges(event, events),
             }))
           : [];
         return {

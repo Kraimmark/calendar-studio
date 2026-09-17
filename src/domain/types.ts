@@ -1,7 +1,7 @@
 import type { DateOnly } from './dateOnly';
 
 export type EventKind = 'match' | 'utm' | 'build';
-export type Discipline = 'pistol' | 'carbine' | 'shotgun' | 'airgun' | 'multigun' | 'other';
+export type Discipline = 'pistol' | 'carbine' | 'cpc' | 'shotgun' | 'airgun' | 'multigun' | 'other';
 export type EventSeries = 'regular' | 'trf' | 'allRussian' | 'departmental' | 'spbCup' | 'other';
 export type EventSource = 'manual' | 'ekp';
 export type EventStatus = 'draft' | 'tentative' | 'confirmed';

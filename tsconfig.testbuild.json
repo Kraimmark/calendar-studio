@@ -12,6 +12,8 @@
   "include": [
     "src/domain/**/*.ts",
     "src/storage/**/*.ts",
-    "src/features/calendar/confirmationState.ts"
+    "src/features/calendar/confirmationState.ts",
+    "src/features/calendar/eventSpreadsheet.ts",
+    "src/features/calendar/eventDraft.ts"
   ]
 }

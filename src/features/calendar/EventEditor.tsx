@@ -31,10 +31,12 @@ interface EventEditorProps {
   revisionConflict?: { expectedRevision: number; actualRevision: number } | null;
   onRefreshConflict?: () => void;
   relatedAvailability?: RelatedEventAvailability;
+  templateMode?: boolean;
+  onCopyToQueue?: () => void;
 }
 
 const kinds: Array<[EventKind, string]> = [['match', 'Матч'], ['utm', 'УТМ / тренировка'], ['build', 'Застройка']];
-const disciplines: Array<[Discipline, string]> = [['pistol', 'Пистолет'], ['carbine', 'Карабин'], ['shotgun', 'Ружьё'], ['airgun', 'Пневматика'], ['multigun', 'Мультиган'], ['other', 'Другое']];
+const disciplines: Array<[Discipline, string]> = [['pistol', 'Пистолет'], ['carbine', 'Карабин'], ['cpc', 'КПК · карабин пистолетного калибра'], ['shotgun', 'Ружьё'], ['airgun', 'Пневматика'], ['multigun', 'Мультиган'], ['other', 'Другое']];
 const series: Array<[EventSeries, string]> = [['regular', 'Обычная'], ['trf', 'ТРФ'], ['allRussian', 'Всероссийская'], ['departmental', 'Ведомственная'], ['spbCup', 'Кубок СПб'], ['other', 'Другая']];
 const statuses: Array<[EventStatus, string]> = [['draft', 'Черновик'], ['tentative', 'Предварительно'], ['confirmed', 'Подтверждено']];
 const sources: Array<[EventSource, string]> = [['manual', 'Ручной ввод'], ['ekp', 'ЕКП']];
@@ -46,11 +48,12 @@ function nullableNumber(value: string): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, onDelete, relatedEventCount = 0, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false } }: EventEditorProps) {
+export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, onDelete, relatedEventCount = 0, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false }, templateMode = false, onCopyToQueue }: EventEditorProps) {
   const normalizedInitialData = useMemo(() => normalizeStudioEventData(initialData), [initialData]);
   const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(normalizedInitialData));
   const [ekpConfirmed, setEkpConfirmed] = useState(false);
   const [related, setRelated] = useState<RelatedEventSelection>({ regional: false, physical: false });
+  const inheritsParentDates = !templateMode && Boolean(draft.parentEventId);
   const dialogRef = useRef<HTMLElement | null>(null);
   const savingRef = useRef(saving);
   const cancelRef = useRef(onCancel);
@@ -127,8 +130,8 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
       <section ref={dialogRef} className="event-editor" role="dialog" aria-modal="true" aria-labelledby="event-editor-title" tabIndex={-1}>
         <header className="editor-header">
           <div>
-            <p className="eyebrow">{readOnly ? `ПРОСМОТР · РЕДАКЦИЯ ${event?.revision ?? 0}` : event ? `РЕДАКЦИЯ ${event.revision}` : 'НОВОЕ МЕРОПРИЯТИЕ'}</p>
-            <h2 id="event-editor-title">{event ? event.title : `Календарь ${year}`}</h2>
+            <p className="eyebrow">{templateMode ? 'НОВЫЙ ШАБЛОН' : readOnly ? `ПРОСМОТР · РЕДАКЦИЯ ${event?.revision ?? 0}` : event ? `РЕДАКЦИЯ ${event.revision}` : 'НОВОЕ МЕРОПРИЯТИЕ'}</p>
+            <h2 id="event-editor-title">{templateMode ? 'Шаблон для корзины' : event ? event.title : `Календарь ${year}`}</h2>
           </div>
           <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>Закрыть</button>
         </header>
@@ -184,29 +187,32 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
               <label className="field">Состояние
                 <select value={draft.status} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('status', e.target.value as EventStatus)}>{statuses.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
               </label>
-              <label className="field">Начало
-                <input type="date" min={`${year}-01-01`} max={`${year}-12-31`} value={draft.startDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('startDate', (e.target.value || null) as CalendarEventData['startDate'])} />
-              </label>
-              <label className="field">Окончание
-                <input type="date" min={`${year}-01-01`} max={`${year}-12-31`} value={draft.endDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('endDate', (e.target.value || null) as CalendarEventData['endDate'])} />
-              </label>
+              {!templateMode && <>
+                <label className="field">Начало
+                  <input type="date" disabled={inheritsParentDates} min={`${year}-01-01`} max={`${year}-12-31`} value={draft.startDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('startDate', (e.target.value || null) as CalendarEventData['startDate'])} />
+                </label>
+                <label className="field">Окончание
+                  <input type="date" disabled={inheritsParentDates} min={`${year}-01-01`} max={`${year}-12-31`} value={draft.endDate ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('endDate', (e.target.value || null) as CalendarEventData['endDate'])} />
+                </label>
+              </>}
               <label className="field">Оценка упражнений
                 <input type="number" min="1" max="40" value={draft.plannedExerciseCount ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('plannedExerciseCount', nullableNumber(e.target.value))} />
               </label>
               <label className="field">Оценка скводов
                 <input type="number" min="1" max="80" value={draft.plannedSquadCount ?? ''} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('plannedSquadCount', nullableNumber(e.target.value))} />
               </label>
-              <label className="field field-wide">Родительское мероприятие
+              {!templateMode && <label className="field field-wide">Родительское мероприятие
                 <select value={draft.parentEventId ?? ''} onChange={(e: ChangeEvent<HTMLSelectElement>) => patch('parentEventId', e.target.value || null)}>
                   <option value="">Без родительского мероприятия</option>
                   {parentCandidates.filter((candidate) => candidate.id !== event?.id).map((candidate) => <option key={candidate.id} value={candidate.id}>{candidate.title}</option>)}
                 </select>
-              </label>
+              </label>}
             </div>
+            {inheritsParentDates && <p className="form-copy">Даты и дисциплина наследуются от родительского мероприятия. Измените их у родителя — весь пакет сдвинется вместе.</p>}
             <label className="check-field"><input type="checkbox" checked={draft.isPrimary} onChange={(e: ChangeEvent<HTMLInputElement>) => patch('isPrimary', e.target.checked)} /> Основное мероприятие</label>
           </fieldset>
 
-          {!draft.parentEventId && (
+          {!templateMode && !draft.parentEventId && (
             <fieldset className="form-section related-events" disabled={readOnly}>
               <legend>{event ? 'Досоздать дочерние мероприятия' : 'Создать дочерние мероприятия'}</legend>
               <p className="form-copy">Связанные записи получат ту же дисциплину и те же даты, что и это мероприятие.</p>
@@ -263,10 +269,11 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
           <div className="editor-danger-actions">
             {!readOnly && event && onArchive ? <button className="button button-danger" type="button" onClick={requestArchive} disabled={saving}>Архивировать</button> : null}
             {!readOnly && event && onDelete ? <button className="button button-danger button-danger-quiet" type="button" onClick={requestDelete} disabled={saving}>Удалить навсегда</button> : null}
+            {!readOnly && event && onCopyToQueue ? <button className="button button-secondary" type="button" onClick={onCopyToQueue} disabled={saving}>Копировать в корзину</button> : null}
           </div>
           <div className="editor-actions">
             <button className="button button-secondary" type="button" onClick={requestClose} disabled={saving}>{readOnly ? 'Закрыть' : 'Отмена'}</button>
-            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(normalizeStudioEventData(draft), related)} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : related.regional || related.physical ? 'Сохранить и создать' : 'Сохранить'}</button>}
+            {!readOnly && <button className="button button-primary" type="button" onClick={() => onSave(normalizeStudioEventData(draft), related)} disabled={saving || (needsEkpConfirmation && !ekpConfirmed)}>{saving ? 'Сохранение…' : templateMode ? 'Сохранить шаблон' : related.regional || related.physical ? 'Сохранить и создать' : 'Сохранить'}</button>}
           </div>
         </footer>
       </section>

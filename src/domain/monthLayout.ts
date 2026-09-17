@@ -1,4 +1,5 @@
 import { addDays, compareDateOnly, differenceInDays, type DateOnly } from './dateOnly';
+import { planningEvents } from './eventBundle';
 import type { MonthModel } from './calendar';
 import type { CalendarEvent } from './types';
 
@@ -33,7 +34,7 @@ export function buildMonthEventSegments(model: MonthModel, events: readonly Cale
 
   const pending: PendingSegment[] = [];
 
-  for (const event of events) {
+  for (const event of planningEvents(events)) {
     if (event.archivedAt !== null || event.startDate === null || event.endDate === null) continue;
     if (compareDateOnly(event.endDate, gridStart) < 0 || compareDateOnly(event.startDate, gridEnd) > 0) continue;
 

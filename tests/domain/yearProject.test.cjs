@@ -50,3 +50,17 @@ test('year project rejects a modified event even when the JSON shape remains pla
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((error) => error.includes('Контрольная сумма')));
 });
+
+test('year project carries custom basket templates and keeps them checksummed', async () => {
+  const repository = new InMemoryCalendarRepository(() => crypto.randomUUID());
+  const template = { ...data('Мой вечерний матч'), startDate: null, endDate: null, parentEventId: null, isPrimary: true };
+  const service = new CalendarYearProjectService(repository);
+  const project = await service.exportProject(2027, '2026-09-12T10:01:00Z', [{ title: template.title, data: template }]);
+  assert.equal(project.templates.length, 1);
+  assert.equal((await validateYearProject(project)).valid, true);
+  const target = new InMemoryCalendarRepository(() => crypto.randomUUID());
+  const imported = await new CalendarYearProjectService(target).importProject(project);
+  assert.equal(imported.templates[0].title, 'Мой вечерний матч');
+  project.templates[0].title = 'Подмена шаблона';
+  assert.equal((await validateYearProject(project)).valid, false);
+});
