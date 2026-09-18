@@ -227,7 +227,8 @@ fn migrate(connection: &mut Connection) -> rusqlite::Result<()> {
     if version < 6 {
         connection.pragma_update(None, "foreign_keys", false)?;
         let migration_result = (|| -> rusqlite::Result<()> {
-            let transaction = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+            let transaction =
+                connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
             transaction.execute_batch(include_str!("../migrations/0006_cpc_discipline.sql"))?;
             transaction.pragma_update(None, "user_version", 6_i64)?;
             transaction.commit()
