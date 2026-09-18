@@ -1,4 +1,4 @@
-name: Calendar Studio 0.9.18 Clean Source Gate # retry
+name: Calendar Studio 0.9.18 Clean Source Gate
 
 on:
   push:
