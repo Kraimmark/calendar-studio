@@ -7,7 +7,23 @@ use storage::{
     calendar_restore_event, calendar_save_event, calendar_save_settings, calendar_switch_workspace,
     StorageState,
 };
+use std::fs;
 use tauri::Manager;
+
+#[tauri::command]
+fn calendar_read_text_file(path: String) -> Result<String, String> {
+    fs::read_to_string(path).map_err(|error| error.to_string())
+}
+
+#[tauri::command]
+fn calendar_write_text_file(path: String, contents: String) -> Result<(), String> {
+    fs::write(path, contents).map_err(|error| error.to_string())
+}
+
+#[tauri::command]
+fn calendar_write_binary_file(path: String, contents: Vec<u8>) -> Result<(), String> {
+    fs::write(path, contents).map_err(|error| error.to_string())
+}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -39,6 +55,9 @@ pub fn run() {
             calendar_replace_year_project,
             calendar_get_workspace_status,
             calendar_switch_workspace,
+            calendar_read_text_file,
+            calendar_write_text_file,
+            calendar_write_binary_file,
         ])
         .run(tauri::generate_context!())
         .expect("error while running Calendar Studio");
