@@ -577,6 +577,29 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     setRangeMenu(null);
   };
 
+  const openRelatedNew = (parent: CalendarEvent) => {
+    if (!editable) return;
+    const parentData = eventDataOf(parent);
+    setIssues([]);
+    setInteractionError(null);
+    setEditorConflict(null);
+    setEditor({
+      event: null,
+      initialData: normalizeStudioEventData({
+        ...parentData,
+        title: `Связанное мероприятие · ${parent.title}`,
+        competitionStatus: 'Связанное мероприятие',
+        parentEventId: parent.id,
+        isPrimary: false,
+        source: 'manual',
+        status: 'draft',
+        notes: '',
+        stickerColor: '#737b84',
+      }),
+      readOnly: false,
+    });
+  };
+
   const saveEditor = async (data: CalendarEventData, related: RelatedEventSelection) => {
     if (!editor || editor.readOnly) return;
     const selectedParent = data.parentEventId ? events.find((candidate) => candidate.id === data.parentEventId && candidate.archivedAt === null) ?? null : null;
@@ -757,6 +780,35 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
   const deleteEditorEvent = async () => {
     if (!editor?.event || editor.readOnly) return;
     await deleteEventPermanently(editor.event);
+  };
+
+  const deleteRelatedEvent = async (relatedEvent: CalendarEvent) => {
+    if (!editable || busy) return;
+    const parent = editor?.event?.id === relatedEvent.parentEventId ? editor.event : null;
+    setSaving(true);
+    setInteractionError(null);
+    try {
+      await repository.deleteEvent(relatedEvent.id, relatedEvent.revision, 'local-owner', new Date().toISOString());
+      const latestParent = parent ? await repository.getEvent(parent.id) : null;
+      await reload();
+      if (latestParent && latestParent.archivedAt === null) {
+        setEditor({ event: latestParent, initialData: eventDataOf(latestParent), readOnly: !editable });
+      } else if (parent) {
+        setEditor(null);
+      }
+      setEditorConflict(null);
+      setIssues([]);
+      setPortabilityStatus(`Связанная запись «${relatedEvent.title}» удалена.`);
+    } catch (error) {
+      if (error instanceof RevisionConflictError) {
+        await reload();
+        setIssues([{ code: 'delete_related_conflict', severity: 'error', field: null, message: 'Связанная запись уже изменилась. Данные обновлены — повторите удаление.' }]);
+      } else {
+        setIssues([{ code: 'delete_related_failed', severity: 'error', field: null, message: error instanceof Error ? error.message : String(error) }]);
+      }
+    } finally {
+      setSaving(false);
+    }
   };
 
   const deleteArchivedEvent = async (event: CalendarEvent) => {
@@ -1422,10 +1474,10 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
         </div>
       )}
 
-      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={planningRoots} relatedEventCount={editor.event ? [...events, ...archivedEvents].filter((candidate) => candidate.parentEventId === editor.event?.id).length : 0} relatedAvailability={((): RelatedEventAvailability => {
+      {editor && <EventEditor year={year} event={editor.event} initialData={editor.initialData} issues={issues} saving={saving} readOnly={editor.readOnly} parentCandidates={planningRoots} relatedEventCount={editor.event ? [...events, ...archivedEvents].filter((candidate) => candidate.parentEventId === editor.event?.id).length : 0} relatedEvents={editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : []} relatedAvailability={((): RelatedEventAvailability => {
         const children = editor.event ? events.filter((candidate) => candidate.parentEventId === editor.event?.id) : [];
         return { regional: children.some((candidate) => candidate.competitionStatus === 'Региональные соревнования'), physical: children.some((candidate) => candidate.competitionStatus === 'Физкультурное мероприятие') };
-      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} onDelete={editor.event && !editor.readOnly ? deleteEditorEvent : undefined} onCopyToQueue={editor.event && !editor.readOnly ? () => void copyEventToQueue() : undefined} />}
+      })()} requireEkpConfirmation={editor.event?.source === 'ekp'} revisionConflict={editorConflict} onRefreshConflict={() => void refreshConflictEditor()} onCancel={() => { setEditor(null); setEditorConflict(null); setIssues([]); }} onSave={saveEditor} onArchive={editor.event && !editor.readOnly ? archiveEditor : undefined} onDelete={editor.event && !editor.readOnly ? deleteEditorEvent : undefined} onCopyToQueue={editor.event && !editor.readOnly ? () => void copyEventToQueue() : undefined} onOpenRelated={openEvent} onAddRelated={editor.event && !editor.readOnly ? () => openRelatedNew(editor.event!) : undefined} onDeleteRelated={editor.event && !editor.readOnly ? (relatedEvent) => void deleteRelatedEvent(relatedEvent) : undefined} />}
       {templateEditor && <EventEditor year={year} event={null} initialData={templateEditor} issues={issues} saving={saving} readOnly={false} templateMode onCancel={() => { setTemplateEditor(null); setIssues([]); }} onSave={(data) => saveMatchTemplate(data)} />}
     </main>
   );
