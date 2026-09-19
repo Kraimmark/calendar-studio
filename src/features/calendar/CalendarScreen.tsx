@@ -37,6 +37,7 @@ import { summarizeCalendarWarnings } from '../../domain/warningSummary';
 import { RevisionConflictError } from '../../domain/revision';
 import type { CalendarRepository } from '../../storage/CalendarRepository';
 import type { WorkspaceManager, WorkspaceStatus } from '../../platform/WorkspaceManager';
+import { chooseTextFile, saveBinaryFile, saveTextFile } from '../../platform/NativeFileDialog';
 import { EventEditor, type RelatedEventAvailability, type RelatedEventSelection } from './EventEditor';
 import { createEventData, diffEventData, eventDataOf, normalizeStudioEventData } from './eventDraft';
 import { calendarModeConfirmationMessage, permanentDeleteConfirmationMessage } from './confirmationState';
@@ -430,9 +431,16 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     try {
       const { buildPublicPlanDocument } = await import('./publicPlanDocument');
       const document = await buildPublicPlanDocument(year, events);
-      download(document, `project-calendar-plan-${year}.docx`);
+      const path = await saveBinaryFile(document, {
+        defaultPath: `project-calendar-plan-${year}.docx`,
+        filters: [{ name: 'Документ Word', extensions: ['docx'] }],
+      });
+      if (!path) {
+        setPortabilityStatus('Сохранение Word-плана отменено.');
+        return;
+      }
       const count = events.filter((event) => event.archivedAt === null && event.kind === 'match' && event.startDate && event.endDate).length;
-      setPortabilityStatus(`Word-план подготовлен: ${count} мероприятий без УТМ, застройки и архива.`);
+      setPortabilityStatus(`Word-план сохранён: ${count} мероприятий. Файл: ${path}`);
     } catch (error) {
       setInteractionError(error instanceof Error ? error.message : String(error));
     } finally {
@@ -440,28 +448,37 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
     }
   };
 
-  const exportEventSpreadsheet = () => {
-    const csv = exportSpreadsheet(events);
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a');
-    anchor.href = url;
-    anchor.download = `calendar-studio-template-${year}.csv`;
-    document.body.appendChild(anchor);
-    anchor.click();
-    anchor.remove();
-    URL.revokeObjectURL(url);
-    setPortabilityStatus(events.length ? `Excel-совместимый шаблон выгружен: ${events.length} мероприятий.` : 'Пустой Excel-совместимый шаблон выгружен. Заполните строки и импортируйте файл обратно.');
+  const exportEventSpreadsheet = async () => {
+    if (busy) return;
+    setPorting(true);
+    setInteractionError(null);
+    try {
+      const path = await saveTextFile(exportSpreadsheet(events), {
+        defaultPath: `calendar-studio-template-${year}.csv`,
+        filters: [{ name: 'Excel-совместимый CSV', extensions: ['csv'] }],
+      });
+      if (!path) {
+        setPortabilityStatus('Экспорт Excel отменён.');
+        return;
+      }
+      setPortabilityStatus(events.length ? `Excel-совместимый файл сохранён: ${events.length} мероприятий. Файл: ${path}` : `Пустой Excel-шаблон сохранён: ${path}`);
+    } catch (error) {
+      setInteractionError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setPorting(false);
+    }
   };
 
-  const importEventSpreadsheet = async (change: ChangeEvent<HTMLInputElement>) => {
-    const file = change.target.files?.[0];
-    change.target.value = '';
-    if (!file || busy || !editable) return;
+  const importEventSpreadsheet = async () => {
+    if (busy || !editable) return;
     setSaving(true);
     setInteractionError(null);
     try {
-      const rows = importSpreadsheet(await file.text());
+      const file = await chooseTextFile([
+        { name: 'Excel-совместимые таблицы', extensions: ['csv', 'tsv'] },
+      ]);
+      if (!file) return;
+      const rows = importSpreadsheet(file.contents);
       if (rows.length === 0) throw new Error('В шаблоне нет заполненных строк для импорта.');
       const validation = rows.flatMap((row, index) => validateEvent(row.data, { year })
         .filter((issue) => issue.severity === 'error')
@@ -1382,11 +1399,8 @@ export function CalendarScreen({ theme, onToggleTheme, repository, portability, 
                   </section>}
                 </div>
               </details>
-              <button className="button button-secondary" type="button" onClick={exportEventSpreadsheet} disabled={busy}>Экспорт Excel</button>
-              <label className={`button button-secondary file-button ${busy ? 'is-disabled' : ''}`}>
-                Импорт Excel
-                <input className="file-input-hidden" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" onChange={(change: ChangeEvent<HTMLInputElement>) => void importEventSpreadsheet(change)} disabled={busy} />
-              </label>
+              <button className="button button-secondary" type="button" onClick={() => void exportEventSpreadsheet()} disabled={busy}>Экспорт Excel</button>
+              <button className="button button-secondary" type="button" onClick={() => void importEventSpreadsheet()} disabled={busy || !editable} title={!editable ? 'Верните календарь в режим планирования перед импортом.' : undefined}>Импорт Excel</button>
             </div>}
             {editable && <p className="queue-hint">Тяните карточку на день, чтобы поставить матч в календарь. Чтобы снять дату — верните карточку сюда. {pointerDrag ? (dragTarget === 'queue' ? 'Отпустите: даты будут сняты.' : dragTarget?.startsWith('day:') ? 'Отпустите: даты будут назначены.' : 'Наведите на нужный день или корзину.') : 'Правый край стикера растягивает матч по дням.'}</p>}
             <div className="queue-tools">
