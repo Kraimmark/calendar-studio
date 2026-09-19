@@ -348,3 +348,90 @@ h2 { margin-bottom: 8px; font-size: 18px; }
 .archive-actions { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
 @media (max-width: 760px) { .risk-item, .accepted-risk { flex-direction: column; } .risk-accept-button { width: 100%; } }
 @media (max-width: 900px) { .risk-groups { grid-template-columns: 1fr; } .risk-panel-heading { align-items: flex-start; flex-direction: column; } .risk-metrics { justify-content: flex-start; } }
+
+
+.related-event-list {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.related-event-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface-raised) 86%, transparent);
+}
+
+.related-event-row > div:not(.related-event-actions) {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.related-event-row strong,
+.related-event-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.related-event-row > div > span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.related-event-code {
+  display: inline-flex;
+  min-width: 28px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.related-event-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.related-event-actions .button {
+  min-height: 30px;
+  padding: 5px 9px;
+}
+
+.related-event-presets {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.related-event-empty {
+  margin: 10px 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.related-event-add {
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .related-event-row {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .related-event-actions {
+    grid-column: 1 / -1;
+  }
+}
