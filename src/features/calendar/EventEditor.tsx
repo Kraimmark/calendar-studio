@@ -25,6 +25,10 @@ interface EventEditorProps {
   onArchive?: () => void;
   onDelete?: () => void;
   relatedEventCount?: number;
+  relatedEvents?: CalendarEvent[];
+  onOpenRelated?: (event: CalendarEvent) => void;
+  onAddRelated?: () => void;
+  onDeleteRelated?: (event: CalendarEvent) => void;
   readOnly?: boolean;
   parentCandidates?: CalendarEvent[];
   requireEkpConfirmation?: boolean;
@@ -48,7 +52,13 @@ function nullableNumber(value: string): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, onDelete, relatedEventCount = 0, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false }, templateMode = false, onCopyToQueue }: EventEditorProps) {
+function relatedEventCode(event: CalendarEvent): string {
+  if (event.competitionStatus === 'Региональные соревнования') return 'РС';
+  if (event.competitionStatus === 'Физкультурное мероприятие') return 'ФМ';
+  return 'СВ';
+}
+
+export function EventEditor({ year, event, initialData, issues, saving, onCancel, onSave, onArchive, onDelete, relatedEventCount = 0, relatedEvents = [], onOpenRelated, onAddRelated, onDeleteRelated, readOnly = false, parentCandidates = [], requireEkpConfirmation = false, revisionConflict = null, onRefreshConflict, relatedAvailability = { regional: false, physical: false }, templateMode = false, onCopyToQueue }: EventEditorProps) {
   const normalizedInitialData = useMemo(() => normalizeStudioEventData(initialData), [initialData]);
   const [draft, setDraft] = useState<CalendarEventData>(() => structuredClone(normalizedInitialData));
   const [ekpConfirmed, setEkpConfirmed] = useState(false);
@@ -76,6 +86,21 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
     if (!window.confirm(permanentDeleteConfirmationMessage(event.title, dirty, relatedEventCount))) return;
     onDelete();
   }, [dirty, event, onDelete, relatedEventCount]);
+  const requestOpenRelated = useCallback((relatedEvent: CalendarEvent) => {
+    if (savingRef.current || !onOpenRelated) return;
+    if (requiresDiscardConfirmation(dirty, readOnly) && !window.confirm('Открыть связанную запись? Несохранённые изменения родительского мероприятия будут потеряны.')) return;
+    onOpenRelated(relatedEvent);
+  }, [dirty, onOpenRelated, readOnly]);
+  const requestAddRelated = useCallback(() => {
+    if (savingRef.current || !onAddRelated) return;
+    if (requiresDiscardConfirmation(dirty, readOnly) && !window.confirm('Создать связанную запись? Несохранённые изменения родительского мероприятия будут потеряны.')) return;
+    onAddRelated();
+  }, [dirty, onAddRelated, readOnly]);
+  const requestDeleteRelated = useCallback((relatedEvent: CalendarEvent) => {
+    if (savingRef.current || !onDeleteRelated) return;
+    if (!window.confirm(`Удалить связанную запись «${relatedEvent.title}» навсегда? Родительское мероприятие останется в календаре.`)) return;
+    onDeleteRelated(relatedEvent);
+  }, [onDeleteRelated]);
   useEffect(() => { cancelRef.current = requestClose; }, [requestClose]);
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -213,17 +238,42 @@ export function EventEditor({ year, event, initialData, issues, saving, onCancel
           </fieldset>
 
           {!templateMode && !draft.parentEventId && (
-            <fieldset className="form-section related-events" disabled={readOnly}>
-              <legend>{event ? 'Досоздать дочерние мероприятия' : 'Создать дочерние мероприятия'}</legend>
-              <p className="form-copy">Связанные записи получат ту же дисциплину и те же даты, что и это мероприятие.</p>
-              <label className="check-field">
-                <input type="checkbox" checked={related.regional} disabled={relatedAvailability.regional} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, regional: change.target.checked }))} />
-                Региональные соревнования{relatedAvailability.regional ? ' — уже есть' : ''}
-              </label>
-              <label className="check-field">
-                <input type="checkbox" checked={related.physical} disabled={relatedAvailability.physical} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, physical: change.target.checked }))} />
-                Физкультурное мероприятие{relatedAvailability.physical ? ' — уже есть' : ''}
-              </label>
+            <fieldset className="form-section related-events">
+              <legend>Связанные зачёты и мероприятия</legend>
+              <p className="form-copy">Они наследуют даты и дисциплину родителя, переносятся вместе с ним и не создают отдельный конфликт календаря.</p>
+              {event && relatedEvents.length > 0 && (
+                <div className="related-event-list">
+                  {relatedEvents.map((relatedEvent) => (
+                    <article className="related-event-row" key={relatedEvent.id}>
+                      <span className="related-event-code">{relatedEventCode(relatedEvent)}</span>
+                      <div>
+                        <strong>{relatedEvent.title}</strong>
+                        <span>{relatedEvent.competitionStatus || 'Связанное мероприятие'} · {statuses.find(([value]) => value === relatedEvent.status)?.[1] ?? relatedEvent.status}</span>
+                      </div>
+                      <div className="related-event-actions">
+                        {onOpenRelated && <button className="button button-secondary" type="button" disabled={saving} onClick={() => requestOpenRelated(relatedEvent)}>Открыть</button>}
+                        {!readOnly && onDeleteRelated && <button className="button button-danger button-danger-quiet" type="button" disabled={saving} onClick={() => requestDeleteRelated(relatedEvent)}>Удалить</button>}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              )}
+              {event && relatedEvents.length === 0 && <p className="related-event-empty">Связанных записей пока нет.</p>}
+              {!readOnly && (
+                <>
+                  <div className="related-event-presets">
+                    <label className="check-field">
+                      <input type="checkbox" checked={related.regional} disabled={relatedAvailability.regional} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, regional: change.target.checked }))} />
+                      Региональные соревнования{relatedAvailability.regional ? ' — уже есть' : ''}
+                    </label>
+                    <label className="check-field">
+                      <input type="checkbox" checked={related.physical} disabled={relatedAvailability.physical} onChange={(change: ChangeEvent<HTMLInputElement>) => setRelated((current) => ({ ...current, physical: change.target.checked }))} />
+                      Физкультурное мероприятие{relatedAvailability.physical ? ' — уже есть' : ''}
+                    </label>
+                  </div>
+                  {event && onAddRelated && <button className="button button-secondary related-event-add" type="button" disabled={saving} onClick={requestAddRelated}>+ Добавить другое связанное мероприятие</button>}
+                </>
+              )}
             </fieldset>
           )}
 
