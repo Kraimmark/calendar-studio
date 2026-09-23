@@ -1,0 +1,40 @@
+{
+  "name": "calendar-studio",
+  "private": true,
+  "version": "0.9.18",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false",
+    "test": "tsc -p tsconfig.testbuild.json && node scripts/prepare-test-build.mjs && node scripts/run-tests.mjs",
+    "lint": "eslint .",
+    "check": "npm run test && npm run lint && npm run build",
+    "tauri": "tauri",
+    "domain:typecheck": "tsc -p tsconfig.domain.json --pretty false",
+    "check:offline": "npm run test && npm run domain:typecheck && npm run ui:typecheck:offline",
+    "ui:typecheck:offline": "tsc -p tsconfig.ui-offline.json --pretty false"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "@tauri-apps/plugin-dialog": "^2.4.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "docx": "9.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@tauri-apps/cli": "^2.8.4",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.41.0",
+    "vite": "^7.1.4"
+  }
+}
